@@ -1,5 +1,18 @@
 [
   {
+    "id": "tematici|LABL.MI|BUY|2026-05-08T15:15:04.755984+00:00",
+    "source": "tematici",
+    "ticker": "LABL.MI",
+    "name": "WisdomTree Food Innovation ETF",
+    "signal": "BUY",
+    "raw_signal": "BUY2",
+    "score": 45.8,
+    "signal_date": "2026-05-08",
+    "detected_at": "2026-05-08T15:15:04.755984+00:00",
+    "page_url": "https://giorgiogoldoni.github.io/raptor-tematici/",
+    "group": "salute"
+  },
+  {
     "id": "alert|CBUH|BUY|2026-05-08T14:35:39.312673+00:00",
     "source": "alert",
     "ticker": "CBUH",
