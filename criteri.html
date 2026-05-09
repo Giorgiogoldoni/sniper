@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAPTOR SNIPER — Criteri di Selezione</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Syne:wght@700;800&display=swap');
+:root{--bg:#f5f4f0;--surface:#fff;--border:#e0ddd6;--text:#1a1816;--muted:#7a766e;--buy:#1a6b3a;--buy-bg:#e8f5ed;--exit:#8b1a1a;--exit-bg:#faeaea;--tag:#eeece7;--mono:'JetBrains Mono',monospace;--sans:'Syne',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:13px;line-height:1.7}
+header{padding:24px 40px 16px;border-bottom:1.5px solid var(--border);background:var(--surface)}
+header h1{font-family:var(--sans);font-size:22px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+header p{font-size:11px;color:var(--muted);margin-top:4px}
+main{max-width:960px;margin:0 auto;padding:32px 40px}
+
+h2{font-family:var(--sans);font-size:16px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin:32px 0 12px;padding-bottom:6px;border-bottom:1.5px solid var(--border)}
+h3{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:20px 0 8px}
+
+.source-block{background:var(--surface);border:1px solid var(--border);border-radius:2px;padding:18px 20px;margin-bottom:16px}
+.source-header{display:flex;align-items:baseline;gap:12px;margin-bottom:12px}
+.source-name{font-family:var(--sans);font-size:15px;font-weight:700}
+.source-url{font-size:11px;color:var(--muted)}
+
+.sig-table{width:100%;border-collapse:collapse;margin-bottom:12px}
+.sig-table th{font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);text-align:left;padding:4px 8px;border-bottom:1px solid var(--border)}
+.sig-table td{font-size:12px;padding:5px 8px;border-bottom:1px solid var(--tag);vertical-align:top}
+.sig-table tr:last-child td{border-bottom:none}
+.sig{display:inline-block;padding:1px 7px;border-radius:2px;font-size:11px;font-weight:700}
+.buy{background:var(--buy-bg);color:var(--buy)}
+.exit{background:var(--exit-bg);color:var(--exit)}
+
+.criteria-list{list-style:none;margin:0 0 10px}
+.criteria-list li{font-size:12px;padding:3px 0;display:flex;gap:8px}
+.criteria-list li::before{content:'→';color:var(--muted);flex-shrink:0}
+
+.metrics-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin:10px 0}
+.metric-card{background:var(--tag);border-radius:2px;padding:8px 12px}
+.metric-card .mk{font-size:11px;font-weight:700;margin-bottom:2px}
+.metric-card .mv{font-size:10px;color:var(--muted)}
+
+.note{font-size:11px;color:var(--muted);font-style:italic;margin-top:8px;padding:8px 12px;background:var(--tag);border-radius:2px}
+
+.legend{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:11px}
+.dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.dot.buy{background:var(--buy)}
+.dot.exit{background:var(--exit)}
+.dot.neutral{background:var(--muted)}
+
+footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-top:1px solid var(--border);margin-top:32px}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>⚡ RAPTOR SNIPER — Criteri di Selezione</h1>
+  <p>Giorgio Goldoni, CFA · Documento tecnico · Aggiornato automaticamente</p>
+</header>
+
+<main>
+
+<!-- INTRODUZIONE -->
+<h2>Come funziona Sniper</h2>
+<div class="source-block">
+  <p style="margin-bottom:10px">RAPTOR Sniper aggrega segnali da 7 repo indipendenti, ognuna con la propria logica di selezione. Gira <strong>4 volte al giorno</strong> (09:15 · 12:00 · 16:00 · 18:30 CET, lun-ven) e salva solo i segnali <strong>nuovi nelle ultime 24 ore</strong>. Lo storico viene mantenuto per <strong>30 giorni</strong>.</p>
+  <div class="legend">
+    <div class="legend-item"><div class="dot buy"></div> BUY — segnale di ingresso/acquisto</div>
+    <div class="legend-item"><div class="dot exit"></div> EXIT — segnale di uscita/vendita</div>
+    <div class="legend-item"><div class="dot neutral"></div> Altri (RANGING, WATCH, ecc.) — scartati</div>
+  </div>
+  <p class="note">Se lo stesso ticker appare con lo stesso segnale su più fonti, viene mostrato come una sola riga con tutte le fonti aggregate.</p>
+</div>
+
+<!-- CHART -->
+<h2>1. RAPTOR Chart Engine</h2>
+<div class="source-block">
+  <div class="source-header">
+    <span class="source-name">chart</span>
+    <span class="source-url">giorgiogoldoni.github.io/chart/</span>
+  </div>
+  <p style="margin-bottom:12px">Sistema per ETP a leva (giornaliera/settimanale). Analizza ETF con leva 2x/3x su indici e commodity europei.</p>
+  <h3>Segnali tracciati</h3>
+  <table class="sig-table">
+    <tr><th>Segnale</th><th>Significato</th><th>Condizioni indicative</th></tr>
+    <tr><td><span class="sig buy">EXIT1</span></td><td>Uscita debole</td><td>Primo segnale di debolezza, momentum in calo</td></tr>
+    <tr><td><span class="sig exit">EXIT2</span></td><td>Uscita media</td><td>Trend negativo confermato, SAR ribassista</td></tr>
+    <tr><td><span class="sig exit">EXIT3</span></td><td>Uscita forte</td><td>Forte deterioramento, score basso, downtrend strutturale</td></tr>
+  </table>
+  <h3>Metriche chiave nel JSON</h3>
+  <div class="metrics-grid">
+    <div class="metric-card"><div class="mk">score</div><div class="mv">Score composito 0-100</div></div>
+    <div class="metric-card"><div class="mk">sar_bull</div><div class="mv">SAR rialzista (true/false)</div></div>
+    <div class="metric-card"><div class="mk">ao</div><div class="mv">Awesome Oscillator</div></div>
+    <div class="metric-card"><div class="mk">rsi</div><div class="mv">RSI 14</div></div>
+    <div class="metric-card"><div class="mk">er</div><div class="mv">Efficiency Ratio KAMA</div></div>
+    <div class="metric-card"><div class="mk">structural_downtrend</div><div class="mv">Downtrend strutturale</div></div>
+    <div class="metric-card"><div class="mk">days_below_ks</div><div class="mv">Giorni sotto Kijun-Sen</div></div>
+    <div class="metric-card"><div class="mk">composite_score</div><div class="mv">Score aggregato multi-fattore</div></div>
+  </div>
+</div>
+
+<!-- ONE -->
+<h2>2. RAPTOR One</h2>
+<div class="source-block">
+  <div class="source-header">
+    <span class="source-name">one</span>
+    <span class="source-url">giorgiogoldoni.github.io/raptor-one/</span>
+  </div>
+  <p style="margin-bottom:12px">Screener generale su ETF europei. Copre più categorie (azionario, obbligazionario, commodity, tematici).</p>
+  <h3>Segnali tracciati</h3>
+  <table class="sig-table">
+    <tr><th>Segnale</th><th>Significato</th></tr>
+    <tr><td><span class="sig buy">BUY1</span></td><td>Segnale di acquisto livello 1 — momentum iniziale</td></tr>
+    <tr><td><span class="sig buy">BUY2</span></td><td>Segnale di acquisto livello 2 — trend confermato</td></tr>
+    <tr><td><span class="sig buy">BUY3</span></td><td>Segnale di acquisto livello 3 — forte momentum</td></tr>
+    <tr><td><span class="sig exit">EXIT1/2/3</span></td><td>Segnali di uscita graduati per intensità</td></tr>
+  </table>
+  <h3>Metriche chiave</h3>
+  <div class="metrics-grid">
+    <div class="metric-card"><div class="mk">score</div><div class="mv">Score 0-100</div></div>
+    <div class="metric-card"><div class="mk">categoria</div><div class="mv">Categoria ETF</div></div>
+    <div class="metric-card"><div class="mk">entryDate</div><div class="mv">Data segnale</div></div>
+  </div>
+</div>
+
+<!-- ALERT -->
+<h2>3. RAPTOR Alert</h2>
+<div class="source-block">
+  <div class="source-header">
+    <span class="source-name">alert</span>
+    <span class="source-url">giorgiogoldoni.github.io/raptor-alert/</span>
+  </div>
+  <p style="margin-bottom:12px">Sistema di alert su ETF europei (prevalentemente UCITS). Universo ampio (~498 ETF). Il segnale si chiama <code>tipo</code> nel JSON.</p>
+  <h3>Segnali tracciati</h3>
+  <table class="sig-table">
+    <tr><th>Segnale</th><th>Significato</th><th>Condizioni tipiche</th></tr>
+    <tr><td><span class="sig buy">BUY1</span></td><td>Acquisto debole</td><td>SAR rialzista, KAMA sale, AO positivo</td></tr>
+    <tr><td><span class="sig buy">BUY2</span></td><td>Acquisto medio</td><td>+ ER > 0.35, Trendycator VERDE</td></tr>
+    <tr><td><span class="sig buy">BUY3</span></td><td>Acquisto forte</td><td>+ ER > 0.45, MM allineate, RSI > 50</td></tr>
+    <tr><td><span class="sig exit">EXIT1/2/3</span></td><td>Uscita graduata</td><td>Inversione SAR, debolezza momentum</td></tr>
+  </table>
+  <h3>Metriche chiave</h3>
+  <div class="metrics-grid">
+    <div class="metric-card"><div class="mk">trendycator</div><div class="mv">VERDE / GIALLO / ROSSO</div></div>
+    <div class="metric-card"><div class="mk">sar_up</div><div class="mv">SAR rialzista</div></div>
+    <div class="metric-card"><div class="mk">er</div><div class="mv">Efficiency Ratio</div></div>
+    <div class="metric-card"><div class="mk">rsi</div><div class="mv">RSI 14</div></div>
+    <div class="metric-card"><div class="mk">mm_align</div><div class="mv">MM20/50/200 allineate</div></div>
+    <div class="metric-card"><div class="mk">ao_pos</div><div class="mv">AO positivo</div></div>
+    <div class="metric-card"><div class="mk">composite_score</div><div class="mv">Score composito</div></div>
+    <div class="metric-card"><div class="mk">pk_pct</div><div class="mv">Percentuale dal picco</div></div>
+  </div>
+</div>
+
+<!-- SETTORIALI -->
+<h2>4. RAPTOR Settoriali</h2>
+<div class="source-block">
+  <div class="source-header">
+    <span class="source-name">settoriali</span>
+    <span class="source-url">giorgiogoldoni.github.io/raptor-settoriali/</span>
+  </div>
+  <p style="margin-bottom:12px">Portfolio settoriali su 3 aree geografiche: Europa, USA, Mondo. Distingue tra <strong>posizioni aperte</strong> (positions) e <strong>qualificate ma non in portafoglio</strong> (qualified).</p>
+  <h3>Struttura</h3>
+  <ul class="criteria-list">
+    <li><strong>portfolios.europa / .usa / .mondo</strong> — tre portafogli separati</li>
+    <li><strong>positions[]</strong> — posizioni attualmente aperte con segnale BUY attivo</li>
+    <li><strong>qualified[]</strong> — ticker che soddisfano i criteri ma non ancora in posizione</li>
+  </ul>
+  <h3>Metriche chiave</h3>
+  <div class="metrics-grid">
+    <div class="metric-card"><div class="mk">signal</div><div class="mv">BUY1/2/3 o EXIT1/2/3</div></div>
+    <div class="metric-card"><div class="mk">current_gain_pct</div><div class="mv">Gain % dalla entry</div></div>
+    <div class="metric-card"><div class="mk">days_held</div><div class="mv">Giorni in posizione</div></div>
+    <div class="metric-card"><div class="mk">target_price</div><div class="mv">Prezzo obiettivo</div></div>
+    <div class="metric-card"><div class="mk">stop_loss</div><div class="mv">Stop loss</div></div>
+    <div class="metric-card"><div class="mk">size_pct</div><div class="mv">Dimensione posizione %</div></div>
+    <div class="metric-card"><div class="mk">trend</div><div class="mv">VERDE / GIALLO / ROSSO</div></div>
+    <div class="metric-card"><div class="mk">pre_alert</div><div class="mv">Vicino a segnale</div></div>
+  </div>
+</div>
+
+<!-- TEMATICI -->
+<h2>5. RAPTOR Tematici</h2>
+<div class="source-block">
+  <div class="source-header">
+    <span class="source-name">tematici</span>
+    <span class="source-url">giorgiogoldoni.github.io/raptor-tematici/</span>
+  </div>
+  <p style="margin-bottom:12px">Portfolio tematici raggruppati per categoria (AI, difesa, energia, ecc.). Struttura analoga ai settoriali.</p>
+  <h3>Struttura</h3>
+  <ul class="criteria-list">
+    <li><strong>groups.{nome_gruppo}</strong> — gruppo tematico (es. ai_tech, difesa, energia)</li>
+    <li><strong>positions[]</strong> — posizioni aperte</li>
+    <li><strong>qualified[]</strong> — qualificati, il segnale può essere in <code>buy_level</code> invece di <code>signal</code></li>
+  </ul>
+  <p class="note">Il campo segnale può essere <code>signal</code>, <code>current_level</code> o <code>buy_level</code> a seconda del contesto.</p>
+</div>
+
+<!-- GEOGRAFIA -->
+<h2>6. RAPTOR Geografia</h2>
+<div class="source-block">
+  <div class="source-header">
+    <span class="source-name">geografia</span>
+    <span class="source-url">giorgiogoldoni.github.io/raptor-geografia/</span>
+  </div>
+  <p style="margin-bottom:12px">Portfolio geografici — ETF per paese/area. Struttura analoga a settoriali e tematici.</p>
+  <h3>Struttura</h3>
+  <ul class="criteria-list">
+    <li><strong>paesi</strong> — gruppo principale con positions[] e qualified[]</li>
+    <li>Il segnale è in <code>signal</code> o <code>current_level</code></li>
+    <li>Include ER (Efficiency Ratio) come metrica aggiuntiva rispetto agli altri portfolio</li>
+  </ul>
+  <div class="metrics-grid">
+    <div class="metric-card"><div class="mk">er</div><div class="mv">Efficiency Ratio — misura la direzionalità del trend</div></div>
+    <div class="metric-card"><div class="mk">current_gain_pct</div><div class="mv">Gain % dalla entry</div></div>
+    <div class="metric-card"><div class="mk">days_held</div><div class="mv">Giorni in posizione</div></div>
+  </div>
+</div>
+
+<!-- SCANNERV2 -->
+<h2>7. Scanner V2</h2>
+<div class="source-block">
+  <div class="source-header">
+    <span class="source-name">scannerv2</span>
+    <span class="source-url">giorgiogoldoni.github.io/scannerv2/</span>
+  </div>
+  <p style="margin-bottom:12px">Scanner più ricco di metriche. Universo ampio (~545 ETF). Fornisce il maggior numero di campi tecnici per ogni segnale. I segnali includono anche <strong>SELL</strong> (mappato su EXIT).</p>
+  <h3>Segnali tracciati</h3>
+  <table class="sig-table">
+    <tr><th>Segnale raw</th><th>Mappato a</th><th>Significato</th></tr>
+    <tr><td><span class="sig buy">BUY1</span></td><td><span class="sig buy">BUY</span></td><td>Momentum iniziale, KAMA in salita</td></tr>
+    <tr><td><span class="sig buy">BUY2</span></td><td><span class="sig buy">BUY</span></td><td>Trend confermato, ER > 0.35, baff ≥ 3</td></tr>
+    <tr><td><span class="sig buy">BUY3</span></td><td><span class="sig buy">BUY</span></td><td>Forte momentum, tutti gli indicatori allineati</td></tr>
+    <tr><td><span class="sig exit">SELL</span></td><td><span class="sig exit">EXIT</span></td><td>Trend negativo confermato</td></tr>
+  </table>
+  <h3>Metriche chiave</h3>
+  <div class="metrics-grid">
+    <div class="metric-card"><div class="mk">kama_trend</div><div class="mv">VERDE/GIALLO/GRIGIO/ROSSO</div></div>
+    <div class="metric-card"><div class="mk">baff</div><div class="mv">Baffetti AO (0-6, soglia ≥ 3)</div></div>
+    <div class="metric-card"><div class="mk">sar_bull</div><div class="mv">SAR rialzista</div></div>
+    <div class="metric-card"><div class="mk">er</div><div class="mv">Efficiency Ratio KAMA</div></div>
+    <div class="metric-card"><div class="mk">ao / ao_rising</div><div class="mv">AO e direzione</div></div>
+    <div class="metric-card"><div class="mk">rvi_bull</div><div class="mv">RVI rialzista</div></div>
+    <div class="metric-card"><div class="mk">rsi</div><div class="mv">RSI 14</div></div>
+    <div class="metric-card"><div class="mk">tv_rating</div><div class="mv">TradingView rating</div></div>
+    <div class="metric-card"><div class="mk">regime</div><div class="mv">LATERALE / SLANCIO / TRANSIZIONE / RIBASSO / SALITA</div></div>
+    <div class="metric-card"><div class="mk">hurst_60</div><div class="mv">Esponente di Hurst 60gg (>0.5 = trend)</div></div>
+    <div class="metric-card"><div class="mk">adx</div><div class="mv">ADX — forza del trend</div></div>
+    <div class="metric-card"><div class="mk">mom1m/3m/6m</div><div class="mv">Momentum 1/3/6 mesi %</div></div>
+    <div class="metric-card"><div class="mk">vol_ratio</div><div class="mv">Volume relativo alla media</div></div>
+    <div class="metric-card"><div class="mk">is_leveraged</div><div class="mv">ETF a leva</div></div>
+    <div class="metric-card"><div class="mk">categoria</div><div class="mv">Tematico / Leva Long / Settoriale / ecc.</div></div>
+  </div>
+  <p class="note">Scanner V2 è l'unica fonte che fornisce l'esponente di Hurst, l'ADX e il rating TradingView. Un baff ≥ 5 con kama_trend VERDE e sar_bull è generalmente il segnale più affidabile.</p>
+</div>
+
+<!-- LOGICA SNIPER -->
+<h2>Logica di aggregazione Sniper</h2>
+<div class="source-block">
+  <h3>Deduplicazione</h3>
+  <ul class="criteria-list">
+    <li>Un segnale dello stesso ticker dalla stessa fonte non viene duplicato nelle 24 ore</li>
+    <li>Se lo stesso ticker appare con lo stesso segnale su più fonti → una sola riga, fonti aggregate</li>
+    <li>BUY1 e BUY2 sullo stesso ticker contano come eventi separati</li>
+  </ul>
+  <h3>Priorità score</h3>
+  <ul class="criteria-list">
+    <li>Quando un ticker appare su più fonti, lo score mostrato è il <strong>massimo</strong> tra le fonti</li>
+    <li>La data segnale è la prima disponibile tra le fonti</li>
+  </ul>
+  <h3>Storico</h3>
+  <ul class="criteria-list">
+    <li>Gli eventi vengono mantenuti per 30 giorni dal momento del rilevamento</li>
+    <li>Un ticker che esce e rientra dopo 24h genera un nuovo evento</li>
+  </ul>
+</div>
+
+</main>
+<footer>RAPTOR SNIPER · Giorgio Goldoni CFA · github.com/Giorgiogoldoni</footer>
+</body>
+</html>
