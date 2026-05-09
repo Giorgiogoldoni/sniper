@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAPTOR SNIPER</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@700;800&display=swap');
+:root {
+  --bg:#f5f4f0; --surface:#fff; --border:#e0ddd6; --text:#1a1816;
+  --muted:#7a766e; --buy:#1a6b3a; --buy-bg:#e8f5ed;
+  --exit:#8b1a1a; --exit-bg:#faeaea; --tag:#eeece7;
+  --mono:'JetBrains Mono',monospace; --sans:'Syne',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:13px;min-height:100vh}
+
+/* HEADER */
+header{padding:20px 28px 14px;border-bottom:1.5px solid var(--border);display:flex;align-items:center;gap:14px}
+header h1{font-family:var(--sans);font-size:20px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+header .sub{font-size:11px;color:var(--muted)}
+.hright{margin-left:auto;display:flex;align-items:center;gap:10px}
+#last-update{font-size:11px;color:var(--muted)}
+
+/* METRICHE */
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;padding:14px 28px;border-bottom:1px solid var(--border);background:var(--surface)}
+.metric{padding:10px 14px;border:1px solid var(--border);border-radius:2px}
+.metric .val{font-size:22px;font-weight:700;line-height:1}
+.metric .lbl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:3px}
+.metric.buy .val{color:var(--buy)}
+.metric.exit .val{color:var(--exit)}
+
+/* FILTRI */
+.filters{padding:10px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.flabel{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-right:2px}
+.chip{padding:3px 9px;border:1px solid var(--border);border-radius:2px;background:var(--surface);font-family:var(--mono);font-size:11px;cursor:pointer;transition:all .1s;color:var(--text)}
+.chip:hover{background:var(--tag)}
+.chip.active{background:var(--text);color:#fff;border-color:var(--text)}
+.chip.buy.active{background:var(--buy);border-color:var(--buy)}
+.chip.exit.active{background:var(--exit);border-color:var(--exit)}
+.sep{width:1px;height:16px;background:var(--border);margin:0 4px}
+
+/* MAIN */
+main{max-width:1100px;margin:0 auto;padding:18px 28px}
+#count-bar{font-size:11px;color:var(--muted);margin-bottom:10px}
+
+/* EVENTO */
+.event{border:1px solid var(--border);border-radius:2px;background:var(--surface);margin-bottom:4px;transition:border-color .1s}
+.event:hover{border-color:#aaa}
+
+.event-row{display:grid;grid-template-columns:70px 90px 1fr auto;align-items:center;gap:10px;padding:8px 12px;cursor:pointer}
+
+.badge{display:block;padding:2px 0;border-radius:2px;font-size:10px;font-weight:700;letter-spacing:.05em;text-align:center}
+.badge.buy{background:var(--buy-bg);color:var(--buy)}
+.badge.exit{background:var(--exit-bg);color:var(--exit)}
+
+.date-col{text-align:right}
+.sig-date{font-size:12px;font-weight:600}
+.det-date{font-size:10px;color:var(--muted)}
+
+.info{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}
+.ticker{font-weight:700;font-size:14px;white-space:nowrap}
+.score{font-size:10px;color:var(--muted);white-space:nowrap}
+.name{font-size:11px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:280px}
+.sources{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+.stag{font-size:10px;padding:1px 6px;background:var(--tag);border-radius:2px;white-space:nowrap;text-transform:uppercase;letter-spacing:.04em}
+
+.row-right{display:flex;align-items:center;gap:6px}
+.btn{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border:1px solid var(--border);border-radius:2px;background:var(--surface);font-family:var(--mono);font-size:11px;color:var(--text);text-decoration:none;white-space:nowrap;transition:all .1s;cursor:pointer}
+.btn:hover{background:var(--text);color:#fff;border-color:var(--text)}
+.toggle{font-size:11px;color:var(--muted);border:none;background:none;cursor:pointer;font-family:var(--mono);padding:4px 6px}
+.toggle:hover{color:var(--text)}
+
+/* DETTAGLIO */
+.event-detail{display:none;padding:10px 14px 12px;border-top:1px solid var(--border);background:#fafaf8}
+.event-detail.open{display:block}
+
+.reasons{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.reason{font-size:10px;padding:2px 8px;border-radius:2px;background:var(--tag);border:1px solid var(--border)}
+.reason.ok{background:#e8f5ed;border-color:#b8dfc8;color:var(--buy)}
+.reason.ko{background:#faeaea;border-color:#e8b0b0;color:var(--exit)}
+
+.extra-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:4px}
+.extra-item{font-size:10px;color:var(--muted)}
+.extra-item span{color:var(--text);font-weight:600}
+
+.src-links{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;padding-top:8px;border-top:1px solid var(--border)}
+
+/* STATI */
+#loading{text-align:center;padding:60px;color:var(--muted);font-size:12px}
+#empty{display:none;text-align:center;padding:60px;color:var(--muted);font-size:12px}
+#err{display:none;padding:10px 14px;background:var(--exit-bg);color:var(--exit);border:1px solid #e8b0b0;border-radius:2px;margin-bottom:14px;font-size:12px}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.blink{animation:blink 1.2s infinite}
+
+@media(max-width:680px){
+  header,.filters,main{padding-left:14px;padding-right:14px}
+  .metrics{padding:10px 14px}
+  .event-row{grid-template-columns:60px 80px 1fr auto;gap:6px}
+  .name{max-width:140px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>⚡ Raptor Sniper</h1>
+    <div class="sub">aggregatore segnali · ultimi 30 giorni</div>
+  </div>
+  <div class="hright">
+    <span id="last-update">—</span>
+    <button class="btn" onclick="exportCSV()">⬇ Excel</button>
+  </div>
+</header>
+
+<!-- METRICHE -->
+<div class="metrics" id="metrics">
+  <div class="metric buy"><div class="val" id="m-buy">—</div><div class="lbl">BUY oggi</div></div>
+  <div class="metric exit"><div class="val" id="m-exit">—</div><div class="lbl">EXIT oggi</div></div>
+  <div class="metric"><div class="val" id="m-tot">—</div><div class="lbl">Totale 30gg</div></div>
+  <div class="metric"><div class="val" id="m-multi">—</div><div class="lbl">Multi-fonte</div></div>
+  <div class="metric"><div class="val" id="m-src">—</div><div class="lbl">Fonte + attiva</div></div>
+</div>
+
+<div class="filters">
+  <span class="flabel">segnale</span>
+  <button class="chip active" data-f="signal" data-v="all">Tutti</button>
+  <button class="chip buy"   data-f="signal" data-v="BUY">BUY</button>
+  <button class="chip exit"  data-f="signal" data-v="EXIT">EXIT</button>
+  <div class="sep"></div>
+  <span class="flabel">fonte</span>
+  <button class="chip active" data-f="source" data-v="all">Tutti</button>
+  <button class="chip" data-f="source" data-v="chart">Chart</button>
+  <button class="chip" data-f="source" data-v="one">One</button>
+  <button class="chip" data-f="source" data-v="alert">Alert</button>
+  <button class="chip" data-f="source" data-v="settoriali">Settoriali</button>
+  <button class="chip" data-f="source" data-v="tematici">Tematici</button>
+  <button class="chip" data-f="source" data-v="geografia">Geografia</button>
+  <button class="chip" data-f="source" data-v="scannerv2">Scanner</button>
+</div>
+
+<main>
+  <div id="err"></div>
+  <div id="count-bar"></div>
+  <div id="loading"><span class="blink">caricamento...</span></div>
+  <div id="list"></div>
+  <div id="empty">Nessun segnale per i filtri selezionati.</div>
+</main>
+
+<script>
+const SIGNALS_URL = 'signals.json';
+let all = [], fSig = 'all', fSrc = 'all';
+
+// ---------------------------------------------------------------------------
+// LOAD
+// ---------------------------------------------------------------------------
+async function load() {
+  try {
+    const r = await fetch(SIGNALS_URL + '?t=' + Date.now());
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    all = await r.json();
+    document.getElementById('loading').style.display = 'none';
+    updateMetrics();
+    render();
+    if (all.length) {
+      document.getElementById('last-update').textContent =
+        'aggiornato ' + fmtDT(all[0].detected_at);
+    }
+  } catch(e) {
+    document.getElementById('loading').style.display = 'none';
+    const el = document.getElementById('err');
+    el.style.display = 'block';
+    el.textContent = 'Impossibile caricare signals.json — ' + e.message;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// METRICHE
+// ---------------------------------------------------------------------------
+function updateMetrics() {
+  const today = new Date().toISOString().slice(0,10);
+  let buyOggi=0, exitOggi=0, multi=0;
+  const srcCount = {};
+  all.forEach(ev => {
+    const d = ev.detected_at.slice(0,10);
+    if (d === today) {
+      if (ev.signal === 'BUY') buyOggi++;
+      if (ev.signal === 'EXIT') exitOggi++;
+    }
+    if ((ev.sources||[]).length > 1) multi++;
+    (ev.sources||[]).forEach(s => { srcCount[s.source] = (srcCount[s.source]||0)+1; });
+  });
+  const topSrc = Object.entries(srcCount).sort((a,b)=>b[1]-a[1])[0];
+  document.getElementById('m-buy').textContent  = buyOggi;
+  document.getElementById('m-exit').textContent = exitOggi;
+  document.getElementById('m-tot').textContent  = all.length;
+  document.getElementById('m-multi').textContent= multi;
+  document.getElementById('m-src').textContent  = topSrc ? topSrc[0] : '—';
+}
+
+// ---------------------------------------------------------------------------
+// RENDER
+// ---------------------------------------------------------------------------
+function render() {
+  const data = all.filter(ev => {
+    const sources = (ev.sources||[]).map(s=>s.source);
+    if (fSig !== 'all' && ev.signal !== fSig) return false;
+    if (fSrc !== 'all' && !sources.includes(fSrc)) return false;
+    return true;
+  });
+
+  document.getElementById('count-bar').textContent =
+    data.length + ' eventi' + (all.length !== data.length ? ' (su '+all.length+' totali)' : '');
+
+  const list = document.getElementById('list');
+  const empty = document.getElementById('empty');
+  if (!data.length) { list.innerHTML=''; empty.style.display='block'; return; }
+  empty.style.display = 'none';
+  list.innerHTML = data.map((ev,i) => buildRow(ev,i)).join('');
+}
+
+function buildRow(ev, idx) {
+  const sc = ev.signal==='BUY'?'buy':'exit';
+  const sources = ev.sources || [];
+  const srcNames = sources.map(s=>s.source);
+  const primarySrc = sources[0] || {};
+
+  const sigDate = ev.signal_date ? fmtD(ev.signal_date) : '—';
+  const detDate = fmtDT(ev.detected_at);
+
+  // Tags fonti
+  const srcTags = srcNames.map(s=>`<span class="stag">${h(s)}</span>`).join('');
+
+  // Bottone vai — usa la prima fonte
+  const gotoUrl = (primarySrc.page_url||'#') +
+    ((primarySrc.page_url||'').includes('?')?'&':'?') +
+    'ticker=' + encodeURIComponent(ev.ticker);
+
+  // Dettaglio motivi
+  const detailHtml = buildDetail(ev);
+
+  return `<div class="event" id="ev${idx}">
+    <div class="event-row" onclick="toggleDetail(${idx})">
+      <div>
+        <span class="badge ${sc}">${h(primarySrc.raw_signal||ev.signal)}</span>
+      </div>
+      <div class="date-col">
+        <div class="sig-date">${sigDate}</div>
+        <div class="det-date">↑${detDate}</div>
+      </div>
+      <div class="info">
+        <span class="ticker">${h(ev.ticker)}</span>
+        ${ev.score!=null?`<span class="score">score ${ev.score}</span>`:''}
+        <span class="name">${h(ev.name)}</span>
+        <div class="sources">${srcTags}</div>
+      </div>
+      <div class="row-right">
+        <a class="btn" href="${h(gotoUrl)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H4M9 1V6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>vai
+        </a>
+        <button class="toggle" id="tog${idx}">▾</button>
+      </div>
+    </div>
+    <div class="event-detail" id="det${idx}">${detailHtml}</div>
+  </div>`;
+}
+
+function buildDetail(ev) {
+  const sources = ev.sources || [];
+  let html = '';
+
+  // Motivi per ogni fonte
+  sources.forEach(src => {
+    const ex = src.extra || {};
+    const reasons = buildReasons(src.source, ex);
+    if (reasons.length) {
+      html += `<div style="margin-bottom:8px">
+        <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px">${src.source} — motivi</div>
+        <div class="reasons">${reasons.map(r=>`<span class="reason ${r.ok?'ok':'ko'}">${r.ok?'✓':'✗'} ${r.label}</span>`).join('')}</div>
+      </div>`;
+    }
+    // Campi extra numerici
+    const extraItems = buildExtraItems(src.source, ex);
+    if (extraItems.length) {
+      html += `<div class="extra-grid" style="margin-bottom:8px">${extraItems.map(e=>`<div class="extra-item">${e.label}: <span>${e.val}</span></div>`).join('')}</div>`;
+    }
+  });
+
+  // Link alle pagine sorgente
+  if (sources.length > 1) {
+    html += `<div class="src-links">`;
+    sources.forEach(src => {
+      const url = (src.page_url||'#') + ((src.page_url||'').includes('?')?'&':'?') +
+        'ticker=' + encodeURIComponent(ev.ticker);
+      html += `<a class="btn" href="${h(url)}" target="_blank" rel="noopener">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H4M9 1V6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>${src.source}
+      </a>`;
+    });
+    html += `</div>`;
+  }
+
+  return html || '<div style="font-size:11px;color:var(--muted)">Nessun dettaglio disponibile</div>';
+}
+
+function buildReasons(source, ex) {
+  const r = [];
+  if (source === 'chart' || source === 'scannerv2') {
+    if (ex.sar_bull !== undefined) r.push({label:'SAR rialzista', ok: ex.sar_bull===true});
+    if (ex.ao !== undefined) r.push({label:'AO positivo', ok: ex.ao > 0});
+    if (ex.ao_rising !== undefined) r.push({label:'AO in salita', ok: ex.ao_rising===true});
+    if (ex.rsi !== undefined) r.push({label:'RSI > 50', ok: ex.rsi > 50});
+    if (ex.kama_trend !== undefined) r.push({label:'KAMA '+ex.kama_trend, ok: ex.kama_trend==='VERDE'});
+    if (ex.baff !== undefined) r.push({label:'Baff ≥ 3', ok: ex.baff >= 3});
+    if (ex.rvi_bull !== undefined) r.push({label:'RVI rialzista', ok: ex.rvi_bull===true});
+    if (ex.trendycator !== undefined) r.push({label:'Trend '+ex.trendycator, ok: ex.trendycator==='VERDE'});
+  }
+  if (source === 'alert') {
+    if (ex.sar_up !== undefined) r.push({label:'SAR rialzista', ok: ex.sar_up===true});
+    if (ex.ao_pos !== undefined) r.push({label:'AO positivo', ok: ex.ao_pos===true});
+    if (ex.rsi !== undefined) r.push({label:'RSI > 50', ok: ex.rsi > 50});
+    if (ex.mm_align !== undefined) r.push({label:'MM allineate', ok: ex.mm_align===true});
+    if (ex.trendycator !== undefined) r.push({label:'Trend '+ex.trendycator, ok: ex.trendycator==='VERDE'});
+    if (ex.er !== undefined) r.push({label:'ER > 0.25', ok: ex.er > 0.25});
+  }
+  if (source === 'settoriali' || source === 'tematici' || source === 'geografia') {
+    if (ex.trend !== undefined) r.push({label:'Trend '+ex.trend, ok: ex.trend==='VERDE'});
+    if (ex.pre_alert !== undefined) r.push({label:'Pre-alert', ok: ex.pre_alert===false});
+    if (ex.target_hit !== undefined) r.push({label:'Target raggiunto', ok: ex.target_hit===true});
+  }
+  return r;
+}
+
+function buildExtraItems(source, ex) {
+  const items = [];
+  const fmt = (v) => typeof v === 'number' ? (Number.isInteger(v)?v:v.toFixed(2)) : v;
+  const add = (label, key) => { if (ex[key]!=null) items.push({label, val: fmt(ex[key])}); };
+
+  if (source==='chart'||source==='scannerv2') {
+    add('RSI', 'rsi'); add('AO', 'ao'); add('ER', 'er');
+    add('Score comp.', 'composite_score'); add('Vol', 'vol_class');
+    add('Regime', 'regime'); add('Mom 1M', 'mom1m'); add('Mom 3M', 'mom3m');
+    add('ADX', 'adx'); add('Hurst 60', 'hurst_60'); add('TV Rating', 'tv_rating');
+  }
+  if (source==='alert') {
+    add('RSI', 'rsi'); add('ER', 'er'); add('Score comp.', 'composite_score');
+    add('Vol', 'vol_class'); add('PK%', 'pk_pct');
+  }
+  if (['settoriali','tematici','geografia'].includes(source)) {
+    add('Gain%', 'current_gain_pct'); add('Giorni', 'days_held');
+    add('Target', 'target_price'); add('Stop', 'stop_loss'); add('Size%', 'size_pct');
+  }
+  return items;
+}
+
+// ---------------------------------------------------------------------------
+// TOGGLE DETTAGLIO
+// ---------------------------------------------------------------------------
+function toggleDetail(idx) {
+  const det = document.getElementById('det'+idx);
+  const tog = document.getElementById('tog'+idx);
+  det.classList.toggle('open');
+  tog.textContent = det.classList.contains('open') ? '▴' : '▾';
+}
+
+// ---------------------------------------------------------------------------
+// FILTRI
+// ---------------------------------------------------------------------------
+document.querySelectorAll('.chip[data-f]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const f=btn.dataset.f, v=btn.dataset.v;
+    if(f==='signal') fSig=v;
+    if(f==='source') fSrc=v;
+    document.querySelectorAll(`.chip[data-f="${f}"]`).forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    render();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// EXPORT CSV
+// ---------------------------------------------------------------------------
+function exportCSV() {
+  const data = all.filter(ev => {
+    const sources = (ev.sources||[]).map(s=>s.source);
+    if(fSig!=='all' && ev.signal!==fSig) return false;
+    if(fSrc!=='all' && !sources.includes(fSrc)) return false;
+    return true;
+  });
+  if(!data.length){alert("Nessun dato da esportare.");return;}
+  const headers = ["Ticker","Nome","Segnale","Score","Fonti","Data Segnale","Rilevato"];
+  const rows = [headers.join(";")];
+  data.forEach(ev=>{
+    const sources=(ev.sources||[]).map(s=>s.source).join('+');
+    rows.push([
+      ev.ticker, ev.name, ev.signal, ev.score??'',
+      sources, ev.signal_date||'', ev.detected_at
+    ].map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(";"));
+  });
+  const blob=new Blob(["\uFEFF"+rows.join("\n")],{type:"text/csv;charset=utf-8;"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download="sniper_"+new Date().toISOString().slice(0,10)+".csv";
+  a.click();
+}
+
+// ---------------------------------------------------------------------------
+// UTILITY
+// ---------------------------------------------------------------------------
+function h(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function fmtDT(iso){try{return new Date(iso).toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Rome'});}catch{return iso||'—';}}
+function fmtD(s){if(!s)return'—';try{if(/^\d{2}\/\d{2}\/\d{4}/.test(s))return s.slice(0,10);return new Date(s).toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit',year:'numeric'});}catch{return s;}}
+
+load();
+</script>
+</body>
+</html>
