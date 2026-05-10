@@ -1,5 +1,745 @@
 [
   {
+    "ticker": "WAT",
+    "name": "Amundi MSCI Water UCITS ETF Dist",
+    "signal": "BUY",
+    "score": 83.6,
+    "signal_date": "",
+    "price": 355.13,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY2",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 80,
+          "trigger_count": 2,
+          "kama_cross": true,
+          "kama_cross_bars": 1,
+          "atr_rising": true,
+          "obv_divergence": false,
+          "sar_bull": true,
+          "price_action_3up": true,
+          "ret_1w": 2.43,
+          "ret_3m": -15.39,
+          "dist_52w_low": 27.87,
+          "is_min_storico": false,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "USA/Altro",
+          "categoria": "Fineco_AZIONARI"
+        },
+        "price": 355.13
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "WAT|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "XGIN.DE",
+    "name": "XGIN.DE",
+    "signal": "BUY",
+    "score": 76.0,
+    "signal_date": "",
+    "price": 219.59,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY2",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 70,
+          "trigger_count": 2,
+          "kama_cross": true,
+          "kama_cross_bars": 4,
+          "atr_rising": false,
+          "obv_divergence": true,
+          "sar_bull": false,
+          "price_action_3up": false,
+          "ret_1w": -0.41,
+          "ret_3m": -0.29,
+          "dist_52w_low": 3.48,
+          "is_min_storico": true,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": false,
+          "borsa": "Xetra",
+          "categoria": "Lazy"
+        },
+        "price": 219.59
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "XGIN.DE|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "DBMFE.PA",
+    "name": "DBMFE.PA",
+    "signal": "BUY",
+    "score": 67.2,
+    "signal_date": "",
+    "price": 118.4,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY2",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 60,
+          "trigger_count": 2,
+          "kama_cross": false,
+          "kama_cross_bars": null,
+          "atr_rising": true,
+          "obv_divergence": true,
+          "sar_bull": false,
+          "price_action_3up": false,
+          "ret_1w": -3.39,
+          "ret_3m": 3.45,
+          "dist_52w_low": 26.36,
+          "is_min_storico": false,
+          "is_pullback": true,
+          "is_compressione": false,
+          "is_min_relativo": false,
+          "borsa": "Parigi",
+          "categoria": "ATTIVO"
+        },
+        "price": 118.4
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "DBMFE.PA|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "CORN",
+    "name": "WisdomTree Corn",
+    "signal": "BUY",
+    "score": 66.8,
+    "signal_date": "",
+    "price": 18.61,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY2",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 70,
+          "trigger_count": 2,
+          "kama_cross": true,
+          "kama_cross_bars": 3,
+          "atr_rising": true,
+          "obv_divergence": false,
+          "sar_bull": false,
+          "price_action_3up": false,
+          "ret_1w": 1.13,
+          "ret_3m": 4.48,
+          "dist_52w_low": 11.37,
+          "is_min_storico": true,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "USA/Altro",
+          "categoria": "Materie"
+        },
+        "price": 18.61
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "CORN|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "NATO.MI",
+    "name": "NATO.MI",
+    "signal": "BUY",
+    "score": 64.4,
+    "signal_date": "",
+    "price": 16.516,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY2",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 80,
+          "trigger_count": 2,
+          "kama_cross": true,
+          "kama_cross_bars": 1,
+          "atr_rising": false,
+          "obv_divergence": true,
+          "sar_bull": false,
+          "price_action_3up": false,
+          "ret_1w": 2.56,
+          "ret_3m": -5.45,
+          "dist_52w_low": 28.05,
+          "is_min_storico": false,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "Milano",
+          "categoria": "Settoriali"
+        },
+        "price": 16.516
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "NATO.MI|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "AIGG.MI",
+    "name": "AIGG.MI",
+    "signal": "BUY",
+    "score": 59.6,
+    "signal_date": "",
+    "price": 3.0895,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY2",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 70,
+          "trigger_count": 2,
+          "kama_cross": true,
+          "kama_cross_bars": 5,
+          "atr_rising": false,
+          "obv_divergence": true,
+          "sar_bull": false,
+          "price_action_3up": false,
+          "ret_1w": 0.76,
+          "ret_3m": 6.81,
+          "dist_52w_low": 14.17,
+          "is_min_storico": false,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "Milano",
+          "categoria": "Materie"
+        },
+        "price": 3.0895
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "AIGG.MI|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "BTCE.DE",
+    "name": "BTCE.DE",
+    "signal": "BUY",
+    "score": 68.4,
+    "signal_date": "",
+    "price": 60.17,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY3",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 50,
+          "trigger_count": 1,
+          "kama_cross": true,
+          "kama_cross_bars": 1,
+          "atr_rising": false,
+          "obv_divergence": false,
+          "sar_bull": true,
+          "price_action_3up": false,
+          "ret_1w": 6.19,
+          "ret_3m": -19.77,
+          "dist_52w_low": 24.71,
+          "is_min_storico": false,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "Xetra",
+          "categoria": "Tematico"
+        },
+        "price": 60.17
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "BTCE.DE|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "VBTC.DE",
+    "name": "VBTC.DE",
+    "signal": "BUY",
+    "score": 67.6,
+    "signal_date": "",
+    "price": 35.778,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY3",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 50,
+          "trigger_count": 1,
+          "kama_cross": true,
+          "kama_cross_bars": 1,
+          "atr_rising": false,
+          "obv_divergence": false,
+          "sar_bull": true,
+          "price_action_3up": false,
+          "ret_1w": 6.34,
+          "ret_3m": -19.46,
+          "dist_52w_low": 25.0,
+          "is_min_storico": false,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "Xetra",
+          "categoria": "Tematico"
+        },
+        "price": 35.778
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "VBTC.DE|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "CARB.MI",
+    "name": "CARB.MI",
+    "signal": "BUY",
+    "score": 67.0,
+    "signal_date": "",
+    "price": 23.66,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY3",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 45,
+          "trigger_count": 1,
+          "kama_cross": true,
+          "kama_cross_bars": 2,
+          "atr_rising": false,
+          "obv_divergence": false,
+          "sar_bull": true,
+          "price_action_3up": false,
+          "ret_1w": 5.97,
+          "ret_3m": -16.09,
+          "dist_52w_low": 18.18,
+          "is_min_storico": false,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "Milano",
+          "categoria": "Materie"
+        },
+        "price": 23.66
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "CARB.MI|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "CO2.MI",
+    "name": "CO2.MI",
+    "signal": "BUY",
+    "score": 67.0,
+    "signal_date": "",
+    "price": 70.92,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY3",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 45,
+          "trigger_count": 1,
+          "kama_cross": true,
+          "kama_cross_bars": 2,
+          "atr_rising": false,
+          "obv_divergence": false,
+          "sar_bull": true,
+          "price_action_3up": false,
+          "ret_1w": 4.47,
+          "ret_3m": -16.11,
+          "dist_52w_low": 18.34,
+          "is_min_storico": false,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "Milano",
+          "categoria": "Materie"
+        },
+        "price": 70.92
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "CO2.MI|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "SXRP.DE",
+    "name": "SXRP.DE",
+    "signal": "BUY",
+    "score": 66.8,
+    "signal_date": "",
+    "price": 133.98,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY3",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 50,
+          "trigger_count": 1,
+          "kama_cross": true,
+          "kama_cross_bars": 1,
+          "atr_rising": false,
+          "obv_divergence": false,
+          "sar_bull": true,
+          "price_action_3up": false,
+          "ret_1w": 0.73,
+          "ret_3m": -0.2,
+          "dist_52w_low": 1.48,
+          "is_min_storico": true,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": false,
+          "borsa": "Xetra",
+          "categoria": "Tematico"
+        },
+        "price": 133.98
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "SXRP.DE|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "EL.PA",
+    "name": "EL.PA",
+    "signal": "BUY",
+    "score": 66.0,
+    "signal_date": "",
+    "price": 171.4,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY3",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 50,
+          "trigger_count": 1,
+          "kama_cross": true,
+          "kama_cross_bars": 1,
+          "atr_rising": false,
+          "obv_divergence": false,
+          "sar_bull": true,
+          "price_action_3up": false,
+          "ret_1w": 8.26,
+          "ret_3m": -18.97,
+          "dist_52w_low": -9.88,
+          "is_min_storico": false,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "Parigi",
+          "categoria": "EUROGROW"
+        },
+        "price": 171.4
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "EL.PA|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "EIDO",
+    "name": "iShares MSCI Indonesia ETF",
+    "signal": "BUY",
+    "score": 65.2,
+    "signal_date": "",
+    "price": 14.89,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY3",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 50,
+          "trigger_count": 1,
+          "kama_cross": true,
+          "kama_cross_bars": 1,
+          "atr_rising": false,
+          "obv_divergence": false,
+          "sar_bull": true,
+          "price_action_3up": false,
+          "ret_1w": 3.38,
+          "ret_3m": -13.58,
+          "dist_52w_low": -1.52,
+          "is_min_storico": true,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "USA/Altro",
+          "categoria": "Paesi"
+        },
+        "price": 14.89
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "EIDO|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "KRBN.MI",
+    "name": "KRBN.MI",
+    "signal": "BUY",
+    "score": 64.0,
+    "signal_date": "",
+    "price": 24.365,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY3",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 40,
+          "trigger_count": 1,
+          "kama_cross": true,
+          "kama_cross_bars": 5,
+          "atr_rising": false,
+          "obv_divergence": false,
+          "sar_bull": true,
+          "price_action_3up": false,
+          "ret_1w": 9.77,
+          "ret_3m": -13.89,
+          "dist_52w_low": 13.09,
+          "is_min_storico": true,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "Milano",
+          "categoria": "Materie"
+        },
+        "price": 24.365
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "KRBN.MI|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "KRBN",
+    "name": "KraneShares Global Carbon Strategy ETC",
+    "signal": "BUY",
+    "score": 64.0,
+    "signal_date": "",
+    "price": 31.26,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY3",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 40,
+          "trigger_count": 1,
+          "kama_cross": true,
+          "kama_cross_bars": 4,
+          "atr_rising": false,
+          "obv_divergence": false,
+          "sar_bull": true,
+          "price_action_3up": false,
+          "ret_1w": 4.59,
+          "ret_3m": -12.74,
+          "dist_52w_low": 17.05,
+          "is_min_storico": false,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "USA/Altro",
+          "categoria": "Materie"
+        },
+        "price": 31.26
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "KRBN|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "ENTR",
+    "name": "L&G New Energy Commodities ETF USD Acc",
+    "signal": "BUY",
+    "score": 64.0,
+    "signal_date": "",
+    "price": 18.81,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY3",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 40,
+          "trigger_count": 1,
+          "kama_cross": true,
+          "kama_cross_bars": 3,
+          "atr_rising": false,
+          "obv_divergence": false,
+          "sar_bull": true,
+          "price_action_3up": false,
+          "ret_1w": 7.81,
+          "ret_3m": -6.97,
+          "dist_52w_low": 26.07,
+          "is_min_storico": false,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "USA/Altro",
+          "categoria": "Materie"
+        },
+        "price": 18.81
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "ENTR|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "LCCN",
+    "name": "Amundi MSCI China UCITS ETF",
+    "signal": "BUY",
+    "score": 64.0,
+    "signal_date": "",
+    "price": 0.0001,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY3",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 40,
+          "trigger_count": 1,
+          "kama_cross": true,
+          "kama_cross_bars": 3,
+          "atr_rising": false,
+          "obv_divergence": false,
+          "sar_bull": true,
+          "price_action_3up": false,
+          "ret_1w": 850.0,
+          "ret_3m": -57.78,
+          "dist_52w_low": -99.99,
+          "is_min_storico": false,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "USA/Altro",
+          "categoria": "Paesi"
+        },
+        "price": 0.0001
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "LCCN|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "BTC",
+    "name": "Mélanion BTC Equities Universe UCITS ETF EUR",
+    "signal": "BUY",
+    "score": 62.4,
+    "signal_date": "",
+    "price": 35.47,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY3",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 40,
+          "trigger_count": 1,
+          "kama_cross": true,
+          "kama_cross_bars": 3,
+          "atr_rising": false,
+          "obv_divergence": false,
+          "sar_bull": true,
+          "price_action_3up": false,
+          "ret_1w": 5.73,
+          "ret_3m": -18.87,
+          "dist_52w_low": 26.0,
+          "is_min_storico": false,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "USA/Altro",
+          "categoria": "Tematici"
+        },
+        "price": 35.47
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "BTC|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "DSY.PA",
+    "name": "DSY.PA",
+    "signal": "BUY",
+    "score": 61.6,
+    "signal_date": "",
+    "price": 19.545,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY3",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 50,
+          "trigger_count": 1,
+          "kama_cross": true,
+          "kama_cross_bars": 1,
+          "atr_rising": false,
+          "obv_divergence": false,
+          "sar_bull": true,
+          "price_action_3up": false,
+          "ret_1w": 15.25,
+          "ret_3m": -16.72,
+          "dist_52w_low": 22.46,
+          "is_min_storico": false,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "Parigi",
+          "categoria": "EUROGROW"
+        },
+        "price": 19.545
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "DSY.PA|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
+    "ticker": "PRX.AS",
+    "name": "PRX.AS",
+    "signal": "BUY",
+    "score": 58.8,
+    "signal_date": "",
+    "price": 41.01,
+    "sources": [
+      {
+        "source": "minfinder",
+        "raw_signal": "BUY3",
+        "page_url": "https://giorgiogoldoni.github.io/min-finder/",
+        "extra": {
+          "inversion_score": 50,
+          "trigger_count": 1,
+          "kama_cross": true,
+          "kama_cross_bars": 1,
+          "atr_rising": false,
+          "obv_divergence": false,
+          "sar_bull": true,
+          "price_action_3up": false,
+          "ret_1w": 6.68,
+          "ret_3m": -15.29,
+          "dist_52w_low": 6.33,
+          "is_min_storico": false,
+          "is_pullback": false,
+          "is_compressione": false,
+          "is_min_relativo": true,
+          "borsa": "Amsterdam",
+          "categoria": "EUROGROW"
+        },
+        "price": 41.01
+      }
+    ],
+    "detected_at": "2026-05-10T15:18:39.353401+00:00",
+    "id": "PRX.AS|BUY|2026-05-10T15:18:39.353401+00:00"
+  },
+  {
     "ticker": "EZNC",
     "name": "WisdomTree Zinc - EUR Daily Hedged",
     "signal": "EXIT",
