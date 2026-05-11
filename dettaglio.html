@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAPTOR SNIPER — Dettaglio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@700;800&display=swap');
+:root{
+  --bg:#f5f4f0;--surface:#fff;--border:#e0ddd6;--text:#1a1816;
+  --muted:#7a766e;--muted2:#a8a49c;--tag:#eeece7;
+  --buy:#1a6b3a;--buy-bg:#e8f5ed;--exit:#8b1a1a;--exit-bg:#faeaea;
+  --watch:#92610a;--watch-bg:#fef3c7;
+  --verde:#16a34a;--rosso:#dc2626;--grigio:#64748b;
+  --mono:'JetBrains Mono',monospace;--sans:'Syne',sans-serif;
+  --radius:6px;--shadow:0 1px 3px rgba(0,0,0,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:12px;line-height:1.5;}
+
+header{padding:12px 24px;border-bottom:1.5px solid var(--border);display:flex;align-items:center;gap:12px;background:var(--surface);}
+header h1{font-family:var(--sans);font-size:16px;font-weight:800;}
+.hright{margin-left:auto;display:flex;gap:8px;}
+.btn{display:inline-flex;align-items:center;gap:3px;padding:5px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);font-family:var(--mono);font-size:10px;color:var(--text);text-decoration:none;cursor:pointer;transition:all .1s;}
+.btn:hover{background:var(--text);color:#fff;border-color:var(--text);}
+.btn.tv{border-color:#2563eb;color:#2563eb;}
+.btn.tv:hover{background:#2563eb;color:#fff;}
+
+.wrap{max-width:900px;margin:0 auto;padding:16px 20px;}
+
+/* HEADER TICKER */
+.tk-header{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-bottom:12px;display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start;box-shadow:var(--shadow);}
+.tk-main{flex:1;min-width:200px;}
+.tk-ticker{font-size:22px;font-weight:700;letter-spacing:-.3px;}
+.tk-name{font-size:11px;color:var(--muted);margin-top:2px;}
+.tk-pills{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.badge{display:inline-block;padding:3px 8px;border-radius:var(--radius);font-size:10px;font-weight:700;}
+.badge.buy{background:var(--buy-bg);color:var(--buy);}
+.badge.exit{background:var(--exit-bg);color:var(--exit);}
+.badge.watch{background:var(--watch-bg);color:var(--watch);}
+.tv-badge{font-size:9px;padding:2px 6px;border:1px solid #2563eb;border-radius:3px;color:#2563eb;}
+.tk-stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:6px;min-width:320px;}
+.stat{background:var(--tag);border-radius:var(--radius);padding:7px 10px;}
+.stat .sl{font-size:8px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:2px;}
+.stat .sv{font-size:14px;font-weight:700;line-height:1;}
+.stat .sv.pos{color:var(--verde);}
+.stat .sv.neg{color:var(--rosso);}
+.stat .sv.neu{color:var(--muted);}
+
+/* INDICATORI */
+.section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;margin-bottom:10px;box-shadow:var(--shadow);}
+.sec-title{font-size:8.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+.ind-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:6px;}
+.ind{background:var(--tag);border-radius:var(--radius);padding:7px 10px;}
+.ind .il{font-size:8px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:2px;}
+.ind .iv{font-size:13px;font-weight:700;}
+.ind .iv.ok{color:var(--verde);}
+.ind .iv.ko{color:var(--rosso);}
+.ind .iv.neu{color:var(--muted);}
+
+/* REGIME */
+.regime-box{display:flex;gap:10px;flex-wrap:wrap;}
+.reg-item{flex:1;min-width:120px;background:var(--tag);border-radius:var(--radius);padding:8px 10px;}
+.reg-label{font-size:8px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:3px;}
+.reg-val{font-size:12px;font-weight:700;}
+.reg-desc{font-size:9px;color:var(--muted);margin-top:2px;}
+.hurst-bar{height:4px;border-radius:2px;background:var(--border);margin-top:5px;overflow:hidden;}
+.hurst-fill{height:100%;border-radius:2px;}
+
+/* GRAFICO */
+.chart-wrap{position:relative;margin-bottom:10px;}
+canvas{display:block;width:100%;border-radius:var(--radius);}
+.chart-legend{display:flex;gap:10px;flex-wrap:wrap;padding:6px 0;font-size:9px;color:var(--muted);}
+.leg-item{display:flex;align-items:center;gap:4px;}
+.leg-dot{width:10px;height:3px;border-radius:1px;}
+
+/* STORIA SEGNALI */
+.sig-history{display:flex;flex-direction:column;gap:4px;}
+.sig-row{display:grid;grid-template-columns:100px 80px 1fr;gap:8px;align-items:center;padding:5px 8px;background:var(--tag);border-radius:var(--radius);}
+.sig-date{font-size:10px;color:var(--muted);}
+.sig-price{font-size:10px;font-weight:600;text-align:right;}
+
+/* LOADER */
+.loader{text-align:center;padding:60px;color:var(--muted);font-size:13px;}
+.spin{width:20px;height:20px;border:2px solid var(--border);border-top-color:var(--text);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 10px;}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fadein{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.fadein{animation:fadein .3s ease}
+
+@media(max-width:600px){.tk-header{flex-direction:column;}.tk-stats{grid-template-columns:repeat(3,1fr);}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>⚡ SNIPER — Dettaglio</h1>
+  <div class="hright">
+    <a class="btn" href="index.html">← Sniper</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div id="loader" class="loader"><div class="spin"></div>Caricamento...</div>
+  <div id="main" style="display:none" class="fadein"></div>
+</div>
+
+<script>
+// ── TV SYMBOL ─────────────────────────────────────────────────────
+function tvSymbol(ticker) {
+  const map = {'.MI':'MIL','.DE':'XETR','.PA':'EURONEXT','.L':'LSE','.AS':'AMS'};
+  for(const [sfx,ex] of Object.entries(map)) {
+    if(ticker.toUpperCase().endsWith(sfx.toUpperCase())) {
+      return ex+':'+ticker.slice(0,-(sfx.length)).toUpperCase();
+    }
+  }
+  return ticker.toUpperCase();
+}
+
+// ── HURST LABEL ───────────────────────────────────────────────────
+function hurstLabel(v) {
+  if(v==null) return {label:'N/D',desc:'',color:'var(--muted)'};
+  if(v>0.6)  return {label:'Trending',desc:'memoria persistente',color:'var(--verde)'};
+  if(v<0.4)  return {label:'Mean-reverting',desc:'struttura oscillante',color:'var(--rosso)'};
+  return {label:'Neutro',desc:'random walk',color:'var(--muted)'};
+}
+
+function adxLabel(v) {
+  if(v==null) return 'N/D';
+  if(v>40) return 'Molto forte';
+  if(v>25) return 'Forte';
+  if(v>20) return 'Moderato';
+  return 'Debole';
+}
+
+// ── DRAW CHARTS ───────────────────────────────────────────────────
+function drawMainChart(ev) {
+  const cd = ev.chart_data || ev.indicators?.chart || {};
+  const dates   = cd.dates   || [];
+  const closes  = cd.closes  || [];
+  const kama    = cd.kama    || [];
+  const sarBull = cd.sar_bull|| [];
+  const ao      = cd.ao      || [];
+  const rsi     = cd.rsi     || [];
+  const baff    = cd.baff    || [];
+  if(!closes.length) return;
+
+  const canvas = document.getElementById('mainChart');
+  if(!canvas) return;
+  const W = canvas.parentElement.clientWidth || 800;
+  const H = 220; canvas.width=W; canvas.height=H;
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0,0,W,H);
+
+  const n = closes.length;
+  const toX = i => (i/(n-1))*(W-20)+10;
+  const mn = Math.min(...closes.filter(Boolean));
+  const mx = Math.max(...closes.filter(Boolean));
+  const rng = mx-mn||1;
+  const toY = v => H-10-((v-mn)/rng)*(H-20);
+
+  // Grid
+  ctx.strokeStyle='#e0ddd6'; ctx.lineWidth=.5;
+  for(let i=0;i<4;i++){const y=10+(H-20)/3*i;ctx.beginPath();ctx.moveTo(10,y);ctx.lineTo(W-10,y);ctx.stroke();}
+
+  // KAMA
+  ctx.beginPath(); ctx.strokeStyle='#2563eb'; ctx.lineWidth=1.5; let first=true;
+  kama.forEach((v,i)=>{
+    if(v==null){first=true;return;}
+    if(first){ctx.moveTo(toX(i),toY(v));first=false;}else ctx.lineTo(toX(i),toY(v));
+  });
+  ctx.stroke();
+
+  // Prezzo
+  ctx.beginPath(); ctx.strokeStyle='#1a1816'; ctx.lineWidth=1.5; first=true;
+  closes.forEach((v,i)=>{
+    if(v==null){first=true;return;}
+    if(first){ctx.moveTo(toX(i),toY(v));first=false;}else ctx.lineTo(toX(i),toY(v));
+  });
+  ctx.stroke();
+
+  // Segnali BUY/SELL
+  sarBull.forEach((bull,i)=>{
+    if(i===0) return;
+    const prev=sarBull[i-1];
+    if(bull===prev) return;
+    const x=toX(i); const y=toY(closes[i]||mn);
+    ctx.beginPath();
+    ctx.arc(x,y,4,0,Math.PI*2);
+    ctx.fillStyle=bull?'#16a34a':'#dc2626';
+    ctx.fill();
+    // Freccia
+    ctx.fillStyle=bull?'#16a34a':'#dc2626';
+    ctx.font='10px sans-serif';
+    ctx.fillText(bull?'▲':'▼',x-4,bull?y-8:y+14);
+  });
+}
+
+function drawSubChart(canvasId, data, color, fillColor, baseline=0) {
+  const canvas=document.getElementById(canvasId);
+  if(!canvas||!data||!data.length) return;
+  const W=canvas.parentElement.clientWidth||800;
+  const H=60; canvas.width=W; canvas.height=H;
+  const ctx=canvas.getContext('2d');
+  ctx.clearRect(0,0,W,H);
+  const vals=data.filter(v=>v!=null);
+  if(!vals.length) return;
+  const mn=Math.min(...vals,baseline); const mx=Math.max(...vals,baseline);
+  const rng=mx-mn||1;
+  const toX=i=>(i/(data.length-1))*(W-4)+2;
+  const toY=v=>H-2-((v-mn)/rng)*(H-4);
+  const base=toY(baseline);
+  // Bars
+  const bw=Math.max(1,(W-4)/data.length-1);
+  data.forEach((v,i)=>{
+    if(v==null) return;
+    const x=toX(i); const y=toY(v);
+    ctx.fillStyle=v>=baseline?color:fillColor;
+    ctx.fillRect(x-bw/2,Math.min(y,base),bw,Math.abs(y-base)||1);
+  });
+}
+
+function drawRsiChart(canvasId, rsiData) {
+  const canvas=document.getElementById(canvasId);
+  if(!canvas||!rsiData||!rsiData.length) return;
+  const W=canvas.parentElement.clientWidth||800;
+  const H=60; canvas.width=W; canvas.height=H;
+  const ctx=canvas.getContext('2d');
+  ctx.clearRect(0,0,W,H);
+  // Linee 70/50/30
+  [70,50,30].forEach(level=>{
+    const y=H-2-((level-20)/60)*(H-4);
+    ctx.beginPath(); ctx.strokeStyle=level===50?'#a8a49c':'#e0ddd6'; ctx.lineWidth=.5;
+    ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke();
+    ctx.fillStyle='#a8a49c'; ctx.font='8px JetBrains Mono';
+    ctx.fillText(level,2,y-1);
+  });
+  // RSI line
+  ctx.beginPath(); ctx.strokeStyle='#e07b00'; ctx.lineWidth=1.5;
+  let first=true;
+  rsiData.forEach((v,i)=>{
+    if(v==null){first=true;return;}
+    const x=(i/(rsiData.length-1))*(W-4)+2;
+    const y=H-2-((v-20)/60)*(H-4);
+    if(first){ctx.moveTo(x,y);first=false;}else ctx.lineTo(x,y);
+  });
+  ctx.stroke();
+}
+
+// ── RENDER ────────────────────────────────────────────────────────
+async function load() {
+  const params = new URLSearchParams(location.search);
+  const ticker = params.get('ticker');
+  if(!ticker) {
+    document.getElementById('loader').innerHTML='<div style="color:#dc2626">Ticker non specificato. <a href="index.html">← Torna a Sniper</a></div>';
+    return;
+  }
+
+  try {
+    const r = await fetch('signals.json?t='+Date.now());
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const signals = await r.json();
+
+    // Cerca il ticker più recente
+    const ev = signals.find(e=>e.ticker===ticker && e.is_top20) || signals.find(e=>e.ticker===ticker);
+    if(!ev) throw new Error('Ticker '+ticker+' non trovato nei segnali recenti');
+
+    document.getElementById('loader').style.display='none';
+    document.getElementById('main').style.display='block';
+
+    const ind   = ev.indicators || {};
+    const srcs  = ev.sources || [];
+    // Merge extra da tutte le fonti
+    const extra = Object.assign({}, ...srcs.map(s=>s.extra||{}));
+    const tv    = ev.tv_symbol || tvSymbol(ticker);
+
+    const sigClass = ev.signal==='BUY'?'buy':ev.signal==='EXIT'?'exit':'watch';
+    const primaryRaw = srcs[0]?.raw_signal || ev.signal;
+
+    // Prezzo e variazione
+    const price = ev.price || ind.price || null;
+    const chg   = ind.chg_pct ?? extra.chg_pct ?? null;
+    const chgCls = chg==null?'neu':chg>0?'pos':chg<0?'neg':'neu';
+
+    // Score
+    const score = ev.composite_score || 0;
+    const scFonteSrc = srcs.length ? (srcs.map(s=>s.extra?.composite_score||s.extra?.score||ev.score||50).reduce((a,b)=>Math.max(a,b),0)) : (ev.score||50);
+
+    // Indicatori
+    const kama    = ind.kama    ?? extra.kama;
+    const kPct    = ind.k_pct   ?? extra.k_pct;
+    const kTrend  = ind.kama_trend ?? extra.kama_trend ?? '—';
+    const sarBull = ind.sar_bull ?? extra.sar_bull ?? extra.sar_up;
+    const ao      = ind.ao      ?? extra.ao;
+    const rsi     = ind.rsi     ?? extra.rsi;
+    const adx     = ind.adx     ?? extra.adx;
+    const er      = ind.er      ?? extra.er;
+    const baff    = ind.baff    ?? extra.baff;
+    const mom1m   = ind.mom1m   ?? extra.mom1m;
+    const mom3m   = ind.mom3m   ?? extra.mom3m;
+    const mom6m   = ind.mom6m   ?? extra.mom6m;
+    const h60     = ind.hurst_60 ?? extra.hurst_60;
+    const h1y     = ind.hurst_1y ?? extra.hurst_1y;
+    const sigDal  = ind.signal_dal || ev.signal_date || '—';
+    const sigBars = ind.signal_bars ?? extra.signal_bars ?? '—';
+    const tvRating= ind.tv_rating ?? extra.tv_rating ?? '—';
+    const sigHist = ind.signals_history || [];
+
+    const hurst60Info = hurstLabel(h60);
+    const hurst1yInfo = hurstLabel(h1y);
+    const adxLabel_   = adxLabel(adx);
+
+    function fmt(v,dec=2,sfx=''){if(v==null)return '—';return (v>0?'+':'')+Number(v).toFixed(dec)+sfx;}
+    function fmtN(v,dec=2){if(v==null)return '—';return Number(v).toFixed(dec);}
+    function cls(v,inv=false){if(v==null)return 'neu';const pos=inv?v<0:v>0;return pos?'ok':'ko';}
+
+    document.getElementById('main').innerHTML = `
+
+    <!-- HEADER TICKER -->
+    <div class="tk-header">
+      <div class="tk-main">
+        <div class="tk-ticker">${ticker}</div>
+        <div class="tk-name">${ev.name||'—'}</div>
+        <div class="tk-pills">
+          <span class="badge ${sigClass}">${primaryRaw}</span>
+          <span class="badge" style="background:var(--tag);color:var(--muted)">${tvRating}</span>
+          ${srcs.map(s=>`<span style="font-size:8px;padding:2px 5px;background:var(--tag);border-radius:3px">${s.source}</span>`).join('')}
+          <span class="tv-badge">TV: ${tv}</span>
+        </div>
+      </div>
+      <div class="tk-stats">
+        <div class="stat"><span class="sl">Prezzo</span><span class="sv">${price!=null?Number(price).toFixed(4):'—'}</span></div>
+        <div class="stat"><span class="sl">Var% oggi</span><span class="sv ${chgCls}">${fmt(chg,2,'%')}</span></div>
+        <div class="stat"><span class="sl">Score ★</span><span class="sv" style="color:#e07b00">${score}</span></div>
+        <div class="stat"><span class="sl">Mom 1W</span><span class="sv ${cls(ev.ret_1w)}">${fmt(ev.ret_1w,1,'%')}</span></div>
+        <div class="stat"><span class="sl">Mom 4W</span><span class="sv ${cls(ev.ret_4w)}">${fmt(ev.ret_4w,1,'%')}</span></div>
+        <div class="stat"><span class="sl">Mom 12W</span><span class="sv ${cls(ev.ret_12w)}">${fmt(ev.ret_12w,1,'%')}</span></div>
+      </div>
+    </div>
+
+    <!-- INDICATORI TECNICI -->
+    <div class="section">
+      <div class="sec-title">Indicatori tecnici</div>
+      <div class="ind-grid">
+        <div class="ind"><span class="il">ER (Efficiency)</span><span class="iv ${er!=null&&er>50?'ok':'neu'}">${fmtN(er,1)}%</span></div>
+        <div class="ind"><span class="il">KAMA</span><span class="iv">${fmtN(kama,4)}</span></div>
+        <div class="ind"><span class="il">KAMA%</span><span class="iv ${cls(kPct)}">${fmt(kPct,2,'%')}</span></div>
+        <div class="ind"><span class="il">Baff AO</span><span class="iv ${baff!=null&&baff>=3?'ok':baff!=null&&baff<0?'ko':'neu'}">${baff!=null?baff:'—'}</span></div>
+        <div class="ind"><span class="il">SAR</span><span class="iv ${sarBull?'ok':'ko'}">${sarBull?'▲ BULL':'▼ BEAR'}</span></div>
+        <div class="ind"><span class="il">AO</span><span class="iv ${ao!=null&&ao>0?'ok':'ko'}">${fmtN(ao,4)}</span></div>
+        <div class="ind"><span class="il">RSI(14)</span><span class="iv ${rsi!=null&&rsi>50?'ok':rsi!=null&&rsi<30?'ko':'neu'}">${fmtN(rsi,1)}</span></div>
+        <div class="ind"><span class="il">ADX(14)</span><span class="iv ${adx!=null&&adx>25?'ok':'neu'}">${fmtN(adx,1)}</span></div>
+        <div class="ind"><span class="il">Mom 1M</span><span class="iv ${cls(mom1m)}">${fmt(mom1m,2,'%')}</span></div>
+        <div class="ind"><span class="il">Mom 3M</span><span class="iv ${cls(mom3m)}">${fmt(mom3m,2,'%')}</span></div>
+        <div class="ind"><span class="il">Mom 6M</span><span class="iv ${cls(mom6m)}">${fmt(mom6m,2,'%')}</span></div>
+        <div class="ind"><span class="il">Segnale dal</span><span class="iv neu" style="font-size:10px">${sigDal||'—'}</span></div>
+        <div class="ind"><span class="il">Barre</span><span class="iv">${sigBars}</span></div>
+        <div class="ind"><span class="il">Trend KAMA</span>
+          <span class="iv" style="color:${kTrend==='VERDE'?'var(--verde)':kTrend==='ROSSO'?'var(--rosso)':'var(--grigio)'}">${kTrend}</span></div>
+      </div>
+    </div>
+
+    <!-- REGIME DI MERCATO -->
+    <div class="section">
+      <div class="sec-title">📊 Regime di mercato</div>
+      <div class="regime-box">
+        <div class="reg-item">
+          <span class="reg-label">Memoria recente (60g)</span>
+          <span class="reg-val" style="color:${hurst60Info.color}">${h60!=null?h60:'—'}</span>
+          <span class="reg-desc">${hurst60Info.label}${hurst60Info.desc?' — '+hurst60Info.desc:''}</span>
+          ${h60!=null?`<div class="hurst-bar"><div class="hurst-fill" style="width:${h60*100}%;background:${hurst60Info.color}"></div></div>`:''}
+        </div>
+        <div class="reg-item">
+          <span class="reg-label">Carattere annuale (1y)</span>
+          <span class="reg-val" style="color:${hurst1yInfo.color}">${h1y!=null?h1y:'—'}</span>
+          <span class="reg-desc">${hurst1yInfo.label}${hurst1yInfo.desc?' — '+hurst1yInfo.desc:''}</span>
+        </div>
+        <div class="reg-item">
+          <span class="reg-label">ADX(14) — forza attuale</span>
+          <span class="reg-val" style="color:${adx!=null&&adx>25?'var(--verde)':'var(--muted)'}">${fmtN(adx,1)}</span>
+          <span class="reg-desc">${adxLabel_}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRAFICO PRINCIPALE -->
+    <div class="section">
+      <div class="sec-title">Prezzo + KAMA + Segnali</div>
+      <div class="chart-wrap"><canvas id="mainChart" height="220"></canvas></div>
+      <div class="chart-legend">
+        <div class="leg-item"><div class="leg-dot" style="background:#1a1816"></div>Prezzo</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#2563eb"></div>KAMA</div>
+        <div class="leg-item"><span style="color:#16a34a">▲</span> BUY</div>
+        <div class="leg-item"><span style="color:#dc2626">▼</span> SELL</div>
+      </div>
+      <div class="chart-wrap" style="margin-top:4px">
+        <div style="font-size:8px;color:var(--muted);margin-bottom:3px">BAFF</div>
+        <canvas id="baffChart" height="60"></canvas>
+      </div>
+      <div class="chart-wrap" style="margin-top:4px">
+        <div style="font-size:8px;color:var(--muted);margin-bottom:3px">AO</div>
+        <canvas id="aoChart" height="60"></canvas>
+      </div>
+      <div class="chart-wrap" style="margin-top:4px">
+        <div style="font-size:8px;color:var(--muted);margin-bottom:3px">RSI(14)</div>
+        <canvas id="rsiChart" height="60"></canvas>
+      </div>
+    </div>
+
+    <!-- LINK -->
+    <div class="section">
+      <div class="sec-title">Apri su</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn tv" href="https://www.tradingview.com/chart/?symbol=${encodeURIComponent(tv)}" target="_blank" rel="noopener">📈 TradingView (${tv})</a>
+        ${srcs.map(s=>`<a class="btn" href="${s.page_url}?ticker=${encodeURIComponent(ticker)}" target="_blank" rel="noopener">↗ ${s.source}</a>`).join('')}
+      </div>
+    </div>
+
+    <!-- STORIA SEGNALI -->
+    ${sigHist.length?`
+    <div class="section">
+      <div class="sec-title">Storia segnali</div>
+      <div class="sig-history">
+        ${sigHist.map(sh=>{
+          const sc2=sh.signal==='BUY'?'buy':sh.signal==='SELL'||sh.signal==='EXIT'?'exit':'watch';
+          return `<div class="sig-row">
+            <span class="sig-date">${sh.date}</span>
+            <span class="badge ${sc2}" style="font-size:9px">${sh.signal}</span>
+            <span class="sig-price">${Number(sh.price).toFixed(4)}</span>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>`:''}
+    `;
+
+    // Disegna grafici
+    const cd = ev.chart_data || {};
+    setTimeout(()=>{
+      drawMainChart(ev);
+      if(cd.baff) drawSubChart('baffChart', cd.baff, '#16a34a', '#dc2626', 0);
+      if(cd.ao)   drawSubChart('aoChart', cd.ao, '#16a34a', '#dc2626', 0);
+      if(cd.rsi)  drawRsiChart('rsiChart', cd.rsi);
+    }, 80);
+
+  } catch(e) {
+    document.getElementById('loader').innerHTML=`<div style="color:#dc2626">Errore: ${e.message}<br><a href="index.html" style="color:inherit">← Torna a Sniper</a></div>`;
+  }
+}
+
+window.addEventListener('load', load);
+</script>
+</body>
+</html>
