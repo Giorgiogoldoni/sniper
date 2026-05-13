@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
-RAPTOR SNIPER v3.0
+RAPTOR SNIPER v3.1
 ══════════════════
 - Score composito con momentum reale
 - Top 40 → arricchimento yfinance → top 20 definitivi con is_top20=True
 - Indicatori tecnici completi (KAMA, SAR, AO, RSI, ADX, Baff, Hurst)
 - Storia segnali e grafico per dettaglio.html
 - Suffisso borsa per TradingView
+- Fonte Raptor Leva (LONG_CONF/LONG_EARLY → BUY, USCITA/STOP → EXIT)
 """
 
 import json, os, sys, time, urllib.request, math
@@ -44,6 +45,7 @@ SOURCES = {
     "geografia":  {"url":"https://giorgiogoldoni.github.io/raptor-geografia/geografia.json","page_url":"https://giorgiogoldoni.github.io/raptor-geografia/","parser":"geografia"},
     "scannerv2":  {"url":"https://giorgiogoldoni.github.io/scannerv2/data/signals.json",   "page_url":"https://giorgiogoldoni.github.io/scannerv2/",     "parser":"scannerv2"},
     "minfinder":  {"url":"https://giorgiogoldoni.github.io/min-finder/data/min_finder_live.json","page_url":"https://giorgiogoldoni.github.io/min-finder/","parser":"minfinder"},
+    "leva":       {"url":"https://giorgiogoldoni.github.io/raptor-leva/raptor_leva.json",  "page_url":"https://giorgiogoldoni.github.io/raptor-leva/",   "parser":"leva"},
 }
 
 BUY_SIGNALS  = {"BUY1","BUY2","BUY3","LONG_FORTE"}
@@ -90,15 +92,15 @@ def normalize_signal(raw):
 
 def buy_level_score(raw) -> int:
     s = (raw or "").upper().strip()
-    if s in {"BUY1","LONG_FORTE"}: return 100
-    if s == "BUY2": return 66
-    if s == "BUY3": return 33
-    if s in EXIT_SIGNALS: return 50
+    if s in {"BUY1","LONG_FORTE","LONG_CONF"}: return 100
+    if s in {"BUY2","LONG_EARLY"}:             return 66
+    if s == "BUY3":                            return 33
+    if s in EXIT_SIGNALS:                      return 50
     return 33
 
 def fetch_json(url):
     try:
-        req = urllib.request.Request(url, headers={"User-Agent":"RaptorSniper/3.0"})
+        req = urllib.request.Request(url, headers={"User-Agent":"RaptorSniper/3.1"})
         with urllib.request.urlopen(req, timeout=15) as r:
             return json.loads(r.read().decode())
     except Exception as e:
@@ -198,26 +200,19 @@ def parse_tematici(data):
 
 def parse_geografia(data):
     out=[]
-    for gname,group in data.items():
-        if not isinstance(group,dict): continue
-        seen={i.get("ticker") for i in group.get("positions",[])}
-        for item in group.get("positions",[]):
-            raw=item.get("signal",item.get("current_level",""))
-            sig=normalize_signal(raw)
+    # v6: struttura {paesi:{all:[],watchlist:[]}, new_area:{all:[],watchlist:[]}}
+    for gname, group in data.items():
+        if not isinstance(group, dict): continue
+        items_list = group.get("all", group.get("positions", []))
+        for item in items_list:
+            raw = item.get("buy_level", item.get("signal", item.get("current_level", "")))
+            sig = normalize_signal(raw)
             if not sig: continue
-            e=ex(item,GEO_EX); e["group"]=gname
+            e = ex(item, GEO_EX); e["group"] = gname
             out.append({"ticker":item.get("ticker",""),"name":item.get("name",""),"signal":sig,
-                        "raw_signal":raw,"score":item.get("score"),"signal_date":item.get("entry_date",""),
-                        "price":item.get("current_price"),"extra":e})
-        for item in group.get("qualified",[]):
-            if item.get("ticker") in seen: continue
-            raw=item.get("signal",item.get("buy_level",""))
-            sig=normalize_signal(raw)
-            if not sig: continue
-            e=ex(item,GEO_EX); e["group"]=gname
-            out.append({"ticker":item.get("ticker",""),"name":item.get("name",""),"signal":sig,
-                        "raw_signal":raw,"score":item.get("score"),"signal_date":item.get("entry_date",item.get("level_ts","")),
-                        "price":None,"extra":e})
+                        "raw_signal":raw,"score":item.get("score"),
+                        "signal_date":item.get("level_ts",item.get("entry_date","")),
+                        "price":item.get("price",item.get("current_price")),"extra":e})
     return out
 
 def parse_scannerv2(data):
@@ -243,56 +238,107 @@ def parse_minfinder(data):
                     "signal_date":"","price":item.get("price"),"extra":ex(item,MIN_EX)})
     return out
 
+def parse_leva(data):
+    """Parser per raptor_leva.json — usa campo 'zona' per determinare BUY/EXIT."""
+    out  = []
+    ZONE_BUY  = {"LONG_CONF", "LONG_EARLY"}
+    ZONE_EXIT = {"USCITA", "STOP"}
+    for item in data.get("data", []):
+        zona = item.get("zona", "")
+        if zona in ZONE_BUY:
+            sig = "BUY"
+        elif zona in ZONE_EXIT:
+            sig = "EXIT"
+        else:
+            continue  # GRIGIA, WATCH, ATTENZIONE → scarta
+        score = item.get("score")
+        # Filtro qualità minimo per BUY
+        if sig == "BUY" and (score is None or score < 65):
+            continue
+        yahoo = item.get("yahoo", item.get("ticker", ""))
+        if not yahoo:
+            continue
+        out.append({
+            "ticker":      yahoo,
+            "name":        item.get("nome", ""),
+            "signal":      sig,
+            "raw_signal":  zona,
+            "score":       score,
+            "signal_date": item.get("entryDate", ""),
+            "price":       item.get("prezzo"),
+            "extra": {
+                "er":        item.get("er"),
+                "baff":      item.get("baff"),
+                "ao":        item.get("ao"),
+                "rsi":       item.get("rsi"),
+                "sar_bull":  item.get("sarBull"),
+                "vol_ratio": item.get("volRatio"),
+                "provider":  item.get("provider", ""),
+                "zona":      zona,
+                "ret_1w":    item.get("perfSett"),
+                "ret_4w":    item.get("perfMese"),
+                "kama_fast": item.get("kama_fast"),
+                "kama_slow": item.get("kama_slow"),
+            }
+        })
+    return out
+
 PARSERS = {
-    "chart":parse_chart,"one":parse_one,"alert":parse_alert,
-    "settoriali":parse_settoriali,"tematici":parse_tematici,"geografia":parse_geografia,
-    "scannerv2":parse_scannerv2,"minfinder":parse_minfinder,
+    "chart":      parse_chart,
+    "one":        parse_one,
+    "alert":      parse_alert,
+    "settoriali": parse_settoriali,
+    "tematici":   parse_tematici,
+    "geografia":  parse_geografia,
+    "scannerv2":  parse_scannerv2,
+    "minfinder":  parse_minfinder,
+    "leva":       parse_leva,
 }
 
 # ── SCORE COMPOSITO ───────────────────────────────────────────────
 def composite_score(ev, slot="") -> float:
-    sources  = ev.get("sources",[])
-    n_src    = len(sources)
-    score_raw= ev.get("score") or 50
+    sources     = ev.get("sources", [])
+    n_src       = len(sources)
+    score_raw   = ev.get("score") or 50
     primary_raw = sources[0].get("raw_signal","BUY3") if sources else ev.get("raw_signal","BUY3")
 
     s_fonte  = min(100, float(score_raw))
     s_buy    = buy_level_score(primary_raw)
-    s_nfonti = min(100, n_src*33)
+    s_nfonti = min(100, n_src * 33)
 
     r1w = ev.get("ret_1w")
     r4w = ev.get("ret_4w")
     # Normalizza momentum: -20%→0, 0%→50, +20%→100
-    s_mom1w = min(100,max(0,(r1w+20)*2.5)) if r1w is not None else 50
-    s_mom4w = min(100,max(0,(r4w+30)*100/60)) if r4w is not None else 50
+    s_mom1w = min(100, max(0, (r1w + 20) * 2.5))   if r1w is not None else 50
+    s_mom4w = min(100, max(0, (r4w + 30) * 100/60)) if r4w is not None else 50
 
     cs = s_fonte*0.35 + s_buy*0.20 + s_nfonti*0.20 + s_mom1w*0.15 + s_mom4w*0.10
     if slot in SLOT_RELIABLE: cs += 5
-    return round(cs,1)
+    return round(cs, 1)
 
 # ── MERGE CROSS-REPO ─────────────────────────────────────────────
 def merge_cross_repo(raw_items):
-    groups={}
-    for source,item,page_url in raw_items:
-        key=(item["ticker"],item["signal"])
+    groups = {}
+    for source, item, page_url in raw_items:
+        key = (item["ticker"], item["signal"])
         if key not in groups:
-            groups[key]={"ticker":item["ticker"],"name":item.get("name",""),
-                         "signal":item["signal"],"score":item.get("score"),
-                         "signal_date":item.get("signal_date",""),"price":item.get("price"),
-                         "sources":[]}
-        g=groups[key]
-        if not g["name"] and item.get("name"): g["name"]=item["name"]
-        if item.get("score") is not None and (g["score"] is None or item["score"]>g["score"]): g["score"]=item["score"]
-        if item.get("signal_date") and not g["signal_date"]: g["signal_date"]=item["signal_date"]
-        if item.get("price") is not None and g["price"] is None: g["price"]=item["price"]
+            groups[key] = {"ticker":item["ticker"],"name":item.get("name",""),
+                           "signal":item["signal"],"score":item.get("score"),
+                           "signal_date":item.get("signal_date",""),"price":item.get("price"),
+                           "sources":[]}
+        g = groups[key]
+        if not g["name"] and item.get("name"):                   g["name"]        = item["name"]
+        if item.get("score") is not None and (g["score"] is None or item["score"] > g["score"]):
+                                                                  g["score"]       = item["score"]
+        if item.get("signal_date") and not g["signal_date"]:     g["signal_date"] = item["signal_date"]
+        if item.get("price") is not None and g["price"] is None: g["price"]       = item["price"]
         g["sources"].append({"source":source,"raw_signal":item.get("raw_signal",item["signal"]),
-                              "page_url":page_url,"extra":item.get("extra",{}),"price":item.get("price")})
+                             "page_url":page_url,"extra":item.get("extra",{}),"price":item.get("price")})
     return list(groups.values())
 
 # ── FETCH + INDICATORI ────────────────────────────────────────────
 def enrich_top(events, slot):
     """Scarica OHLCV 6 mesi e calcola indicatori per i top TOP_ENRICH."""
-    # Score provvisorio
     for ev in events:
         ev["composite_score"] = composite_score(ev, slot)
 
@@ -315,10 +361,8 @@ def enrich_top(events, slot):
                 highs  = hist["High"].dropna().values.tolist()
                 lows   = hist["Low"].dropna().values.tolist()
                 dates  = [str(d.date()) for d in hist["Close"].dropna().index]
-                daily_data[tk] = {
-                    "closes": closes, "highs": highs, "lows": lows, "dates": dates,
-                    "ticker_used": suffix,
-                }
+                daily_data[tk] = {"closes":closes,"highs":highs,"lows":lows,
+                                  "dates":dates,"ticker_used":suffix}
                 print(f"    ✓ {tk} ({suffix}) {len(closes)} barre")
                 break
             except Exception:
@@ -327,40 +371,34 @@ def enrich_top(events, slot):
             print(f"    ⚠ {tk} — non trovato")
         time.sleep(0.15)
 
-    # Calcola indicatori e aggiorna score con momentum reale
     for ev in top40:
         tk = ev["ticker"]
         if tk not in daily_data:
             continue
         d = daily_data[tk]
-        closes=d["closes"]; highs=d["highs"]; lows=d["lows"]; dates=d["dates"]
-        n=len(closes)
-        # Momentum
-        r1w = (closes[-1]/closes[-6]-1)*100  if n>6  else None
-        r4w = (closes[-1]/closes[-21]-1)*100 if n>21 else None
-        r12w= (closes[-1]/closes[-63]-1)*100 if n>63 else None
-        ev["ret_1w"]  = round(r1w,2)  if r1w  is not None else None
-        ev["ret_4w"]  = round(r4w,2)  if r4w  is not None else None
-        ev["ret_12w"] = round(r12w,2) if r12w is not None else None
-        if not ev.get("price"): ev["price"] = round(float(closes[-1]),4)
+        closes = d["closes"]; highs = d["highs"]; lows = d["lows"]; dates = d["dates"]
+        n = len(closes)
+        r1w  = (closes[-1]/closes[-6]  - 1)*100 if n > 6  else None
+        r4w  = (closes[-1]/closes[-21] - 1)*100 if n > 21 else None
+        r12w = (closes[-1]/closes[-63] - 1)*100 if n > 63 else None
+        ev["ret_1w"]  = round(r1w,  2) if r1w  is not None else None
+        ev["ret_4w"]  = round(r4w,  2) if r4w  is not None else None
+        ev["ret_12w"] = round(r12w, 2) if r12w is not None else None
+        if not ev.get("price"): ev["price"] = round(float(closes[-1]), 4)
 
-        # Ricalcola score con momentum reale
         ev["composite_score"] = composite_score(ev, slot)
 
-        # Indicatori completi
         if compute_all:
             try:
                 ind = compute_all(dates, closes, highs, lows)
-                ev["indicators"] = {k:v for k,v in ind.items() if k!="chart"}
-                ev["chart_data"] = ind.get("chart",{})
+                ev["indicators"] = {k:v for k,v in ind.items() if k != "chart"}
+                ev["chart_data"] = ind.get("chart", {})
             except Exception as ex_err:
                 print(f"    [WARN] indicatori {tk}: {ex_err}")
 
-        # TradingView symbol
         ev["tv_symbol"] = tv_symbol(tk)
 
-    # Top 20 definitivi
-    sorted_final = sorted(events, key=lambda e: e["composite_score"], reverse=True)
+    sorted_final  = sorted(events, key=lambda e: e["composite_score"], reverse=True)
     top20_tickers = {e["ticker"] for e in sorted_final[:TOP_FINAL]}
     for ev in events:
         ev["is_top20"] = ev["ticker"] in top20_tickers
@@ -375,76 +413,92 @@ def load_history():
     except Exception: return []
 
 def save_history(events):
-    with open(SIGNALS_FILE,"w") as f:
-        json.dump(events,f,ensure_ascii=False,indent=2)
+    with open(SIGNALS_FILE, "w") as f:
+        json.dump(events, f, ensure_ascii=False, indent=2)
 
 def prune_old(events, now):
-    cutoff=now-timedelta(days=MAX_DAYS)
-    return [e for e in events if datetime.fromisoformat(e["detected_at"])>=cutoff]
+    cutoff = now - timedelta(days=MAX_DAYS)
+    return [e for e in events if datetime.fromisoformat(e["detected_at"]) >= cutoff]
 
 # ── MAIN ──────────────────────────────────────────────────────────
 def run():
     now     = datetime.now(timezone.utc)
     now_str = now.isoformat()
     slot    = detect_slot(now)
-    print(f"[SNIPER v3.0] {now_str} — Slot: {slot}")
+    print(f"[SNIPER v3.1] {now_str} — Slot: {slot}")
 
     history = load_history()
     history = prune_old(history, now)
 
-    cutoff_24h = now-timedelta(hours=24)
+    cutoff_24h  = now - timedelta(hours=24)
     recent_keys = set()
     for e in history:
-        detected=datetime.fromisoformat(e["detected_at"])
-        if detected>=cutoff_24h:
-            for s in e.get("sources",[]):
+        detected = datetime.fromisoformat(e["detected_at"])
+        if detected >= cutoff_24h:
+            for s in e.get("sources", []):
                 recent_keys.add(f"{s['source']}|{e['ticker']}|{e['signal']}")
 
     # Raccoglie segnali
-    raw_new=[]
-    for src_name,src_cfg in SOURCES.items():
+    raw_new = []
+    for src_name, src_cfg in SOURCES.items():
         print(f"  Fetching {src_name}...")
-        data=fetch_json(src_cfg["url"])
+        data = fetch_json(src_cfg["url"])
         if data is None: continue
-        try: items=PARSERS[src_cfg["parser"]](data)
-        except Exception as ex_err: print(f"  [ERR] {src_name}: {ex_err}"); continue
+        try:
+            items = PARSERS[src_cfg["parser"]](data)
+        except Exception as ex_err:
+            print(f"  [ERR] {src_name}: {ex_err}"); continue
         print(f"  → {len(items)} segnali")
         for item in items:
             if not item["ticker"]: continue
-            key=f"{src_name}|{item['ticker']}|{item['signal']}"
+            key = f"{src_name}|{item['ticker']}|{item['signal']}"
             if key in recent_keys: continue
             recent_keys.add(key)
-            raw_new.append((src_name,item,src_cfg["page_url"]))
+            raw_new.append((src_name, item, src_cfg["page_url"]))
             print(f"    + {item['ticker']} {item['signal']} [{src_name}]")
 
     merged = merge_cross_repo(raw_new)
 
-    # Aggiungi metadata
     for ev in merged:
-        ev["detected_at"] = now_str
-        ev["slot"]        = slot
-        ev["id"]          = f"{ev['ticker']}|{ev['signal']}|{now_str}"
-        ev["is_top20"]    = False
+        ev["detected_at"]     = now_str
+        ev["slot"]            = slot
+        ev["id"]              = f"{ev['ticker']}|{ev['signal']}|{now_str}"
+        ev["is_top20"]        = False
         ev["composite_score"] = 0
 
-    # Arricchimento top 40 con yfinance + indicatori
     if merged:
         merged = enrich_top(merged, slot)
 
-    # Merge con storico
+    # Merge con storico — deduplica stesso ticker+segnale nello stesso giorno CET
     all_events = merged + history
     all_events = prune_old(all_events, now)
-    all_events.sort(key=lambda e: e["composite_score"], reverse=True)
 
-    save_history(all_events)
+    # Deduplica: per stesso ticker+segnale nello stesso giorno CET, tieni solo il più recente
+    seen_day = {}
+    deduped  = []
+    for ev in sorted(all_events, key=lambda e: e["detected_at"], reverse=True):
+        try:
+            from datetime import timezone as tz
+            dt  = datetime.fromisoformat(ev["detected_at"])
+            cet = dt.astimezone(__import__('zoneinfo').ZoneInfo("Europe/Rome"))
+            day_key = f"{cet.date()}|{ev['ticker']}|{ev['signal']}"
+        except Exception:
+            day_key = f"{ev['detected_at'][:10]}|{ev['ticker']}|{ev['signal']}"
+        if day_key not in seen_day:
+            seen_day[day_key] = True
+            deduped.append(ev)
+
+    deduped.sort(key=lambda e: e["composite_score"], reverse=True)
+    save_history(deduped)
+
     n_top20 = sum(1 for e in merged if e.get("is_top20"))
-    print(f"\n[SNIPER] {len(all_events)} totali, {len(merged)} nuovi, {n_top20} top20")
+    print(f"\n[SNIPER] {len(deduped)} totali (deduplicati), {len(merged)} nuovi, {n_top20} top20")
     if merged:
         print("  Top 5:")
-        for ev in sorted(merged,key=lambda e:e["composite_score"],reverse=True)[:5]:
-            srcs="+".join(s["source"] for s in ev.get("sources",[]))
-            mom=f" 1W:{ev.get('ret_1w','?')}%" if ev.get('ret_1w') is not None else ""
+        for ev in sorted(merged, key=lambda e: e["composite_score"], reverse=True)[:5]:
+            srcs = "+".join(s["source"] for s in ev.get("sources", []))
+            mom  = f" 1W:{ev.get('ret_1w','?')}%" if ev.get("ret_1w") is not None else ""
             print(f"    [{ev['composite_score']}★] {ev['ticker']} {ev['signal']} [{srcs}]{mom}")
 
-if __name__=="__main__":
+if __name__ == "__main__":
     run()
