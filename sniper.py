@@ -311,12 +311,20 @@ def composite_score(ev, slot="") -> float:
     score_raw   = ev.get("score") or 50
     primary_raw = sources[0].get("raw_signal","BUY3") if sources else ev.get("raw_signal","BUY3")
 
-    s_fonte  = min(100, float(score_raw))
+    try:
+        score_raw_f = float(score_raw)
+        if score_raw_f != score_raw_f:  # NaN check (NaN != NaN è True)
+            score_raw_f = 50.0
+    except (TypeError, ValueError):
+        score_raw_f = 50.0
+    s_fonte  = min(100, score_raw_f)
     s_buy    = buy_level_score(primary_raw)
     s_nfonti = min(100, n_src * 33)
 
     r1w = ev.get("ret_1w")
     r2w = ev.get("ret_2w")
+    if isinstance(r1w, float) and r1w != r1w: r1w = None  # NaN -> None
+    if isinstance(r2w, float) and r2w != r2w: r2w = None  # NaN -> None
 
     # Momentum 1W: picca intorno a +10%, non premia chi ha già corso molto
     # -20%→0, 0%→40, +10%→80, +20%→85 (cap soft oltre +15%)
@@ -439,7 +447,7 @@ def load_history():
 
 def save_history(events):
     with open(SIGNALS_FILE, "w") as f:
-        json.dump(events, f, ensure_ascii=False, indent=2)
+        json.dump(events, f, ensure_ascii=False, indent=2, allow_nan=False, default=lambda o: None)
 
 def prune_old(events, now):
     cutoff = now - timedelta(days=MAX_DAYS)
