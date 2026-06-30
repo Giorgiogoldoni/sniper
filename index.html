@@ -203,10 +203,14 @@ main{padding:14px 28px;}
     <span class="badge-count" id="top20-count">—</span>
   </button>
   <button class="top20-btn" id="fresh-btn" onclick="toggleFresh()" style="background:#d97706;box-shadow:0 2px 8px rgba(217,119,6,.3)">
-    🔥 Freschi &amp; Forti
+    🔥 Rassegna Mattutina
     <span class="badge-count" id="fresh-count">—</span>
   </button>
-  <span class="top20-desc">I migliori segnali per score composito · con grafici dettaglio</span>
+  <span class="slot-label" style="margin-left:6px">Finestra</span>
+  <button class="slot-btn" data-window="24" onclick="setFreshWindow(24,this)">24h</button>
+  <button class="slot-btn active-slot" data-window="48" onclick="setFreshWindow(48,this)">48h</button>
+  <button class="slot-btn" data-window="72" onclick="setFreshWindow(72,this)">72h</button>
+  <span class="top20-desc">Multi-fonte in evidenza · poi i migliori per score</span>
 </div>
 
 <!-- SLOT -->
@@ -283,7 +287,7 @@ main{padding:14px 28px;}
 
 <script>
 const SIGNALS_URL = 'signals.json';
-let all=[], fSig='all', fSrc='all', fSlot='all', fSort='composite', fTop20=false, fFresh=false;
+let all=[], fSig='all', fSrc='all', fSlot='all', fSort='composite', fTop20=false, fFresh=false, fFreshHours=48;
 
 // ── TIMEZONE CET ──────────────────────────────────────────────────
 function todayCET() {
@@ -437,8 +441,16 @@ function toggleFresh() {
   const fc = document.getElementById('fresh-count');
   const n = fc ? fc.textContent : '';
   btn.innerHTML = fFresh
-    ? '🔥 Freschi & Forti attivo — disattiva <span class="badge-count">'+n+'</span>'
-    : '🔥 Freschi & Forti <span class="badge-count" id="fresh-count">'+n+'</span>';
+    ? '🔥 Rassegna Mattutina attiva — disattiva <span class="badge-count">'+n+'</span>'
+    : '🔥 Rassegna Mattutina <span class="badge-count" id="fresh-count">'+n+'</span>';
+  render();
+}
+
+function setFreshWindow(hours, btn) {
+  fFreshHours = hours;
+  document.querySelectorAll('[data-window]').forEach(b=>b.classList.remove('active-slot'));
+  btn.classList.add('active-slot');
+  if (!fFresh) { fFresh = true; document.getElementById('fresh-btn').classList.add('active'); }
   render();
 }
 
@@ -490,16 +502,16 @@ function render() {
     }
     data = dedup;
   }
-  // Freschi & Forti: BUY nelle ultime 48h CET, deduplicati per ticker, per data+score
+  // Rassegna Mattutina: BUY nella finestra selezionata (24/48/72h), multi-fonte in evidenza, poi per score
   if(fFresh) {
-    const now48 = new Date(Date.now() - 48*60*60*1000);
+    const cutoff = new Date(Date.now() - fFreshHours*60*60*1000);
     const seen = new Set(); const dedup = [];
     for(const ev of [...data]
-        .filter(e => e.signal==='BUY' && new Date(e.detected_at) >= now48)
+        .filter(e => e.signal==='BUY' && new Date(e.detected_at) >= cutoff)
         .sort((a,b) => {
-          // prima per data (più recenti), poi per score
-          const dd = new Date(b.detected_at) - new Date(a.detected_at);
-          if(dd !== 0) return dd;
+          // prima multi-fonte (più fonti = più in alto), poi per score composito
+          const na = (a.sources||[]).length, nb = (b.sources||[]).length;
+          if(nb !== na) return nb - na;
           return (b.composite_score||0) - (a.composite_score||0);
         })) {
       if(!seen.has(ev.ticker)) { seen.add(ev.ticker); dedup.push(ev); }
@@ -524,6 +536,7 @@ function buildRow(ev,idx) {
   const sigDate=fmtD(ev.signal_date);
   const detDate=fmtD2(ev.detected_at);
   const srcTags=sources.map(s=>`<span class="stag">${h(s.source)}</span>`).join('');
+  const multiSrcBadge = sources.length>=2 ? `<span style="background:#fef3c7;color:#92400e;font-size:8px;font-weight:800;padding:1px 6px;border-radius:8px;margin-right:4px;border:1px solid #fde68a">🎯 ${sources.length} FONTI</span>` : '';
   const slot=ev.slot||'';
   const slotCls={'09:15':'sb-0915','12:00':'sb-1200','16:00':'sb-1600','18:30':'sb-1830'}[slot]||'';
   const slotBadge=slot?`<span class="slot-badge ${slotCls}">${slot}</span>`:'';
