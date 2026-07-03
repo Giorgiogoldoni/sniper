@@ -408,10 +408,20 @@ def enrich_top(events, slot):
         d = daily_data[tk]
         closes = d["closes"]; highs = d["highs"]; lows = d["lows"]; dates = d["dates"]
         n = len(closes)
-        r1w  = (closes[-1]/closes[-6]  - 1)*100 if n > 6  else None
-        r2w  = (closes[-1]/closes[-11] - 1)*100 if n > 11 else None
-        r4w  = (closes[-1]/closes[-21] - 1)*100 if n > 21 else None
-        r12w = (closes[-1]/closes[-63] - 1)*100 if n > 63 else None
+        # Sanitizza closes: rimuovi NaN prima di calcolare
+        import math
+        closes_clean = [c for c in closes if c is not None and not (isinstance(c, float) and math.isnan(c))]
+        nc = len(closes_clean)
+        def safe_ret(arr, steps):
+            if len(arr) <= steps: return None
+            try:
+                v = (arr[-1]/arr[-steps] - 1)*100
+                return None if math.isnan(v) or math.isinf(v) else v
+            except Exception: return None
+        r1w  = safe_ret(closes_clean, 6)
+        r2w  = safe_ret(closes_clean, 11)
+        r4w  = safe_ret(closes_clean, 21)
+        r12w = safe_ret(closes_clean, 63)
         ev["ret_1w"]  = round(r1w,  2) if r1w  is not None else None
         ev["ret_2w"]  = round(r2w,  2) if r2w  is not None else None
         ev["ret_4w"]  = round(r4w,  2) if r4w  is not None else None
@@ -445,9 +455,22 @@ def load_history():
         with open(SIGNALS_FILE) as f: return json.load(f)
     except Exception: return []
 
+def sanitize_for_json(obj):
+    """Ricorsivamente sostituisce NaN/Inf con None."""
+    import math
+    if isinstance(obj, float):
+        if math.isnan(obj) or math.isinf(obj): return None
+        return obj
+    if isinstance(obj, dict):
+        return {k: sanitize_for_json(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [sanitize_for_json(v) for v in obj]
+    return obj
+
 def save_history(events):
+    clean = sanitize_for_json(events)
     with open(SIGNALS_FILE, "w") as f:
-        json.dump(events, f, ensure_ascii=False, indent=2, allow_nan=False, default=lambda o: None)
+        json.dump(clean, f, ensure_ascii=False, indent=2, allow_nan=False)
 
 def prune_old(events, now):
     cutoff = now - timedelta(days=MAX_DAYS)
