@@ -468,13 +468,33 @@ def sanitize_for_json(obj):
     return obj
 
 def save_history(events):
+    import os
+    from datetime import datetime, timedelta, timezone
     clean = sanitize_for_json(events)
+
+    # 1. Write atomico signals.json (storico completo)
     tmp = SIGNALS_FILE + ".tmp"
     with open(tmp, "w") as f:
         json.dump(clean, f, ensure_ascii=False, indent=2, allow_nan=False)
-    # Write atomico: rinomina solo se il dump è andato a buon fine
-    import os
     os.replace(tmp, SIGNALS_FILE)
+
+    # 2. signals_latest.json — solo ultimi 7 giorni (leggero, per la dashboard)
+    cutoff = datetime.now(timezone.utc) - timedelta(days=7)
+    recent = []
+    for ev in clean:
+        det = ev.get("detected_at", "")
+        try:
+            dt = datetime.fromisoformat(det.replace("Z", "+00:00"))
+            if dt.tzinfo is None: dt = dt.replace(tzinfo=timezone.utc)
+            if dt >= cutoff: recent.append(ev)
+        except Exception:
+            pass
+    latest_file = SIGNALS_FILE.replace("signals.json", "signals_latest.json")
+    tmp2 = latest_file + ".tmp"
+    with open(tmp2, "w") as f:
+        json.dump(recent, f, ensure_ascii=False, indent=2, allow_nan=False)
+    os.replace(tmp2, latest_file)
+    print(f"  signals_latest.json: {len(recent)} record (ultimi 7gg)")
 
 def prune_old(events, now):
     cutoff = now - timedelta(days=MAX_DAYS)
