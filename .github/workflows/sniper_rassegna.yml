@@ -1,0 +1,35 @@
+name: RAPTOR Sniper — Rassegna Mattutina
+
+on:
+  schedule:
+    - cron: '0 6 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      fresh_hours:
+        description: 'Finestra ore (default 48)'
+        required: false
+        default: '48'
+
+jobs:
+  rassegna-mattutina:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installa dipendenze
+        run: pip install requests
+
+      - name: Scarica script e dati
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/Giorgiogoldoni/sniper/main/sniper_email.py -o sniper_email.py
+          curl -fsSL https://raw.githubusercontent.com/Giorgiogoldoni/sniper/main/signals.json -o signals.json
+
+      - name: Esegui Rassegna Mattutina
+        env:
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          FRESH_HOURS: ${{ github.event.inputs.fresh_hours || '48' }}
+        run: python sniper_email.py
