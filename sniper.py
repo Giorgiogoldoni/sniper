@@ -469,8 +469,12 @@ def sanitize_for_json(obj):
 
 def save_history(events):
     clean = sanitize_for_json(events)
-    with open(SIGNALS_FILE, "w") as f:
+    tmp = SIGNALS_FILE + ".tmp"
+    with open(tmp, "w") as f:
         json.dump(clean, f, ensure_ascii=False, indent=2, allow_nan=False)
+    # Write atomico: rinomina solo se il dump è andato a buon fine
+    import os
+    os.replace(tmp, SIGNALS_FILE)
 
 def prune_old(events, now):
     cutoff = now - timedelta(days=MAX_DAYS)
