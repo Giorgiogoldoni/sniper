@@ -40,6 +40,16 @@ def main():
     cache = {}
     for item in mapping["instruments"]:
         etp, und = item["etp_yahoo"], item["underlying_yahoo"]
+        if not und:
+            results.append({
+                "etp_yahoo": etp, "underlying_yahoo": None,
+                "status": item["status"], "benchmark_name": item.get("benchmark_name"),
+                "benchmark_ticker": item.get("benchmark_ticker"),
+                "identity_only": True,
+                "warning": "Benchmark ufficiale identificato; serie storica esatta non ancora collegata."
+            })
+            print(f"{etp}: benchmark identificato, serie numerica da collegare")
+            continue
         try:
             for symbol in (etp, und):
                 if symbol not in cache:
