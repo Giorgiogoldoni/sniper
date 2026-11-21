@@ -14,7 +14,8 @@
       "issuer_confirmed",
       "benchmark_confirmed",
       "pending_verification"
-    ]
+    ],
+    "corporate_actions_policy": "Gli eventi di consolidamento sono registrati come metadati; non si applicano rettifiche automatiche ai prezzi. Le serie pre/post ISIN restano separate fino a verifica di prezzi ufficiali e continuità NAV."
   },
   "instruments": [
     {
@@ -246,6 +247,13 @@
           "date": "2025-06-02",
           "event": "cambio/consolidamento e nuovo ISIN riportati nell'audit Sniper; rapporto prezzi Yahoo circa 199x",
           "verification": "non riconciliato; non rettificare"
+        },
+        {
+          "date": "2025-06-02",
+          "event": "Consolidamento ufficiale 200:1; vecchio ISIN XS2377112110; nuovo ISIN XS3075487713; prima seduta del titolo consolidato 2025-06-02. Corregge il rapporto approssimativo ~199x annotato nel primo audit.",
+          "consolidation_ratio": 200,
+          "source": "https://www.lse.co.uk/rns/LAM3/granite-3x-long-amd-reverse-split-02june25-uhdmoho8yw8bj8k.html",
+          "verification": "rapporto, data e cambio ISIN verificati su comunicazione RNS"
         }
       ],
       "notes": "Corretto sottostante: AMD, non Amazon. Il ticker Amazon GraniteShares è 3LZN."
@@ -343,6 +351,13 @@
           "date": "2025-05-19",
           "event": "consolidamento 5000:1 riportato nell'audit Sniper; rapporto prezzi Yahoo circa 5603x",
           "verification": "data coincidente, differenza residua da verificare"
+        },
+        {
+          "date": "2025-05-19",
+          "event": "Consolidamento ufficiale 5000:1; vecchio ISIN XS2613356620; nuovo ISIN XS3069877556; prima seduta del titolo consolidato 2025-05-19.",
+          "consolidation_ratio": 5000,
+          "source": "https://shareprices.com/rns/granite-3x-long-mrna-reverse-split-19-may-25-kigbex5kdxnsd7l/",
+          "verification": "rapporto, data e cambio ISIN verificati su avviso RNS"
         }
       ],
       "notes": "Confronto giornaliero solo diagnostico; prezzo ETP Borsa Italiana e close USA non sono perfettamente sincronizzati."
@@ -525,6 +540,13 @@
           "date": "2025-02-10",
           "event": "consolidamento 641:1 riportato nell'audit Sniper; rapporto prezzi Yahoo circa 656x",
           "verification": "match molto forte, da non usare per rettifiche automatiche"
+        },
+        {
+          "date": "2025-02-07",
+          "event": "Consolidamento ufficiale Leverage Shares 641:1; ultimo giorno del vecchio ISIN 2025-02-06; prima seduta del nuovo ISIN XS2970736489 2025-02-07 (dal precedente XS2663694417). Il salto massimo Yahoo compare il 2025-02-10, dopo il weekend e una seduta di scarto.",
+          "consolidation_ratio": 641,
+          "source": "https://leverageshares.com/documents/notices/30.01.2025-notice-of-consolidation-3x-long-nio-etp.pdf",
+          "verification": "rapporto, date e cambio ISIN verificati su avviso emittente; anomalia Yahoo slittata di una seduta"
         }
       ],
       "notes": "Verificare la continuità storica fra ISIN precedente e nuovo ISIN prima di considerare omogenea l'intera serie."
@@ -668,7 +690,15 @@
       "benchmark_ticker": null,
       "status": "issuer_confirmed",
       "issuer_source": "https://graniteshares.com/it/etps/?category=basket",
-      "known_history_events": [],
+      "known_history_events": [
+        {
+          "date": "2025-05-19",
+          "event": "Consolidamento ufficiale e cambio ISIN: XS2836637525 -> XS3069873134; prima seduta del titolo consolidato 2025-05-19. Il rapporto non è leggibile nella copia dell'avviso reperita; non viene stimato dal salto Yahoo.",
+          "consolidation_ratio": null,
+          "source": "https://www.investegate.co.uk/announcement/rns/graniteshares-financial-plc--3smi/granite-3x-short-mstr-reverse-split-19-may-25/8863912",
+          "verification": "data e cambio ISIN verificati; rapporto da confermare sul documento integrale"
+        }
+      ],
       "notes": "Sottostante identificato su scheda/catalogo ufficiale emittente. Per i prodotti short, direzione -1. Verificare il simbolo storico in caso di cambio ticker/ISIN; confronto giornaliero indicativo per disallineamento orari."
     },
     {
@@ -685,7 +715,15 @@
       "benchmark_ticker": null,
       "status": "issuer_confirmed",
       "issuer_source": "https://graniteshares.com/it/etps/?category=basket",
-      "known_history_events": [],
+      "known_history_events": [
+        {
+          "date": "2025-06-02",
+          "event": "Consolidamento ufficiale 50:1; vecchio ISIN XS2675292135; nuovo ISIN XS3075487986; prima seduta del titolo consolidato 2025-06-02.",
+          "consolidation_ratio": 50,
+          "source": "https://www.londonstockexchange.com/en/news/article/granite-3x-short-nflx-reverse-split-02june25/17043595",
+          "verification": "rapporto, data e cambio ISIN verificati su comunicazione RNS"
+        }
+      ],
       "notes": "Sottostante identificato su scheda/catalogo ufficiale emittente. Per i prodotti short, direzione -1. Verificare il simbolo storico in caso di cambio ticker/ISIN; confronto giornaliero indicativo per disallineamento orari."
     },
     {
@@ -702,7 +740,15 @@
       "benchmark_ticker": null,
       "status": "issuer_confirmed",
       "issuer_source": "https://graniteshares.com/it/etps/?category=basket",
-      "known_history_events": [],
+      "known_history_events": [
+        {
+          "date": "2025-05-19",
+          "event": "Consolidamento ufficiale e cambio ISIN: XS2626290311 -> XS3069879768; prima seduta del titolo consolidato 2025-05-19. Il rapporto non è leggibile nella copia dell'avviso reperita; non viene stimato dal salto Yahoo del 2025-05-20.",
+          "consolidation_ratio": null,
+          "source": "https://www.investegate.co.uk/announcement/rns/graniteshares-financial-plc--3sie/granite-3x-short-nio-reverse-split-19-may-25/8863910",
+          "verification": "data e cambio ISIN verificati; rapporto da confermare sul documento integrale"
+        }
+      ],
       "notes": "Sottostante identificato su scheda/catalogo ufficiale emittente. Per i prodotti short, direzione -1. Verificare il simbolo storico in caso di cambio ticker/ISIN; confronto giornaliero indicativo per disallineamento orari."
     },
     {
@@ -736,7 +782,15 @@
       "benchmark_ticker": null,
       "status": "issuer_confirmed",
       "issuer_source": "https://graniteshares.com/it/etps/?category=basket",
-      "known_history_events": [],
+      "known_history_events": [
+        {
+          "date": "2025-05-19",
+          "event": "Consolidamento ufficiale 6000:1; vecchio ISIN XS2836484787; nuovo ISIN XS3069876582; prima seduta del titolo consolidato 2025-05-19. Il salto massimo Yahoo è rilevato il 2025-05-20.",
+          "consolidation_ratio": 6000,
+          "source": "https://shareprices.com/rns/granite-3x-short-pltr-reverse-split-19-may-25-vrfz9an8weh3h4f/",
+          "verification": "rapporto, data e cambio ISIN verificati; anomalia Yahoo slittata di una seduta"
+        }
+      ],
       "notes": "Sottostante identificato su scheda/catalogo ufficiale emittente. Per i prodotti short, direzione -1. Verificare il simbolo storico in caso di cambio ticker/ISIN; confronto giornaliero indicativo per disallineamento orari."
     },
     {
@@ -787,7 +841,15 @@
       "benchmark_ticker": null,
       "status": "issuer_confirmed",
       "issuer_source": "https://graniteshares.com/it/etps/?category=basket",
-      "known_history_events": [],
+      "known_history_events": [
+        {
+          "date": "2025-06-02",
+          "event": "Consolidamento ufficiale 150:1; vecchio ISIN XS2656471039; nuovo ISIN XS3075487556; prima seduta del titolo consolidato 2025-06-02.",
+          "consolidation_ratio": 150,
+          "source": "https://www.lse.co.uk/rns/3STE/granite-3x-short-tsla-reverse-split-02june25-w4ug3svfbjumlft.html",
+          "verification": "rapporto, data e cambio ISIN verificati su comunicazione RNS"
+        }
+      ],
       "notes": "Sottostante identificato su scheda/catalogo ufficiale emittente. Per i prodotti short, direzione -1. Verificare il simbolo storico in caso di cambio ticker/ISIN; confronto giornaliero indicativo per disallineamento orari."
     },
     {
@@ -906,7 +968,15 @@
       "benchmark_ticker": null,
       "status": "issuer_confirmed",
       "issuer_source": "https://leverageshares.com/it/all-products/",
-      "known_history_events": [],
+      "known_history_events": [
+        {
+          "date": "2025-04-07",
+          "event": "Consolidamento ufficiale Leverage Shares 329:1; ultimo giorno del vecchio ISIN XS2472334585 2025-04-04; primo giorno del nuovo ISIN XS3037640110 2025-04-07.",
+          "consolidation_ratio": 329,
+          "source": "https://leverageshares.com/documents/notices/28.03.2025-notice-result-of-adjourned-meeting-3x-short-baba.pdf?x50707=",
+          "verification": "rapporto, date e cambio ISIN verificati su avviso emittente"
+        }
+      ],
       "notes": "Sottostante identificato su scheda/catalogo ufficiale emittente. Per i prodotti short, direzione -1. Verificare il simbolo storico in caso di cambio ticker/ISIN; confronto giornaliero indicativo per disallineamento orari."
     },
     {
@@ -923,7 +993,15 @@
       "benchmark_ticker": null,
       "status": "issuer_confirmed",
       "issuer_source": "https://leverageshares.com/it/all-products/",
-      "known_history_events": [],
+      "known_history_events": [
+        {
+          "date": "2024-12-30",
+          "event": "Consolidamento ufficiale 46:1; vecchio ISIN XS2779863021; nuovo ISIN XS2944889109; prima seduta del titolo consolidato 2024-12-30.",
+          "consolidation_ratio": 46,
+          "source": "https://www.lse.co.uk/rns/SMC2/replacement-1xtesla-2xsmci-consoldtn-notice-ojmtbw1ekctcuk0.html",
+          "verification": "rapporto, data e cambio ISIN verificati su avviso emittente"
+        }
+      ],
       "notes": "Sottostante identificato su scheda/catalogo ufficiale emittente. Per i prodotti short, direzione -1. Verificare il simbolo storico in caso di cambio ticker/ISIN; confronto giornaliero indicativo per disallineamento orari."
     },
     {
@@ -957,7 +1035,15 @@
       "benchmark_ticker": null,
       "status": "issuer_confirmed",
       "issuer_source": "https://leverageshares.com/it/all-products/",
-      "known_history_events": [],
+      "known_history_events": [
+        {
+          "date": "2024-12-03",
+          "event": "Consolidamento ufficiale 246:1; ultimo giorno del vecchio ISIN 2024-12-02; primo giorno del nuovo ISIN 2024-12-03. Vecchio ISIN XS2706225427; nuovo XS2944874416. Nel report Yahoo il salto massimo compare il 2024-12-04, un giorno di mercato dopo.",
+          "consolidation_ratio": 246,
+          "source": "https://leverageshares.com/documents/notices/25.11.2024-notice-3x-short-nvda-consolidation.pdf?x35175=",
+          "verification": "rapporto e ISIN verificati su avviso emittente; scarto di un giorno della data anomala Yahoo da approfondire"
+        }
+      ],
       "notes": "Sottostante identificato su scheda/catalogo ufficiale emittente. Per i prodotti short, direzione -1. Verificare il simbolo storico in caso di cambio ticker/ISIN; confronto giornaliero indicativo per disallineamento orari."
     },
     {
@@ -974,7 +1060,15 @@
       "benchmark_ticker": null,
       "status": "issuer_confirmed",
       "issuer_source": "https://leverageshares.com/it/all-products/",
-      "known_history_events": [],
+      "known_history_events": [
+        {
+          "date": "2025-08-20",
+          "event": "Consolidamento ufficiale 606:1; vecchio ISIN XS2706232803; nuovo ISIN XS3135031279; ultimo giorno del vecchio ISIN 2025-08-19 e prima seduta del nuovo 2025-08-20. La serie Yahoo mostra salti nella finestra 18-20 agosto.",
+          "consolidation_ratio": 606,
+          "source": "https://leverageshares.com/documents/notices/Consolidation-Notice_-3x-Tesla-13-August-2025.pdf",
+          "verification": "rapporto, date e cambio ISIN verificati su avviso emittente"
+        }
+      ],
       "notes": "Sottostante identificato su scheda/catalogo ufficiale emittente. Per i prodotti short, direzione -1. Verificare il simbolo storico in caso di cambio ticker/ISIN; confronto giornaliero indicativo per disallineamento orari."
     },
     {
