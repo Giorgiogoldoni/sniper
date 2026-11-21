@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Cutoff conservativi per test di selezione indicatori: usa solo il segmento post-corporate-action dopo cambio ISIN e assestamento dei prezzi Yahoo. Non modifica i dati grezzi e non esclude gli strumenti dall'universo.",
+  "policy": "Per gli strumenti elencati, il backtest usa esclusivamente osservazioni dalla data valid_from inclusa. Il periodo precedente e la finestra dell'operazione non partecipano al calcolo degli indicatori, al warm-up o ai trade. L'universo degli strumenti resta invariato.",
+  "instruments": [
+    {
+      "ticker": "SNV3.MI",
+      "event_date": "2024-12-03",
+      "valid_from": "2024-12-09",
+      "old_isin": "XS2706225427",
+      "new_isin": "XS2944874416",
+      "reason": "Consolidamento 246:1; salto Yahoo il 04/12/2024."
+    },
+    {
+      "ticker": "SMCI.MI",
+      "event_date": "2024-12-30",
+      "valid_from": "2025-01-02",
+      "old_isin": "XS2779863021",
+      "new_isin": "XS2944889109",
+      "reason": "Consolidamento 46:1; primo segmento post-evento."
+    },
+    {
+      "ticker": "3NIO.MI",
+      "event_date": "2025-02-07",
+      "valid_from": "2025-02-11",
+      "old_isin": "XS2663694417",
+      "new_isin": "XS2970736489",
+      "reason": "Consolidamento 641:1; salto Yahoo il 10/02/2025."
+    },
+    {
+      "ticker": "SBA3.MI",
+      "event_date": "2025-04-07",
+      "valid_from": "2025-04-08",
+      "old_isin": "XS2472334585",
+      "new_isin": "XS3037640110",
+      "reason": "Consolidamento 329:1."
+    },
+    {
+      "ticker": "3SMI.MI",
+      "event_date": "2025-05-19",
+      "valid_from": "2025-05-21",
+      "old_isin": "XS2836637525",
+      "new_isin": "XS3069873134",
+      "reason": "Cambio ISIN; salto Yahoo il 20/05/2025. Rapporto non ancora confermato."
+    },
+    {
+      "ticker": "3SPA.MI",
+      "event_date": "2025-05-19",
+      "valid_from": "2025-05-21",
+      "old_isin": "XS2836484787",
+      "new_isin": "XS3069876582",
+      "reason": "Consolidamento 6.000:1; salto Yahoo il 20/05/2025."
+    },
+    {
+      "ticker": "3LMO.MI",
+      "event_date": "2025-05-19",
+      "valid_from": "2025-05-21",
+      "old_isin": "XS2613356620",
+      "new_isin": "XS3069877556",
+      "reason": "Consolidamento 5.000:1."
+    },
+    {
+      "ticker": "3SNI.MI",
+      "event_date": "2025-05-19",
+      "valid_from": "2025-05-21",
+      "old_isin": "XS2626290311",
+      "new_isin": "XS3069879768",
+      "reason": "Cambio ISIN; salto Yahoo il 20/05/2025. Rapporto non ancora confermato."
+    },
+    {
+      "ticker": "3SNF.MI",
+      "event_date": "2025-06-02",
+      "valid_from": "2025-06-03",
+      "old_isin": "XS2675292135",
+      "new_isin": "XS3075487986",
+      "reason": "Consolidamento 50:1."
+    },
+    {
+      "ticker": "3STS.MI",
+      "event_date": "2025-06-02",
+      "valid_from": "2025-06-03",
+      "old_isin": "XS2656471039",
+      "new_isin": "XS3075487556",
+      "reason": "Consolidamento 150:1."
+    },
+    {
+      "ticker": "3LAM.MI",
+      "event_date": "2025-06-02",
+      "valid_from": "2025-06-03",
+      "old_isin": "XS2377112110",
+      "new_isin": "XS3075487713",
+      "reason": "Consolidamento 200:1."
+    },
+    {
+      "ticker": "TSLQ.MI",
+      "event_date": "2025-08-20",
+      "valid_from": "2025-08-21",
+      "old_isin": "XS2706232803",
+      "new_isin": "XS3135031279",
+      "reason": "Consolidamento 606:1; salti Yahoo nella finestra 18–20/08/2025."
+    }
+  ]
+}
