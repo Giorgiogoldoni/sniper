@@ -6,6 +6,8 @@ on:
     paths:
       - 'backtest_indicators.py'
       - 'backtest_stops.py'
+      - 'corporate_action_filter.py'
+      - 'data/indicator_history_cutoffs.json'
       - '.github/workflows/backtest.yml'
 
 permissions:
