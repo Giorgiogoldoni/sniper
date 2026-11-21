@@ -179,7 +179,7 @@ main{padding:14px 28px;}
 <header>
   <div>
     <h1>⚡ Raptor Sniper</h1>
-    <div class="sub">aggregatore segnali · ultimi 30 giorni</div>
+    <div class="sub">aggregatore segnali · ultimi 7 giorni</div>
   </div>
   <div class="hright">
     <span id="last-update">—</span>
@@ -191,7 +191,7 @@ main{padding:14px 28px;}
 <div class="metrics">
   <div class="metric buy"><div class="val" id="m-buy">—</div><div class="lbl">BUY oggi</div></div>
   <div class="metric exit"><div class="val" id="m-exit">—</div><div class="lbl">EXIT oggi</div></div>
-  <div class="metric"><div class="val" id="m-tot">—</div><div class="lbl">Totale 30gg</div></div>
+  <div class="metric"><div class="val" id="m-tot">—</div><div class="lbl">Totale 7gg</div></div>
   <div class="metric"><div class="val" id="m-multi">—</div><div class="lbl">Multi-fonte</div></div>
   <div class="metric"><div class="val" id="m-src">—</div><div class="lbl">Fonte + attiva</div></div>
 </div>
@@ -279,7 +279,7 @@ main{padding:14px 28px;}
     <div class="popup-title">📊 Metriche — RAPTOR Sniper</div>
     <div class="popup-grid" id="popup-grid"></div>
     <div class="popup-sources">
-      <div class="popup-src-title">Attività per fonte (30gg)</div>
+      <div class="popup-src-title">Attività per fonte (7gg)</div>
       <div id="popup-sources"></div>
     </div>
   </div>
@@ -396,7 +396,7 @@ function openMetrics() {
   document.getElementById('popup-grid').innerHTML = `
     <div class="popup-metric buy"><div class="pv">${buyOggi}</div><div class="pl">BUY oggi</div></div>
     <div class="popup-metric exit"><div class="pv">${exitOggi}</div><div class="pl">EXIT oggi</div></div>
-    <div class="popup-metric"><div class="pv">${all.length}</div><div class="pl">Totale 30gg (deduplicati)</div></div>
+    <div class="popup-metric"><div class="pv">${all.length}</div><div class="pl">Totale 7gg (deduplicati)</div></div>
     <div class="popup-metric top"><div class="pv">${top20}</div><div class="pl">Top 20 attivi</div></div>
     <div class="popup-metric"><div class="pv">${multi}</div><div class="pl">Multi-fonte</div></div>
     <div class="popup-metric"><div class="pv">${todayAll.length}</div><div class="pl">Segnali oggi</div></div>
@@ -671,7 +671,7 @@ function exportExcel() {
   const rowsOggi = all.filter(ev=>detectedDateCET(ev.detected_at)===today).map(fmtRow);
   const sep=';';
   const lines=[
-    'RAPTOR SNIPER — Storico 30 giorni (deduplicato)',
+    'RAPTOR SNIPER — Storico 7 giorni (deduplicato)',
     hdr.join(sep),
     ...rows30.map(r=>r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(sep)),
     '','',
