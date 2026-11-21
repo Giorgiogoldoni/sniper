@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install dependencies
-        run: pip install yfinance pandas numpy
+        run: pip install 'yfinance[repair]' pandas numpy
       - name: Run historical indicator backtest
         run: python backtest_indicators.py
       - name: Run next-open ATR and Chandelier backtest
