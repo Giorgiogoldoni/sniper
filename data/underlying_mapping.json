@@ -245,11 +245,6 @@
       "known_history_events": [
         {
           "date": "2025-06-02",
-          "event": "cambio/consolidamento e nuovo ISIN riportati nell'audit Sniper; rapporto prezzi Yahoo circa 199x",
-          "verification": "non riconciliato; non rettificare"
-        },
-        {
-          "date": "2025-06-02",
           "event": "Consolidamento ufficiale 200:1; vecchio ISIN XS2377112110; nuovo ISIN XS3075487713; prima seduta del titolo consolidato 2025-06-02. Corregge il rapporto approssimativo ~199x annotato nel primo audit.",
           "consolidation_ratio": 200,
           "source": "https://www.lse.co.uk/rns/LAM3/granite-3x-long-amd-reverse-split-02june25-uhdmoho8yw8bj8k.html",
@@ -347,11 +342,6 @@
       "status": "issuer_confirmed",
       "issuer_source": "https://graniteshares.com/it/etps/graniteshares-3x-leveraged-moderna-securities-etp-3lmo/",
       "known_history_events": [
-        {
-          "date": "2025-05-19",
-          "event": "consolidamento 5000:1 riportato nell'audit Sniper; rapporto prezzi Yahoo circa 5603x",
-          "verification": "data coincidente, differenza residua da verificare"
-        },
         {
           "date": "2025-05-19",
           "event": "Consolidamento ufficiale 5000:1; vecchio ISIN XS2613356620; nuovo ISIN XS3069877556; prima seduta del titolo consolidato 2025-05-19.",
@@ -536,11 +526,6 @@
       "status": "issuer_confirmed",
       "issuer_source": "https://leverageshares.com/it/etps/leverage-shares-3x-long-nio-etp/",
       "known_history_events": [
-        {
-          "date": "2025-02-10",
-          "event": "consolidamento 641:1 riportato nell'audit Sniper; rapporto prezzi Yahoo circa 656x",
-          "verification": "match molto forte, da non usare per rettifiche automatiche"
-        },
         {
           "date": "2025-02-07",
           "event": "Consolidamento ufficiale Leverage Shares 641:1; ultimo giorno del vecchio ISIN 2025-02-06; prima seduta del nuovo ISIN XS2970736489 2025-02-07 (dal precedente XS2663694417). Il salto massimo Yahoo compare il 2025-02-10, dopo il weekend e una seduta di scarto.",
