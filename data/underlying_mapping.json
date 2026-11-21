@@ -917,7 +917,7 @@
       "underlying_yahoo": "SMCI",
       "underlying_type": "single_stock",
       "leverage": 2,
-      "direction": 2,
+      "direction": 1,
       "base_currency": "USD",
       "benchmark_name": null,
       "benchmark_ticker": null,
@@ -993,6 +993,109 @@
       "issuer_source": "https://www.wisdomtree.com/it/products/alternatives/wisdomtree-sp-500-vix-short-term-futures-225x-daily-leveraged",
       "known_history_events": [],
       "notes": "Benchmark esatto identificato su pagina ufficiale emittente. Nessuna serie proxy: per il confronto quantitativo occorre acquisire la serie storica del benchmark e allineare timestamp/valuta."
+    },
+    {
+      "etp_yahoo": "SOXS.MI",
+      "etp_name": "Leverage Shares -4x Short Semiconductors ETP Securities",
+      "issuer": "Leverage Shares",
+      "underlying_name": "NYSE Semiconductor Index",
+      "underlying_yahoo": null,
+      "underlying_type": "equity_index",
+      "leverage": 4,
+      "direction": -1,
+      "base_currency": "USD",
+      "benchmark_name": "NYSE Semiconductor Index",
+      "benchmark_ticker": "ICESEMI",
+      "status": "benchmark_confirmed",
+      "issuer_source": "https://leverageshares.com/it/etps/leverage-shares-4x-short-semiconductors-etp/",
+      "known_history_events": [
+        {
+          "date": "2025-12-18",
+          "event": "Consolidamento 104:1; primo giorno nuovo ISIN 18/12/2025",
+          "verification": "evento ufficiale emittente; salti Yahoo non riconciliati integralmente"
+        }
+      ],
+      "notes": "Benchmark ufficiale identificato. Avviso emittente: consolidamento 104:1, ultimo giorno di negoziazione vecchio ISIN 17/12/2025 e primo giorno del nuovo ISIN 18/12/2025. Gli enormi salti Yahoo del 08-18/12/2025 non coincidono in modo pulito con il solo rapporto 104:1: mantenere i prezzi grezzi e verificare NAV/ISIN."
+    },
+    {
+      "etp_yahoo": "SQQQ.MI",
+      "etp_name": "Leverage Shares -5x Short Nasdaq 100 ETP Securities",
+      "issuer": "Leverage Shares",
+      "underlying_name": "Nasdaq-100 Index",
+      "underlying_yahoo": null,
+      "underlying_type": "equity_index",
+      "leverage": 5,
+      "direction": -1,
+      "base_currency": "USD",
+      "benchmark_name": "Nasdaq-100 Index",
+      "benchmark_ticker": "NDX",
+      "status": "benchmark_confirmed",
+      "issuer_source": "https://leverageshares.com/documents/factsheet/-5x_qqq_factsheet.pdf",
+      "known_history_events": [
+        {
+          "date": "2026-06-11",
+          "event": "Consolidamento 681:1; primo giorno nuovo ISIN 11/06/2026",
+          "verification": "evento ufficiale emittente; verifica quantitativa ancora necessaria"
+        }
+      ],
+      "notes": "Benchmark e leva -5x confermati da factsheet ufficiale. Consolidamento 681:1: ultimo giorno vecchio ISIN 10/06/2026, primo giorno nuovo ISIN 11/06/2026. Il salto Yahoo è compatibile per ordine di grandezza, ma serve verifica delle serie per ISIN."
+    },
+    {
+      "etp_yahoo": "GPTS.MI",
+      "etp_name": "Leverage Shares -3x Short Artificial Intelligence (AI) ETP Securities",
+      "issuer": "Leverage Shares",
+      "underlying_name": "Solactive US Artificial Intelligence (AI) Index",
+      "underlying_yahoo": null,
+      "underlying_type": "equity_index",
+      "leverage": 3,
+      "direction": -1,
+      "base_currency": "USD",
+      "benchmark_name": "Solactive US Artificial Intelligence (AI) Index",
+      "benchmark_ticker": "SOLUAI",
+      "status": "benchmark_confirmed",
+      "issuer_source": "https://leverageshares.com/it/etps/leverage-shares-3x-short-artificial-intelligence-etp/",
+      "known_history_events": [],
+      "notes": "Indice e leva -3x confermati dal factsheet ufficiale. I salti Yahoo di ottobre-novembre 2026 non sono spiegati da una corporate action verificata: non rettificare; richiedere controllo su ISIN, NAV e prezzi ufficiali."
+    },
+    {
+      "etp_yahoo": "LQQ.MI",
+      "etp_name": "Amundi Nasdaq-100 Daily (2x) Leveraged UCITS ETF Acc",
+      "issuer": "Amundi",
+      "underlying_name": "Nasdaq-100 Leverage (2x) Index / Nasdaq-100",
+      "underlying_yahoo": null,
+      "underlying_type": "equity_index",
+      "leverage": 2,
+      "direction": 1,
+      "base_currency": "EUR",
+      "benchmark_name": "Nasdaq-100 Leveraged Notional Net Return",
+      "benchmark_ticker": "XNDXNNRL",
+      "status": "benchmark_confirmed",
+      "issuer_source": "https://www.amundietf.it/pdfDocuments/monthly-factsheet/FR0010342592/ITA/ITA/RETAIL/ETF/20261031",
+      "known_history_events": [
+        {
+          "date": "2021-01-29/2021-02-01",
+          "event": "Salto anomalo nella serie Yahoo",
+          "verification": "nessuna corporate action confermata; verifica NAV/ISIN necessaria"
+        }
+      ],
+      "notes": "Correzione inventario: LQQ.MI è Amundi, non Leverage Shares, e la leva è 2x (non 3x). Benchmark ticker XNDXNNRL da fonte Amundi. Il movimento Yahoo del 29/01-01/02/2021 resta da verificare separatamente."
+    },
+    {
+      "etp_yahoo": "NICK.MI",
+      "etp_name": "WisdomTree Nickel",
+      "issuer": "WisdomTree",
+      "underlying_name": "Bloomberg Commodity Nickel Subindex 4W Total Return",
+      "underlying_yahoo": null,
+      "underlying_type": "commodity_futures_index",
+      "leverage": 1,
+      "direction": 1,
+      "base_currency": "USD",
+      "benchmark_name": "Bloomberg Commodity Nickel Subindex 4W Total Return",
+      "benchmark_ticker": "BCOMNI4T",
+      "status": "benchmark_confirmed",
+      "issuer_source": "https://www.wisdomtree.com/it/products/commodities/wisdomtree-nickel",
+      "known_history_events": [],
+      "notes": "Benchmark corretto: BCOMNI4T (Total Return 4W), non BCOMNI (Excess Return usato da altri prodotti Nickel). Il movimento del marzo 2022 va mantenuto come evento storico da approfondire, non rettificato automaticamente."
     }
   ]
 }
