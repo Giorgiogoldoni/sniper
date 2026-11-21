@@ -9,6 +9,7 @@ from datetime import datetime, timezone
 import numpy as np
 import pandas as pd
 import yfinance as yf
+from corporate_action_filter import apply_history_cutoff, load_cutoffs
 
 warnings.filterwarnings("ignore")
 ROOT = Path(__file__).resolve().parent
@@ -177,6 +178,8 @@ def main():
         if t and x.get("classification"): items[t]=x
     tickers=list(items)
     frames={}; quality_flagged={}; too_short=[]
+    corporate_action_audit={}
+    corporate_action_cutoffs=load_cutoffs()
     for start in range(0,len(tickers),BATCH):
         batch=tickers[start:start+BATCH]
         try:
@@ -184,6 +187,10 @@ def main():
                 group_by="ticker",threads=False,progress=False,timeout=30)
             for t in batch:
                 x=extract_frame(raw,t)
+                if x is not None:
+                    x, cutoff_meta=apply_history_cutoff(x,t,corporate_action_cutoffs)
+                    if cutoff_meta.get("cutoff_applied"):
+                        corporate_action_audit[t]=cutoff_meta
                 if x is None or len(x)<MIN_BARS:
                     too_short.append(t); continue
                 moves=x.Close.pct_change().abs().dropna()
@@ -247,6 +254,8 @@ def main():
         d.to_csv(ROOT/"data"/"backtest_stops_detail.csv",index=False)
     result={"generated_at":datetime.now(timezone.utc).isoformat(),"period_requested":PERIOD,
         "universe_total":len(tickers),"usable_instruments":len(frames),"quality_excluded":0,"quality_flagged":len(quality_flagged),
+        "corporate_action_cutoff_count":len(corporate_action_audit),
+        "corporate_action_cutoffs":corporate_action_audit,
         "insufficient_or_missing_history":len(too_short),"coverage_by_category":coverage,
         "execution":"signal close t; entry next session open; stop checked using daily low, gap fills at open if worse; time exit at close of final holding session",
         "stops":{"ATR_2":"initial stop at entry minus 2x ATR(14) measured at signal close",
@@ -256,6 +265,7 @@ def main():
         "metrics":"returns net of assumed round-trip cost; equal-weighted instrument summaries; drawdown computed on sequential compounded trades per instrument",
         "limitations":["daily OHLC cannot resolve intraday ordering beyond conservative stop-first logic",
           "Yahoo adjusted OHLC and corporate-action history can be incomplete for ETPs; repair=True is best-effort and does not guarantee full recovery",
+          "12 ETP con corporate action note sono testati solo dal cutoff post-evento; nessun prezzo viene rettificato e nessun ticker viene eliminato dall universo",
           "cost assumptions are sensitivities, not observed spreads/commissions",
           "no taxes, financing or internal ETP fees beyond embedded price history",
           "not a portfolio-level simulation; equal weighting by instrument"],
