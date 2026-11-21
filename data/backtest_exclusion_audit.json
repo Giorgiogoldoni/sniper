@@ -1,7 +1,9 @@
 {
-  "generated_at": "2026-11-21T18:59:35.338522+00:00",
-  "excluded_count": 65,
-  "excluded_instruments": {
+  "generated_at": "2026-11-21T19:32:01.564647+00:00",
+  "excluded_count": 0,
+  "excluded_instruments": {},
+  "quality_flagged_count": 60,
+  "quality_flagged_instruments": {
     "3AAP.MI": {
       "adjusted_max_move_pct": 64.33,
       "max_absolute_move_pct": 64.33,
@@ -31,13 +33,13 @@
       "has_split_action": false
     },
     "3CON.MI": {
-      "adjusted_max_move_pct": 2532400.09,
-      "max_absolute_move_pct": 2532400.09,
+      "adjusted_max_move_pct": 25225.0,
+      "max_absolute_move_pct": 25225.0,
       "largest_events": [
         {
           "date": "2023-03-27",
-          "absolute_change_pct": 2532400.09,
-          "close_before": 0.0004,
+          "absolute_change_pct": 25225.0,
+          "close_before": 0.04,
           "close_after": 10.13,
           "stock_split": null
         },
@@ -51,22 +53,22 @@
         {
           "date": "2022-07-20",
           "absolute_change_pct": 84.78,
-          "close_before": 0.0046,
-          "close_after": 0.0085,
+          "close_before": 0.46,
+          "close_after": 0.85,
           "stock_split": null
         }
       ],
       "has_split_action": false
     },
     "3DEL.MI": {
-      "adjusted_max_move_pct": 95.21,
-      "max_absolute_move_pct": 95.21,
+      "adjusted_max_move_pct": 94.98,
+      "max_absolute_move_pct": 94.98,
       "largest_events": [
         {
-          "date": "2026-05-12",
-          "absolute_change_pct": 95.21,
+          "date": "2026-05-11",
+          "absolute_change_pct": 94.98,
           "close_before": 480.600006,
-          "close_after": 23.01,
+          "close_after": 24.145,
           "stock_split": null
         },
         {
@@ -227,20 +229,20 @@
       "has_split_action": false
     },
     "3LCO.MI": {
-      "adjusted_max_move_pct": 2709499.94,
-      "max_absolute_move_pct": 2709499.94,
+      "adjusted_max_move_pct": 26996.0,
+      "max_absolute_move_pct": 26996.0,
       "largest_events": [
         {
           "date": "2023-01-31",
-          "absolute_change_pct": 2709499.94,
-          "close_before": 0.0005,
+          "absolute_change_pct": 26996.0,
+          "close_before": 0.05,
           "close_after": 13.548,
           "stock_split": null
         },
         {
           "date": "2022-03-09",
-          "absolute_change_pct": 2295294.48,
-          "close_before": 2.71718,
+          "absolute_change_pct": 22853.94,
+          "close_before": 271.718001,
           "close_after": 62370.0,
           "stock_split": null
         },
@@ -367,21 +369,14 @@
       "has_split_action": false
     },
     "3LPP.MI": {
-      "adjusted_max_move_pct": 31867.43,
-      "max_absolute_move_pct": 31867.43,
+      "adjusted_max_move_pct": 219.67,
+      "max_absolute_move_pct": 219.67,
       "largest_events": [
         {
           "date": "2023-03-21",
-          "absolute_change_pct": 31867.43,
-          "close_before": 0.0737,
+          "absolute_change_pct": 219.67,
+          "close_before": 7.37,
           "close_after": 23.559999,
-          "stock_split": null
-        },
-        {
-          "date": "2023-03-20",
-          "absolute_change_pct": 99.67,
-          "close_before": 22.110001,
-          "close_after": 0.0737,
           "stock_split": null
         },
         {
@@ -389,6 +384,13 @@
           "absolute_change_pct": 69.34,
           "close_before": 1020.450012,
           "close_after": 312.899994,
+          "stock_split": null
+        },
+        {
+          "date": "2023-03-20",
+          "absolute_change_pct": 66.67,
+          "close_before": 22.110001,
+          "close_after": 7.37,
           "stock_split": null
         }
       ],
@@ -534,34 +536,6 @@
       ],
       "has_split_action": false
     },
-    "3MST.MI": {
-      "adjusted_max_move_pct": 13375.39,
-      "max_absolute_move_pct": 13375.39,
-      "largest_events": [
-        {
-          "date": "2026-04-07",
-          "absolute_change_pct": 13375.39,
-          "close_before": 0.2194,
-          "close_after": 29.565001,
-          "stock_split": null
-        },
-        {
-          "date": "2026-04-17",
-          "absolute_change_pct": 56.86,
-          "close_before": 45.474998,
-          "close_after": 71.330002,
-          "stock_split": null
-        },
-        {
-          "date": "2025-03-05",
-          "absolute_change_pct": 49.27,
-          "close_before": 17.327999,
-          "close_after": 25.865,
-          "stock_split": null
-        }
-      ],
-      "has_split_action": false
-    },
     "3NIO.MI": {
       "adjusted_max_move_pct": 65525.0,
       "max_absolute_move_pct": 65525.0,
@@ -647,14 +621,14 @@
       "has_split_action": false
     },
     "3TSL.MI": {
-      "adjusted_max_move_pct": 12659.51,
-      "max_absolute_move_pct": 12659.51,
+      "adjusted_max_move_pct": 222.01,
+      "max_absolute_move_pct": 222.01,
       "largest_events": [
         {
-          "date": "2025-12-10",
-          "absolute_change_pct": 12659.51,
-          "close_before": 0.1472,
-          "close_after": 18.782,
+          "date": "2024-11-25",
+          "absolute_change_pct": 222.01,
+          "close_before": 14.72,
+          "close_after": 47.400002,
           "stock_split": null
         },
         {
@@ -665,10 +639,10 @@
           "stock_split": null
         },
         {
-          "date": "2023-03-27",
-          "absolute_change_pct": 29.36,
-          "close_before": 0.3283,
-          "close_after": 0.2319,
+          "date": "2025-03-24",
+          "absolute_change_pct": 34.19,
+          "close_before": 8.859,
+          "close_after": 11.888,
           "stock_split": null
         }
       ],
@@ -765,26 +739,26 @@
         {
           "date": "2021-02-01",
           "absolute_change_pct": 1122.04,
-          "close_before": 48.23,
-          "close_after": 589.390015,
+          "close_before": 0.24115,
+          "close_after": 2.94695,
           "stock_split": null
-        },
-        {
-          "date": "2026-07-09",
-          "absolute_change_pct": 99.47,
-          "close_before": 1875.199951,
-          "close_after": 9.882,
-          "stock_split": 200.0
         },
         {
           "date": "2021-01-29",
           "absolute_change_pct": 91.93,
-          "close_before": 597.840027,
-          "close_after": 48.23,
+          "close_before": 2.9892,
+          "close_after": 0.24115,
+          "stock_split": null
+        },
+        {
+          "date": "2023-02-02",
+          "absolute_change_pct": 11.58,
+          "close_before": 2.3392,
+          "close_after": 2.61015,
           "stock_split": null
         }
       ],
-      "has_split_action": true
+      "has_split_action": false
     },
     "SMCI.MI": {
       "adjusted_max_move_pct": 4269.39,
@@ -809,90 +783,6 @@
           "absolute_change_pct": 63.93,
           "close_before": 2.5895,
           "close_after": 0.934,
-          "stock_split": null
-        }
-      ],
-      "has_split_action": false
-    },
-    "1GIS.L": {
-      "adjusted_max_move_pct": 9968.65,
-      "max_absolute_move_pct": 9968.65,
-      "largest_events": [
-        {
-          "date": "2026-03-02",
-          "absolute_change_pct": 9968.65,
-          "close_before": 123.815002,
-          "close_after": 12466.5,
-          "stock_split": null
-        },
-        {
-          "date": "2025-09-16",
-          "absolute_change_pct": 9918.01,
-          "close_before": 127.705002,
-          "close_after": 12793.5,
-          "stock_split": null
-        },
-        {
-          "date": "2025-07-28",
-          "absolute_change_pct": 9908.25,
-          "close_before": 127.260002,
-          "close_after": 12736.5,
-          "stock_split": null
-        }
-      ],
-      "has_split_action": false
-    },
-    "3DES.MI": {
-      "adjusted_max_move_pct": 12495.8,
-      "max_absolute_move_pct": 12495.8,
-      "largest_events": [
-        {
-          "date": "2026-04-21",
-          "absolute_change_pct": 12495.8,
-          "close_before": 0.1571,
-          "close_after": 19.788,
-          "stock_split": null
-        },
-        {
-          "date": "2020-03-12",
-          "absolute_change_pct": 34.98,
-          "close_before": 7.761,
-          "close_after": 10.476,
-          "stock_split": null
-        },
-        {
-          "date": "2020-03-24",
-          "absolute_change_pct": 33.27,
-          "close_before": 11.52,
-          "close_after": 7.687,
-          "stock_split": null
-        }
-      ],
-      "has_split_action": false
-    },
-    "3EUS.MI": {
-      "adjusted_max_move_pct": 14722.08,
-      "max_absolute_move_pct": 14722.08,
-      "largest_events": [
-        {
-          "date": "2026-04-21",
-          "absolute_change_pct": 14722.08,
-          "close_before": 0.1304,
-          "close_after": 19.327999,
-          "stock_split": null
-        },
-        {
-          "date": "2020-03-12",
-          "absolute_change_pct": 32.86,
-          "close_before": 7.124,
-          "close_after": 9.465,
-          "stock_split": null
-        },
-        {
-          "date": "2020-03-24",
-          "absolute_change_pct": 28.73,
-          "close_before": 9.853,
-          "close_after": 7.022,
           "stock_split": null
         }
       ],
@@ -1039,28 +929,28 @@
       "has_split_action": false
     },
     "3SMI.MI": {
-      "adjusted_max_move_pct": 6239899.47,
-      "max_absolute_move_pct": 6239899.47,
+      "adjusted_max_move_pct": 367749910.24,
+      "max_absolute_move_pct": 367749910.24,
       "largest_events": [
         {
+          "date": "2024-06-17",
+          "absolute_change_pct": 367749910.24,
+          "close_before": 0.0008,
+          "close_after": 2942.000008,
+          "stock_split": null
+        },
+        {
           "date": "2023-06-21",
-          "absolute_change_pct": 6239899.47,
-          "close_before": 0.0003,
+          "absolute_change_pct": 62299.99,
+          "close_before": 0.03,
           "close_after": 18.719999,
           "stock_split": null
         },
         {
           "date": "2022-05-13",
-          "absolute_change_pct": 4082718.12,
-          "close_before": 3.16905,
+          "absolute_change_pct": 40728.18,
+          "close_before": 316.904998,
           "close_after": 129386.546875,
-          "stock_split": null
-        },
-        {
-          "date": "2024-06-17",
-          "absolute_change_pct": 3677400.1,
-          "close_before": 0.0008,
-          "close_after": 29.42,
           "stock_split": null
         }
       ],
@@ -1095,28 +985,28 @@
       "has_split_action": false
     },
     "3SNI.MI": {
-      "adjusted_max_move_pct": 37848.55,
-      "max_absolute_move_pct": 37848.55,
+      "adjusted_max_move_pct": 4967.61,
+      "max_absolute_move_pct": 4967.61,
       "largest_events": [
         {
-          "date": "2023-06-06",
-          "absolute_change_pct": 37848.55,
-          "close_before": 0.0758,
-          "close_after": 28.764999,
+          "date": "2025-05-19",
+          "absolute_change_pct": 4967.61,
+          "close_before": 0.4585,
+          "close_after": 23.235001,
           "stock_split": null
         },
         {
-          "date": "2025-05-20",
-          "absolute_change_pct": 5119.19,
-          "close_before": 0.4585,
-          "close_after": 23.93,
+          "date": "2023-06-06",
+          "absolute_change_pct": 279.49,
+          "close_before": 7.58,
+          "close_after": 28.764999,
           "stock_split": null
         },
         {
           "date": "2022-03-16",
           "absolute_change_pct": 62.78,
-          "close_before": 2.653,
-          "close_after": 0.9875,
+          "close_before": 265.300012,
+          "close_after": 98.750001,
           "stock_split": null
         }
       ],
@@ -1151,49 +1041,49 @@
       "has_split_action": false
     },
     "3SPA.MI": {
-      "adjusted_max_move_pct": 686566.66,
-      "max_absolute_move_pct": 686566.66,
+      "adjusted_max_move_pct": 68666565.94,
+      "max_absolute_move_pct": 68666565.94,
       "largest_events": [
         {
           "date": "2024-06-18",
-          "absolute_change_pct": 686566.66,
+          "absolute_change_pct": 68666565.94,
           "close_before": 0.0018,
-          "close_after": 12.36,
+          "close_after": 1235.999966,
           "stock_split": null
         },
         {
-          "date": "2025-05-20",
-          "absolute_change_pct": 622460.02,
-          "close_before": 0.0025,
-          "close_after": 15.564,
+          "date": "2025-03-27",
+          "absolute_change_pct": 9968.03,
+          "close_before": 0.0147,
+          "close_after": 1.48,
           "stock_split": null
         },
         {
-          "date": "2022-05-09",
-          "absolute_change_pct": 104.75,
-          "close_before": 12.664,
-          "close_after": 25.93,
+          "date": "2025-01-09",
+          "absolute_change_pct": 9961.16,
+          "close_before": 0.1635,
+          "close_after": 16.45,
           "stock_split": null
         }
       ],
       "has_split_action": false
     },
     "3SSQ.MI": {
-      "adjusted_max_move_pct": 160293.94,
-      "max_absolute_move_pct": 160293.94,
+      "adjusted_max_move_pct": 1503.94,
+      "max_absolute_move_pct": 1503.94,
       "largest_events": [
         {
           "date": "2024-06-19",
-          "absolute_change_pct": 160293.94,
-          "close_before": 0.0165,
+          "absolute_change_pct": 1503.94,
+          "close_before": 1.65,
           "close_after": 26.465,
           "stock_split": null
         },
         {
           "date": "2022-02-25",
           "absolute_change_pct": 76.8,
-          "close_before": 9.7589,
-          "close_after": 2.26431,
+          "close_before": 975.889969,
+          "close_after": 226.430988,
           "stock_split": null
         },
         {
@@ -1207,56 +1097,56 @@
       "has_split_action": false
     },
     "3STS.MI": {
-      "adjusted_max_move_pct": 46525.26,
-      "max_absolute_move_pct": 46525.26,
+      "adjusted_max_move_pct": 4662425.8,
+      "max_absolute_move_pct": 4662425.8,
       "largest_events": [
         {
           "date": "2023-08-16",
-          "absolute_change_pct": 46525.26,
+          "absolute_change_pct": 4662425.8,
           "close_before": 0.0483,
-          "close_after": 22.52,
+          "close_after": 2252.000046,
           "stock_split": null
         },
         {
-          "date": "2025-06-02",
-          "absolute_change_pct": 17699.16,
-          "close_before": 0.0717,
-          "close_after": 12.762,
+          "date": "2025-05-06",
+          "absolute_change_pct": 10048.74,
+          "close_before": 0.1748,
+          "close_after": 17.739999,
           "stock_split": null
         },
         {
-          "date": "2024-10-24",
-          "absolute_change_pct": 51.71,
-          "close_before": 3.535,
-          "close_after": 1.7072,
+          "date": "2025-01-29",
+          "absolute_change_pct": 9855.2,
+          "close_before": 0.2232,
+          "close_after": 22.220001,
           "stock_split": null
         }
       ],
       "has_split_action": false
     },
     "GPTS.MI": {
-      "adjusted_max_move_pct": 16565.47,
-      "max_absolute_move_pct": 16565.47,
+      "adjusted_max_move_pct": 10859.11,
+      "max_absolute_move_pct": 10859.11,
       "largest_events": [
         {
-          "date": "2026-07-17",
-          "absolute_change_pct": 16565.47,
-          "close_before": 0.2789,
-          "close_after": 46.48,
+          "date": "2026-10-15",
+          "absolute_change_pct": 10859.11,
+          "close_before": 30.08,
+          "close_after": 3296.500015,
           "stock_split": null
         },
         {
-          "date": "2024-07-19",
-          "absolute_change_pct": 34.66,
-          "close_before": 20.23,
-          "close_after": 13.218,
+          "date": "2026-11-13",
+          "absolute_change_pct": 10858.61,
+          "close_before": 39.744999,
+          "close_after": 4355.500031,
           "stock_split": null
         },
         {
-          "date": "2025-04-10",
-          "absolute_change_pct": 34.53,
-          "close_before": 11.046,
-          "close_after": 7.232,
+          "date": "2026-10-22",
+          "absolute_change_pct": 10781.44,
+          "close_before": 33.865002,
+          "close_after": 3684.999847,
           "stock_split": null
         }
       ],
@@ -1291,20 +1181,20 @@
       "has_split_action": false
     },
     "SNV3.MI": {
-      "adjusted_max_move_pct": 36829.79,
-      "max_absolute_move_pct": 36829.79,
+      "adjusted_max_move_pct": 3692878.98,
+      "max_absolute_move_pct": 3692878.98,
       "largest_events": [
         {
           "date": "2023-11-07",
-          "absolute_change_pct": 36829.79,
+          "absolute_change_pct": 3692878.98,
           "close_before": 0.0527,
-          "close_after": 19.462,
+          "close_after": 1946.199989,
           "stock_split": null
         },
         {
           "date": "2024-12-04",
-          "absolute_change_pct": 22388.79,
-          "close_before": 0.1338,
+          "absolute_change_pct": 124.89,
+          "close_before": 13.38,
           "close_after": 30.09,
           "stock_split": null
         },
@@ -1319,28 +1209,28 @@
       "has_split_action": false
     },
     "SOXS.MI": {
-      "adjusted_max_move_pct": 9547.0,
-      "max_absolute_move_pct": 9547.0,
+      "adjusted_max_move_pct": 336991.2,
+      "max_absolute_move_pct": 336991.2,
       "largest_events": [
         {
+          "date": "2025-12-11",
+          "absolute_change_pct": 336991.2,
+          "close_before": 0.2434,
+          "close_after": 820.479965,
+          "stock_split": null
+        },
+        {
+          "date": "2025-12-08",
+          "absolute_change_pct": 320284.47,
+          "close_before": 0.2497,
+          "close_after": 800.0,
+          "stock_split": null
+        },
+        {
           "date": "2025-12-18",
-          "absolute_change_pct": 9547.0,
+          "absolute_change_pct": 308604.13,
           "close_before": 0.3187,
-          "close_after": 30.745001,
-          "stock_split": null
-        },
-        {
-          "date": "2026-11-18",
-          "absolute_change_pct": 3411.7,
-          "close_before": 0.6027,
-          "close_after": 21.165001,
-          "stock_split": null
-        },
-        {
-          "date": "2025-04-10",
-          "absolute_change_pct": 59.87,
-          "close_before": 15.324,
-          "close_after": 6.15,
+          "close_after": 983.840027,
           "stock_split": null
         }
       ],
@@ -1365,10 +1255,10 @@
           "stock_split": null
         },
         {
-          "date": "2026-06-10",
-          "absolute_change_pct": 99.85,
-          "close_before": 32.4837,
-          "close_after": 0.0494,
+          "date": "2026-06-09",
+          "absolute_change_pct": 99.84,
+          "close_before": 29.419201,
+          "close_after": 0.0477,
           "stock_split": null
         }
       ],
@@ -1403,16 +1293,9 @@
       "has_split_action": false
     },
     "VIXL.MI": {
-      "adjusted_max_move_pct": 597302.6,
-      "max_absolute_move_pct": 597302.6,
+      "adjusted_max_move_pct": 65.99,
+      "max_absolute_move_pct": 65.99,
       "largest_events": [
-        {
-          "date": "2024-07-22",
-          "absolute_change_pct": 597302.6,
-          "close_before": 0.0077,
-          "close_after": 46.0,
-          "stock_split": 0.00015822779802917783
-        },
         {
           "date": "2024-08-05",
           "absolute_change_pct": 65.99,
@@ -1423,36 +1306,15 @@
         {
           "date": "2020-03-12",
           "absolute_change_pct": 63.57,
-          "close_before": 1752.062744,
-          "close_after": 2865.7771,
-          "stock_split": null
-        }
-      ],
-      "has_split_action": true
-    },
-    "COMH.MI": {
-      "adjusted_max_move_pct": 70.92,
-      "max_absolute_move_pct": 70.92,
-      "largest_events": [
-        {
-          "date": "2026-09-21",
-          "absolute_change_pct": 70.92,
-          "close_before": 25.615,
-          "close_after": 43.779999,
+          "close_before": 11073040.047094,
+          "close_after": 18111717.001085,
           "stock_split": null
         },
         {
-          "date": "2020-04-29",
-          "absolute_change_pct": 9.36,
-          "close_before": 11.618,
-          "close_after": 12.706,
-          "stock_split": null
-        },
-        {
-          "date": "2020-04-21",
-          "absolute_change_pct": 8.63,
-          "close_before": 13.028,
-          "close_after": 11.904,
+          "date": "2024-08-02",
+          "absolute_change_pct": 58.38,
+          "close_before": 53.970001,
+          "close_after": 85.480003,
           "stock_split": null
         }
       ],
@@ -1554,17 +1416,17 @@
           "stock_split": null
         },
         {
-          "date": "2026-03-09",
-          "absolute_change_pct": 50.69,
-          "close_before": 32.305,
-          "close_after": 48.68,
-          "stock_split": null
-        },
-        {
           "date": "2021-11-26",
           "absolute_change_pct": 32.32,
           "close_before": 520.070007,
           "close_after": 351.98999,
+          "stock_split": null
+        },
+        {
+          "date": "2026-04-08",
+          "absolute_change_pct": 31.27,
+          "close_before": 61.709999,
+          "close_after": 42.415001,
           "stock_split": null
         }
       ],
@@ -1599,13 +1461,13 @@
       "has_split_action": false
     },
     "3NGL.MI": {
-      "adjusted_max_move_pct": 46977.77,
-      "max_absolute_move_pct": 46977.77,
+      "adjusted_max_move_pct": 370.78,
+      "max_absolute_move_pct": 370.78,
       "largest_events": [
         {
           "date": "2024-07-23",
-          "absolute_change_pct": 46977.77,
-          "close_before": 0.045,
+          "absolute_change_pct": 370.78,
+          "close_before": 4.5,
           "close_after": 21.184999,
           "stock_split": null
         },
@@ -1619,8 +1481,8 @@
         {
           "date": "2022-06-14",
           "absolute_change_pct": 47.79,
-          "close_before": 482.660004,
-          "close_after": 252.0,
+          "close_before": 48266.000366,
+          "close_after": 25200.0,
           "stock_split": null
         }
       ],
@@ -1638,17 +1500,17 @@
           "stock_split": null
         },
         {
-          "date": "2026-03-09",
-          "absolute_change_pct": 58.98,
-          "close_before": 30.934999,
-          "close_after": 49.18,
-          "stock_split": null
-        },
-        {
           "date": "2026-04-08",
           "absolute_change_pct": 37.45,
           "close_before": 62.84,
           "close_after": 39.305,
+          "stock_split": null
+        },
+        {
+          "date": "2021-11-26",
+          "absolute_change_pct": 35.98,
+          "close_before": 498.429993,
+          "close_after": 319.079987,
           "stock_split": null
         }
       ],
@@ -1666,10 +1528,10 @@
           "stock_split": null
         },
         {
-          "date": "2026-05-12",
-          "absolute_change_pct": 88.58,
+          "date": "2026-05-11",
+          "absolute_change_pct": 87.9,
           "close_before": 183.0,
-          "close_after": 20.905001,
+          "close_after": 22.145,
           "stock_split": null
         },
         {
@@ -1717,22 +1579,22 @@
         {
           "date": "2026-04-21",
           "absolute_change_pct": 52075.93,
-          "close_before": 0.0432,
-          "close_after": 22.540001,
+          "close_before": 4.32,
+          "close_after": 2254.000092,
           "stock_split": null
         },
         {
-          "date": "2020-04-03",
-          "absolute_change_pct": 90.73,
-          "close_before": 6161.469727,
-          "close_after": 570.986816,
+          "date": "2026-05-26",
+          "absolute_change_pct": 8938.18,
+          "close_before": 16.344,
+          "close_after": 1477.200031,
           "stock_split": null
         },
         {
-          "date": "2026-03-09",
-          "absolute_change_pct": 73.83,
-          "close_before": 0.2182,
-          "close_after": 0.0571,
+          "date": "2026-04-22",
+          "absolute_change_pct": 99.07,
+          "close_before": 2254.000092,
+          "close_after": 20.879999,
           "stock_split": null
         }
       ],
@@ -1823,5 +1685,6 @@
       "has_split_action": false
     }
   },
-  "review_note": "Un evento split segnalato da Yahoo e un indizio, non prova sufficiente a reinserire il ticker. Verificare continuita della serie e rapporto prezzi prima di riabilitare."
+  "audit_scope": "Tutti gli strumenti dell universo; prezzi Yahoo con repair=True. Gli eventi estremi sono segnalati, non usati per escludere gli ETP.",
+  "review_note": "repair=True tenta di correggere alcune anomalie Yahoo, ma non certifica la serie. Verificare gli eventi estremi prima di interpretare i rendimenti."
 }
