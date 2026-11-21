@@ -157,7 +157,7 @@ def main():
         batch=tickers[start:start+BATCH_SIZE]
         try:
             raw=yf.download(batch,period=PERIOD,interval="1d",auto_adjust=True,repair=True,
-                group_by="ticker",threads=True,progress=False,timeout=30)
+                group_by="ticker",threads=False,progress=False,timeout=30)
             for ticker in batch:
                 try:
                     df=raw[ticker].copy() if isinstance(raw.columns,pd.MultiIndex) else raw.copy()
