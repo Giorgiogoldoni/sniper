@@ -1,0 +1,2235 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-21",
+  "purpose": "Coda di verifica dei 60 strumenti segnalati dall'audit prezzi. Nessuna esclusione o rettifica automatica.",
+  "count": 60,
+  "summary": {
+    "critical": 34,
+    "high": 9,
+    "normal": 17,
+    "mapped": 36,
+    "pending": 24
+  },
+  "instruments": [
+    {
+      "etp_yahoo": "3SMI.MI",
+      "name": "GraniteShares 3x Short MicroStrategy Daily Etp",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 367749910.24,
+      "largest_events": [
+        {
+          "date": "2024-06-17",
+          "absolute_change_pct": 367749910.24,
+          "close_before": 0.0008,
+          "close_after": 2942.000008,
+          "stock_split": null
+        },
+        {
+          "date": "2023-06-21",
+          "absolute_change_pct": 62299.99,
+          "close_before": 0.03,
+          "close_after": 18.719999,
+          "stock_split": null
+        },
+        {
+          "date": "2022-05-13",
+          "absolute_change_pct": 40728.18,
+          "close_before": 316.904998,
+          "close_after": 129386.546875,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "MSTR",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3SPA.MI",
+      "name": "GraniteShares 3x Short Palantir Daily Etp",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 68666565.94,
+      "largest_events": [
+        {
+          "date": "2024-06-18",
+          "absolute_change_pct": 68666565.94,
+          "close_before": 0.0018,
+          "close_after": 1235.999966,
+          "stock_split": null
+        },
+        {
+          "date": "2025-03-27",
+          "absolute_change_pct": 9968.03,
+          "close_before": 0.0147,
+          "close_after": 1.48,
+          "stock_split": null
+        },
+        {
+          "date": "2025-01-09",
+          "absolute_change_pct": 9961.16,
+          "close_before": 0.1635,
+          "close_after": 16.45,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "PLTR",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3STS.MI",
+      "name": "GraniteShares 3x Short Tesla",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 4662425.8,
+      "largest_events": [
+        {
+          "date": "2023-08-16",
+          "absolute_change_pct": 4662425.8,
+          "close_before": 0.0483,
+          "close_after": 2252.000046,
+          "stock_split": null
+        },
+        {
+          "date": "2025-05-06",
+          "absolute_change_pct": 10048.74,
+          "close_before": 0.1748,
+          "close_after": 17.739999,
+          "stock_split": null
+        },
+        {
+          "date": "2025-01-29",
+          "absolute_change_pct": 9855.2,
+          "close_before": 0.2232,
+          "close_after": 22.220001,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "TSLA",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "SNV3.MI",
+      "name": "Leverage Shares -3x Short NVIDIA Etp Securities",
+      "issuer": "Leverage Shares",
+      "classification": "LEVA_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 3692878.98,
+      "largest_events": [
+        {
+          "date": "2023-11-07",
+          "absolute_change_pct": 3692878.98,
+          "close_before": 0.0527,
+          "close_after": 1946.199989,
+          "stock_split": null
+        },
+        {
+          "date": "2024-12-04",
+          "absolute_change_pct": 124.89,
+          "close_before": 13.38,
+          "close_after": 30.09,
+          "stock_split": null
+        },
+        {
+          "date": "2025-01-27",
+          "absolute_change_pct": 56.55,
+          "close_before": 25.129999,
+          "close_after": 39.34,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "NVDA",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3SNV.MI",
+      "name": "GraniteShares 3x Short Nvidia",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 2119899.94,
+      "largest_events": [
+        {
+          "date": "2023-05-02",
+          "absolute_change_pct": 2119899.94,
+          "close_before": 0.0012,
+          "close_after": 25.440001,
+          "stock_split": null
+        },
+        {
+          "date": "2024-07-01",
+          "absolute_change_pct": 62420.89,
+          "close_before": 0.0359,
+          "close_after": 22.445,
+          "stock_split": null
+        },
+        {
+          "date": "2023-05-25",
+          "absolute_change_pct": 78.57,
+          "close_before": 20.695,
+          "close_after": 4.4355,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "NVDA",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3LMO.MI",
+      "name": "GraniteShares 3x Long Moderna Daily Etp",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 560177.79,
+      "largest_events": [
+        {
+          "date": "2025-05-19",
+          "absolute_change_pct": 560177.79,
+          "close_before": 0.0036,
+          "close_after": 20.17,
+          "stock_split": null
+        },
+        {
+          "date": "2023-05-03",
+          "absolute_change_pct": 198559.1,
+          "close_before": 0.0088,
+          "close_after": 17.482,
+          "stock_split": null
+        },
+        {
+          "date": "2026-08-19",
+          "absolute_change_pct": 375.57,
+          "close_before": 46.25,
+          "close_after": 219.949997,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "MRNA",
+      "benchmark_name": "Solactive Daily Leveraged 3x Long Moderna Index",
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3SIS.MI",
+      "name": "WisdomTree Silver 3x Daily Short",
+      "issuer": "WisdomTree",
+      "classification": "MATERIE_PRIME_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": true,
+      "max_adjusted_move_pct": 409536.36,
+      "largest_events": [
+        {
+          "date": "2026-04-20",
+          "absolute_change_pct": 409536.36,
+          "close_before": 0.0033,
+          "close_after": 13.518,
+          "stock_split": null
+        },
+        {
+          "date": "2026-01-30",
+          "absolute_change_pct": 48.57,
+          "close_before": 0.0035,
+          "close_after": 0.0052,
+          "stock_split": null
+        },
+        {
+          "date": "2026-02-05",
+          "absolute_change_pct": 42.55,
+          "close_before": 0.0047,
+          "close_after": 0.0067,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "SOXS.MI",
+      "name": "Leverage Shares -4x Short Semiconductors Etp",
+      "issuer": "Leverage Shares",
+      "classification": "LEVA_SHORT",
+      "leverage": 4,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 336991.2,
+      "largest_events": [
+        {
+          "date": "2025-12-11",
+          "absolute_change_pct": 336991.2,
+          "close_before": 0.2434,
+          "close_after": 820.479965,
+          "stock_split": null
+        },
+        {
+          "date": "2025-12-08",
+          "absolute_change_pct": 320284.47,
+          "close_before": 0.2497,
+          "close_after": 800,
+          "stock_split": null
+        },
+        {
+          "date": "2025-12-18",
+          "absolute_change_pct": 308604.13,
+          "close_before": 0.3187,
+          "close_after": 983.840027,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3LMI.MI",
+      "name": "GraniteShares 3x Long MicroStrategy Daily Etp",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 182644.37,
+      "largest_events": [
+        {
+          "date": "2023-05-19",
+          "absolute_change_pct": 182644.37,
+          "close_before": 0.0133,
+          "close_after": 24.305,
+          "stock_split": null
+        },
+        {
+          "date": "2022-07-20",
+          "absolute_change_pct": 172.56,
+          "close_before": 0.0492,
+          "close_after": 0.1341,
+          "stock_split": null
+        },
+        {
+          "date": "2022-02-07",
+          "absolute_change_pct": 99.95,
+          "close_before": 13446.912109,
+          "close_after": 7.208,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "MSTR",
+      "benchmark_name": "Solactive Daily Leveraged 3x Long MicroStrategy Index",
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3SCR.MI",
+      "name": "GraniteShares 3x Short Unicredit Daily Etp",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 98273.05,
+      "largest_events": [
+        {
+          "date": "2024-07-10",
+          "absolute_change_pct": 98273.05,
+          "close_before": 0.0193,
+          "close_after": 18.986,
+          "stock_split": null
+        },
+        {
+          "date": "2022-03-04",
+          "absolute_change_pct": 43.76,
+          "close_before": 10.76428,
+          "close_after": 15.47421,
+          "stock_split": null
+        },
+        {
+          "date": "2022-02-24",
+          "absolute_change_pct": 40.45,
+          "close_before": 5.53129,
+          "close_after": 7.76857,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "UCG",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "SQQQ.MI",
+      "name": "Leverage Shares -5x Short Nasdaq 100 Etp",
+      "issuer": "Leverage Shares",
+      "classification": "LEVA_SHORT",
+      "leverage": 5,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 68260.32,
+      "largest_events": [
+        {
+          "date": "2026-06-11",
+          "absolute_change_pct": 68260.32,
+          "close_before": 0.0494,
+          "close_after": 33.77,
+          "stock_split": null
+        },
+        {
+          "date": "2026-06-08",
+          "absolute_change_pct": 66914.12,
+          "close_before": 0.0439,
+          "close_after": 29.419201,
+          "stock_split": null
+        },
+        {
+          "date": "2026-06-09",
+          "absolute_change_pct": 99.84,
+          "close_before": 29.419201,
+          "close_after": 0.0477,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "TSLQ.MI",
+      "name": "Leverage Shares -3x Short Tesla Etp Securities",
+      "issuer": "Leverage Shares",
+      "classification": "LEVA_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 67245.6,
+      "largest_events": [
+        {
+          "date": "2025-08-20",
+          "absolute_change_pct": 67245.6,
+          "close_before": 0.0761,
+          "close_after": 51.25,
+          "stock_split": null
+        },
+        {
+          "date": "2025-08-18",
+          "absolute_change_pct": 60181.05,
+          "close_before": 0.076,
+          "close_after": 45.813599,
+          "stock_split": null
+        },
+        {
+          "date": "2023-11-03",
+          "absolute_change_pct": 24953.42,
+          "close_before": 0.0936,
+          "close_after": 23.450001,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "TSLA",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3NIO.MI",
+      "name": "Leverage Shares 3x NIO Etp Securities",
+      "issuer": "Leverage Shares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 65525,
+      "largest_events": [
+        {
+          "date": "2025-02-10",
+          "absolute_change_pct": 65525,
+          "close_before": 0.076,
+          "close_after": 49.875,
+          "stock_split": null
+        },
+        {
+          "date": "2025-08-22",
+          "absolute_change_pct": 40.89,
+          "close_before": 39.215,
+          "close_after": 55.25,
+          "stock_split": null
+        },
+        {
+          "date": "2024-10-28",
+          "absolute_change_pct": 39.6,
+          "close_before": 0.2076,
+          "close_after": 0.2898,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "NIO",
+      "benchmark_name": "iSTOXX Leveraged 3x NIO Index",
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3LSQ.MI",
+      "name": "GraniteShares 3x Long Square Daily Etp",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 65424.93,
+      "largest_events": [
+        {
+          "date": "2023-03-21",
+          "absolute_change_pct": 65424.93,
+          "close_before": 0.0381,
+          "close_after": 24.965,
+          "stock_split": null
+        },
+        {
+          "date": "2022-02-28",
+          "absolute_change_pct": 159.58,
+          "close_before": 0.8144,
+          "close_after": 2.114,
+          "stock_split": null
+        },
+        {
+          "date": "2022-08-03",
+          "absolute_change_pct": 113.09,
+          "close_before": 0.0886,
+          "close_after": 0.1888,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "XYZ",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3SNF.MI",
+      "name": "GraniteShares 3x Short Netflix Daily Etp",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 52296.63,
+      "largest_events": [
+        {
+          "date": "2023-09-19",
+          "absolute_change_pct": 52296.63,
+          "close_before": 0.0653,
+          "close_after": 34.215,
+          "stock_split": null
+        },
+        {
+          "date": "2025-06-02",
+          "absolute_change_pct": 4558.16,
+          "close_before": 0.423,
+          "close_after": 19.704,
+          "stock_split": null
+        },
+        {
+          "date": "2022-04-20",
+          "absolute_change_pct": 103.46,
+          "close_before": 1.256,
+          "close_after": 2.5555,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "NFLX",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3BRS.MI",
+      "name": "WisdomTree Brent Crude Oil 3x Daily Short",
+      "issuer": "WisdomTree",
+      "classification": "MATERIE_PRIME_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": true,
+      "max_adjusted_move_pct": 52075.93,
+      "largest_events": [
+        {
+          "date": "2026-04-21",
+          "absolute_change_pct": 52075.93,
+          "close_before": 4.32,
+          "close_after": 2254.000092,
+          "stock_split": null
+        },
+        {
+          "date": "2026-05-26",
+          "absolute_change_pct": 8938.18,
+          "close_before": 16.344,
+          "close_after": 1477.200031,
+          "stock_split": null
+        },
+        {
+          "date": "2026-04-22",
+          "absolute_change_pct": 99.07,
+          "close_before": 2254.000092,
+          "close_after": 20.879999,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "SBA3.MI",
+      "name": "Leverage Shares -3x Short Alibaba Etp Securities",
+      "issuer": "Leverage Shares",
+      "classification": "LEVA_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 42106.95,
+      "largest_events": [
+        {
+          "date": "2025-04-07",
+          "absolute_change_pct": 42106.95,
+          "close_before": 0.1237,
+          "close_after": 52.209999,
+          "stock_split": null
+        },
+        {
+          "date": "2026-04-20",
+          "absolute_change_pct": 41.49,
+          "close_before": 9.939,
+          "close_after": 5.815,
+          "stock_split": null
+        },
+        {
+          "date": "2026-07-09",
+          "absolute_change_pct": 37.63,
+          "close_before": 13.516,
+          "close_after": 8.43,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "BABA",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3LCO.MI",
+      "name": "GraniteShares 3x Coinbase",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 26996,
+      "largest_events": [
+        {
+          "date": "2023-01-31",
+          "absolute_change_pct": 26996,
+          "close_before": 0.05,
+          "close_after": 13.548,
+          "stock_split": null
+        },
+        {
+          "date": "2022-03-09",
+          "absolute_change_pct": 22853.94,
+          "close_before": 271.718001,
+          "close_after": 62370,
+          "stock_split": null
+        },
+        {
+          "date": "2022-07-20",
+          "absolute_change_pct": 136.59,
+          "close_before": 82,
+          "close_after": 194,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3CON.MI",
+      "name": "Leverage Shares 3x Long Coinbase Etp Securities",
+      "issuer": "Leverage Shares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 25225,
+      "largest_events": [
+        {
+          "date": "2023-03-27",
+          "absolute_change_pct": 25225,
+          "close_before": 0.04,
+          "close_after": 10.13,
+          "stock_split": null
+        },
+        {
+          "date": "2024-05-28",
+          "absolute_change_pct": 644.92,
+          "close_before": 7.241,
+          "close_after": 53.939999,
+          "stock_split": null
+        },
+        {
+          "date": "2022-07-20",
+          "absolute_change_pct": 84.78,
+          "close_before": 0.46,
+          "close_after": 0.85,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "COIN",
+      "benchmark_name": "Leverage Shares 3x Long Coinbase daily exposure",
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3LAA.MI",
+      "name": "GraniteShares 3x Long Alibaba Daily Etp",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 24705.04,
+      "largest_events": [
+        {
+          "date": "2024-07-01",
+          "absolute_change_pct": 24705.04,
+          "close_before": 0.0872,
+          "close_after": 21.629999,
+          "stock_split": null
+        },
+        {
+          "date": "2022-03-16",
+          "absolute_change_pct": 94.27,
+          "close_before": 0.8791,
+          "close_after": 1.7078,
+          "stock_split": null
+        },
+        {
+          "date": "2022-10-24",
+          "absolute_change_pct": 47.77,
+          "close_before": 0.3291,
+          "close_after": 0.1719,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "BABA",
+      "benchmark_name": "Solactive Daily Leveraged 3x Long Alibaba Index",
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3SAP.MI",
+      "name": "GraniteShares 3x Short Apple",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 21302.71,
+      "largest_events": [
+        {
+          "date": "2023-08-23",
+          "absolute_change_pct": 21302.71,
+          "close_before": 0.1105,
+          "close_after": 23.65,
+          "stock_split": null
+        },
+        {
+          "date": "2023-02-02",
+          "absolute_change_pct": 32.62,
+          "close_before": 0.2606,
+          "close_after": 0.1756,
+          "stock_split": null
+        },
+        {
+          "date": "2025-04-07",
+          "absolute_change_pct": 31.01,
+          "close_before": 13.584,
+          "close_after": 17.796,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "AAPL",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3ITS.MI",
+      "name": "WisdomTree FTSE MIB 3x Daily Short",
+      "issuer": "WisdomTree",
+      "classification": "LEVA_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 19937.35,
+      "largest_events": [
+        {
+          "date": "2024-07-22",
+          "absolute_change_pct": 19937.35,
+          "close_before": 0.2142,
+          "close_after": 42.919998,
+          "stock_split": null
+        },
+        {
+          "date": "2020-03-12",
+          "absolute_change_pct": 39.2,
+          "close_before": 8.513,
+          "close_after": 11.85,
+          "stock_split": null
+        },
+        {
+          "date": "2020-03-09",
+          "absolute_change_pct": 33.34,
+          "close_before": 5.846,
+          "close_after": 7.795,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3LAM.MI",
+      "name": "GraniteShares 3x Long AMD Daily ETP",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 19791.14,
+      "largest_events": [
+        {
+          "date": "2025-06-02",
+          "absolute_change_pct": 19791.14,
+          "close_before": 0.1286,
+          "close_after": 25.58,
+          "stock_split": null
+        },
+        {
+          "date": "2025-10-06",
+          "absolute_change_pct": 68.2,
+          "close_before": 68.370003,
+          "close_after": 115,
+          "stock_split": null
+        },
+        {
+          "date": "2026-05-06",
+          "absolute_change_pct": 55.29,
+          "close_before": 249.229996,
+          "close_after": 387.040009,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "AMD",
+      "benchmark_name": "Solactive Daily Leveraged 3x Long AMD Index",
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "GPTS.MI",
+      "name": "Leverage Shares -3x Short Artificial Intelligence (AI) Etp",
+      "issuer": "Leverage Shares",
+      "classification": "LEVA_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 10859.11,
+      "largest_events": [
+        {
+          "date": "2026-10-15",
+          "absolute_change_pct": 10859.11,
+          "close_before": 30.08,
+          "close_after": 3296.500015,
+          "stock_split": null
+        },
+        {
+          "date": "2026-11-13",
+          "absolute_change_pct": 10858.61,
+          "close_before": 39.744999,
+          "close_after": 4355.500031,
+          "stock_split": null
+        },
+        {
+          "date": "2026-10-22",
+          "absolute_change_pct": 10781.44,
+          "close_before": 33.865002,
+          "close_after": 3684.999847,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3SAA.MI",
+      "name": "GraniteShares 3x Short Alibaba Daily Etp",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 10085.79,
+      "largest_events": [
+        {
+          "date": "2024-07-02",
+          "absolute_change_pct": 10085.79,
+          "close_before": 0.2745,
+          "close_after": 27.959999,
+          "stock_split": null
+        },
+        {
+          "date": "2022-10-21",
+          "absolute_change_pct": 63.95,
+          "close_before": 1.4288,
+          "close_after": 2.3425,
+          "stock_split": null
+        },
+        {
+          "date": "2022-03-16",
+          "absolute_change_pct": 59.43,
+          "close_before": 7.033,
+          "close_after": 2.853,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "BABA",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3SNI.MI",
+      "name": "GraniteShares 3x Short NIO Daily Etp",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 4967.61,
+      "largest_events": [
+        {
+          "date": "2025-05-19",
+          "absolute_change_pct": 4967.61,
+          "close_before": 0.4585,
+          "close_after": 23.235001,
+          "stock_split": null
+        },
+        {
+          "date": "2023-06-06",
+          "absolute_change_pct": 279.49,
+          "close_before": 7.58,
+          "close_after": 28.764999,
+          "stock_split": null
+        },
+        {
+          "date": "2022-03-16",
+          "absolute_change_pct": 62.78,
+          "close_before": 265.300012,
+          "close_after": 98.750001,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "NIO",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "SMCI.MI",
+      "name": "Leverage Shares 2x Super Micro Computer Etp",
+      "issuer": "Leverage Shares",
+      "classification": "LEVA_LONG",
+      "leverage": 2,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 4269.39,
+      "largest_events": [
+        {
+          "date": "2024-12-30",
+          "absolute_change_pct": 4269.39,
+          "close_before": 0.5574,
+          "close_after": 24.355,
+          "stock_split": null
+        },
+        {
+          "date": "2024-11-19",
+          "absolute_change_pct": 63.98,
+          "close_before": 0.3084,
+          "close_after": 0.5057,
+          "stock_split": null
+        },
+        {
+          "date": "2024-10-30",
+          "absolute_change_pct": 63.93,
+          "close_before": 2.5895,
+          "close_after": 0.934,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "SMCI",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3SIL.MI",
+      "name": "WisdomTree Silver 3x",
+      "issuer": "WisdomTree",
+      "classification": "MATERIE_PRIME_LEVA",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": true,
+      "max_adjusted_move_pct": 3861.35,
+      "largest_events": [
+        {
+          "date": "2022-12-19",
+          "absolute_change_pct": 3861.35,
+          "close_before": 1.229,
+          "close_after": 48.685001,
+          "stock_split": null
+        },
+        {
+          "date": "2026-05-11",
+          "absolute_change_pct": 87.9,
+          "close_before": 183,
+          "close_after": 22.145,
+          "stock_split": null
+        },
+        {
+          "date": "2026-02-02",
+          "absolute_change_pct": 54.48,
+          "close_before": 534.840027,
+          "close_after": 243.440002,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "benchmark_confirmed",
+      "underlying_yahoo": null,
+      "benchmark_name": "Solactive Silver Commodity Futures SL Index",
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3HCS.MI",
+      "name": "WisdomTree Copper 3x Daily Short",
+      "issuer": "WisdomTree",
+      "classification": "MATERIE_PRIME_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": true,
+      "max_adjusted_move_pct": 2997.54,
+      "largest_events": [
+        {
+          "date": "2026-04-20",
+          "absolute_change_pct": 2997.54,
+          "close_before": 0.5239,
+          "close_after": 16.228001,
+          "stock_split": null
+        },
+        {
+          "date": "2025-07-31",
+          "absolute_change_pct": 64.49,
+          "close_before": 1.132,
+          "close_after": 1.862,
+          "stock_split": null
+        },
+        {
+          "date": "2025-07-09",
+          "absolute_change_pct": 33.1,
+          "close_before": 1.788,
+          "close_after": 1.1962,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3LZN.MI",
+      "name": "GraniteShares 3x Long Amazon Daily Etp",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 2856.8,
+      "largest_events": [
+        {
+          "date": "2023-09-18",
+          "absolute_change_pct": 2856.8,
+          "close_before": 1.088,
+          "close_after": 32.169998,
+          "stock_split": null
+        },
+        {
+          "date": "2026-07-31",
+          "absolute_change_pct": 37.86,
+          "close_before": 40.540001,
+          "close_after": 55.889999,
+          "stock_split": null
+        },
+        {
+          "date": "2022-09-22",
+          "absolute_change_pct": 36.63,
+          "close_before": 1.8486,
+          "close_after": 1.1714,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "AMZN",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3LFB.MI",
+      "name": "GraniteShares 3x Long Facebook Daily Etp",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 2833.64,
+      "largest_events": [
+        {
+          "date": "2023-08-16",
+          "absolute_change_pct": 2833.64,
+          "close_before": 0.5741,
+          "close_after": 16.841999,
+          "stock_split": null
+        },
+        {
+          "date": "2023-02-02",
+          "absolute_change_pct": 88.27,
+          "close_before": 0.0989,
+          "close_after": 0.1862,
+          "stock_split": null
+        },
+        {
+          "date": "2022-10-27",
+          "absolute_change_pct": 75,
+          "close_before": 0.168,
+          "close_after": 0.042,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "META",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3LUB.MI",
+      "name": "GraniteShares 3x Long Uber Daily Etp",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 1524.35,
+      "largest_events": [
+        {
+          "date": "2023-08-24",
+          "absolute_change_pct": 1524.35,
+          "close_before": 0.9674,
+          "close_after": 15.714,
+          "stock_split": null
+        },
+        {
+          "date": "2022-08-02",
+          "absolute_change_pct": 67.9,
+          "close_before": 0.385,
+          "close_after": 0.6464,
+          "stock_split": null
+        },
+        {
+          "date": "2023-05-02",
+          "absolute_change_pct": 63.25,
+          "close_before": 0.3567,
+          "close_after": 0.5823,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "UBER",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3SSQ.MI",
+      "name": "GraniteShares 3x Short Square Daily Etp",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 1503.94,
+      "largest_events": [
+        {
+          "date": "2024-06-19",
+          "absolute_change_pct": 1503.94,
+          "close_before": 1.65,
+          "close_after": 26.465,
+          "stock_split": null
+        },
+        {
+          "date": "2022-02-25",
+          "absolute_change_pct": 76.8,
+          "close_before": 975.889969,
+          "close_after": 226.430988,
+          "stock_split": null
+        },
+        {
+          "date": "2025-02-24",
+          "absolute_change_pct": 75.39,
+          "close_before": 5.267,
+          "close_after": 9.238,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "XYZ",
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "LQQ.MI",
+      "name": "Leverage Shares 3x Nasdaq",
+      "issuer": null,
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 1122.04,
+      "largest_events": [
+        {
+          "date": "2021-02-01",
+          "absolute_change_pct": 1122.04,
+          "close_before": 0.24115,
+          "close_after": 2.94695,
+          "stock_split": null
+        },
+        {
+          "date": "2021-01-29",
+          "absolute_change_pct": 91.93,
+          "close_before": 2.9892,
+          "close_after": 0.24115,
+          "stock_split": null
+        },
+        {
+          "date": "2023-02-02",
+          "absolute_change_pct": 11.58,
+          "close_before": 2.3392,
+          "close_after": 2.61015,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "critical"
+    },
+    {
+      "etp_yahoo": "3NGL.MI",
+      "name": "WisdomTree Natural Gas 3x Daily Leveraged",
+      "issuer": "WisdomTree",
+      "classification": "MATERIE_PRIME_LEVA",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": true,
+      "max_adjusted_move_pct": 370.78,
+      "largest_events": [
+        {
+          "date": "2024-07-23",
+          "absolute_change_pct": 370.78,
+          "close_before": 4.5,
+          "close_after": 21.184999,
+          "stock_split": null
+        },
+        {
+          "date": "2026-02-02",
+          "absolute_change_pct": 51.02,
+          "close_before": 4.6955,
+          "close_after": 2.3,
+          "stock_split": null
+        },
+        {
+          "date": "2022-06-14",
+          "absolute_change_pct": 47.79,
+          "close_before": 48266.000366,
+          "close_after": 25200,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "benchmark_confirmed",
+      "underlying_yahoo": null,
+      "benchmark_name": "Solactive Natural Gas Commodity Futures SL Index",
+      "review_priority": "high"
+    },
+    {
+      "etp_yahoo": "3LTS.MI",
+      "name": "GraniteShares 3x Tesla",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 330.17,
+      "largest_events": [
+        {
+          "date": "2023-08-16",
+          "absolute_change_pct": 330.17,
+          "close_before": 3.01,
+          "close_after": 12.948,
+          "stock_split": null
+        },
+        {
+          "date": "2024-10-24",
+          "absolute_change_pct": 53.23,
+          "close_before": 3.0585,
+          "close_after": 4.6865,
+          "stock_split": null
+        },
+        {
+          "date": "2026-07-23",
+          "absolute_change_pct": 42.96,
+          "close_before": 1.675,
+          "close_after": 0.9554,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "TSLA",
+      "benchmark_name": null,
+      "review_priority": "high"
+    },
+    {
+      "etp_yahoo": "3TSL.MI",
+      "name": "Leverage Shares 3x Tesla Etp",
+      "issuer": "Leverage Shares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 222.01,
+      "largest_events": [
+        {
+          "date": "2024-11-25",
+          "absolute_change_pct": 222.01,
+          "close_before": 14.72,
+          "close_after": 47.400002,
+          "stock_split": null
+        },
+        {
+          "date": "2026-07-23",
+          "absolute_change_pct": 45.3,
+          "close_before": 7.603,
+          "close_after": 4.159,
+          "stock_split": null
+        },
+        {
+          "date": "2025-03-24",
+          "absolute_change_pct": 34.19,
+          "close_before": 8.859,
+          "close_after": 11.888,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "TSLA",
+      "benchmark_name": null,
+      "review_priority": "high"
+    },
+    {
+      "etp_yahoo": "3LPP.MI",
+      "name": "GraniteShares 3x Long PayPal Daily Etp",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 219.67,
+      "largest_events": [
+        {
+          "date": "2023-03-21",
+          "absolute_change_pct": 219.67,
+          "close_before": 7.37,
+          "close_after": 23.559999,
+          "stock_split": null
+        },
+        {
+          "date": "2022-02-02",
+          "absolute_change_pct": 69.34,
+          "close_before": 1020.450012,
+          "close_after": 312.899994,
+          "stock_split": null
+        },
+        {
+          "date": "2023-03-20",
+          "absolute_change_pct": 66.67,
+          "close_before": 22.110001,
+          "close_after": 7.37,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "PYPL",
+      "benchmark_name": null,
+      "review_priority": "high"
+    },
+    {
+      "etp_yahoo": "ARM3.MI",
+      "name": "Leverage Shares 3x Arm Etp Securities",
+      "issuer": "Leverage Shares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 197.13,
+      "largest_events": [
+        {
+          "date": "2024-02-08",
+          "absolute_change_pct": 197.13,
+          "close_before": 39.945,
+          "close_after": 118.690002,
+          "stock_split": null
+        },
+        {
+          "date": "2024-02-12",
+          "absolute_change_pct": 129.74,
+          "close_before": 99.260002,
+          "close_after": 228.039993,
+          "stock_split": null
+        },
+        {
+          "date": "2025-01-22",
+          "absolute_change_pct": 69.87,
+          "close_before": 36.18,
+          "close_after": 61.459999,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "ARM",
+      "benchmark_name": null,
+      "review_priority": "high"
+    },
+    {
+      "etp_yahoo": "3SQ.MI",
+      "name": "Leverage Shares 3x Square Etp Securities",
+      "issuer": "Leverage Shares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 174.29,
+      "largest_events": [
+        {
+          "date": "2026-05-08",
+          "absolute_change_pct": 174.29,
+          "close_before": 1.1712,
+          "close_after": 3.2125,
+          "stock_split": null
+        },
+        {
+          "date": "2024-11-22",
+          "absolute_change_pct": 98.65,
+          "close_before": 22.290001,
+          "close_after": 44.279999,
+          "stock_split": null
+        },
+        {
+          "date": "2026-02-12",
+          "absolute_change_pct": 58.53,
+          "close_before": 2.824,
+          "close_after": 1.1712,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "XYZ",
+      "benchmark_name": null,
+      "review_priority": "high"
+    },
+    {
+      "etp_yahoo": "3M7S.MI",
+      "name": "WisdomTree Magnificent 7 3x Daily Short",
+      "issuer": "WisdomTree",
+      "classification": "LEVA_SHORT",
+      "leverage": 3,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 165.69,
+      "largest_events": [
+        {
+          "date": "2025-10-24",
+          "absolute_change_pct": 165.69,
+          "close_before": 14.412,
+          "close_after": 38.291809,
+          "stock_split": null
+        },
+        {
+          "date": "2025-10-27",
+          "absolute_change_pct": 62.36,
+          "close_before": 38.291809,
+          "close_after": 14.412,
+          "stock_split": null
+        },
+        {
+          "date": "2025-10-13",
+          "absolute_change_pct": 58.02,
+          "close_before": 33.664799,
+          "close_after": 14.132,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "high"
+    },
+    {
+      "etp_yahoo": "3MG7.MI",
+      "name": "WisdomTree Magnificent 7 3x Daily Leveraged",
+      "issuer": "WisdomTree",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 132.69,
+      "largest_events": [
+        {
+          "date": "2025-10-27",
+          "absolute_change_pct": 132.69,
+          "close_before": 15.00893,
+          "close_after": 34.924999,
+          "stock_split": null
+        },
+        {
+          "date": "2025-10-24",
+          "absolute_change_pct": 51.74,
+          "close_before": 31.1,
+          "close_after": 15.00893,
+          "stock_split": null
+        },
+        {
+          "date": "2025-08-07",
+          "absolute_change_pct": 26.97,
+          "close_before": 20.575541,
+          "close_after": 26.125,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "high"
+    },
+    {
+      "etp_yahoo": "LNIK.MI",
+      "name": "WisdomTree Nickel 2x Daily Leveraged",
+      "issuer": "WisdomTree",
+      "classification": "MATERIE_PRIME_LEVA",
+      "leverage": 2,
+      "direction": 1,
+      "commodity": true,
+      "max_adjusted_move_pct": 121.17,
+      "largest_events": [
+        {
+          "date": "2022-03-07",
+          "absolute_change_pct": 121.17,
+          "close_before": 228.820007,
+          "close_after": 506.079987,
+          "stock_split": null
+        },
+        {
+          "date": "2022-03-10",
+          "absolute_change_pct": 45.36,
+          "close_before": 362.399994,
+          "close_after": 198,
+          "stock_split": null
+        },
+        {
+          "date": "2022-03-22",
+          "absolute_change_pct": 42.3,
+          "close_before": 170.070007,
+          "close_after": 98.129997,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "high"
+    },
+    {
+      "etp_yahoo": "3LAP.MI",
+      "name": "GraniteShares 3x Apple",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 97.89,
+      "largest_events": [
+        {
+          "date": "2023-12-04",
+          "absolute_change_pct": 97.89,
+          "close_before": 13.702,
+          "close_after": 27.115,
+          "stock_split": null
+        },
+        {
+          "date": "2025-04-03",
+          "absolute_change_pct": 27.22,
+          "close_before": 29.865,
+          "close_after": 21.735001,
+          "stock_split": null
+        },
+        {
+          "date": "2025-04-07",
+          "absolute_change_pct": 26.76,
+          "close_before": 18.75,
+          "close_after": 13.732,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "AAPL",
+      "benchmark_name": "Solactive Daily Leveraged 3x Long Apple Inc Index",
+      "review_priority": "normal"
+    },
+    {
+      "etp_yahoo": "3EUL.MI",
+      "name": "WisdomTree EURO STOXX 50® 3x Daily Leveraged",
+      "issuer": "WisdomTree",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 96,
+      "largest_events": [
+        {
+          "date": "2026-05-11",
+          "absolute_change_pct": 96,
+          "close_before": 614.380005,
+          "close_after": 24.555,
+          "stock_split": null
+        },
+        {
+          "date": "2020-03-12",
+          "absolute_change_pct": 36.24,
+          "close_before": 123.709999,
+          "close_after": 78.879997,
+          "stock_split": null
+        },
+        {
+          "date": "2020-03-24",
+          "absolute_change_pct": 29.81,
+          "close_before": 70.019997,
+          "close_after": 90.889999,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "normal"
+    },
+    {
+      "etp_yahoo": "3NVD.MI",
+      "name": "Leverage Shares 3x NVIDIA Etp Securities",
+      "issuer": "Leverage Shares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 95.07,
+      "largest_events": [
+        {
+          "date": "2024-05-27",
+          "absolute_change_pct": 95.07,
+          "close_before": 1037.060059,
+          "close_after": 51.130001,
+          "stock_split": null
+        },
+        {
+          "date": "2023-05-25",
+          "absolute_change_pct": 92.67,
+          "close_before": 54.84,
+          "close_after": 105.660004,
+          "stock_split": null
+        },
+        {
+          "date": "2025-01-27",
+          "absolute_change_pct": 52.36,
+          "close_before": 64.019997,
+          "close_after": 30.5,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "NVDA",
+      "benchmark_name": null,
+      "review_priority": "normal"
+    },
+    {
+      "etp_yahoo": "3USL.MI",
+      "name": "WisdomTree S&P500 3x Daily",
+      "issuer": "WisdomTree",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 95.06,
+      "largest_events": [
+        {
+          "date": "2022-12-19",
+          "absolute_change_pct": 95.06,
+          "close_before": 788.97998,
+          "close_after": 38.974998,
+          "stock_split": null
+        },
+        {
+          "date": "2020-03-12",
+          "absolute_change_pct": 26.58,
+          "close_before": 469.880005,
+          "close_after": 345,
+          "stock_split": null
+        },
+        {
+          "date": "2020-03-24",
+          "absolute_change_pct": 25.52,
+          "close_before": 221,
+          "close_after": 277.410004,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "normal"
+    },
+    {
+      "etp_yahoo": "3DEL.MI",
+      "name": "WisdomTree DAX 3x Daily Leveraged",
+      "issuer": "WisdomTree",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 94.98,
+      "largest_events": [
+        {
+          "date": "2026-05-11",
+          "absolute_change_pct": 94.98,
+          "close_before": 480.600006,
+          "close_after": 24.145,
+          "stock_split": null
+        },
+        {
+          "date": "2020-03-12",
+          "absolute_change_pct": 36.15,
+          "close_before": 113.07,
+          "close_after": 72.199997,
+          "stock_split": null
+        },
+        {
+          "date": "2020-03-24",
+          "absolute_change_pct": 32.9,
+          "close_before": 61,
+          "close_after": 81.07,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "normal"
+    },
+    {
+      "etp_yahoo": "3UKL.L",
+      "name": "WisdomTree FTSE 100 3x Daily Leveraged",
+      "issuer": "WisdomTree",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 94.96,
+      "largest_events": [
+        {
+          "date": "2026-05-11",
+          "absolute_change_pct": 94.96,
+          "close_before": 41677,
+          "close_after": 2098.75,
+          "stock_split": null
+        },
+        {
+          "date": "2020-03-24",
+          "absolute_change_pct": 29.08,
+          "close_before": 6548.5,
+          "close_after": 8453,
+          "stock_split": null
+        },
+        {
+          "date": "2020-03-12",
+          "absolute_change_pct": 28.85,
+          "close_before": 11551.5,
+          "close_after": 8218.5,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "normal"
+    },
+    {
+      "etp_yahoo": "3LNV.MI",
+      "name": "GraniteShares 3x Nvidia",
+      "issuer": "GraniteShares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 93.13,
+      "largest_events": [
+        {
+          "date": "2023-05-25",
+          "absolute_change_pct": 93.13,
+          "close_before": 12.466,
+          "close_after": 24.075001,
+          "stock_split": null
+        },
+        {
+          "date": "2024-06-11",
+          "absolute_change_pct": 86.82,
+          "close_before": 319.829987,
+          "close_after": 42.139999,
+          "stock_split": null
+        },
+        {
+          "date": "2025-01-27",
+          "absolute_change_pct": 53.15,
+          "close_before": 39.404999,
+          "close_after": 18.459999,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "NVDA",
+      "benchmark_name": null,
+      "review_priority": "normal"
+    },
+    {
+      "etp_yahoo": "3BRL.MI",
+      "name": "WisdomTree Brent Crude Oil 3x Daily Leveraged",
+      "issuer": "WisdomTree",
+      "classification": "MATERIE_PRIME_LEVA",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": true,
+      "max_adjusted_move_pct": 91.9,
+      "largest_events": [
+        {
+          "date": "2022-12-19",
+          "absolute_change_pct": 91.9,
+          "close_before": 454.519989,
+          "close_after": 36.830002,
+          "stock_split": null
+        },
+        {
+          "date": "2021-11-26",
+          "absolute_change_pct": 32.32,
+          "close_before": 520.070007,
+          "close_after": 351.98999,
+          "stock_split": null
+        },
+        {
+          "date": "2026-04-08",
+          "absolute_change_pct": 31.27,
+          "close_before": 61.709999,
+          "close_after": 42.415001,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "normal"
+    },
+    {
+      "etp_yahoo": "3OIL.MI",
+      "name": "WisdomTree Crude Oil 3x",
+      "issuer": "WisdomTree",
+      "classification": "MATERIE_PRIME_LEVA",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": true,
+      "max_adjusted_move_pct": 89.54,
+      "largest_events": [
+        {
+          "date": "2022-12-19",
+          "absolute_change_pct": 89.54,
+          "close_before": 364.589996,
+          "close_after": 38.130001,
+          "stock_split": null
+        },
+        {
+          "date": "2026-04-08",
+          "absolute_change_pct": 37.45,
+          "close_before": 62.84,
+          "close_after": 39.305,
+          "stock_split": null
+        },
+        {
+          "date": "2021-11-26",
+          "absolute_change_pct": 35.98,
+          "close_before": 498.429993,
+          "close_after": 319.079987,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "normal"
+    },
+    {
+      "etp_yahoo": "3FB.MI",
+      "name": "Leverage Shares 3x Facebook Etp Securities",
+      "issuer": "Leverage Shares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 87.91,
+      "largest_events": [
+        {
+          "date": "2023-02-02",
+          "absolute_change_pct": 87.91,
+          "close_before": 0.3731,
+          "close_after": 0.7011,
+          "stock_split": null
+        },
+        {
+          "date": "2022-10-27",
+          "absolute_change_pct": 69.26,
+          "close_before": 0.5292,
+          "close_after": 0.1627,
+          "stock_split": null
+        },
+        {
+          "date": "2024-02-02",
+          "absolute_change_pct": 61.85,
+          "close_before": 4.1785,
+          "close_after": 6.763,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "META",
+      "benchmark_name": null,
+      "review_priority": "normal"
+    },
+    {
+      "etp_yahoo": "2PAL.MI",
+      "name": "WisdomTree Palladium 2x Daily Leveraged",
+      "issuer": "WisdomTree",
+      "classification": "MATERIE_PRIME_LEVA",
+      "leverage": 2,
+      "direction": 1,
+      "commodity": true,
+      "max_adjusted_move_pct": 76.95,
+      "largest_events": [
+        {
+          "date": "2022-12-19",
+          "absolute_change_pct": 76.95,
+          "close_before": 153.979996,
+          "close_after": 35.5,
+          "stock_split": null
+        },
+        {
+          "date": "2020-03-25",
+          "absolute_change_pct": 44.81,
+          "close_before": 334.5,
+          "close_after": 484.380005,
+          "stock_split": null
+        },
+        {
+          "date": "2020-03-24",
+          "absolute_change_pct": 34.97,
+          "close_before": 247.830002,
+          "close_after": 334.5,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "normal"
+    },
+    {
+      "etp_yahoo": "VIXL.MI",
+      "name": "WisdomTree S&P 500 VIX Short-Term Futures 2.25x Daily Leveraged",
+      "issuer": "WisdomTree",
+      "classification": "LEVA_SHORT",
+      "leverage": 1,
+      "direction": -1,
+      "commodity": false,
+      "max_adjusted_move_pct": 65.99,
+      "largest_events": [
+        {
+          "date": "2024-08-05",
+          "absolute_change_pct": 65.99,
+          "close_before": 85.480003,
+          "close_after": 141.889999,
+          "stock_split": null
+        },
+        {
+          "date": "2020-03-12",
+          "absolute_change_pct": 63.57,
+          "close_before": 11073040.047094,
+          "close_after": 18111717.001085,
+          "stock_split": null
+        },
+        {
+          "date": "2024-08-02",
+          "absolute_change_pct": 58.38,
+          "close_before": 53.970001,
+          "close_after": 85.480003,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "normal"
+    },
+    {
+      "etp_yahoo": "3HCL.MI",
+      "name": "WisdomTree Copper 3x Daily Leveraged",
+      "issuer": "WisdomTree",
+      "classification": "MATERIE_PRIME_LEVA",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": true,
+      "max_adjusted_move_pct": 64.49,
+      "largest_events": [
+        {
+          "date": "2025-07-31",
+          "absolute_change_pct": 64.49,
+          "close_before": 21.135,
+          "close_after": 7.506,
+          "stock_split": null
+        },
+        {
+          "date": "2025-07-09",
+          "absolute_change_pct": 24.46,
+          "close_before": 15.708,
+          "close_after": 19.549999,
+          "stock_split": null
+        },
+        {
+          "date": "2025-04-04",
+          "absolute_change_pct": 22.39,
+          "close_before": 17.667999,
+          "close_after": 13.712,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "normal"
+    },
+    {
+      "etp_yahoo": "3AAP.MI",
+      "name": "Leverage Shares 3x Apple Etp Securities",
+      "issuer": "Leverage Shares",
+      "classification": "LEVA_LONG",
+      "leverage": 3,
+      "direction": 1,
+      "commodity": false,
+      "max_adjusted_move_pct": 64.33,
+      "largest_events": [
+        {
+          "date": "2022-08-03",
+          "absolute_change_pct": 64.33,
+          "close_before": 47.544998,
+          "close_after": 78.129997,
+          "stock_split": null
+        },
+        {
+          "date": "2022-06-20",
+          "absolute_change_pct": 31.91,
+          "close_before": 60.439999,
+          "close_after": 41.154999,
+          "stock_split": null
+        },
+        {
+          "date": "2025-04-07",
+          "absolute_change_pct": 27.82,
+          "close_before": 48.814999,
+          "close_after": 35.235001,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "AAPL",
+      "benchmark_name": "iSTOXX Leveraged 3X AAPL Index",
+      "review_priority": "normal"
+    },
+    {
+      "etp_yahoo": "SNIK.MI",
+      "name": "WisdomTree Nickel 1x Daily Short",
+      "issuer": "WisdomTree",
+      "classification": "MATERIE_PRIME_SHORT",
+      "leverage": 1,
+      "direction": -1,
+      "commodity": true,
+      "max_adjusted_move_pct": 62.14,
+      "largest_events": [
+        {
+          "date": "2022-03-07",
+          "absolute_change_pct": 62.14,
+          "close_before": 8.64,
+          "close_after": 3.2715,
+          "stock_split": null
+        },
+        {
+          "date": "2022-03-08",
+          "absolute_change_pct": 37.55,
+          "close_before": 3.2715,
+          "close_after": 4.5,
+          "stock_split": null
+        },
+        {
+          "date": "2017-08-03",
+          "absolute_change_pct": 18.06,
+          "close_before": 32.380001,
+          "close_after": 38.228031,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "normal"
+    },
+    {
+      "etp_yahoo": "NICK.MI",
+      "name": "WisdomTree Nickel",
+      "issuer": "WisdomTree",
+      "classification": "MATERIE_PRIME_1X",
+      "leverage": 1,
+      "direction": 1,
+      "commodity": true,
+      "max_adjusted_move_pct": 61.97,
+      "largest_events": [
+        {
+          "date": "2022-03-07",
+          "absolute_change_pct": 61.97,
+          "close_before": 25.424999,
+          "close_after": 41.18,
+          "stock_split": null
+        },
+        {
+          "date": "2022-03-09",
+          "absolute_change_pct": 25,
+          "close_before": 32,
+          "close_after": 24,
+          "stock_split": null
+        },
+        {
+          "date": "2022-03-08",
+          "absolute_change_pct": 22.29,
+          "close_before": 41.18,
+          "close_after": 32,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "normal"
+    },
+    {
+      "etp_yahoo": "ENIK.MI",
+      "name": "WisdomTree Nickel - EUR Daily Hedged",
+      "issuer": "WisdomTree",
+      "classification": "MATERIE_PRIME_1X",
+      "leverage": 1,
+      "direction": 1,
+      "commodity": true,
+      "max_adjusted_move_pct": 60.23,
+      "largest_events": [
+        {
+          "date": "2022-03-07",
+          "absolute_change_pct": 60.23,
+          "close_before": 12.074,
+          "close_after": 19.346001,
+          "stock_split": null
+        },
+        {
+          "date": "2022-03-09",
+          "absolute_change_pct": 27.45,
+          "close_before": 17.4,
+          "close_after": 12.624,
+          "stock_split": null
+        },
+        {
+          "date": "2022-11-17",
+          "absolute_change_pct": 18.65,
+          "close_before": 12.406,
+          "close_after": 10.092,
+          "stock_split": null
+        }
+      ],
+      "mapping_status": "pending_verification",
+      "underlying_yahoo": null,
+      "benchmark_name": null,
+      "review_priority": "normal"
+    }
+  ]
+}
