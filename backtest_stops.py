@@ -93,7 +93,7 @@ def audit_raw_exclusions(tickers):
         batch=tickers[start:start+BATCH]
         try:
             raw=yf.download(batch,period=PERIOD,interval="1d",auto_adjust=False,repair=True,
-                actions=True,group_by="ticker",threads=True,progress=False,timeout=30)
+                actions=True,group_by="ticker",threads=False,progress=False,timeout=30)
             for t in batch:
                 try:
                     x=raw[t].copy() if isinstance(raw.columns,pd.MultiIndex) else raw.copy()
@@ -181,7 +181,7 @@ def main():
         batch=tickers[start:start+BATCH]
         try:
             raw=yf.download(batch,period=PERIOD,interval="1d",auto_adjust=True,repair=True,
-                group_by="ticker",threads=True,progress=False,timeout=30)
+                group_by="ticker",threads=False,progress=False,timeout=30)
             for t in batch:
                 x=extract_frame(raw,t)
                 if x is None or len(x)<MIN_BARS:
