@@ -152,6 +152,7 @@ def main():
     tickers=list(items)
     print(f"Universe: {len(tickers)} unique Yahoo tickers")
     frames={}
+    quality_excluded={}
     for start in range(0,len(tickers),BATCH_SIZE):
         batch=tickers[start:start+BATCH_SIZE]
         try:
@@ -166,7 +167,14 @@ def main():
                     if not set(cols).issubset(df.columns): continue
                     df=df[cols].dropna(subset=["Close"])
                     df=df[~df.index.duplicated(keep="last")]
+                    df=df[df["Close"]>0]
                     if len(df)>=MIN_BARS:
+                        daily_move=df["Close"].pct_change().abs().dropna()
+                        max_move=float(daily_move.max()) if len(daily_move) else 0.0
+                        # Oltre il 60% giornaliero: potenziale split non rettificato o dato anomalo.
+                        if max_move>0.60:
+                            quality_excluded[ticker]=round(max_move*100,2)
+                            continue
                         frames[ticker]=df
                 except Exception:
                     continue
@@ -209,14 +217,17 @@ def main():
                 "avg_instrument_return_pct":round(float(valid["avg_return_pct"].mean()),3),
                 "median_instrument_return_pct":round(float(valid["median_return_pct"].median()),3),
                 "avg_win_rate_pct":round(float(valid["win_rate_pct"].mean()),2),
-                "avg_profit_factor":round(float(valid["profit_factor"].dropna().mean()),3) if valid["profit_factor"].notna().any() else None})
+                "median_win_rate_pct":round(float(valid["win_rate_pct"].median()),2),
+                "avg_profit_factor":round(float(valid["profit_factor"].dropna().mean()),3) if valid["profit_factor"].notna().any() else None,
+                "median_profit_factor":round(float(valid["profit_factor"].dropna().median()),3) if valid["profit_factor"].notna().any() else None})
         summary.sort(key=lambda x:(x["category"],x["horizon_days"],-(x["avg_instrument_return_pct"] or -999)))
         detail.to_csv(ROOT/"data"/"backtest_detail.csv",index=False)
     result={"generated_at":datetime.now(timezone.utc).isoformat(),"period_requested":PERIOD,
         "minimum_history_bars":MIN_BARS,"universe_total":len(tickers),"usable_instruments":len(frames),
-        "coverage_by_category":coverage,"horizons_days":list(HORIZONS),
+        "coverage_by_category":coverage,"quality_excluded_count":len(quality_excluded),
+        "quality_excluded_tickers":quality_excluded,"horizons_days":list(HORIZONS),
         "method":"segnale a close t, rendimento close t -> close t+N; segnali non sovrapposti per strumento/strategia/orizzonte; 70% iniziale warm-up/train cronologico, test OOS sul 30% finale; strumenti pesati in modo uguale nelle medie categoria.",
-        "limitations":["prezzi Yahoo auto-adjusted; disponibilita e qualita storica variabili","strumenti con meno di 260 sedute esclusi","non include spread, commissioni, slippage, imposte e costi interni dell'ETP","segnali valutati sul prezzo dello strumento, senza leva sintetica","risultati esplorativi, non garanzia di performance"],
+        "limitations":["prezzi Yahoo auto-adjusted; disponibilita e qualita storica variabili","strumenti con meno di 260 sedute esclusi","serie con variazione giornaliera assoluta oltre 60% escluse come potenziali anomalie di split/dati","non include spread, commissioni, slippage, imposte e costi interni dell'ETP","segnali valutati sul prezzo dello strumento, senza leva sintetica","risultati esplorativi, non garanzia di performance"],
         "category_strategy_results":summary}
     OUT.write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding="utf-8")
     print(json.dumps({"usable":len(frames),"coverage":coverage,"rows":len(rows),"summary_rows":len(summary)},ensure_ascii=False))
