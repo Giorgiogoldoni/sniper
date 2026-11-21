@@ -152,11 +152,11 @@ def main():
     tickers=list(items)
     print(f"Universe: {len(tickers)} unique Yahoo tickers")
     frames={}
-    quality_excluded={}
+    quality_flagged={}
     for start in range(0,len(tickers),BATCH_SIZE):
         batch=tickers[start:start+BATCH_SIZE]
         try:
-            raw=yf.download(batch,period=PERIOD,interval="1d",auto_adjust=True,
+            raw=yf.download(batch,period=PERIOD,interval="1d",auto_adjust=True,repair=True,
                 group_by="ticker",threads=True,progress=False,timeout=30)
             for ticker in batch:
                 try:
@@ -171,10 +171,10 @@ def main():
                     if len(df)>=MIN_BARS:
                         daily_move=df["Close"].pct_change().abs().dropna()
                         max_move=float(daily_move.max()) if len(daily_move) else 0.0
-                        # Oltre il 60% giornaliero: potenziale split non rettificato o dato anomalo.
+                        # La volatilita non e un criterio di esclusione: registriamo
+                        # soltanto gli eventi estremi per un controllo dati separato.
                         if max_move>0.60:
-                            quality_excluded[ticker]=round(max_move*100,2)
-                            continue
+                            quality_flagged[ticker]=round(max_move*100,2)
                         frames[ticker]=df
                 except Exception:
                     continue
@@ -224,10 +224,12 @@ def main():
         detail.to_csv(ROOT/"data"/"backtest_detail.csv",index=False)
     result={"generated_at":datetime.now(timezone.utc).isoformat(),"period_requested":PERIOD,
         "minimum_history_bars":MIN_BARS,"universe_total":len(tickers),"usable_instruments":len(frames),
-        "coverage_by_category":coverage,"quality_excluded_count":len(quality_excluded),
-        "quality_excluded_tickers":quality_excluded,"horizons_days":list(HORIZONS),
+        "coverage_by_category":coverage,"quality_excluded_count":0,
+        "quality_excluded_tickers":{},
+        "quality_flagged_count":len(quality_flagged),
+        "quality_flagged_tickers":quality_flagged,"horizons_days":list(HORIZONS),
         "method":"segnale a close t, rendimento close t -> close t+N; segnali non sovrapposti per strumento/strategia/orizzonte; 70% iniziale warm-up/train cronologico, test OOS sul 30% finale; strumenti pesati in modo uguale nelle medie categoria.",
-        "limitations":["prezzi Yahoo auto-adjusted; disponibilita e qualita storica variabili","strumenti con meno di 260 sedute esclusi","serie con variazione giornaliera assoluta oltre 60% escluse come potenziali anomalie di split/dati","non include spread, commissioni, slippage, imposte e costi interni dell'ETP","segnali valutati sul prezzo dello strumento, senza leva sintetica","risultati esplorativi, non garanzia di performance"],
+        "limitations":["prezzi Yahoo auto-adjusted con tentativo di riparazione yfinance repair=True; disponibilita e qualita storica variabili","strumenti con meno di 260 sedute esclusi per insufficienza di storico","variazioni giornaliere oltre 60% segnalate per audit ma non escluse; repair=True non garantisce la correzione di ogni discontinuita","non include spread, commissioni, slippage, imposte e costi interni dell'ETP","segnali valutati sul prezzo dello strumento, senza leva sintetica","risultati esplorativi, non garanzia di performance"],
         "category_strategy_results":summary}
     OUT.write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding="utf-8")
     print(json.dumps({"usable":len(frames),"coverage":coverage,"rows":len(rows),"summary_rows":len(summary)},ensure_ascii=False))
