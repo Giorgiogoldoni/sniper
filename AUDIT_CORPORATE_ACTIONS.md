@@ -96,3 +96,14 @@ La presenza di un'operazione societaria per un ticker non prova che ogni salto a
 - SNV3 e SOXS restano casi con operazione documentata ma collegamento al salto Yahoo non dimostrato.
 - Non è stata ottenuta una serie EOD gratuita, indipendente e completa per i ticker .MI; Twelve Data Basic non copre in modo generalizzato Borsa Italiana.
 - Nessun prezzo corretto o interpolato; nessun backtest rigenerato. I casi non risolti restano da verificare, non vengono cancellati dall'universo.
+
+
+### Altra corrispondenza verificata
+
+| Ticker | Data evento nell'audit | Operazione documentata | Esito |
+|---|---:|---|---|
+| SBA3.MI | 07/04/2025 | Leverage Shares -3x Short Alibaba: consolidamento 329:1; ultima seduta vecchio ISIN 04/04/2025, prima seduta nuovo ISIN 07/04/2025 | **Corrispondenza diretta**: data e quotazione italiana SBA3 IM incluse nell'avviso dell'emittente |
+
+Fonte primaria: https://leverageshares.com/documents/notices/28.03.2025-notice-result-of-adjourned-meeting-3x-short-baba.pdf
+
+Questo porta a due ulteriori corrispondenze temporali dirette emerse nell'integrazione (3ITS e SBA3), oltre ai casi già elencati nella prima versione. I casi con sola coincidenza temporale o con date non allineate non vengono conteggiati come confermati.
