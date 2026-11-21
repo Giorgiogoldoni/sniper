@@ -161,6 +161,29 @@
       "notes": "Confronto giornaliero solo diagnostico; prezzo ETP Borsa Italiana e close USA non sono perfettamente sincronizzati."
     },
     {
+      "etp_yahoo": "3NGL.MI",
+      "etp_name": "WisdomTree Natural Gas 3x Daily Leveraged",
+      "issuer": "WisdomTree",
+      "underlying_name": "Solactive Natural Gas Commodity Futures SL Index",
+      "underlying_yahoo": null,
+      "underlying_type": "commodity_futures_index",
+      "leverage": 3,
+      "direction": 1,
+      "base_currency": "USD",
+      "benchmark_name": "Solactive Natural Gas Commodity Futures SL Index",
+      "benchmark_ticker": null,
+      "status": "benchmark_confirmed",
+      "issuer_source": "https://www.wisdomtree.eu/-/media/eu-media-files/other-documents/operational/corp-action/boost/rns-corporate-actions/2026/wtma-3ngl-restrike-event-2-february-2026.pdf",
+      "known_history_events": [
+        {
+          "date": "2026-02-02",
+          "event": "Restrike ufficiale per volatilità futures natural gas; indice benchmark identificato nel notice",
+          "verification": "evento operativo da tenere distinto da split/corporate action"
+        }
+      ],
+      "notes": "Non sostituire con Henry Hub spot o un future generico: occorre la serie esatta dell'indice Solactive, inclusi roll e metodologia."
+    },
+    {
       "etp_yahoo": "3NIO.MI",
       "etp_name": "Leverage Shares 3x Long NIO ETP",
       "issuer": "Leverage Shares",
@@ -182,6 +205,29 @@
         }
       ],
       "notes": "Verificare la continuità storica fra ISIN precedente e nuovo ISIN prima di considerare omogenea l'intera serie."
+    },
+    {
+      "etp_yahoo": "3SIL.MI",
+      "etp_name": "WisdomTree Silver 3x Daily Leveraged",
+      "issuer": "WisdomTree",
+      "underlying_name": "Solactive Silver Commodity Futures SL Index",
+      "underlying_yahoo": null,
+      "underlying_type": "commodity_futures_index",
+      "leverage": 3,
+      "direction": 1,
+      "base_currency": "USD",
+      "benchmark_name": "Solactive Silver Commodity Futures SL Index",
+      "benchmark_ticker": "SOLWSSI1",
+      "status": "benchmark_confirmed",
+      "issuer_source": "https://www.wisdomtree.eu/-/media/eu-media-files/other-documents/operational/corp-action/boost/rns-corporate-actions/2026/silver-futures-volatility.pdf",
+      "known_history_events": [
+        {
+          "date": "2026-01-30",
+          "event": "Restrike ufficiale; indice Solactive Silver Commodity Futures SL Index",
+          "verification": "benchmark ufficiale identificato"
+        }
+      ],
+      "notes": "Il benchmark segue futures sull'argento, non il prezzo spot. La serie del benchmark va acquisita da fonte coerente prima del confronto numerico."
     }
   ]
 }
