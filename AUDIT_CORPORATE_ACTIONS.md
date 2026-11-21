@@ -166,3 +166,22 @@ Fonti:
 
 ### Regola applicata
 Questi casi sono stati aggiunti all'audit documentale, non al motore di rettifica. **Nessun prezzo è stato cambiato**: per una correzione automatica serve la riconciliazione completa tra vecchio e nuovo ISIN, rapporto, linea di negoziazione e prezzi ufficiali pre/post evento. Le differenze fra prezzo osservato e rapporto dichiarato non vengono colmate con medie, interpolazioni o fattori stimati.
+
+
+## Verifiche aggiuntive — casi ad altissimo salto
+
+| Ticker | Evento Yahoo | Operazione documentata | Rapporto osservato | Esito |
+|---|---:|---|---:|---|
+| 3NIO.MI | 10/02/2025; 0,076 → 49,875 | Leverage Shares 3x Long NIO: consolidamento 641:1; record date 06/02/2025; prima seduta consolidata 07/02/2025; ISIN XS2663694417 → XS2970736489; la notifica include esplicitamente la linea Borsa Italiana 3NIO IM | circa 656:1 | **Corrispondenza molto forte**: salto Yahoo tre giorni dopo l'efficacia, rapporto osservato vicino a 641:1 e identificazione della linea italiana esplicita. Resta da controllare il prezzo ufficiale di chiusura e il calendario della linea. |
+| 3LMO.MI | 19/05/2025; 0,0036 → 20,17 | GraniteShares 3x Long Moderna: consolidamento 5.000:1; record date 16/05/2025; prima seduta consolidata 19/05/2025; ISIN XS2613356620 → XS3069877556 | circa 5.603:1 | **Corrispondenza temporale diretta e rapporto compatibile come ordine di grandezza**, ma scarto del 12% circa da riconciliare con prezzi ufficiali/linea EUR. Non applicare ancora il fattore. |
+| 3LMI.MI | 19/05/2023; 0,0133 → 24,305 | Consolidamento 2.000:1 del 15/05/2023 riportato per GraniteShares 3x Long MicroStrategy | circa 1.827:1 | **Operazione documentata, rapporto/data non perfettamente riconciliati**: evento Yahoo quattro giorni dopo; serve catena ISIN e verifica prezzi. |
+
+Fonti:
+- Leverage Shares, avviso ufficiale consolidamento 3x Long NIO 641:1, con ISIN e linee di negoziazione: https://leverageshares.com/documents/notices/30.01.2025-notice-of-consolidation-3x-long-nio-etp.pdf
+- RNS Leverage Shares 3x NIO: https://www.investegate.co.uk/announcement/rns/leverage-shares-public-limited-company--3nie/3x-nio-consolidation-notice/8714551
+- Borsa Italiana, 3NIO Leverage Shares, ISIN XS2970736489: https://www.borsaitaliana.it/borsa/etc-etn/scheda/XS2970736489-ETFP.html?lang=it
+- GraniteShares 3LMO, avviso RNS con rapporto 5.000:1 e cambio ISIN: https://shareprices.com/rns/granite-3x-long-mrna-reverse-split-19-may-25-kigbex5kdxnsd7l/
+- 3LMI, riferimento al rapporto 2.000:1 del 15/05/2023: https://divvydiary.com/en/graniteshares-3x-long-microstrategy-daily-etp-etf-XS2617255760
+
+### Correzione di classificazione dell'emittente
+Il ticker **3NIO.MI è Leverage Shares**, non GraniteShares. Il master data/instrument_universe.json riporta già correttamente il provider Leverage Shares; questa verifica conferma che l'audit deve mantenere distinti emittente, ticker e linea di negoziazione. Non è stata necessaria alcuna modifica all'anagrafica.
