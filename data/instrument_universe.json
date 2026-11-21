@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generated_from": "GitHub source archives",
-  "as_of": "2026-11-20",
+  "as_of": "2026-11-20T22:44:32Z",
   "scope": "ETP/ETF a leva, short/inversi e prodotti su materie prime (inclusi ETC/ETP 1x)",
   "deduplication": "Deduplicazione sul simbolo Yahoo Finance completo; nessuna fusione per ticker semplice tra borse diverse",
   "source_counts": {
@@ -9,7 +9,10 @@
     "raptor_one_commodity": 77,
     "raptor_leva_valid": 342,
     "raptor_leva_target": 244,
-    "chart_commodity_pending_exchange_mapping": 43
+    "chart_commodity_pending_exchange_mapping": 43,
+    "chart_index_candidates": 43,
+    "chart_index_linked_existing": 43,
+    "chart_index_added_pending_mapping": 0
   },
   "unique_instruments": 310,
   "classification_counts": {
@@ -25,7 +28,8 @@
     "Raptor One: inclusa soltanto la categoria Materie; EUROGROW e le azioni singole sono escluse.",
     "Chart: candidati materie prime esclusi dal master finché non viene verificato il simbolo Yahoo con suffisso di borsa.",
     "Min Finder: usato come controllo storico, non come fonte primaria, per dati mancanti e ticker duplicati/alias.",
-    "Il ticker 3OIS compare nel vecchio archivio Min Finder senza nome né borsa specifica; non è stato aggiunto al master finché non si conferma il simbolo Yahoo corretto."
+    "Il ticker 3OIS compare nel vecchio archivio Min Finder senza nome né borsa specifica; non è stato aggiunto al master finché non si conferma il simbolo Yahoo corretto.",
+    "Chart index: tutti i 43 strumenti candidati sono inclusi; 43 collegati a strumenti già censiti e 0 aggiunti come record distinti con mapping Yahoo da verificare. Nessun suffisso di borsa è stato inventato."
   ],
   "instruments": [
     {
@@ -2681,8 +2685,12 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "AIGL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "AIGO.MI",
@@ -2750,8 +2758,12 @@
       "sources": [
         "scannerv2_universe",
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "ALUM",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "BCOM.DE",
@@ -2800,8 +2812,12 @@
       "sources": [
         "scannerv2_universe",
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "BRENT",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "BRES.MI",
@@ -2866,8 +2882,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_1X",
       "sources": [
-        "raptor_one"
-      ]
+        "raptor_one",
+        "chart_index"
+      ],
+      "chart_ticker": "CARB",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "CCEUAS.MI",
@@ -2980,8 +3000,12 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "COCO",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "COFF.MI",
@@ -3145,8 +3169,12 @@
       "sources": [
         "scannerv2_universe",
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "CORN",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "COTN.MI",
@@ -3162,8 +3190,12 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "COTN",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "CPER.MI",
@@ -3178,8 +3210,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_1X",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "CPER",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "CRRE.MI",
@@ -3262,8 +3298,12 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "EALU",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "EBRT.MI",
@@ -3328,8 +3368,12 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "ECOF",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "ECOP.MI",
@@ -3345,8 +3389,12 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "ECOP",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "ECRD.MI",
@@ -3396,8 +3444,12 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "ECTN",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "EFCM.MI",
@@ -3480,8 +3532,12 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "ENIK",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "ENTR.MI",
@@ -3512,8 +3568,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_1X",
       "sources": [
-        "raptor_one"
-      ]
+        "raptor_one",
+        "chart_index"
+      ],
+      "chart_ticker": "ESOY",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "ESUG.MI",
@@ -3611,8 +3671,12 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "EZNC",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "FCRU.MI",
@@ -3646,8 +3710,12 @@
       "sources": [
         "scannerv2_universe",
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "GAS",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "GBS.MI",
@@ -3824,8 +3892,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_1X",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "NCLR",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "NGAS.MI",
@@ -3981,8 +4053,12 @@
       "sources": [
         "scannerv2_universe",
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "PHPT",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "SGBS.MI",
@@ -4046,8 +4122,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_1X",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "SLVR",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "SOYB.MI",
@@ -4080,8 +4160,12 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "SOYO",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "SUGA.MI",
@@ -4097,8 +4181,12 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "SUGA",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "TINM.MI",
@@ -4195,8 +4283,12 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "WCOA",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "WCOE.MI",
@@ -4328,8 +4420,12 @@
       "sources": [
         "scannerv2_universe",
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "WTI",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "XAGZ.MI",
@@ -4378,8 +4474,12 @@
       "sources": [
         "scannerv2_universe",
         "raptor_one",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "ZINC",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "2GOL.MI",
@@ -4410,8 +4510,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "2PAL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "3BRL.MI",
@@ -4426,8 +4530,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3BRL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "3CFL.MI",
@@ -4442,8 +4550,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3CFL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "3GOL.MI",
@@ -4459,8 +4571,12 @@
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
         "scannerv2_universe",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3GOL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "3HCL.MI",
@@ -4475,8 +4591,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3HCL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "3NGL.MI",
@@ -4491,8 +4611,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3NGL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "3OIL.MI",
@@ -4508,8 +4632,12 @@
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
         "scannerv2_universe",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3OIL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "3SIL.MI",
@@ -4525,8 +4653,12 @@
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
         "scannerv2_universe",
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3SIL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "3SUL.MI",
@@ -4541,8 +4673,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3SUL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "3WHL.MI",
@@ -4557,8 +4693,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3WHL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "LAGR.MI",
@@ -4589,8 +4729,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LALU",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "LBRT.MI",
@@ -4637,8 +4781,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LCFE",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "LCOC.MI",
@@ -4653,8 +4801,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LCOC",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "LCOP.MI",
@@ -4669,8 +4821,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LCOP",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "LCOR.MI",
@@ -4685,8 +4841,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LCOR",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "LNGA.MI",
@@ -4733,8 +4893,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LOIL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "LPLA.MI",
@@ -4749,8 +4913,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LPLA",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "LSIL.MI",
@@ -4781,8 +4949,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LSUG",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "LWEA.MI",
@@ -4797,8 +4969,12 @@
       "short": false,
       "classification": "MATERIE_PRIME_LEVA",
       "sources": [
-        "raptor_leva"
-      ]
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LWEA",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "1PAS.MI",
