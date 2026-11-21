@@ -14,6 +14,7 @@ import numpy as np
 import pandas as pd
 import yfinance as yf
 from indicators import calc_sar
+from corporate_action_filter import apply_history_cutoff, load_cutoffs
 
 warnings.filterwarnings("ignore")
 ROOT = Path(__file__).resolve().parent
@@ -153,6 +154,8 @@ def main():
     print(f"Universe: {len(tickers)} unique Yahoo tickers")
     frames={}
     quality_flagged={}
+    corporate_action_audit={}
+    corporate_action_cutoffs=load_cutoffs()
     for start in range(0,len(tickers),BATCH_SIZE):
         batch=tickers[start:start+BATCH_SIZE]
         try:
@@ -168,6 +171,9 @@ def main():
                     df=df[cols].dropna(subset=["Close"])
                     df=df[~df.index.duplicated(keep="last")]
                     df=df[df["Close"]>0]
+                    df, cutoff_meta = apply_history_cutoff(df, ticker, corporate_action_cutoffs)
+                    if cutoff_meta.get("cutoff_applied"):
+                        corporate_action_audit[ticker] = cutoff_meta
                     if len(df)>=MIN_BARS:
                         daily_move=df["Close"].pct_change().abs().dropna()
                         max_move=float(daily_move.max()) if len(daily_move) else 0.0
@@ -228,6 +234,8 @@ def main():
         "quality_excluded_tickers":{},
         "quality_flagged_count":len(quality_flagged),
         "quality_flagged_tickers":quality_flagged,"horizons_days":list(HORIZONS),
+        "corporate_action_cutoff_count":len(corporate_action_audit),
+        "corporate_action_cutoffs":corporate_action_audit,
         "method":"segnale a close t, rendimento close t -> close t+N; segnali non sovrapposti per strumento/strategia/orizzonte; 70% iniziale warm-up/train cronologico, test OOS sul 30% finale; strumenti pesati in modo uguale nelle medie categoria.",
         "limitations":["prezzi Yahoo auto-adjusted con tentativo di riparazione yfinance repair=True; disponibilita e qualita storica variabili","strumenti con meno di 260 sedute esclusi per insufficienza di storico","variazioni giornaliere oltre 60% segnalate per audit ma non escluse; repair=True non garantisce la correzione di ogni discontinuita","non include spread, commissioni, slippage, imposte e costi interni dell'ETP","segnali valutati sul prezzo dello strumento, senza leva sintetica","risultati esplorativi, non garanzia di performance"],
         "category_strategy_results":summary}
