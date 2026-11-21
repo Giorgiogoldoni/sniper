@@ -492,7 +492,7 @@ def save_history(events):
     latest_file = SIGNALS_FILE.replace("signals.json", "signals_latest.json")
     tmp2 = latest_file + ".tmp"
     with open(tmp2, "w") as f:
-        json.dump(recent, f, ensure_ascii=False, indent=2, allow_nan=False)
+        json.dump(recent, f, ensure_ascii=False, separators=(",", ":"), allow_nan=False)
     os.replace(tmp2, latest_file)
     print(f"  signals_latest.json: {len(recent)} record (ultimi 7gg)")
 
