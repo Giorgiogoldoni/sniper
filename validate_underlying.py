@@ -40,6 +40,10 @@ def main():
     cache = {}
     for item in mapping["instruments"]:
         etp, und = item["etp_yahoo"], item["underlying_yahoo"]
+        if item["direction"] not in (-1, 1):
+            raise ValueError(f"{etp}: direction deve essere -1 o +1; la leva va indicata separatamente")
+        if float(item["leverage"]) <= 0:
+            raise ValueError(f"{etp}: leverage deve essere positiva")
         if not und:
             results.append({
                 "etp_yahoo": etp, "underlying_yahoo": None,
