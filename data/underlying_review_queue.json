@@ -7,8 +7,8 @@
     "critical": 34,
     "high": 9,
     "normal": 17,
-    "issuer_confirmed": 34,
-    "benchmark_confirmed": 26,
+    "issuer_confirmed": 35,
+    "benchmark_confirmed": 25,
     "pending": 0
   },
   "instruments": [
@@ -404,11 +404,12 @@
         }
       ],
       "mapping_status": "issuer_confirmed",
-      "underlying_yahoo": "UCG",
+      "underlying_yahoo": "UCG.MI",
       "benchmark_name": null,
       "review_priority": "critical",
       "benchmark_ticker": null,
-      "mapping_source": "https://graniteshares.com/it/etps/?category=basket"
+      "mapping_source": "https://graniteshares.com/it/etps/?category=basket",
+      "mapping_notes": "UniCredit S.p.A.; simbolo Yahoo corretto UCG.MI in EUR. Il precedente simbolo UCG non restituiva serie storica."
     },
     {
       "etp_yahoo": "SQQQ.MI",
@@ -723,12 +724,13 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "benchmark_confirmed",
-      "underlying_yahoo": null,
-      "benchmark_name": "Coinbase Global Inc.",
+      "mapping_status": "issuer_confirmed",
+      "underlying_yahoo": "COIN",
+      "benchmark_name": "Solactive Daily Leveraged 3x Long Coinbase Index",
       "review_priority": "critical",
-      "benchmark_ticker": "COIN",
-      "mapping_source": "https://graniteshares.com/it/etps/?category=basket"
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/3x-coinbase-3lco/",
+      "mapping_notes": "Coinbase Global Inc. confermata da factsheet ufficiale; indice Solactive è la strategia 3x, COIN è il sottostante azionario per il confronto diagnostico."
     },
     {
       "etp_yahoo": "3CON.MI",
