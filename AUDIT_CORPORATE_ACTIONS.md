@@ -6,7 +6,7 @@
 
 ## Esito preliminare
 
-Sono state reperite comunicazioni dell'emittente o avvisi regolamentari che documentano consolidamenti per **9 ticker** tra quelli segnalati. In questi casi il salto storico non va interpretato come rendimento di mercato: il numero di titoli posseduti viene ridotto e il prezzo unitario aumenta proporzionalmente.
+Sono state reperite comunicazioni dell'emittente o avvisi regolamentari che documentano consolidamenti per **12 ticker** tra quelli segnalati. In questi casi il salto storico non va interpretato come rendimento di mercato: il numero di titoli posseduti viene ridotto e il prezzo unitario aumenta proporzionalmente.
 
 Questo non dimostra che l'intera serie Yahoo sia corretta dopo aver individuato l'operazione. In diversi casi il rapporto tra i due prezzi riportati dall'audit non coincide con il rapporto di consolidamento: possono esserci più operazioni, cambi di ISIN/ticker o ulteriori difetti di continuità. **Non applicare una correzione automatica basata soltanto sul rapporto dichiarato.**
 
@@ -24,6 +24,10 @@ Questo non dimostra che l'intera serie Yahoo sia corretta dopo aver individuato 
 | 3BRS.MI | 21/04/2026 | Consolidamento WisdomTree, efficace dal 20/04/2026 | 650:1 | Corporate action confermata; data audit a una seduta di distanza |
 | SQQQ.MI | 11/06/2026 | Consolidamento Leverage Shares, primo giorno di negoziazione 11/06/2026 | 681:1 | Corporate action confermata |
 
+| 3EUL.MI | 11/05/2026 | Split WisdomTree, primo giorno di negoziazione 11/05/2026 | 25:1 | Split confermato; il prezzo unitario viene diviso per 25 |
+| 3DEL.MI | 11/05/2026 | Split WisdomTree, primo giorno di negoziazione 11/05/2026 | 20:1 | Split confermato; il prezzo unitario viene diviso per 20 |
+| 3UKL.L | 11/05/2026 | Split WisdomTree, primo giorno di negoziazione 11/05/2026 | 20:1 | Split confermato; il prezzo unitario viene diviso per 20 |
+
 ## Fonti primarie e avvisi regolamentari
 
 - 3SMI, consolidamento 35.000:1 del 17/06/2024: https://graniteshares.com/media/vicngzc3/3smi-1st-security-holder-notice-of-consolidation-lse.pdf
@@ -37,6 +41,7 @@ Questo non dimostra che l'intera serie Yahoo sia corretta dopo aver individuato 
 - 3SIS e 3BRS, consolidamenti WisdomTree: https://www.wisdomtree.com/it/important-notices/2026/q2/consolidations-of-certain-classes-of-wtma-etp-securities
 - Rapporti e ISIN WisdomTree (3SIS 3.800:1; 3BRS 650:1): https://www.globenewswire.com/fr/news-release/2026/04/02/3267139/0/en/Programme-for-the-issuance-of-Collateralised-ETP-Securities.html
 - SQQQ, consolidamento 681:1: https://leverageshares.com/documents/notices/Consolidation-Notice_-5x-Nasdaq-04-June-2026.pdf
+- 3EUL, 3DEL e 3UKL, split WisdomTree con rapporti 25:1, 20:1 e 20:1: https://www.wisdomtree.com/gb/media/advance-notice-wtmai-plc-announcement-splits-23-april-2026
 
 ## Caso da non classificare ancora
 
