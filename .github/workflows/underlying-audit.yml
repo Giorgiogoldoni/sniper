@@ -1,0 +1,36 @@
+name: Sniper underlying audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "validate_underlying.py"
+      - "data/underlying_mapping.json"
+      - ".github/workflows/underlying-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pandas numpy yfinance
+      - name: Run diagnostic audit
+        run: python validate_underlying.py --period 2y
+      - name: Upload diagnostic report
+        uses: actions/upload-artifact@v4
+        with:
+          name: underlying-validation
+          path: data/underlying_validation.json
+          if-no-files-found: error
+          retention-days: 30
