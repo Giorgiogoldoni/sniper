@@ -23,7 +23,7 @@ Aggiornamento sorgenti: 20 novembre 2026. Inventario generato da archivi GitHub;
 | Raptor One — categoria Materie | 77 |
 | Raptor Leva — record validi | 342 |
 | Raptor Leva — candidati leva/short/materie prime | 244 |
-| Chart — candidati commodity in attesa di mapping borsa | 43 |
+| Chart — strumenti commodity collegati all’inventario | 43 |
 
 ## Regole
 
@@ -31,9 +31,13 @@ Aggiornamento sorgenti: 20 novembre 2026. Inventario generato da archivi GitHub;
 - Materie prime 1x, a leva e short sono separate.
 - Sono conservati ticker e simbolo Yahoo completo per evitare fusioni errate fra borse.
 - Il file JSON contiene fonti e metadati per ogni strumento.
-- I candidati Chart non sono stati aggiunti al totale perché il simbolo di borsa non è ancora verificato.
+- Tutti i 43 strumenti individuati nel feed Chart sono ora collegati ai record già presenti nell’inventario, usando il simbolo Yahoo completo già censito. Non sono stati creati duplicati: il totale resta 310.
 - Min Finder resta una fonte di controllo, non primaria, per i numerosi campi mancanti.
 - Il ticker 3OIS compare in Min Finder senza nome e senza borsa specifica: resta in verifica e non viene associato arbitrariamente a un suffisso Yahoo.
+
+## Integrazione Chart (43/43)
+
+Tutti i 43 ticker commodity del file `Giorgiogoldoni/chart/data/index.json` risultano associati a un record dell’inventario Sniper. Il JSON riporta per ciascuno `chart_ticker`, `chart_included: true` e `chart_index` tra le fonti. Verifica automatica: 43 collegamenti, nessun ticker Chart mancante o duplicato.
 
 ## Limiti
 
