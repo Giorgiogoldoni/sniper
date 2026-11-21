@@ -33,6 +33,7 @@ Aggiornamento sorgenti: 20 novembre 2026. Inventario generato da archivi GitHub;
 - Il file JSON contiene fonti e metadati per ogni strumento.
 - I candidati Chart non sono stati aggiunti al totale perché il simbolo di borsa non è ancora verificato.
 - Min Finder resta una fonte di controllo, non primaria, per i numerosi campi mancanti.
+- Il ticker 3OIS compare in Min Finder senza nome e senza borsa specifica: resta in verifica e non viene associato arbitrariamente a un suffisso Yahoo.
 
 ## Limiti
 
