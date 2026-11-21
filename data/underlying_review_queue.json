@@ -7,8 +7,9 @@
     "critical": 34,
     "high": 9,
     "normal": 17,
-    "mapped": 36,
-    "pending": 24
+    "issuer_confirmed": 34,
+    "benchmark_confirmed": 21,
+    "pending": 5
   },
   "instruments": [
     {
@@ -46,7 +47,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "MSTR",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/?category=basket"
     },
     {
       "etp_yahoo": "3SPA.MI",
@@ -83,7 +86,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "PLTR",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/?category=basket"
     },
     {
       "etp_yahoo": "3STS.MI",
@@ -120,7 +125,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "TSLA",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/?category=basket"
     },
     {
       "etp_yahoo": "SNV3.MI",
@@ -157,7 +164,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "NVDA",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://leverageshares.com/it/all-products/"
     },
     {
       "etp_yahoo": "3SNV.MI",
@@ -194,7 +203,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "NVDA",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/?category=basket"
     },
     {
       "etp_yahoo": "3LMO.MI",
@@ -231,7 +242,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "MRNA",
       "benchmark_name": "Solactive Daily Leveraged 3x Long Moderna Index",
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/graniteshares-3x-leveraged-moderna-securities-etp-3lmo/"
     },
     {
       "etp_yahoo": "3SIS.MI",
@@ -265,10 +278,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "critical"
+      "benchmark_name": "Solactive Silver Commodity Futures SL Index",
+      "review_priority": "critical",
+      "benchmark_ticker": "SOLWSSI1",
+      "mapping_source": "https://www.wisdomtree.com/it/products/commodities/wisdomtree-silver-3x-daily-short"
     },
     {
       "etp_yahoo": "SOXS.MI",
@@ -305,7 +320,9 @@
       "mapping_status": "pending_verification",
       "underlying_yahoo": null,
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": null
     },
     {
       "etp_yahoo": "3LMI.MI",
@@ -342,7 +359,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "MSTR",
       "benchmark_name": "Solactive Daily Leveraged 3x Long MicroStrategy Index",
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/graniteshares-3x-leveraged-microstrategy-etp/"
     },
     {
       "etp_yahoo": "3SCR.MI",
@@ -379,7 +398,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "UCG",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/?category=basket"
     },
     {
       "etp_yahoo": "SQQQ.MI",
@@ -416,7 +437,9 @@
       "mapping_status": "pending_verification",
       "underlying_yahoo": null,
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": null
     },
     {
       "etp_yahoo": "TSLQ.MI",
@@ -453,7 +476,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "TSLA",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://leverageshares.com/it/all-products/"
     },
     {
       "etp_yahoo": "3NIO.MI",
@@ -490,7 +515,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "NIO",
       "benchmark_name": "iSTOXX Leveraged 3x NIO Index",
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": "IX3XNIO",
+      "mapping_source": "https://leverageshares.com/it/etps/leverage-shares-3x-long-nio-etp/"
     },
     {
       "etp_yahoo": "3LSQ.MI",
@@ -527,7 +554,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "XYZ",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/uk/etps/"
     },
     {
       "etp_yahoo": "3SNF.MI",
@@ -564,7 +593,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "NFLX",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/?category=basket"
     },
     {
       "etp_yahoo": "3BRS.MI",
@@ -598,10 +629,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "critical"
+      "benchmark_name": "Solactive Brent Crude Oil Commodity Futures SL Index",
+      "review_priority": "critical",
+      "benchmark_ticker": "SOLWSCO2",
+      "mapping_source": "https://www.wisdomtree.com/it/products/commodities/wisdomtree-brent-crude-oil-3x-daily-short"
     },
     {
       "etp_yahoo": "SBA3.MI",
@@ -638,7 +671,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "BABA",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://leverageshares.com/it/all-products/"
     },
     {
       "etp_yahoo": "3LCO.MI",
@@ -672,10 +707,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "critical"
+      "benchmark_name": "Coinbase Global Inc.",
+      "review_priority": "critical",
+      "benchmark_ticker": "COIN",
+      "mapping_source": "https://graniteshares.com/it/etps/?category=basket"
     },
     {
       "etp_yahoo": "3CON.MI",
@@ -712,7 +749,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "COIN",
       "benchmark_name": "Leverage Shares 3x Long Coinbase daily exposure",
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://leverageshares.com/en/etps/leverage-shares-3x-long-coinbase-etp/"
     },
     {
       "etp_yahoo": "3LAA.MI",
@@ -749,7 +788,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "BABA",
       "benchmark_name": "Solactive Daily Leveraged 3x Long Alibaba Index",
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/3x-alibaba-3laa/"
     },
     {
       "etp_yahoo": "3SAP.MI",
@@ -786,7 +827,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "AAPL",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/?category=basket"
     },
     {
       "etp_yahoo": "3ITS.MI",
@@ -820,10 +863,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "critical"
+      "benchmark_name": "FTSE MIB Daily Ultra Short Strategy RT Gross TR Index",
+      "review_priority": "critical",
+      "benchmark_ticker": "FMIBI3X",
+      "mapping_source": "https://www.wisdomtree.com/it/products/equities/wisdomtree-ftse-mib-3x-daily-short"
     },
     {
       "etp_yahoo": "3LAM.MI",
@@ -860,7 +905,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "AMD",
       "benchmark_name": "Solactive Daily Leveraged 3x Long AMD Index",
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/3x-leveraged-amd-securities-etp/"
     },
     {
       "etp_yahoo": "GPTS.MI",
@@ -897,7 +944,9 @@
       "mapping_status": "pending_verification",
       "underlying_yahoo": null,
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": null
     },
     {
       "etp_yahoo": "3SAA.MI",
@@ -934,7 +983,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "BABA",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/?category=basket"
     },
     {
       "etp_yahoo": "3SNI.MI",
@@ -971,7 +1022,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "NIO",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/?category=basket"
     },
     {
       "etp_yahoo": "SMCI.MI",
@@ -1008,7 +1061,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "SMCI",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://leverageshares.com/it/all-products/"
     },
     {
       "etp_yahoo": "3SIL.MI",
@@ -1045,7 +1100,9 @@
       "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
       "benchmark_name": "Solactive Silver Commodity Futures SL Index",
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": "SOLWSSI1",
+      "mapping_source": "https://www.wisdomtree.eu/-/media/eu-media-files/other-documents/operational/corp-action/boost/rns-corporate-actions/2026/silver-futures-volatility.pdf"
     },
     {
       "etp_yahoo": "3HCS.MI",
@@ -1079,10 +1136,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "critical"
+      "benchmark_name": "Solactive HG Copper Commodity Futures SL Index",
+      "review_priority": "critical",
+      "benchmark_ticker": "SOLWSHG1",
+      "mapping_source": "https://www.wisdomtree.com/it/products/commodities/wisdomtree-copper-3x-daily-short"
     },
     {
       "etp_yahoo": "3LZN.MI",
@@ -1119,7 +1178,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "AMZN",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/uk/etps/"
     },
     {
       "etp_yahoo": "3LFB.MI",
@@ -1156,7 +1217,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "META",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/3x-leveraged-meta-platforms-3lfb/"
     },
     {
       "etp_yahoo": "3LUB.MI",
@@ -1193,7 +1256,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "UBER",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/3x-leveraged-uber-etp/"
     },
     {
       "etp_yahoo": "3SSQ.MI",
@@ -1230,7 +1295,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "XYZ",
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/?category=basket"
     },
     {
       "etp_yahoo": "LQQ.MI",
@@ -1267,7 +1334,9 @@
       "mapping_status": "pending_verification",
       "underlying_yahoo": null,
       "benchmark_name": null,
-      "review_priority": "critical"
+      "review_priority": "critical",
+      "benchmark_ticker": null,
+      "mapping_source": null
     },
     {
       "etp_yahoo": "3NGL.MI",
@@ -1304,7 +1373,9 @@
       "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
       "benchmark_name": "Solactive Natural Gas Commodity Futures SL Index",
-      "review_priority": "high"
+      "review_priority": "high",
+      "benchmark_ticker": null,
+      "mapping_source": "https://www.wisdomtree.eu/-/media/eu-media-files/other-documents/operational/corp-action/boost/rns-corporate-actions/2026/wtma-3ngl-restrike-event-2-february-2026.pdf"
     },
     {
       "etp_yahoo": "3LTS.MI",
@@ -1341,7 +1412,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "TSLA",
       "benchmark_name": null,
-      "review_priority": "high"
+      "review_priority": "high",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/media/m04dkdq0/graniteshares_factsheet_italy.pdf"
     },
     {
       "etp_yahoo": "3TSL.MI",
@@ -1378,7 +1451,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "TSLA",
       "benchmark_name": null,
-      "review_priority": "high"
+      "review_priority": "high",
+      "benchmark_ticker": null,
+      "mapping_source": "https://leverageshares.com/it/etps/leverage-shares-3x-Tesla-ETP/"
     },
     {
       "etp_yahoo": "3LPP.MI",
@@ -1415,7 +1490,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "PYPL",
       "benchmark_name": null,
-      "review_priority": "high"
+      "review_priority": "high",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/uk/etps/"
     },
     {
       "etp_yahoo": "ARM3.MI",
@@ -1452,7 +1529,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "ARM",
       "benchmark_name": null,
-      "review_priority": "high"
+      "review_priority": "high",
+      "benchmark_ticker": null,
+      "mapping_source": "https://leverageshares.com/it/all-products/"
     },
     {
       "etp_yahoo": "3SQ.MI",
@@ -1489,7 +1568,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "XYZ",
       "benchmark_name": null,
-      "review_priority": "high"
+      "review_priority": "high",
+      "benchmark_ticker": null,
+      "mapping_source": "https://leverageshares.com/it/all-products/"
     },
     {
       "etp_yahoo": "3M7S.MI",
@@ -1523,10 +1604,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "high"
+      "benchmark_name": "WisdomTree US Bluechip Select Index (GTR)",
+      "review_priority": "high",
+      "benchmark_ticker": "WTUSBLUT",
+      "mapping_source": "https://www.wisdomtree.com/it/products/equities/wisdomtree-magnificent-7-3x-daily-short"
     },
     {
       "etp_yahoo": "3MG7.MI",
@@ -1560,10 +1643,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "high"
+      "benchmark_name": "WisdomTree US Bluechip Select Index (NTR)",
+      "review_priority": "high",
+      "benchmark_ticker": "WTUSBLUN",
+      "mapping_source": "https://www.wisdomtree.com/it/products/equities/wisdomtree-magnificent-7-3x-daily-leveraged"
     },
     {
       "etp_yahoo": "LNIK.MI",
@@ -1597,10 +1682,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "high"
+      "benchmark_name": "Bloomberg Nickel Subindex Excess Return",
+      "review_priority": "high",
+      "benchmark_ticker": "BCOMNI",
+      "mapping_source": "https://www.wisdomtree.com/it/products/commodities/wisdomtree-nickel-2x-daily-leveraged"
     },
     {
       "etp_yahoo": "3LAP.MI",
@@ -1637,7 +1724,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "AAPL",
       "benchmark_name": "Solactive Daily Leveraged 3x Long Apple Inc Index",
-      "review_priority": "normal"
+      "review_priority": "normal",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/3x-long-apple/"
     },
     {
       "etp_yahoo": "3EUL.MI",
@@ -1671,10 +1760,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "normal"
+      "benchmark_name": "EURO STOXX 50 Daily Leverage 3 EUR Net Return Index",
+      "review_priority": "normal",
+      "benchmark_ticker": "SX5TDL3",
+      "mapping_source": "https://www.wisdomtree.com/it/products/equities/wisdomtree-euro-stoxx-50-3x-daily-leveraged"
     },
     {
       "etp_yahoo": "3NVD.MI",
@@ -1711,7 +1802,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "NVDA",
       "benchmark_name": null,
-      "review_priority": "normal"
+      "review_priority": "normal",
+      "benchmark_ticker": null,
+      "mapping_source": "https://leverageshares.com/it/all-products/"
     },
     {
       "etp_yahoo": "3USL.MI",
@@ -1745,10 +1838,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "normal"
+      "benchmark_name": "S&P 500 Net Total Return",
+      "review_priority": "normal",
+      "benchmark_ticker": "SPTR500N",
+      "mapping_source": "https://www.wisdomtree.com/it/products/equities/wisdomtree-sp-500-3x-daily-leveraged"
     },
     {
       "etp_yahoo": "3DEL.MI",
@@ -1782,10 +1877,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "normal"
+      "benchmark_name": "LevDAX x3 AR (TR)",
+      "review_priority": "normal",
+      "benchmark_ticker": "LEVDAX3",
+      "mapping_source": "https://www.wisdomtree.com/it/products/equities/wisdomtree-dax-3x-daily-leveraged"
     },
     {
       "etp_yahoo": "3UKL.L",
@@ -1819,10 +1916,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "normal"
+      "benchmark_name": "FTSE 100 Daily Super Leveraged RT TR Index",
+      "review_priority": "normal",
+      "benchmark_ticker": "UKXL3X",
+      "mapping_source": "https://www.wisdomtree.com/it/products/equities/wisdomtree-ftse-100-3x-daily-leveraged"
     },
     {
       "etp_yahoo": "3LNV.MI",
@@ -1859,7 +1958,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "NVDA",
       "benchmark_name": null,
-      "review_priority": "normal"
+      "review_priority": "normal",
+      "benchmark_ticker": null,
+      "mapping_source": "https://graniteshares.com/it/etps/3x-leveraged-nvidia-etp-3lnv/"
     },
     {
       "etp_yahoo": "3BRL.MI",
@@ -1893,10 +1994,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "normal"
+      "benchmark_name": "Solactive Brent Crude Oil Commodity Futures SL Index",
+      "review_priority": "normal",
+      "benchmark_ticker": "SOLWSCO2",
+      "mapping_source": "https://www.wisdomtree.com/it/products/commodities/wisdomtree-brent-crude-oil-3x-daily-leveraged"
     },
     {
       "etp_yahoo": "3OIL.MI",
@@ -1930,10 +2033,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "normal"
+      "benchmark_name": "Solactive WTI Crude Oil Commodity Futures SL Index",
+      "review_priority": "normal",
+      "benchmark_ticker": "SOLWSCL2",
+      "mapping_source": "https://www.wisdomtree.com/it/products/commodities/wisdomtree-wti-crude-oil-3x-daily-leveraged"
     },
     {
       "etp_yahoo": "3FB.MI",
@@ -1970,7 +2075,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "META",
       "benchmark_name": null,
-      "review_priority": "normal"
+      "review_priority": "normal",
+      "benchmark_ticker": null,
+      "mapping_source": "https://leverageshares.com/it/all-products/"
     },
     {
       "etp_yahoo": "2PAL.MI",
@@ -2004,10 +2111,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "normal"
+      "benchmark_name": "Solactive Palladium Commodity Futures SL Index",
+      "review_priority": "normal",
+      "benchmark_ticker": "SOLWSPA1",
+      "mapping_source": "https://www.wisdomtree.com/it/products/commodities/wisdomtree-palladium-2x-daily-leveraged"
     },
     {
       "etp_yahoo": "VIXL.MI",
@@ -2041,10 +2150,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "normal"
+      "benchmark_name": "S&P 500 VIX Short-Term Futures Index",
+      "review_priority": "normal",
+      "benchmark_ticker": "VXXIDSPE",
+      "mapping_source": "https://www.wisdomtree.com/it/products/alternatives/wisdomtree-sp-500-vix-short-term-futures-225x-daily-leveraged"
     },
     {
       "etp_yahoo": "3HCL.MI",
@@ -2078,10 +2189,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "normal"
+      "benchmark_name": "Solactive HG Copper Commodity Futures SL Index",
+      "review_priority": "normal",
+      "benchmark_ticker": "SOLWSHG1",
+      "mapping_source": "https://www.wisdomtree.com/it/products/commodities/wisdomtree-copper-3x-daily-leveraged"
     },
     {
       "etp_yahoo": "3AAP.MI",
@@ -2118,7 +2231,9 @@
       "mapping_status": "issuer_confirmed",
       "underlying_yahoo": "AAPL",
       "benchmark_name": "iSTOXX Leveraged 3X AAPL Index",
-      "review_priority": "normal"
+      "review_priority": "normal",
+      "benchmark_ticker": "IX3XAAPL",
+      "mapping_source": "https://leverageshares.com/documents/factsheet/3x_aapl_factsheet.pdf"
     },
     {
       "etp_yahoo": "SNIK.MI",
@@ -2152,10 +2267,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "normal"
+      "benchmark_name": "Bloomberg Nickel Subindex Excess Return",
+      "review_priority": "normal",
+      "benchmark_ticker": "BCOMNI",
+      "mapping_source": "https://www.wisdomtree.com/it/products/commodities/wisdomtree-nickel-1x-daily-short"
     },
     {
       "etp_yahoo": "NICK.MI",
@@ -2192,7 +2309,9 @@
       "mapping_status": "pending_verification",
       "underlying_yahoo": null,
       "benchmark_name": null,
-      "review_priority": "normal"
+      "review_priority": "normal",
+      "benchmark_ticker": null,
+      "mapping_source": null
     },
     {
       "etp_yahoo": "ENIK.MI",
@@ -2226,10 +2345,12 @@
           "stock_split": null
         }
       ],
-      "mapping_status": "pending_verification",
+      "mapping_status": "benchmark_confirmed",
       "underlying_yahoo": null,
-      "benchmark_name": null,
-      "review_priority": "normal"
+      "benchmark_name": "Bloomberg Nickel Sub Euro Hedged Daily Total Return",
+      "review_priority": "normal",
+      "benchmark_ticker": "BUNIDET",
+      "mapping_source": "https://www.wisdomtree.com/it/products/commodities/wisdomtree-nickel---eur-daily-hedged"
     }
   ]
 }
