@@ -140,3 +140,8 @@ L'audit dell'universo Sniper riporta 3LAM come Amazon, mentre la documentazione 
 - 3LAA e 3LAM hanno una corrispondenza di data diretta con l'anomalia; 3LFB e 3LSQ hanno corrispondenza vicina con differenze da riconciliare; 3LCO resta non riconciliato per il cambio/riemissione ISIN.
 - Nessun fattore è stato applicato ai prezzi; non sono state fatte interpolazioni o medie.
 - Non è stata ottenuta una serie storica indipendente completa per questi strumenti; i casi restano in audit e i backtest non vengono rigenerati.
+
+
+### Esito del controllo anagrafico 3LAM
+
+Il controllo diretto di `data/instrument_universe.json` ha confermato che il nome associato a `3LAM.MI` era errato: riportava GraniteShares 3x Amazon. È stato corretto in **GraniteShares 3x Long AMD Daily ETP**, coerentemente con l'ISIN XS2377112110 e con l'avviso dell'emittente. Amazon resta correttamente associato a 3LZN. Modifica anagrafica eseguita nel commit `74eb03899520ae2460e0652730b14c89e24d6c37`. Nessun ticker o prezzo è stato rimosso o alterato.
