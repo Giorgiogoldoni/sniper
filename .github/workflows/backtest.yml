@@ -2,6 +2,10 @@ name: Sniper Indicator Backtest
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'backtest_indicators.py'
+      - '.github/workflows/backtest.yml'
 
 permissions:
   contents: write
