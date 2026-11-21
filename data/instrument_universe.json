@@ -24,19 +24,9 @@
     "Scanner: inclusi soltanto Leva Long, Short e Materie Prime.",
     "Raptor One: inclusa soltanto la categoria Materie; EUROGROW e le azioni singole sono escluse.",
     "Chart: candidati materie prime esclusi dal master finché non viene verificato il simbolo Yahoo con suffisso di borsa.",
-    "Min Finder: usato come controllo storico, non come fonte primaria, per dati mancanti e ticker duplicati/alias."
+    "Min Finder: usato come controllo storico, non come fonte primaria, per dati mancanti e ticker duplicati/alias.",
+    "Il ticker 3OIS compare nel vecchio archivio Min Finder senza nome né borsa specifica; non è stato aggiunto al master finché non si conferma il simbolo Yahoo corretto."
   ],
-  "mandatory_coverage": {
-    "checked": [
-      "3OIL.MI",
-      "3OIS.MI",
-      "SOIL.MI",
-      "SBRT.MI"
-    ],
-    "missing": [
-      "3OIS.MI"
-    ]
-  },
   "instruments": [
     {
       "id": "2BUL.MI",
