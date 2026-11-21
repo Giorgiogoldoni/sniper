@@ -147,10 +147,10 @@ def run_trades(signal, df, atr, horizon, test_start, stop_mode, cost_bps):
                 op=float(df.Open.iloc[j])
                 exit_price=op if op<stop else stop  # adverse gap fill
                 exit_i=j; exit_reason="STOP"; break
-            highest=max(highest,float(df.High.iloc[j]))
             if stop_mode=="CHAND_22_3" and j<exit_i:
                 prior_atr=float(atr.iloc[j]) if np.isfinite(atr.iloc[j]) else initial_atr
-                stop=max(stop,highest-3*prior_atr)
+                rolling_high=float(df.High.iloc[max(0,j-21):j+1].max())
+                stop=max(stop,rolling_high-3*prior_atr)
         gross=(exit_price/entry-1)*100
         net=gross-cost_bps/100
         rows.append({"return_pct":net,"gross_return_pct":gross,"exit_reason":exit_reason,
@@ -248,7 +248,7 @@ def main():
         "insufficient_or_missing_history":len(too_short),"coverage_by_category":coverage,
         "execution":"signal close t; entry next session open; stop checked using daily low, gap fills at open if worse; time exit at close of final holding session",
         "stops":{"ATR_2":"initial stop at entry minus 2x ATR(14) measured at signal close",
-                 "CHAND_22_3":"initial 3x ATR stop, then trailing high since entry minus 3x ATR; updated only after each completed session"},
+                 "CHAND_22_3":"initial 3x ATR stop, then rolling 22-session highest high minus 3x ATR; updated only after each completed session"},
         "cost_sensitivity_round_trip_bps":list(COST_BPS),
         "oos":"final 30% of each instrument history; no parameter optimization on OOS",
         "metrics":"returns net of assumed round-trip cost; equal-weighted instrument summaries; drawdown computed on sequential compounded trades per instrument",
