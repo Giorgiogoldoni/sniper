@@ -76,3 +76,37 @@ Il rendimento teorico è calcolato come `direzione × leva × rendimento giornal
 ## Prossimo passo
 
 Riconciliare i 12 casi con correlazione più bassa contro NAV/prezzi ufficiali e ISIN, poi collegare le serie storiche dei 25 benchmark esatti. Solo dopo ripetere il test e decidere quali fonti dati siano utilizzabili.
+
+
+## Fase 1 — riconciliazione dei 12 casi a bassa correlazione (21 novembre 2026)
+
+La verifica delle comunicazioni degli emittenti ha identificato almeno un consolidamento/cambio ISIN ufficiale per **tutti e 12 i 12 strumenti**. I salti di prezzo evidenziati dall'audit Yahoo coincidono con le date delle operazioni o, in alcuni casi, compaiono con uno scarto di una seduta. Questo rende la correlazione originaria non utilizzabile per giudicare la qualità di replica.
+
+| ETP | Evento ufficiale | Rapporto | ISIN precedente → nuovo | Riscontro rispetto al salto Yahoo |
+|---|---|---:|---|---|
+| SNV3 | 03/12/2024 | 246:1 | XS2706225427 → XS2944874416 | salto 04/12, +1 seduta |
+| 3SMI | 19/05/2025 | da confermare | XS2836637525 → XS3069873134 | salto 20/05, +1 seduta |
+| 3SNF | 02/06/2025 | 50:1 | XS2675292135 → XS3075487986 | salto 02/06 |
+| 3SPA | 19/05/2025 | 6.000:1 | XS2836484787 → XS3069876582 | salto 20/05, +1 seduta |
+| SMCI | 30/12/2024 | 46:1 | XS2779863021 → XS2944889109 | salto 30/12 |
+| TSLQ | 20/08/2025 | 606:1 | XS2706232803 → XS3135031279 | salti nella finestra 18–20/08 |
+| 3STS | 02/06/2025 | 150:1 | XS2656471039 → XS3075487556 | salto 02/06 |
+| 3LMO | 19/05/2025 | 5.000:1 | XS2613356620 → XS3069877556 | salto 19/05 |
+| 3NIO | 07/02/2025 | 641:1 | XS2663694417 → XS2970736489 | salto 10/02, dopo il weekend e +1 seduta |
+| 3LAM | 02/06/2025 | 200:1 | XS2377112110 → XS3075487713 | salto 02/06 |
+| 3SNI | 19/05/2025 | da confermare | XS2626290311 → XS3069879768 | salto 20/05, +1 seduta |
+| SBA3 | 07/04/2025 | 329:1 | XS2472334585 → XS3037640110 | salto 07/04 |
+
+**Esito della riconciliazione:** 10 rapporti di consolidamento sono confermati documentalmente; per 3SMI e 3SNI sono verificati data e cambio ISIN, ma il rapporto non è leggibile nelle copie degli avvisi reperite e resta da confermare. Nessun rapporto è stato dedotto dal movimento di prezzo.
+
+**Conseguenza sul test:** la correlazione calcolata sulle serie Yahoo concatenando i periodi pre/post consolidamento è contaminata da discontinuità di capitale e da cambi ISIN. I valori negativi o prossimi a zero dei 12 strumenti non sono una prova di tracking difettoso e non vanno usati per ranking, esclusioni o segnali Sniper.
+
+**Ulteriore limite:** il confronto ETP su Borsa Italiana vs azione USA resta disallineato per orario di chiusura; gli scostamenti concentrati nei giorni di forte volatilità (ad esempio 8–10 aprile 2025) richiedono NAV ufficiali e timestamp coerenti.
+
+**Decisioni operative:**
+1. Non rettificare né mediare prezzi Yahoo; conservare la serie grezza.
+2. Segmentare le serie per ISIN, con data di ultima seduta vecchio ISIN e prima seduta nuovo ISIN.
+3. Acquisire NAV/prezzi ufficiali emittente per ogni segmento e verificare i due rapporti ancora incompleti (3SMI, 3SNI).
+4. Ripetere la correlazione solo su rendimenti NAV allineati e, separatamente, riportare l'audit close-to-close di mercato.
+
+Fonti ufficiali e avvisi: Leverage Shares (SNV3, 3NIO, TSLQ, SBA3) e GraniteShares/RNS (3SMI, 3SNF, 3SPA, 3STS, 3LMO, 3LAM, 3SNI). I collegamenti puntuali sono registrati nel campo `known_history_events[].source` di `data/underlying_mapping.json`.
