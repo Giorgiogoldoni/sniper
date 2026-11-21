@@ -6,7 +6,7 @@
 
 ## Esito preliminare
 
-Sono state reperite comunicazioni dell'emittente o avvisi regolamentari che documentano consolidamenti per **12 ticker** tra quelli segnalati. In questi casi il salto storico non va interpretato come rendimento di mercato: il numero di titoli posseduti viene ridotto e il prezzo unitario aumenta proporzionalmente.
+Sono state reperite comunicazioni dell'emittente o avvisi regolamentari che documentano consolidamenti per **13 ticker** tra quelli segnalati. In questi casi il salto storico non va interpretato come rendimento di mercato: il numero di titoli posseduti viene ridotto e il prezzo unitario aumenta proporzionalmente.
 
 Questo non dimostra che l'intera serie Yahoo sia corretta dopo aver individuato l'operazione. In diversi casi il rapporto tra i due prezzi riportati dall'audit non coincide con il rapporto di consolidamento: possono esserci più operazioni, cambi di ISIN/ticker o ulteriori difetti di continuità. **Non applicare una correzione automatica basata soltanto sul rapporto dichiarato.**
 
@@ -22,6 +22,7 @@ Questo non dimostra che l'intera serie Yahoo sia corretta dopo aver individuato 
 | 3LMO.MI | 19/05/2025 | Consolidamento GraniteShares, primo giorno di negoziazione 19/05/2025 | 5.000:1 | Corporate action confermata |
 | 3SIS.MI | 20/04/2026 | Consolidamento WisdomTree, efficace e negoziazione dei titoli consolidati dal 20/04/2026 | 3.800:1 | Corporate action confermata |
 | 3BRS.MI | 21/04/2026 | Consolidamento WisdomTree, efficace dal 20/04/2026 | 650:1 | Corporate action confermata; data audit a una seduta di distanza |
+| 3HCS.MI | 20/04/2026 | Consolidamento WisdomTree, efficace e negoziazione dei titoli consolidati dal 20/04/2026 | 30:1 | Corporate action confermata; il salto Yahoo è circa 30 volte |
 | SQQQ.MI | 11/06/2026 | Consolidamento Leverage Shares, primo giorno di negoziazione 11/06/2026 | 681:1 | Corporate action confermata |
 
 | 3EUL.MI | 11/05/2026 | Split WisdomTree, primo giorno di negoziazione 11/05/2026 | 25:1 | Split confermato; il prezzo unitario viene diviso per 25 |
