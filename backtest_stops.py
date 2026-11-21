@@ -18,7 +18,6 @@ AUDIT = ROOT / "data" / "backtest_exclusion_audit.json"
 PERIOD, MIN_BARS, BATCH = "10y", 260, 20
 HORIZONS = (3, 5, 10)
 COST_BPS = (10, 20, 30)  # round-trip sensitivity, not broker-specific
-MAX_DAILY_MOVE = 0.60
 
 def rsi(s, n):
     d=s.diff()
@@ -93,7 +92,7 @@ def audit_raw_exclusions(tickers):
     for start in range(0,len(tickers),BATCH):
         batch=tickers[start:start+BATCH]
         try:
-            raw=yf.download(batch,period=PERIOD,interval="1d",auto_adjust=False,
+            raw=yf.download(batch,period=PERIOD,interval="1d",auto_adjust=False,repair=True,
                 actions=True,group_by="ticker",threads=True,progress=False,timeout=30)
             for t in batch:
                 try:
@@ -177,11 +176,11 @@ def main():
         t=x.get("yahoo") or x.get("ticker")
         if t and x.get("classification"): items[t]=x
     tickers=list(items)
-    frames={}; excluded={}; too_short=[]
+    frames={}; quality_flagged={}; too_short=[]
     for start in range(0,len(tickers),BATCH):
         batch=tickers[start:start+BATCH]
         try:
-            raw=yf.download(batch,period=PERIOD,interval="1d",auto_adjust=True,
+            raw=yf.download(batch,period=PERIOD,interval="1d",auto_adjust=True,repair=True,
                 group_by="ticker",threads=True,progress=False,timeout=30)
             for t in batch:
                 x=extract_frame(raw,t)
@@ -189,18 +188,21 @@ def main():
                     too_short.append(t); continue
                 moves=x.Close.pct_change().abs().dropna()
                 mx=float(moves.max()) if len(moves) else 0
-                if mx>MAX_DAILY_MOVE:
-                    excluded[t]={"adjusted_max_move_pct":round(mx*100,2)}
-                else: frames[t]=x
+                if mx>0.60:
+                    quality_flagged[t]={"adjusted_max_move_pct":round(mx*100,2)}
+                # Non si esclude un ETP per volatilita: si segnala l'evento e si conserva.
+                frames[t]=x
         except Exception as e:
             print(f"Download batch {start} warning: {e}")
         time.sleep(0.8)
-        print(f"Download {min(start+BATCH,len(tickers))}/{len(tickers)}; usable={len(frames)}; flagged={len(excluded)}")
-    audit=audit_raw_exclusions(list(excluded))
-    for t,v in excluded.items(): v.update(audit.get(t,{}))
+        print(f"Download {min(start+BATCH,len(tickers))}/{len(tickers)}; usable={len(frames)}; flagged={len(quality_flagged)}")
+    audit=audit_raw_exclusions(tickers)
+    for t,v in quality_flagged.items(): v.update(audit.get(t,{}))
     AUDIT.write_text(json.dumps({"generated_at":datetime.now(timezone.utc).isoformat(),
-        "excluded_count":len(excluded),"excluded_instruments":excluded,
-        "review_note":"Un evento split segnalato da Yahoo e un indizio, non prova sufficiente a reinserire il ticker. Verificare continuita della serie e rapporto prezzi prima di riabilitare."},
+        "excluded_count":0,"excluded_instruments":{},
+        "quality_flagged_count":len(quality_flagged),"quality_flagged_instruments":quality_flagged,
+        "audit_scope":"Tutti gli strumenti dell universo; prezzi Yahoo con repair=True. Gli eventi estremi sono segnalati, non usati per escludere gli ETP.",
+        "review_note":"repair=True tenta di correggere alcune anomalie Yahoo, ma non certifica la serie. Verificare gli eventi estremi prima di interpretare i rendimenti."},
         ensure_ascii=False,indent=2),encoding="utf-8")
     detail=[]; coverage={}
     for ticker,df in frames.items():
@@ -244,7 +246,7 @@ def main():
         summary.sort(key=lambda x:(x["category"],x["horizon_days"],x["round_trip_cost_bps"],x["stop_mode"],-x["median_instrument_net_return_pct"]))
         d.to_csv(ROOT/"data"/"backtest_stops_detail.csv",index=False)
     result={"generated_at":datetime.now(timezone.utc).isoformat(),"period_requested":PERIOD,
-        "universe_total":len(tickers),"usable_instruments":len(frames),"quality_flagged":len(excluded),
+        "universe_total":len(tickers),"usable_instruments":len(frames),"quality_excluded":0,"quality_flagged":len(quality_flagged),
         "insufficient_or_missing_history":len(too_short),"coverage_by_category":coverage,
         "execution":"signal close t; entry next session open; stop checked using daily low, gap fills at open if worse; time exit at close of final holding session",
         "stops":{"ATR_2":"initial stop at entry minus 2x ATR(14) measured at signal close",
@@ -253,7 +255,7 @@ def main():
         "oos":"final 30% of each instrument history; no parameter optimization on OOS",
         "metrics":"returns net of assumed round-trip cost; equal-weighted instrument summaries; drawdown computed on sequential compounded trades per instrument",
         "limitations":["daily OHLC cannot resolve intraday ordering beyond conservative stop-first logic",
-          "Yahoo adjusted OHLC and corporate-action history can be incomplete for ETPs",
+          "Yahoo adjusted OHLC and corporate-action history can be incomplete for ETPs; repair=True is best-effort and does not guarantee full recovery",
           "cost assumptions are sensitivities, not observed spreads/commissions",
           "no taxes, financing or internal ETP fees beyond embedded price history",
           "not a portfolio-level simulation; equal weighting by instrument"],
