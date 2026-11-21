@@ -18,6 +18,40 @@
   },
   "instruments": [
     {
+      "etp_yahoo": "3AAP.MI",
+      "etp_name": "Leverage Shares 3x Apple ETP Securities",
+      "issuer": "Leverage Shares",
+      "underlying_name": "Apple Inc.",
+      "underlying_yahoo": "AAPL",
+      "underlying_type": "single_stock",
+      "leverage": 3,
+      "direction": 1,
+      "base_currency": "USD",
+      "benchmark_name": "iSTOXX Leveraged 3X AAPL Index",
+      "benchmark_ticker": "IX3XAAPL",
+      "status": "issuer_confirmed",
+      "issuer_source": "https://leverageshares.com/documents/factsheet/3x_aapl_factsheet.pdf",
+      "known_history_events": [],
+      "notes": "Borsa Italiana listing 3AAP IM; daily comparison remains affected by different closing times."
+    },
+    {
+      "etp_yahoo": "3CON.MI",
+      "etp_name": "Leverage Shares 3x Long Coinbase ETP Securities",
+      "issuer": "Leverage Shares",
+      "underlying_name": "Coinbase Global Inc.",
+      "underlying_yahoo": "COIN",
+      "underlying_type": "single_stock",
+      "leverage": 3,
+      "direction": 1,
+      "base_currency": "USD",
+      "benchmark_name": "Leverage Shares 3x Long Coinbase daily exposure",
+      "benchmark_ticker": null,
+      "status": "issuer_confirmed",
+      "issuer_source": "https://leverageshares.com/en/etps/leverage-shares-3x-long-coinbase-etp/",
+      "known_history_events": [],
+      "notes": "Borsa Italiana listing 3CON IM; daily comparison remains affected by different closing times."
+    },
+    {
       "etp_yahoo": "3LAA.MI",
       "etp_name": "GraniteShares 3x Long Alibaba Daily ETP",
       "issuer": "GraniteShares",
@@ -39,6 +73,46 @@
         }
       ],
       "notes": "Confronto giornaliero solo diagnostico; prezzo ETP Borsa Italiana e close USA non sono perfettamente sincronizzati."
+    },
+    {
+      "etp_yahoo": "3LAM.MI",
+      "etp_name": "GraniteShares 3x Long AMD Daily ETP Securities",
+      "issuer": "GraniteShares",
+      "underlying_name": "Advanced Micro Devices Inc.",
+      "underlying_yahoo": "AMD",
+      "underlying_type": "single_stock",
+      "leverage": 3,
+      "direction": 1,
+      "base_currency": "USD",
+      "benchmark_name": "Solactive Daily Leveraged 3x Long AMD Index",
+      "benchmark_ticker": null,
+      "status": "issuer_confirmed",
+      "issuer_source": "https://graniteshares.com/it/etps/3x-leveraged-amd-securities-etp/",
+      "known_history_events": [
+        {
+          "date": "2025-06-02",
+          "event": "cambio/consolidamento e nuovo ISIN riportati nell'audit Sniper; rapporto prezzi Yahoo circa 199x",
+          "verification": "non riconciliato; non rettificare"
+        }
+      ],
+      "notes": "Corretto sottostante: AMD, non Amazon. Il ticker Amazon GraniteShares è 3LZN."
+    },
+    {
+      "etp_yahoo": "3LAP.MI",
+      "etp_name": "GraniteShares 3x Long Apple Daily ETP",
+      "issuer": "GraniteShares",
+      "underlying_name": "Apple Inc.",
+      "underlying_yahoo": "AAPL",
+      "underlying_type": "single_stock",
+      "leverage": 3,
+      "direction": 1,
+      "base_currency": "USD",
+      "benchmark_name": "Solactive Daily Leveraged 3x Long Apple Inc Index",
+      "benchmark_ticker": null,
+      "status": "issuer_confirmed",
+      "issuer_source": "https://graniteshares.com/it/etps/3x-long-apple/",
+      "known_history_events": [],
+      "notes": "Borsa Italiana listing; la valuta di negoziazione EUR non cambia la valuta base USD."
     },
     {
       "etp_yahoo": "3LMI.MI",
