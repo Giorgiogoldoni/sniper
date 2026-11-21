@@ -145,3 +145,24 @@ L'audit dell'universo Sniper riporta 3LAM come Amazon, mentre la documentazione 
 ### Esito del controllo anagrafico 3LAM
 
 Il controllo diretto di `data/instrument_universe.json` ha confermato che il nome associato a `3LAM.MI` era errato: riportava GraniteShares 3x Amazon. È stato corretto in **GraniteShares 3x Long AMD Daily ETP**, coerentemente con l'ISIN XS2377112110 e con l'avviso dell'emittente. Amazon resta correttamente associato a 3LZN. Modifica anagrafica eseguita nel commit `74eb03899520ae2460e0652730b14c89e24d6c37`. Nessun ticker o prezzo è stato rimosso o alterato.
+
+
+## Verifica aggiuntiva GraniteShares — 21 novembre 2026 (secondo lotto)
+
+| Ticker | Evento massimo Yahoo | Operazione documentata | Valutazione |
+|---|---:|---|---|
+| 3SAA.MI | 02/07/2024; 0,2745 → 27,96 (circa 102x) | Consolidamento 100:1; record date 28/06/2024; prima seduta consolidata 01/07/2024; ISIN XS2435550194 → XS2842095759 | **Corrispondenza molto forte**: prezzo circa 100x e data Yahoo un giorno dopo la prima seduta consolidata. Verificare il fixing ufficiale della quotazione italiana prima della ricostruzione. |
+| 3SAP.MI | 23/08/2023; 0,1105 → 23,65 (circa 214x) | Consolidamento 250:1; record date 18/08/2023; prima seduta consolidata 21/08/2023; ISIN XS2193970030 → XS2662641195 | **Operazione confermata, salto non perfettamente riconciliato**: evento Yahoo due giorni dopo e rapporto osservato circa 214x anziché 250x. Non applicare il fattore senza verificare prezzi e identificativo della linea EUR. |
+| 3SSQ.MI | 19/06/2024; 1,65 → 26,465 (circa 16x) | Consolidamento annunciato per il 17/06/2024; ISIN XS2376991738 → XS2836701123. Una fonte secondaria riporta 1.600:1 | **Non riconciliato**: il rapporto osservato è incompatibile con 1.600:1. La notizia conferma il cambio ISIN, ma non autorizza a correggere questa serie. Recuperare l'avviso completo e i dati ufficiali della linea italiana. |
+| 3LTS.MI | 16/08/2023; 3,01 → 12,948 (circa 4,3x) | Una fonte comunitaria riporta consolidamento 5:1 con prima negoziazione 14/08/2023; ISIN nuovo XS2656472193, issue date 14/08/2023 | **Indizio, non prova primaria sufficiente**: data vicina e rapporto approssimativo, ma occorre il notice ufficiale dell'emittente e la verifica del vecchio ISIN. |
+
+Fonti:
+- 3SAA, avviso ufficiale GraniteShares: https://graniteshares.com/media/efkhaydy/3saa-1st-security-holder-notice-consolidation-bi.pdf
+- 3SAP, avviso RNS: https://www.lse.co.uk/rns/granite-3sap3swp3lae-reverse-split-21aug23-hzyxcz3dnm714z6.html
+- 3SSQ, avviso RNS: https://www.investegate.info/announcement/rns/graniteshares-financial-plc--3ssq/granite-3x-short-sq-reverse-split-17jun24/8236968
+- 3SSQ, rapporto 1.600:1 riportato da fonte secondaria: https://etfworld.co.uk/graniteshares-etp-consolidation-reverse-split-for-3-etps/
+- 3LTS, riferimento secondario al consolidamento 5:1: https://community.trading212.com/t/corporate-events-in-august-2023/63735/10
+- 3LTS, pagina London Stock Exchange con ISIN XS2656472193 e issue date 14/08/2023: https://www.londonstockexchange.com/stock/3LTS/graniteshares/company-page
+
+### Regola applicata
+Questi casi sono stati aggiunti all'audit documentale, non al motore di rettifica. **Nessun prezzo è stato cambiato**: per una correzione automatica serve la riconciliazione completa tra vecchio e nuovo ISIN, rapporto, linea di negoziazione e prezzi ufficiali pre/post evento. Le differenze fra prezzo osservato e rapporto dichiarato non vengono colmate con medie, interpolazioni o fattori stimati.
