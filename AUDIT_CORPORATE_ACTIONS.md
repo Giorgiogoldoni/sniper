@@ -67,3 +67,32 @@ Fonti:
 7. Dopo la ricostruzione, confrontare i rendimenti giornalieri e rigenerare i backtest.
 
 **Stato:** indagine documentale preliminare. Nessun prezzo è stato modificato e nessun backtest è stato rigenerato.
+
+
+## Integrazione della verifica — 21 novembre 2026
+
+### Ulteriori operazioni documentate e confronto con le date anomale
+
+| Ticker | Data evento nell'audit | Operazione documentata | Esito del collegamento |
+|---|---:|---|---|
+| 3ITS.MI | 22/07/2024 | WisdomTree: consolidamento; negoziazione dei titoli consolidati iniziata il 22/07/2024 | **Corrispondenza temporale diretta**: il salto dell'audit coincide con la data di efficacia |
+| VIXL.MI | 05/08/2024 | WisdomTree: consolidamento efficace 22/07/2024 | **Non corrisponde**: l'evento massimo dell'audit è successivo di circa due settimane; il consolidamento è documentato ma non spiega da solo quel salto |
+| SNV3.MI | 07/11/2023 | Leverage Shares: consolidamento 457:1, primo giorno di negoziazione con nuovo ISIN 03/11/2023 | **Corrispondenza non conclusiva**: evento Yahoo quattro giorni dopo; occorre verificare ticker/ISIN e prezzi giornalieri intermedi |
+| SOXS.MI | 11/12/2025 | Leverage Shares: consolidamento 104:1, primo giorno di negoziazione 18/12/2025 | **Non corrisponde**: il salto segnalato precede la prima seduta consolidata di una settimana; non va attribuito automaticamente a questa operazione |
+
+Fonti primarie:
+- WisdomTree, operazioni efficaci 22/07/2024 (3ITS e VIXL): https://www.wisdomtree.com/it/important-notices/2024/q3/splits-and-consolidations-of-certain-classes-of-wtma-etp-securities-effected
+- Leverage Shares, consolidamento 457:1 del -3x Short NVIDIA, efficace 03/11/2023: https://www.investegate.co.uk/announcement/rns/leverage-shares-public-limited-company--sxee/leverage-shares-consolidation-notice-update/7833971
+- Leverage Shares, consolidamento SOXS 104:1, prima negoziazione 18/12/2025: https://leverageshares.com/documents/notices/consolidation-notice_-4x-semiconductors-10-december-2025.pdf
+
+### Avvertenza sulla classificazione
+
+La presenza di un'operazione societaria per un ticker non prova che ogni salto anomalo della sua serie sia spiegato da quella sola operazione. In particolare, quando data o rapporto non coincidono, la serie resta non risolta. Anche una corrispondenza esatta della data è una prova forte dell'origine societaria del salto, ma prima di correggere i prezzi occorre controllare ISIN, rapporto, prezzi pre/post e valuta della specifica quotazione italiana.
+
+### Stato aggiornato del lavoro
+
+- 13 ticker già elencati nella prima sezione con corporate action documentata.
+- 3ITS aggiunto come corrispondenza temporale diretta; VIXL ha un'operazione documentata ma non coincidente con la data del salto massimo.
+- SNV3 e SOXS restano casi con operazione documentata ma collegamento al salto Yahoo non dimostrato.
+- Non è stata ottenuta una serie EOD gratuita, indipendente e completa per i ticker .MI; Twelve Data Basic non copre in modo generalizzato Borsa Italiana.
+- Nessun prezzo corretto o interpolato; nessun backtest rigenerato. I casi non risolti restano da verificare, non vengono cancellati dall'universo.
