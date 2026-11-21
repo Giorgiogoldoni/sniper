@@ -261,7 +261,7 @@ def main():
           "not a portfolio-level simulation; equal weighting by instrument"],
         "summary":summary}
     OUT.write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding="utf-8")
-    print(json.dumps({"usable":len(frames),"flagged":len(excluded),"coverage":coverage,
+    print(json.dumps({"usable":len(frames),"flagged":len(quality_flagged),"coverage":coverage,
         "detail_rows":len(detail),"summary_rows":len(summary)},ensure_ascii=False))
     if len(frames)<10: raise SystemExit("Insufficient usable instruments; refusing to publish a valid test.")
 
