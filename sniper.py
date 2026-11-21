@@ -137,6 +137,9 @@ def parse_chart(data):
 def parse_one(data):
     out=[]
     for item in data.get("data",[]):
+        # EUROGROW contiene azioni singole, non ETF: non inserirle nella base Sniper.
+        if str(item.get("categoria","")).strip().upper() == "EUROGROW":
+            continue
         sig=normalize_signal(item.get("segnale",""))
         if not sig: continue
         out.append({"ticker":item.get("ticker",""),"name":item.get("nome",""),"signal":sig,
@@ -147,6 +150,9 @@ def parse_one(data):
 def parse_alert(data):
     out=[]
     for item in (data if isinstance(data,list) else data.get("data",[])):
+        # EUROGROW contiene azioni singole, non ETF: non inserirle nella base Sniper.
+        if str(item.get("categoria","")).strip().upper() == "EUROGROW":
+            continue
         sig=normalize_signal(item.get("tipo",item.get("segnale","")))
         if not sig: continue
         out.append({"ticker":item.get("ticker",item.get("display","")),"name":item.get("nome",item.get("name","")),"signal":sig,
