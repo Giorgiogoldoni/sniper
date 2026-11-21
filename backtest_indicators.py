@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 import numpy as np
 import pandas as pd
 import yfinance as yf
+from indicators import calc_sar
 
 warnings.filterwarnings("ignore")
 ROOT = Path(__file__).resolve().parent
@@ -58,6 +59,31 @@ def indicators(df):
     atr=tr.ewm(alpha=1/14,adjust=False,min_periods=14).mean()
     # Relative volume only as diagnostic; not used to select the winner
     relvol=v/v.rolling(20).mean()
+    # ADX / directional movement
+    up=h.diff(); down=-l.diff()
+    plus_dm=up.where((up>down)&(up>0),0.0)
+    minus_dm=down.where((down>up)&(down>0),0.0)
+    atr14=tr.ewm(alpha=1/14,adjust=False,min_periods=14).mean()
+    pdi=100*plus_dm.ewm(alpha=1/14,adjust=False,min_periods=14).mean()/atr14
+    ndi=100*minus_dm.ewm(alpha=1/14,adjust=False,min_periods=14).mean()/atr14
+    dx=100*(pdi-ndi).abs()/(pdi+ndi).replace(0,np.nan)
+    adx=dx.ewm(alpha=1/14,adjust=False,min_periods=14).mean()
+    vm_plus=(h-l.shift(1)).abs().rolling(14).sum()
+    vm_minus=(l-h.shift(1)).abs().rolling(14).sum()
+    tr_sum=tr.rolling(14).sum()
+    vortex_plus=vm_plus/tr_sum.replace(0,np.nan)
+    vortex_minus=vm_minus/tr_sum.replace(0,np.nan)
+    mfm=((c-l)-(h-c))/(h-l).replace(0,np.nan)
+    cmf=(mfm.fillna(0)*v).rolling(20).sum()/v.rolling(20).sum().replace(0,np.nan)
+    obv=(np.sign(c.diff()).fillna(0)*v.fillna(0)).cumsum()
+    obv_up=obv>obv.shift(5)
+    sar_values,sar_bull=calc_sar(h.to_numpy(),l.to_numpy())
+    sar_bull=pd.Series(sar_bull,index=c.index)
+    bb_mid=c.rolling(20).mean()
+    bb_std=c.rolling(20).std()
+    bb_upper=bb_mid+2*bb_std
+    atr_pct=atr14/c*100
+    atr_cap=atr_pct.rolling(252,min_periods=60).quantile(0.90)
     return {
       "ROC 5/10": (roc5>0)&(roc10>0),
       "RSI 7": r7>52,
@@ -66,10 +92,23 @@ def indicators(df):
       "MACD 8/21/5": macd>macd_sig,
       "KAMA": (c>kama)&(kama_slope>0),
       "Donchian 20": c>prev_high,
+      "ADX trend": (adx>20)&(pdi>ndi),
+      "Vortex 14": vortex_plus>vortex_minus,
+      "SAR": c>pd.Series(sar_values,index=c.index),
+      "CMF + Relative Volume": (cmf>0)&(relvol>1.0),
+      "OBV trend": obv_up,
+      "Bollinger breakout": c>bb_upper,
       "Sniper consensus": ((roc5>0).astype(int)+(roc10>0).astype(int)+(r7>52).astype(int)+
           (e20>e50).astype(int)+(macd>macd_sig).astype(int)+
-          ((c>kama)&(kama_slope>0)).astype(int)+(c>prev_high).astype(int))>=4,
-      "ATR%": atr/c*100,
+          ((c>kama)&(kama_slope>0)).astype(int)+(c>prev_high).astype(int)+
+          ((adx>20)&(pdi>ndi)).astype(int)+(vortex_plus>vortex_minus).astype(int)+
+          sar_bull.astype(int))>=5,
+      "Consensus + ATR filter": (((roc5>0).astype(int)+(roc10>0).astype(int)+(r7>52).astype(int)+
+          (e20>e50).astype(int)+(macd>macd_sig).astype(int)+
+          ((c>kama)&(kama_slope>0)).astype(int)+(c>prev_high).astype(int)+
+          ((adx>20)&(pdi>ndi)).astype(int)+(vortex_plus>vortex_minus).astype(int)+
+          sar_bull.astype(int))>=5)&(atr_pct<atr_cap),
+      "ATR%": atr_pct,
       "RSI7": r7,
       "RelVolume": relvol
     }
@@ -145,9 +184,11 @@ def main():
             n=len(df)
             test_start=int(n*0.70)
             coverage[cat]=coverage.get(cat,0)+1
-            for strategy in [k for k in sigs if k not in ("ATR%","RSI7","RelVolume")]:
+            strategy_signals={k:v for k,v in sigs.items() if k not in ("ATR%","RSI7","RelVolume")}
+            strategy_signals["Buy & Hold baseline"]=pd.Series(True,index=df.index)
+            for strategy,signal in strategy_signals.items():
                 for horizon in HORIZONS:
-                    metrics=score_events(sigs[strategy],df["Close"],horizon,test_start)
+                    metrics=score_events(signal,df["Close"],horizon,test_start)
                     if metrics["trades"]==0: continue
                     rows.append({"ticker":ticker,"name":meta.get("name",""),"category":cat,
                         "strategy":strategy,"horizon_days":horizon,
