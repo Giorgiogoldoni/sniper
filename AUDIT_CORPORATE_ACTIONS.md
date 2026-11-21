@@ -107,3 +107,36 @@ La presenza di un'operazione societaria per un ticker non prova che ogni salto a
 Fonte primaria: https://leverageshares.com/documents/notices/28.03.2025-notice-result-of-adjourned-meeting-3x-short-baba.pdf
 
 Questo porta a due ulteriori corrispondenze temporali dirette emerse nell'integrazione (3ITS e SBA3), oltre ai casi già elencati nella prima versione. I casi con sola coincidenza temporale o con date non allineate non vengono conteggiati come confermati.
+
+
+## Verifica GraniteShares — approfondimento 21 novembre 2026
+
+Sono state reperite comunicazioni dell'emittente per ulteriori strumenti che compaiono nell'audit prezzi. La presenza dell'operazione è documentata; il suo collegamento al salto Yahoo è classificato separatamente.
+
+| Ticker | Data salto segnalato | Operazione dell'emittente | Confronto e giudizio |
+|---|---:|---|---|
+| 3LAA.MI | 01/07/2024 | Consolidamento 250:1; record date 28/06/2024; nuovo ISIN XS2842095320 dal 01/07/2024 | **Corrispondenza forte**: data esatta; rapporto atteso compatibile con il salto circa 248x, da verificare sui prezzi ufficiali di chiusura |
+| 3LAM.MI | 02/06/2025 | Consolidamento; cambio ISIN XS2377112110 → XS3075487713; prima negoziazione consolidata 02/06/2025 | **Corrispondenza temporale diretta**. Il rapporto di consolidamento non è riportato nell'estratto consultato; non applicare un fattore finché non si recupera il dettaglio completo |
+| 3LFB.MI | 16/08/2023 nell'audit | Consolidamento 30:1; record date 11/08/2023; prima negoziazione 14/08/2023; cambio ISIN XS2193971350 → XS2656469561 | **Corrispondenza molto forte**: il primo giorno consolidato precede di due sedute la data massima segnalata; verificare il calendario della quotazione e il mapping Yahoo |
+| 3LSQ.MI | 21/03/2023 | Consolidamento 500:1; record date 17/03/2023; prima negoziazione 20/03/2023; cambio ISIN XS2376992207 → XS2596085972 | **Corrispondenza temporale forte, fattore non perfettamente riconciliato**: il salto Yahoo riportato è circa 655x, diverso da 500x; non correggere automaticamente |
+| 3LCO.MI | 31/01/2023 | Avviso di consolidamento 20.000:1 efficace 16/01/2023 per ISIN XS2377112896; la quotazione LSE/nuovo ISIN XS2575914176 risulta emessa il 30/01/2023 | **Non riconciliato**: il salto Yahoo del 31/01 non è spiegato dal solo rapporto 20.000:1 sulla base dei dati attuali; probabile discontinuità di identificativo/serie, da ricostruire con le due catene ISIN e la quotazione Borsa Italiana |
+
+Fonti documentali:
+- 3LAA, comunicazione RNS dell'emittente: https://www.investegate.co.uk/index.php/announcement/rns/graniteshares-financial-plc--3laa/granite-3x-long-baba-reverse-split-01jul24/8261673
+- 3LAM, comunicazione RNS dell'emittente: https://www.investegate.co.uk/announcement/rns/graniteshares-financial-plc--3lam/granite-3x-long-amd-reverse-split-02june25/8885592
+- 3LFB, avviso ufficiale GraniteShares: https://graniteshares.com/media/14fpce1z/3lfb-1st-security-holder-notice-consolidation-lse.pdf
+- 3LSQ, avviso ufficiale GraniteShares: https://graniteshares.com/media/v40alc4t/3lsq-1st-security-holder-notice-consolidation.pdf
+- 3LCO, avviso RNS 20.000:1: https://www.advfn.com/stock-market/london/LCO3/stock-news/89881034/graniteshares-financial-plc-3lco-reverse-split-1
+- 3LCO, dati identificativi e data emissione ISIN XS2575914176: https://www.londonstockexchange.com/stock/3LCO/graniteshares/company-page
+- 3LCO, factsheet GraniteShares con listing Borsa Italiana, ticker e ISIN: https://graniteshares.com/media/hyukmzpr/factsheet_graniteshares-3x-long-coinbase-daily-etp_en.pdf
+
+### Controllo di coerenza anagrafica da fare
+
+L'audit dell'universo Sniper riporta 3LAM come Amazon, mentre la documentazione ufficiale GraniteShares identifica 3LAM come **3x Long AMD** (ISIN XS2377112110). L'Elenco prodotti italiano dell'emittente associa invece Amazon a 3LZN e AMD a 3LAM. Questo è un problema di anagrafica/mapping da correggere dopo controllo del record in `data/instrument_universe.json`; non va confuso con la qualità dei prezzi. La documentazione dell'emittente: https://graniteshares.com/media/p1mcbnhy/italian-product-list.pdf e https://www.investegate.co.uk/announcement/rns/graniteshares-financial-plc--3lam/granite-3x-long-amd-reverse-split-02june25/8885592
+
+### Conclusione di questo approfondimento
+
+- Nuove operazioni societarie documentate: 3LAA, 3LAM, 3LFB, 3LSQ e 3LCO.
+- 3LAA e 3LAM hanno una corrispondenza di data diretta con l'anomalia; 3LFB e 3LSQ hanno corrispondenza vicina con differenze da riconciliare; 3LCO resta non riconciliato per il cambio/riemissione ISIN.
+- Nessun fattore è stato applicato ai prezzi; non sono state fatte interpolazioni o medie.
+- Non è stata ottenuta una serie storica indipendente completa per questi strumenti; i casi restano in audit e i backtest non vengono rigenerati.
