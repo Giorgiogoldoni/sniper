@@ -49,6 +49,10 @@ def make_signals(df):
     ks=kama.pct_change(5)
     r14=rsi(c,14)
     prev_high=h.shift(1).rolling(20).max()
+    bb_mid=c.rolling(20).mean()
+    bb_upper=bb_mid+2*c.rolling(20).std()
+    near_upper=(c>=bb_upper*0.985)&(c>=bb_mid)&(bb_upper>bb_upper.shift(1))
+    walking_upper_band=near_upper.rolling(3,min_periods=3).sum()>=2
     bb=c.rolling(20).mean()+2*c.rolling(20).std()
     up=h.diff(); down=-l.diff()
     pdm=up.where((up>down)&(up>0),0.0)
@@ -63,6 +67,7 @@ def make_signals(df):
     signals={
       "Bollinger breakout": c>bb,
       "Donchian 20": c>prev_high,
+      "Walking upper Bollinger Band": walking_upper_band,
       "KAMA": (c>kama)&(ks>0),
       "RSI 14": r14>52,
       "Vortex 14": vp>vm,

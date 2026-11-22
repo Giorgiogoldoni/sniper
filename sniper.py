@@ -7,7 +7,6 @@ RAPTOR SNIPER v3.1
 - Indicatori tecnici completi (KAMA, SAR, AO, RSI, ADX, Baff, Hurst)
 - Storia segnali e grafico per dettaglio.html
 - Suffisso borsa per TradingView
-- Fonte Raptor Leva (LONG_CONF/LONG_EARLY → BUY, USCITA/STOP → EXIT)
 """
 
 import json, os, sys, time, urllib.request, math
@@ -45,7 +44,6 @@ SOURCES = {
     "geografia":  {"url":"https://giorgiogoldoni.github.io/raptor-geografia/geografia.json","page_url":"https://giorgiogoldoni.github.io/raptor-geografia/","parser":"geografia"},
     "scannerv2":  {"url":"https://giorgiogoldoni.github.io/scannerv2/data/signals.json",   "page_url":"https://giorgiogoldoni.github.io/scannerv2/",     "parser":"scannerv2"},
     "minfinder":  {"url":"https://giorgiogoldoni.github.io/min-finder/data/min_finder_live.json","page_url":"https://giorgiogoldoni.github.io/min-finder/","parser":"minfinder"},
-    "leva":       {"url":"https://giorgiogoldoni.github.io/raptor-leva/raptor_leva.json",  "page_url":"https://giorgiogoldoni.github.io/raptor-leva/",   "parser":"leva"},
 }
 
 BUY_SIGNALS  = {"BUY1","BUY2","BUY3","LONG_FORTE"}
@@ -244,51 +242,6 @@ def parse_minfinder(data):
                     "signal_date":"","price":item.get("price"),"extra":ex(item,MIN_EX)})
     return out
 
-def parse_leva(data):
-    """Parser per raptor_leva.json — usa campo 'zona' per determinare BUY/EXIT."""
-    out  = []
-    ZONE_BUY  = {"LONG_CONF", "LONG_EARLY"}
-    ZONE_EXIT = {"USCITA", "STOP"}
-    for item in data.get("data", []):
-        zona = item.get("zona", "")
-        if zona in ZONE_BUY:
-            sig = "BUY"
-        elif zona in ZONE_EXIT:
-            sig = "EXIT"
-        else:
-            continue  # GRIGIA, WATCH, ATTENZIONE → scarta
-        score = item.get("score")
-        # Filtro qualità minimo per BUY
-        if sig == "BUY" and (score is None or score < 65):
-            continue
-        yahoo = item.get("yahoo", item.get("ticker", ""))
-        if not yahoo:
-            continue
-        out.append({
-            "ticker":      yahoo,
-            "name":        item.get("nome", ""),
-            "signal":      sig,
-            "raw_signal":  zona,
-            "score":       score,
-            "signal_date": item.get("entryDate", ""),
-            "price":       item.get("prezzo"),
-            "extra": {
-                "er":        item.get("er"),
-                "baff":      item.get("baff"),
-                "ao":        item.get("ao"),
-                "rsi":       item.get("rsi"),
-                "sar_bull":  item.get("sarBull"),
-                "vol_ratio": item.get("volRatio"),
-                "provider":  item.get("provider", ""),
-                "zona":      zona,
-                "ret_1w":    item.get("perfSett"),
-                "ret_4w":    item.get("perfMese"),
-                "kama_fast": item.get("kama_fast"),
-                "kama_slow": item.get("kama_slow"),
-            }
-        })
-    return out
-
 PARSERS = {
     "chart":      parse_chart,
     "one":        parse_one,
@@ -298,7 +251,6 @@ PARSERS = {
     "geografia":  parse_geografia,
     "scannerv2":  parse_scannerv2,
     "minfinder":  parse_minfinder,
-    "leva":       parse_leva,
 }
 
 # ── SCORE COMPOSITO ───────────────────────────────────────────────
@@ -559,13 +511,7 @@ def run():
                 ev["ret_2w"] = ex_data.get("mom3m")  # proxy 2W con mom3m
                 ev["momentum_source"] = "scannerv2"
                 break
-            # leva: perfSett è performance del leva — dividi per ~2.5 come proxy
-            if src_name == "leva" and ex_data.get("ret_1w") is not None:
-                mult = 2.5  # approssimazione media leva
-                ev["ret_1w"] = round(ex_data["ret_1w"] / mult, 2)
-                ev["ret_2w"] = round(ex_data["ret_4w"] / mult, 2) if ex_data.get("ret_4w") else None
-                ev["momentum_source"] = "leva_proxy"
-                break
+
         if ev.get("ret_1w") is None:
             ev["momentum_source"] = "none"
 

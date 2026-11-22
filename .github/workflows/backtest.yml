@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'backtest_indicators.py'
+      - 'indicators.py'
       - 'backtest_stops.py'
       - 'backtest_fast_leverage3.py'
       - 'corporate_action_filter.py'

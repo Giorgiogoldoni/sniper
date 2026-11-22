@@ -83,6 +83,8 @@ def indicators(df):
     bb_mid=c.rolling(20).mean()
     bb_std=c.rolling(20).std()
     bb_upper=bb_mid+2*bb_std
+    near_upper=(c>=bb_upper*0.985)&(c>=bb_mid)&(bb_upper>bb_upper.shift(1))
+    walking_upper_band=near_upper.rolling(3,min_periods=3).sum()>=2
     atr_pct=atr14/c*100
     atr_cap=atr_pct.rolling(252,min_periods=60).quantile(0.90)
     return {
@@ -99,6 +101,7 @@ def indicators(df):
       "CMF + Relative Volume": (cmf>0)&(relvol>1.0),
       "OBV trend": obv_up,
       "Bollinger breakout": c>bb_upper,
+      "Walking upper Bollinger Band": walking_upper_band,
       "Sniper consensus": ((roc5>0).astype(int)+(roc10>0).astype(int)+(r7>52).astype(int)+
           (e20>e50).astype(int)+(macd>macd_sig).astype(int)+
           ((c>kama)&(kama_slope>0)).astype(int)+(c>prev_high).astype(int)+

@@ -184,6 +184,30 @@ def compute_all(dates, closes, highs, lows, volumes=None):
     baff_arr=calc_baff(highs,lows)
     hurst60=calc_hurst(closes,60)
     hurst1y=calc_hurst(closes,252) if n>=262 else None
+
+    # Donchian 20: breakout rispetto ai 20 massimi precedenti (esclude la barra corrente).
+    donchian_upper=[None]*n
+    for i in range(20,n):
+        donchian_upper[i]=float(max(highs[i-20:i]))
+    donchian_breakout=bool(n>20 and donchian_upper[-1] is not None and closes[-1]>donchian_upper[-1])
+
+    # Bollinger 20,2. Walking: almeno 2 delle ultime 3 chiusure vicine
+    # alla banda superiore (entro l'1.5%), sopra la media e con banda crescente.
+    bb_mid=[None]*n; bb_upper=[None]*n
+    for i in range(19,n):
+        window=[float(x) for x in closes[i-19:i+1]]
+        mid=float(np.mean(window))
+        std=float(np.std(window,ddof=1))
+        bb_mid[i]=mid
+        bb_upper[i]=mid+2*std
+    walking_flags=[]
+    for i in range(n):
+        ok=False
+        if i>=1 and bb_upper[i] is not None and bb_upper[i-1] is not None and bb_mid[i] is not None:
+            ok=(closes[i]>=bb_upper[i]*0.985 and closes[i]>=bb_mid[i] and bb_upper[i]>bb_upper[i-1])
+        walking_flags.append(bool(ok))
+    walking_upper_band=bool(sum(walking_flags[-3:])>=2) if n>=3 else False
+    walking_upper_band_bars=sum(walking_flags[-3:])
     kama_trend=calc_kama_trend(closes,kama)
 
     # Ultimi valori
@@ -250,6 +274,11 @@ def compute_all(dates, closes, highs, lows, volumes=None):
         "signal_dal":  sig_dal,
         "signal_bars": 1,
         "signals_history": sig_history,
+        "donchian20_upper": round(donchian_upper[-1],4) if donchian_upper[-1] is not None else None,
+        "donchian20_breakout": donchian_breakout,
+        "bollinger_upper": round(bb_upper[-1],4) if bb_upper[-1] is not None else None,
+        "walking_upper_band": walking_upper_band,
+        "walking_upper_band_bars_3": walking_upper_band_bars,
         # Serie per grafico
         "chart": {
             "dates":    dates[-90:],
@@ -262,5 +291,9 @@ def compute_all(dates, closes, highs, lows, volumes=None):
             "ao":       ao[-90:],
             "rsi":      rsi[-90:],
             "baff":     baff_arr[-90:],
+            "donchian20_upper": donchian_upper[-90:],
+            "bollinger_upper": bb_upper[-90:],
+            "bollinger_mid": bb_mid[-90:],
+            "walking_upper_band": walking_flags[-90:],
         }
     }
