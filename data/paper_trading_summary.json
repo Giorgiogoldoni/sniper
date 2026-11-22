@@ -1,0 +1,93 @@
+{
+  "generated_at": "2026-11-22T09:56:49.555493+00:00",
+  "mode": "PAPER_ONLY_NO_ORDERS",
+  "universe": {
+    "total_selected": 99,
+    "categories": {
+      "LEVA_LONG": 73,
+      "MATERIE_PRIME_LEVA": 26
+    }
+  },
+  "processed_bars": 86,
+  "open_positions": 0,
+  "pending_entries": 1,
+  "closed_trades": 0,
+  "open_positions_detail": [],
+  "pending_entries_detail": {
+    "3TYL.MI": {
+      "signal_date": "2026-11-20",
+      "atr": 0.6599067943033246
+    }
+  },
+  "closed_trades_latest": [],
+  "cost_sensitivity_bps_round_trip": [
+    20,
+    30,
+    50
+  ],
+  "spread_data": "Not available from Yahoo OHLC. No observed spread is claimed; net returns are sensitivities only.",
+  "skipped_count": 13,
+  "skipped_latest": [
+    {
+      "ticker": "2BUL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "2QQL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3DAL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3LAD.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3LBA.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3LGO.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3LJP.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3LMS.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3LMT.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3LNF.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "DX3L.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "TECL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "2GOL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    }
+  ],
+  "rules": {
+    "entry": "Donchian 20 breakout at completed close; enter next session open",
+    "stop": "Initial stop at entry minus 2 x ATR(14) from signal close; daily low checked; adverse gap exits at open",
+    "LEVA_LONG": "Exit at close of third holding session",
+    "MATERIE_PRIME_LEVA": "Exit next open after two consecutive completed closes with Walking upper Bollinger Band false; time cap 10 sessions at close",
+    "walking": "Not an entry filter",
+    "position_limit": "One open position per ticker; no overlapping entries",
+    "activation": "First run establishes a baseline on the latest available daily candle; it does not backfill or fabricate historical trades."
+  }
+}
