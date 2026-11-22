@@ -187,10 +187,17 @@ def main():
                     df, continuity_meta = apply_price_continuity(df, ticker)
                     continuity_audit[ticker] = continuity_meta
                     if len(df) >= MIN_BARS:
-                        move = df["Close"].pct_change().abs().dropna()
-                        mx = float(move.max()) if len(move) else 0
-                        if mx > 0.60:
-                            flagged[ticker] = round(mx*100, 2)
+                        # High/Low measure intraday range only; price-jump flags
+                        # must be based exclusively on consecutive closing prices.
+                        close_move = df["Close"].pct_change().abs().dropna()
+                        max_close_move = float(close_move.max()) if len(close_move) else 0.0
+                        intraday_range = ((df["High"] - df["Low"]) / df["Close"]).replace([np.inf, -np.inf], np.nan).dropna()
+                        max_intraday_range = float(intraday_range.max()) if len(intraday_range) else 0.0
+                        if max_close_move > 0.60:
+                            flagged[ticker] = {
+                                "max_abs_close_change_pct": round(max_close_move * 100, 2),
+                                "max_intraday_high_low_range_pct": round(max_intraday_range * 100, 2)
+                            }
                         frames[ticker] = df
                     else:
                         insufficient_after_filter[ticker] = int(len(df))
@@ -250,6 +257,7 @@ def main():
         "universe_3x_count": len(tickers), "usable_instruments": len(frames),
         "coverage_by_category": coverage,
         "high_volatility_flag_threshold_pct": 60,
+        "volatility_flag_price_basis": "Consecutive daily Close-to-Close percentage change; High/Low range is recorded separately and never drives the close-jump flag.",
         "high_volatility_flagged_count": len(flagged),
         "high_volatility_flagged_tickers": flagged,
         "corporate_action_cutoffs": cutoff_audit,
