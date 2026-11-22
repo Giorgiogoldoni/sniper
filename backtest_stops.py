@@ -68,6 +68,8 @@ def make_signals(df):
       "Bollinger breakout": c>bb,
       "Donchian 20": c>prev_high,
       "Walking upper Bollinger Band": walking_upper_band,
+      "Donchian + Walking same-day": (c>prev_high)&walking_upper_band,
+      "Donchian breakout then Walking confirm (3d)": walking_upper_band & (c>prev_high).rolling(3,min_periods=1).max().astype(bool),
       "KAMA": (c>kama)&(ks>0),
       "RSI 14": r14>52,
       "Vortex 14": vp>vm,
@@ -130,7 +132,7 @@ def audit_raw_exclusions(tickers):
         time.sleep(0.5)
     return out
 
-def run_trades(signal, df, atr, horizon, test_start, stop_mode, cost_bps):
+def run_trades(signal, df, atr, horizon, test_start, stop_mode, cost_bps, exit_signal=None):
     # Each trade: close signal at i, enter open i+1. No overlapping positions.
     rows=[]
     last_exit=-1
@@ -152,6 +154,12 @@ def run_trades(signal, df, atr, horizon, test_start, stop_mode, cost_bps):
                 op=float(df.Open.iloc[j])
                 exit_price=op if op<stop else stop  # adverse gap fill
                 exit_i=j; exit_reason="STOP"; break
+            if exit_signal is not None and bool(exit_signal.iloc[j]) and j<exit_i:
+                # Close-based invalidation at session j is executed at next session open.
+                exit_i=j+1
+                exit_price=float(df.Open.iloc[exit_i])
+                exit_reason="WALKING_EXIT"
+                break
             if stop_mode=="CHAND_22_3" and j<exit_i:
                 prior_atr=float(atr.iloc[j]) if np.isfinite(atr.iloc[j]) else initial_atr
                 rolling_high=float(df.High.iloc[max(0,j-21):j+1].max())
@@ -232,6 +240,18 @@ def main():
                             if m:
                                 detail.append({"ticker":ticker,"category":cat,"strategy":name,
                                     "horizon_days":horizon,"stop_mode":stop_mode,"round_trip_cost_bps":cost,**m})
+            # Donchian entry with Walking as a trend-retention / exit rule.
+            donchian_entry=signals["Donchian 20"]
+            walking_exit=~signals["Walking upper Bollinger Band"]
+            for horizon in HORIZONS:
+                for stop_mode in ("NONE","ATR_2","CHAND_22_3"):
+                    for cost in COST_BPS:
+                        m=run_trades(donchian_entry,df,atr,horizon,start,stop_mode,cost,exit_signal=walking_exit)
+                        if m:
+                            detail.append({"ticker":ticker,"category":cat,
+                                "strategy":"Donchian 20 + Walking hold/exit",
+                                "horizon_days":horizon,"stop_mode":stop_mode,
+                                "round_trip_cost_bps":cost,**m})
             # Comparable passive entry-next-open/time-exit baseline
             baseline=pd.Series(True,index=df.index)
             for horizon in HORIZONS:
@@ -262,7 +282,8 @@ def main():
         "corporate_action_cutoff_count":len(corporate_action_audit),
         "corporate_action_cutoffs":corporate_action_audit,
         "insufficient_or_missing_history":len(too_short),"coverage_by_category":coverage,
-        "execution":"signal close t; entry next session open; stop checked using daily low, gap fills at open if worse; time exit at close of final holding session",
+        "execution":"signal close t; entry next session open; stop checked using daily low, gap fills at open if worse; Walking invalidation at close exits next session open; time exit at close of final holding session",
+        "walking_exit_rule":"for Donchian entries, if Walking upper Bollinger Band becomes false at close, exit at next session open; no same-close execution",
         "stops":{"ATR_2":"initial stop at entry minus 2x ATR(14) measured at signal close",
                  "CHAND_22_3":"initial 3x ATR stop, then rolling 22-session highest high minus 3x ATR; updated only after each completed session"},
         "cost_sensitivity_round_trip_bps":list(COST_BPS),
