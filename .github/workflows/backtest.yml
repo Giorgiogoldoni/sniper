@@ -9,10 +9,14 @@ on:
       - 'backtest_fast_leverage3.py'
       - 'corporate_action_filter.py'
       - 'data/indicator_history_cutoffs.json'
-      - '.github/workflows/backtest.yml'
 
 permissions:
   contents: write
+
+# Avoid simultaneous runs racing while committing generated result files.
+concurrency:
+  group: sniper-backtest-main
+  cancel-in-progress: false
 
 jobs:
   backtest:
