@@ -197,6 +197,6 @@ def main():
     print(json.dumps({"mode":summary["mode"],"universe":summary["universe"],"processed_bars":fetched,
         "open_positions":len(open_positions),"pending_entries":len(state["pending_entries"]),
         "closed_trades":len(state["trades"]),"skipped":len(skipped)},ensure_ascii=False))
-    if fetched==0: raise SystemExit("No new market bars processed; state preserved but run is not a fresh market update.")
+    if fetched==0: print("NO_NEW_MARKET_BARS: state preserved; no synthetic trades created.")
 
 if __name__=="__main__": main()
