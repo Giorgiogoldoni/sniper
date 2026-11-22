@@ -195,11 +195,15 @@ def main():
     state_path.parent.mkdir(parents=True,exist_ok=True)
     state_path.write_text(json.dumps(state,ensure_ascii=False,indent=2),encoding="utf-8")
     fields=["ticker","category","signal_date","entry_date","entry_price","exit_date","exit_price","holding_sessions","exit_reason","gross_return_pct","net_return_pct_by_cost_bps","spread_observed","spread_note"]
-    existing=log_path.exists()
-    with log_path.open("a",newline="",encoding="utf-8") as f:
+    # A backfill is a full isolated reconstruction: replace its CSV on every run.
+    # The live paper book remains incremental and appends only newly closed trades.
+    append_mode = not bool(args.backfill_from)
+    existing = log_path.exists() and append_mode
+    start_index = int(state.get("logged_trades",0)) if append_mode else 0
+    with log_path.open("a" if append_mode else "w",newline="",encoding="utf-8") as f:
         w=csv.DictWriter(f,fieldnames=fields)
         if not existing: w.writeheader()
-        for row in state["trades"][int(state.get("logged_trades",0)):]:
+        for row in state["trades"][start_index:]:
             r=dict(row); r["net_return_pct_by_cost_bps"]=json.dumps(r["net_return_pct_by_cost_bps"])
             w.writerow(r)
     state["logged_trades"]=len(state["trades"])
