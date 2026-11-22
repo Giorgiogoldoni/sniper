@@ -240,18 +240,26 @@ def main():
                             if m:
                                 detail.append({"ticker":ticker,"category":cat,"strategy":name,
                                     "horizon_days":horizon,"stop_mode":stop_mode,"round_trip_cost_bps":cost,**m})
-            # Donchian entry with Walking as a trend-retention / exit rule.
+            # Donchian entry with three explicit close-based exit rules.
             donchian_entry=signals["Donchian 20"]
-            walking_exit=~signals["Walking upper Bollinger Band"]
-            for horizon in HORIZONS:
-                for stop_mode in ("NONE","ATR_2","CHAND_22_3"):
-                    for cost in COST_BPS:
-                        m=run_trades(donchian_entry,df,atr,horizon,start,stop_mode,cost,exit_signal=walking_exit)
-                        if m:
-                            detail.append({"ticker":ticker,"category":cat,
-                                "strategy":"Donchian 20 + Walking hold/exit",
-                                "horizon_days":horizon,"stop_mode":stop_mode,
-                                "round_trip_cost_bps":cost,**m})
+            walking=signals["Walking upper Bollinger Band"].fillna(False)
+            bb_mid=df.Close.rolling(20).mean()
+            exit_rules={
+                "Donchian 20 + Walking exit first negative": ~walking,
+                "Donchian 20 + Walking exit 2 negative closes": (~walking).rolling(2,min_periods=2).sum().eq(2),
+                "Donchian 20 + Bollinger midline loss exit":
+                    (df.Close<bb_mid)&(df.Close.shift(1)>=bb_mid.shift(1)),
+            }
+            for strategy_name, exit_signal in exit_rules.items():
+                for horizon in HORIZONS:
+                    for stop_mode in ("NONE","ATR_2","CHAND_22_3"):
+                        for cost in COST_BPS:
+                            m=run_trades(donchian_entry,df,atr,horizon,start,stop_mode,cost,exit_signal=exit_signal)
+                            if m:
+                                detail.append({"ticker":ticker,"category":cat,
+                                    "strategy":strategy_name,
+                                    "horizon_days":horizon,"stop_mode":stop_mode,
+                                    "round_trip_cost_bps":cost,**m})
             # Comparable passive entry-next-open/time-exit baseline
             baseline=pd.Series(True,index=df.index)
             for horizon in HORIZONS:
@@ -283,7 +291,11 @@ def main():
         "corporate_action_cutoffs":corporate_action_audit,
         "insufficient_or_missing_history":len(too_short),"coverage_by_category":coverage,
         "execution":"signal close t; entry next session open; stop checked using daily low, gap fills at open if worse; Walking invalidation at close exits next session open; time exit at close of final holding session",
-        "walking_exit_rule":"for Donchian entries, if Walking upper Bollinger Band becomes false at close, exit at next session open; no same-close execution",
+        "walking_exit_rules":{
+            "first_negative_close":"exit at next open when Walking upper Bollinger Band condition is false at a completed close",
+            "two_negative_closes":"exit at next open after two consecutive completed closes with Walking upper Bollinger Band condition false",
+            "bollinger_midline_loss":"exit at next open on a close crossing below the 20-session Bollinger middle SMA"
+        },
         "stops":{"ATR_2":"initial stop at entry minus 2x ATR(14) measured at signal close",
                  "CHAND_22_3":"initial 3x ATR stop, then rolling 22-session highest high minus 3x ATR; updated only after each completed session"},
         "cost_sensitivity_round_trip_bps":list(COST_BPS),
