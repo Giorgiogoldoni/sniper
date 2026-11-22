@@ -14,6 +14,7 @@ on:
 permissions:
   contents: write
 
+# Serialize every paper run so the live ledger and historical backfill cannot race.
 concurrency:
   group: sniper-paper-trading-main
   cancel-in-progress: false
