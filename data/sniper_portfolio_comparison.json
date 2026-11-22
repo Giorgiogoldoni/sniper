@@ -1,0 +1,147 @@
+{
+  "strategy": "Donchian20 + Walking; ATR14 x2; Walking exit after 2 false closes at next open; max 10 sessions",
+  "assumptions": {
+    "capital_eur": 100000.0,
+    "sizing": "fixed initial capital / slots, equal notional, no leverage, no compounding slot size",
+    "entry_priority": "breakout distance above previous 20-session high descending; ticker alphabetical tie-break",
+    "mark_to_market": "daily close; stops checked on daily low with adverse gap fill at open",
+    "costs": "excluded",
+    "open_positions": "valued at final close",
+    "fractional_units": true,
+    "production_changes": false,
+    "data_source": "Yahoo Finance daily OHLC",
+    "universe_count": 26,
+    "tickers_with_data": 25,
+    "failed_data": [
+      {
+        "ticker": "2GOL.MI",
+        "error": "missing/short history"
+      }
+    ]
+  },
+  "results": {
+    "5": {
+      "slots": 5,
+      "initial_capital": 100000.0,
+      "fixed_slot_amount": 20000.0,
+      "start": "2023-01-02",
+      "end": "2026-11-20",
+      "final_equity": 165767.31,
+      "total_return_pct": 65.77,
+      "cagr_pct": 13.9,
+      "max_drawdown_pct": -32.43,
+      "closed_trades": 396,
+      "trade_win_rate_pct": 43.94,
+      "trade_mean_pct": 0.82,
+      "trade_profit_factor": 1.21,
+      "max_concurrent_positions": 5,
+      "rejected_entries": 174,
+      "open_at_end": [
+        {
+          "ticker": "LNGA.MI",
+          "entry_date": "2026-11-20"
+        }
+      ],
+      "annual": {
+        "2023": {
+          "return_pct": -13.83,
+          "end_equity": 86172.75
+        },
+        "2024": {
+          "return_pct": 35.87,
+          "end_equity": 117081.38
+        },
+        "2025": {
+          "return_pct": 6.29,
+          "end_equity": 124449.15
+        },
+        "2026": {
+          "return_pct": 33.2,
+          "end_equity": 165767.31
+        }
+      }
+    },
+    "8": {
+      "slots": 8,
+      "initial_capital": 100000.0,
+      "fixed_slot_amount": 12500.0,
+      "start": "2023-01-02",
+      "end": "2026-11-20",
+      "final_equity": 152268.83,
+      "total_return_pct": 52.27,
+      "cagr_pct": 11.44,
+      "max_drawdown_pct": -24.82,
+      "closed_trades": 446,
+      "trade_win_rate_pct": 43.95,
+      "trade_mean_pct": 0.93,
+      "trade_profit_factor": 1.25,
+      "max_concurrent_positions": 8,
+      "rejected_entries": 41,
+      "open_at_end": [
+        {
+          "ticker": "LNGA.MI",
+          "entry_date": "2026-11-20"
+        }
+      ],
+      "annual": {
+        "2023": {
+          "return_pct": -12.57,
+          "end_equity": 87426.46
+        },
+        "2024": {
+          "return_pct": 21.5,
+          "end_equity": 106223.56
+        },
+        "2025": {
+          "return_pct": 15.5,
+          "end_equity": 122689.09
+        },
+        "2026": {
+          "return_pct": 24.11,
+          "end_equity": 152268.83
+        }
+      }
+    },
+    "12": {
+      "slots": 12,
+      "initial_capital": 100000.0,
+      "fixed_slot_amount": 8333.33,
+      "start": "2023-01-02",
+      "end": "2026-11-20",
+      "final_equity": 137746.68,
+      "total_return_pct": 37.75,
+      "cagr_pct": 8.6,
+      "max_drawdown_pct": -18.04,
+      "closed_trades": 456,
+      "trade_win_rate_pct": 44.3,
+      "trade_mean_pct": 0.99,
+      "trade_profit_factor": 1.27,
+      "max_concurrent_positions": 11,
+      "rejected_entries": 8,
+      "open_at_end": [
+        {
+          "ticker": "LNGA.MI",
+          "entry_date": "2026-11-20"
+        }
+      ],
+      "annual": {
+        "2023": {
+          "return_pct": -8.99,
+          "end_equity": 91012.85
+        },
+        "2024": {
+          "return_pct": 16.41,
+          "end_equity": 105947.32
+        },
+        "2025": {
+          "return_pct": 11.05,
+          "end_equity": 117650.05
+        },
+        "2026": {
+          "return_pct": 17.08,
+          "end_equity": 137746.68
+        }
+      }
+    }
+  }
+}
