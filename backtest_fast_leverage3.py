@@ -93,8 +93,10 @@ def trade_returns(signal, df, horizon, test_start, cost_bps):
 
 
 def apply_price_continuity(df, ticker):
-    """Isolate confirmed >5x price-basis breaks without rewriting raw prices.
+    """Isolate confirmed upward >5x price-basis breaks without rewriting raw prices.
 
+    Only an upward jump is eligible: an extreme one-day loss can be a genuine
+    leveraged-ETP event and must not be mistaken for a split.
     A jump reversing to within 20% of the pre-jump close next session is treated
     as an isolated bad bar. A persistent jump starts a new history segment.
     A final-bar jump is audited but not filtered because it cannot be confirmed.
@@ -106,7 +108,7 @@ def apply_price_continuity(df, ticker):
     work = df.copy().sort_index()
     close = pd.to_numeric(work["Close"], errors="coerce")
     ratio = close / close.shift(1)
-    candidates = np.flatnonzero(((ratio >= 5.0) | (ratio <= 0.20)).fillna(False).to_numpy())
+    candidates = np.flatnonzero((ratio >= 5.0).fillna(False).to_numpy())
     confirmed_breaks, isolated, unconfirmed_tail = [], [], []
     for pos in candidates:
         if pos + 1 >= len(work):
@@ -140,7 +142,7 @@ def apply_price_continuity(df, ticker):
         "rows_before_break_omitted": rows_before_break,
         "isolated_bad_bars": isolated_dates,
         "unconfirmed_final_bar_jumps": unconfirmed_tail,
-        "factor_threshold": 5.0, "reversal_tolerance_pct": 20.0
+        "upward_factor_threshold": 5.0, "reversal_tolerance_pct": 20.0
     }
 
 
@@ -251,7 +253,7 @@ def main():
         "high_volatility_flagged_count": len(flagged),
         "high_volatility_flagged_tickers": flagged,
         "corporate_action_cutoffs": cutoff_audit,
-        "price_continuity_policy": "Price changes >=5x or <=0.2x are investigated. If the next close returns within 20% of the prior close, only the isolated bad bar is omitted. Otherwise the test starts a new segment at the persistent break. Final-bar jumps are audited but not filtered. Raw Yahoo observations are never rewritten.",
+        "price_continuity_policy": "Upward price changes >=5x are investigated; extreme losses are retained as potentially genuine ETP events. If the next close returns within 20% of the prior close, only the isolated bad bar is omitted. Otherwise the test starts a new segment at the persistent break. Final-bar jumps are audited but not filtered. Raw Yahoo observations are never rewritten.",
         "price_continuity_audit": continuity_audit,
         "insufficient_history_after_filters": insufficient_after_filter,
         "horizons_days": list(HORIZONS), "round_trip_cost_bps": list(COSTS_BPS),
