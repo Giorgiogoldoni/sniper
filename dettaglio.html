@@ -304,6 +304,11 @@ async function load() {
     const sigBars = ind.signal_bars ?? extra.signal_bars ?? '—';
     const tvRating= ind.tv_rating ?? extra.tv_rating ?? '—';
     const sigHist = ind.signals_history || [];
+    const donchianBreakout = ind.donchian20_breakout;
+    const donchianUpper = ind.donchian20_upper;
+    const walkingBand = ind.walking_upper_band;
+    const walkingBars = ind.walking_upper_band_bars_3;
+    const bollingerUpper = ind.bollinger_upper;
 
     const hurst60Info = hurstLabel(h60);
     const hurst1yInfo = hurstLabel(h1y);
@@ -356,6 +361,9 @@ async function load() {
         <div class="ind"><span class="il">Barre</span><span class="iv">${sigBars}</span></div>
         <div class="ind"><span class="il">Trend KAMA</span>
           <span class="iv" style="color:${kTrend==='VERDE'?'var(--verde)':kTrend==='ROSSO'?'var(--rosso)':'var(--grigio)'}">${kTrend}</span></div>
+        <div class="ind"><span class="il">Donchian 20</span><span class="iv ${donchianBreakout?'ok':'neu'}">${donchianBreakout==null?'—':donchianBreakout?'BREAKOUT':'NO'}${donchianUpper!=null?' · '+fmtN(donchianUpper,4):''}</span></div>
+        <div class="ind"><span class="il">Walking upper band</span><span class="iv ${walkingBand?'ok':'neu'}">${walkingBand==null?'—':walkingBand?'ON':'OFF'}${walkingBars!=null?' · '+walkingBars+'/3':''}</span></div>
+        <div class="ind"><span class="il">Bollinger upper</span><span class="iv">${fmtN(bollingerUpper,4)}</span></div>
       </div>
     </div>
 

@@ -580,11 +580,14 @@ function buildMomPills(ev, sources) {
   const pills=[];
   if(ev.ret_1w!=null){
     const cls=ev.ret_1w>0?'ok':ev.ret_1w<0?'ko':'';
-    const msrc={'yfinance':'','scannerv2':'~','leva_proxy':'≈','none':''}[ev.momentum_source||'']||'';
+    const msrc={'yfinance':'','scannerv2':'~','none':''}[ev.momentum_source||'']||'';
     pills.push(`<span class="pill-sm ${cls}" title="fonte: ${ev.momentum_source||'?'}">1W ${ev.ret_1w>0?'+':''}${ev.ret_1w.toFixed(1)}%${msrc}</span>`);
   }
   if(ev.ret_2w!=null){const cls=ev.ret_2w>0?'ok':ev.ret_2w<0?'ko':'';pills.push(`<span class="pill-sm ${cls}">2W ${ev.ret_2w>0?'+':''}${ev.ret_2w.toFixed(1)}%</span>`);}
   else if(ev.ret_4w!=null){const cls=ev.ret_4w>0?'ok':ev.ret_4w<0?'ko':'';pills.push(`<span class="pill-sm ${cls}">4W ${ev.ret_4w>0?'+':''}${ev.ret_4w.toFixed(1)}%</span>`);}
+  const ind=ev.indicators||{};
+  if(ind.donchian20_breakout!==undefined) pills.push(`<span class="pill-sm ${ind.donchian20_breakout?'ok':''}">Donchian ${ind.donchian20_breakout?'BREAKOUT':'—'}</span>`);
+  if(ind.walking_upper_band!==undefined) pills.push(`<span class="pill-sm ${ind.walking_upper_band?'ok':''}">Band walk ${ind.walking_upper_band?'ON':'OFF'}</span>`);
   sources.forEach(src=>{
     const ex=src.extra||{};
     if(ex.sar_bull!==undefined) pills.push(`<span class="pill-sm ${ex.sar_bull?'ok':'ko'}">SAR${ex.sar_bull?'↑':'↓'}</span>`);
@@ -604,7 +607,7 @@ function buildDetail(ev) {
     ${ev.ret_1w!=null?`<div class="di"><span class="dk">Momentum 1W</span><span class="dv ${ev.ret_1w>0?'ok':'ko'}">${ev.ret_1w>0?'+':''}${ev.ret_1w.toFixed(2)}%</span></div>`:''}
     ${ev.ret_2w!=null?`<div class="di"><span class="dk">Momentum 2W</span><span class="dv ${ev.ret_2w>0?'ok':'ko'}">${ev.ret_2w>0?'+':''}${ev.ret_2w.toFixed(2)}%</span></div>`:''}
     ${ev.ret_4w!=null?`<div class="di"><span class="dk">Momentum 4W</span><span class="dv ${ev.ret_4w>0?'ok':'ko'}">${ev.ret_4w>0?'+':''}${ev.ret_4w.toFixed(2)}%</span></div>`:''}
-    ${ev.momentum_source?`<div class="di"><span class="dk">Fonte momentum</span><span class="dv">${{'yfinance':'✓ yfinance','scannerv2':'~ scannerv2','leva_proxy':'≈ leva proxy','none':'— non disponibile'}[ev.momentum_source]||ev.momentum_source}</span></div>`:''}
+    ${ev.momentum_source?`<div class="di"><span class="dk">Fonte momentum</span><span class="dv">${{'yfinance':'✓ yfinance','scannerv2':'~ scannerv2','none':'— non disponibile'}[ev.momentum_source]||ev.momentum_source}</span></div>`:''}
     ${ev.ret_12w!=null?`<div class="di"><span class="dk">Momentum 12W</span><span class="dv ${ev.ret_12w>0?'ok':'ko'}">${ev.ret_12w>0?'+':''}${ev.ret_12w.toFixed(2)}%</span></div>`:''}
     ${ev.price!=null?`<div class="di"><span class="dk">Ultimo prezzo</span><span class="dv">${ev.price}</span></div>`:''}
     <div class="di"><span class="dk">Top 20</span><span class="dv ${ev.is_top20?'ok':'ko'}">${ev.is_top20?'⭐ Sì':'No'}</span></div>
