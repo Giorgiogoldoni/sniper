@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T03:45:40.679469+00:00",
+  "generated_at": "2026-11-22T06:09:37.572975+00:00",
   "scope": "solo ETP con leva esattamente 3x; LEVA_LONG e LEVA_SHORT; leva 2x/5x e commodity escluse",
   "period_requested": "10y",
   "minimum_history_bars": 260,
@@ -1466,11 +1466,11 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 10,
       "instruments": 45,
-      "trades": 6571,
-      "mean_instrument_net_return_pct": -0.2956,
+      "trades": 6572,
+      "mean_instrument_net_return_pct": -0.2917,
       "median_instrument_net_return_pct": -0.1,
       "median_win_rate_pct": 44.89,
-      "median_profit_factor": 0.828
+      "median_profit_factor": 0.834
     },
     {
       "category": "LEVA_LONG",
@@ -1478,11 +1478,11 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 10,
       "instruments": 45,
-      "trades": 6598,
-      "mean_instrument_net_return_pct": -0.2954,
+      "trades": 6599,
+      "mean_instrument_net_return_pct": -0.2915,
       "median_instrument_net_return_pct": -0.1,
       "median_win_rate_pct": 44.89,
-      "median_profit_factor": 0.828
+      "median_profit_factor": 0.834
     },
     {
       "category": "LEVA_LONG",
@@ -1490,10 +1490,10 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 10,
       "instruments": 45,
-      "trades": 2368,
-      "mean_instrument_net_return_pct": -0.133,
+      "trades": 2369,
+      "mean_instrument_net_return_pct": -0.1363,
       "median_instrument_net_return_pct": -0.1,
-      "median_win_rate_pct": 46.3,
+      "median_win_rate_pct": 46.34,
       "median_profit_factor": 0.941
     },
     {
@@ -1502,11 +1502,11 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 10,
       "instruments": 45,
-      "trades": 2348,
-      "mean_instrument_net_return_pct": -0.222,
+      "trades": 2346,
+      "mean_instrument_net_return_pct": -0.2142,
       "median_instrument_net_return_pct": -0.1,
-      "median_win_rate_pct": 45.61,
-      "median_profit_factor": 0.889
+      "median_win_rate_pct": 43.75,
+      "median_profit_factor": 0.891
     },
     {
       "category": "LEVA_LONG",
@@ -1514,11 +1514,11 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 10,
       "instruments": 44,
-      "trades": 5849,
-      "mean_instrument_net_return_pct": -0.2209,
+      "trades": 5854,
+      "mean_instrument_net_return_pct": -0.2392,
       "median_instrument_net_return_pct": -0.1,
       "median_win_rate_pct": 45.2,
-      "median_profit_factor": 0.785
+      "median_profit_factor": 0.776
     },
     {
       "category": "LEVA_LONG",
@@ -1527,10 +1527,10 @@
       "cost_bps_round_trip": 10,
       "instruments": 45,
       "trades": 5755,
-      "mean_instrument_net_return_pct": -0.3831,
-      "median_instrument_net_return_pct": -0.1336,
-      "median_win_rate_pct": 43.94,
-      "median_profit_factor": 0.766
+      "mean_instrument_net_return_pct": -0.3846,
+      "median_instrument_net_return_pct": -0.1351,
+      "median_win_rate_pct": 44.27,
+      "median_profit_factor": 0.741
     },
     {
       "category": "LEVA_LONG",
@@ -1538,11 +1538,11 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 20,
       "instruments": 45,
-      "trades": 6571,
-      "mean_instrument_net_return_pct": -0.3956,
+      "trades": 6572,
+      "mean_instrument_net_return_pct": -0.3917,
       "median_instrument_net_return_pct": -0.2,
       "median_win_rate_pct": 42.11,
-      "median_profit_factor": 0.737
+      "median_profit_factor": 0.767
     },
     {
       "category": "LEVA_LONG",
@@ -1550,11 +1550,11 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 20,
       "instruments": 45,
-      "trades": 6598,
-      "mean_instrument_net_return_pct": -0.3954,
+      "trades": 6599,
+      "mean_instrument_net_return_pct": -0.3915,
       "median_instrument_net_return_pct": -0.2,
       "median_win_rate_pct": 42.11,
-      "median_profit_factor": 0.737
+      "median_profit_factor": 0.767
     },
     {
       "category": "LEVA_LONG",
@@ -1562,10 +1562,10 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 20,
       "instruments": 45,
-      "trades": 2368,
-      "mean_instrument_net_return_pct": -0.233,
+      "trades": 2369,
+      "mean_instrument_net_return_pct": -0.2363,
       "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 43.45,
+      "median_win_rate_pct": 43.44,
       "median_profit_factor": 0.778
     },
     {
@@ -1574,11 +1574,11 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 20,
       "instruments": 45,
-      "trades": 2348,
-      "mean_instrument_net_return_pct": -0.322,
+      "trades": 2346,
+      "mean_instrument_net_return_pct": -0.3142,
       "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 43.48,
-      "median_profit_factor": 0.786
+      "median_win_rate_pct": 42.11,
+      "median_profit_factor": 0.799
     },
     {
       "category": "LEVA_LONG",
@@ -1586,11 +1586,11 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 20,
       "instruments": 44,
-      "trades": 5849,
-      "mean_instrument_net_return_pct": -0.3209,
+      "trades": 5854,
+      "mean_instrument_net_return_pct": -0.3392,
       "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 43.84,
-      "median_profit_factor": 0.736
+      "median_win_rate_pct": 43.58,
+      "median_profit_factor": 0.726
     },
     {
       "category": "LEVA_LONG",
@@ -1599,10 +1599,10 @@
       "cost_bps_round_trip": 20,
       "instruments": 45,
       "trades": 5755,
-      "mean_instrument_net_return_pct": -0.4831,
-      "median_instrument_net_return_pct": -0.2336,
+      "mean_instrument_net_return_pct": -0.4846,
+      "median_instrument_net_return_pct": -0.2351,
       "median_win_rate_pct": 41.74,
-      "median_profit_factor": 0.696
+      "median_profit_factor": 0.694
     },
     {
       "category": "LEVA_LONG",
@@ -1610,11 +1610,11 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 30,
       "instruments": 45,
-      "trades": 6571,
-      "mean_instrument_net_return_pct": -0.4956,
+      "trades": 6572,
+      "mean_instrument_net_return_pct": -0.4917,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 40.91,
-      "median_profit_factor": 0.697
+      "median_profit_factor": 0.704
     },
     {
       "category": "LEVA_LONG",
@@ -1622,11 +1622,11 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 30,
       "instruments": 45,
-      "trades": 6598,
-      "mean_instrument_net_return_pct": -0.4954,
+      "trades": 6599,
+      "mean_instrument_net_return_pct": -0.4915,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 40.91,
-      "median_profit_factor": 0.697
+      "median_profit_factor": 0.704
     },
     {
       "category": "LEVA_LONG",
@@ -1634,11 +1634,11 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 30,
       "instruments": 45,
-      "trades": 2368,
-      "mean_instrument_net_return_pct": -0.333,
+      "trades": 2369,
+      "mean_instrument_net_return_pct": -0.3363,
       "median_instrument_net_return_pct": -0.3,
-      "median_win_rate_pct": 41.07,
-      "median_profit_factor": 0.684
+      "median_win_rate_pct": 40.98,
+      "median_profit_factor": 0.653
     },
     {
       "category": "LEVA_LONG",
@@ -1646,11 +1646,11 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 30,
       "instruments": 45,
-      "trades": 2348,
-      "mean_instrument_net_return_pct": -0.422,
+      "trades": 2346,
+      "mean_instrument_net_return_pct": -0.4142,
       "median_instrument_net_return_pct": -0.3,
-      "median_win_rate_pct": 42.11,
-      "median_profit_factor": 0.716
+      "median_win_rate_pct": 41.18,
+      "median_profit_factor": 0.76
     },
     {
       "category": "LEVA_LONG",
@@ -1658,11 +1658,11 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 30,
       "instruments": 44,
-      "trades": 5849,
-      "mean_instrument_net_return_pct": -0.4209,
+      "trades": 5854,
+      "mean_instrument_net_return_pct": -0.4392,
       "median_instrument_net_return_pct": -0.3,
-      "median_win_rate_pct": 41.58,
-      "median_profit_factor": 0.675
+      "median_win_rate_pct": 41.21,
+      "median_profit_factor": 0.666
     },
     {
       "category": "LEVA_LONG",
@@ -1671,8 +1671,8 @@
       "cost_bps_round_trip": 30,
       "instruments": 45,
       "trades": 5755,
-      "mean_instrument_net_return_pct": -0.5831,
-      "median_instrument_net_return_pct": -0.3336,
+      "mean_instrument_net_return_pct": -0.5846,
+      "median_instrument_net_return_pct": -0.3351,
       "median_win_rate_pct": 40.43,
       "median_profit_factor": 0.647
     },
@@ -1682,8 +1682,8 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 10,
       "instruments": 45,
-      "trades": 1786,
-      "mean_instrument_net_return_pct": -0.0138,
+      "trades": 1787,
+      "mean_instrument_net_return_pct": -0.0193,
       "median_instrument_net_return_pct": 0.0067,
       "median_win_rate_pct": 50.0,
       "median_profit_factor": 1.009
@@ -1694,10 +1694,10 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 10,
       "instruments": 44,
-      "trades": 3465,
-      "mean_instrument_net_return_pct": -0.1903,
-      "median_instrument_net_return_pct": -0.0294,
-      "median_win_rate_pct": 49.7,
+      "trades": 3468,
+      "mean_instrument_net_return_pct": -0.2251,
+      "median_instrument_net_return_pct": -0.0352,
+      "median_win_rate_pct": 49.66,
       "median_profit_factor": 0.949
     },
     {
@@ -1706,11 +1706,11 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 10,
       "instruments": 45,
-      "trades": 3936,
-      "mean_instrument_net_return_pct": -0.1493,
-      "median_instrument_net_return_pct": -0.0725,
+      "trades": 3933,
+      "mean_instrument_net_return_pct": -0.1391,
+      "median_instrument_net_return_pct": -0.0866,
       "median_win_rate_pct": 48.48,
-      "median_profit_factor": 0.928
+      "median_profit_factor": 0.918
     },
     {
       "category": "LEVA_LONG",
@@ -1719,10 +1719,10 @@
       "cost_bps_round_trip": 10,
       "instruments": 45,
       "trades": 3808,
-      "mean_instrument_net_return_pct": -0.5232,
+      "mean_instrument_net_return_pct": -0.5196,
       "median_instrument_net_return_pct": -0.1,
-      "median_win_rate_pct": 48.75,
-      "median_profit_factor": 0.938
+      "median_win_rate_pct": 48.53,
+      "median_profit_factor": 0.945
     },
     {
       "category": "LEVA_LONG",
@@ -1731,10 +1731,10 @@
       "cost_bps_round_trip": 10,
       "instruments": 45,
       "trades": 3821,
-      "mean_instrument_net_return_pct": -0.5265,
+      "mean_instrument_net_return_pct": -0.5229,
       "median_instrument_net_return_pct": -0.1,
-      "median_win_rate_pct": 48.75,
-      "median_profit_factor": 0.938
+      "median_win_rate_pct": 48.53,
+      "median_profit_factor": 0.945
     },
     {
       "category": "LEVA_LONG",
@@ -1742,8 +1742,8 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 10,
       "instruments": 45,
-      "trades": 1529,
-      "mean_instrument_net_return_pct": 0.5192,
+      "trades": 1528,
+      "mean_instrument_net_return_pct": 0.5207,
       "median_instrument_net_return_pct": -0.1,
       "median_win_rate_pct": 50.0,
       "median_profit_factor": 1.041
@@ -1754,10 +1754,10 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 20,
       "instruments": 45,
-      "trades": 1786,
-      "mean_instrument_net_return_pct": -0.1138,
+      "trades": 1787,
+      "mean_instrument_net_return_pct": -0.1193,
       "median_instrument_net_return_pct": -0.0933,
-      "median_win_rate_pct": 50.0,
+      "median_win_rate_pct": 48.72,
       "median_profit_factor": 0.958
     },
     {
@@ -1766,10 +1766,10 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 20,
       "instruments": 44,
-      "trades": 3465,
-      "mean_instrument_net_return_pct": -0.2903,
-      "median_instrument_net_return_pct": -0.1294,
-      "median_win_rate_pct": 47.83,
+      "trades": 3468,
+      "mean_instrument_net_return_pct": -0.3251,
+      "median_instrument_net_return_pct": -0.1351,
+      "median_win_rate_pct": 47.78,
       "median_profit_factor": 0.885
     },
     {
@@ -1778,11 +1778,11 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 20,
       "instruments": 45,
-      "trades": 3936,
-      "mean_instrument_net_return_pct": -0.2493,
-      "median_instrument_net_return_pct": -0.1725,
-      "median_win_rate_pct": 47.85,
-      "median_profit_factor": 0.862
+      "trades": 3933,
+      "mean_instrument_net_return_pct": -0.2391,
+      "median_instrument_net_return_pct": -0.1866,
+      "median_win_rate_pct": 47.83,
+      "median_profit_factor": 0.861
     },
     {
       "category": "LEVA_LONG",
@@ -1791,9 +1791,9 @@
       "cost_bps_round_trip": 20,
       "instruments": 45,
       "trades": 3808,
-      "mean_instrument_net_return_pct": -0.6232,
+      "mean_instrument_net_return_pct": -0.6196,
       "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 48.53,
+      "median_win_rate_pct": 47.52,
       "median_profit_factor": 0.848
     },
     {
@@ -1803,9 +1803,9 @@
       "cost_bps_round_trip": 20,
       "instruments": 45,
       "trades": 3821,
-      "mean_instrument_net_return_pct": -0.6265,
+      "mean_instrument_net_return_pct": -0.6229,
       "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 48.53,
+      "median_win_rate_pct": 47.52,
       "median_profit_factor": 0.848
     },
     {
@@ -1814,11 +1814,11 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 20,
       "instruments": 45,
-      "trades": 1529,
-      "mean_instrument_net_return_pct": 0.4192,
+      "trades": 1528,
+      "mean_instrument_net_return_pct": 0.4207,
       "median_instrument_net_return_pct": -0.2,
       "median_win_rate_pct": 48.48,
-      "median_profit_factor": 0.948
+      "median_profit_factor": 0.94
     },
     {
       "category": "LEVA_LONG",
@@ -1826,8 +1826,8 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 30,
       "instruments": 45,
-      "trades": 1786,
-      "mean_instrument_net_return_pct": -0.2138,
+      "trades": 1787,
+      "mean_instrument_net_return_pct": -0.2193,
       "median_instrument_net_return_pct": -0.1933,
       "median_win_rate_pct": 47.96,
       "median_profit_factor": 0.91
@@ -1838,9 +1838,9 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 30,
       "instruments": 44,
-      "trades": 3465,
-      "mean_instrument_net_return_pct": -0.3903,
-      "median_instrument_net_return_pct": -0.2294,
+      "trades": 3468,
+      "mean_instrument_net_return_pct": -0.4251,
+      "median_instrument_net_return_pct": -0.2351,
       "median_win_rate_pct": 47.2,
       "median_profit_factor": 0.849
     },
@@ -1850,10 +1850,10 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 30,
       "instruments": 45,
-      "trades": 3936,
-      "mean_instrument_net_return_pct": -0.3493,
-      "median_instrument_net_return_pct": -0.2725,
-      "median_win_rate_pct": 46.77,
+      "trades": 3933,
+      "mean_instrument_net_return_pct": -0.3391,
+      "median_instrument_net_return_pct": -0.2866,
+      "median_win_rate_pct": 46.74,
       "median_profit_factor": 0.82
     },
     {
@@ -1863,9 +1863,9 @@
       "cost_bps_round_trip": 30,
       "instruments": 45,
       "trades": 3808,
-      "mean_instrument_net_return_pct": -0.7232,
+      "mean_instrument_net_return_pct": -0.7196,
       "median_instrument_net_return_pct": -0.3,
-      "median_win_rate_pct": 47.06,
+      "median_win_rate_pct": 46.53,
       "median_profit_factor": 0.805
     },
     {
@@ -1875,9 +1875,9 @@
       "cost_bps_round_trip": 30,
       "instruments": 45,
       "trades": 3821,
-      "mean_instrument_net_return_pct": -0.7265,
+      "mean_instrument_net_return_pct": -0.7229,
       "median_instrument_net_return_pct": -0.3,
-      "median_win_rate_pct": 47.06,
+      "median_win_rate_pct": 46.53,
       "median_profit_factor": 0.805
     },
     {
@@ -1886,11 +1886,23 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 30,
       "instruments": 45,
-      "trades": 1529,
-      "mean_instrument_net_return_pct": 0.3192,
+      "trades": 1528,
+      "mean_instrument_net_return_pct": 0.3207,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 46.67,
       "median_profit_factor": 0.898
+    },
+    {
+      "category": "LEVA_LONG",
+      "strategy": "RSI 2 pullback",
+      "horizon_days": 3,
+      "cost_bps_round_trip": 10,
+      "instruments": 45,
+      "trades": 1268,
+      "mean_instrument_net_return_pct": 0.2198,
+      "median_instrument_net_return_pct": -0.089,
+      "median_win_rate_pct": 47.06,
+      "median_profit_factor": 0.96
     },
     {
       "category": "LEVA_LONG",
@@ -1898,11 +1910,11 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 10,
       "instruments": 45,
-      "trades": 2846,
-      "mean_instrument_net_return_pct": -0.1901,
+      "trades": 2847,
+      "mean_instrument_net_return_pct": -0.189,
       "median_instrument_net_return_pct": -0.1,
       "median_win_rate_pct": 48.57,
-      "median_profit_factor": 0.988
+      "median_profit_factor": 0.981
     },
     {
       "category": "LEVA_LONG",
@@ -1910,11 +1922,11 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 10,
       "instruments": 45,
-      "trades": 2853,
-      "mean_instrument_net_return_pct": -0.1863,
+      "trades": 2854,
+      "mean_instrument_net_return_pct": -0.1852,
       "median_instrument_net_return_pct": -0.1,
       "median_win_rate_pct": 48.57,
-      "median_profit_factor": 1.004
+      "median_profit_factor": 0.988
     },
     {
       "category": "LEVA_LONG",
@@ -1922,8 +1934,8 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 10,
       "instruments": 45,
-      "trades": 1508,
-      "mean_instrument_net_return_pct": -0.3993,
+      "trades": 1509,
+      "mean_instrument_net_return_pct": -0.3983,
       "median_instrument_net_return_pct": -0.1,
       "median_win_rate_pct": 50.0,
       "median_profit_factor": 0.998
@@ -1934,23 +1946,11 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 10,
       "instruments": 45,
-      "trades": 3036,
-      "mean_instrument_net_return_pct": -0.4784,
+      "trades": 3034,
+      "mean_instrument_net_return_pct": -0.4549,
       "median_instrument_net_return_pct": -0.1,
-      "median_win_rate_pct": 47.5,
-      "median_profit_factor": 0.843
-    },
-    {
-      "category": "LEVA_LONG",
-      "strategy": "RSI 2 pullback",
-      "horizon_days": 3,
-      "cost_bps_round_trip": 10,
-      "instruments": 45,
-      "trades": 1269,
-      "mean_instrument_net_return_pct": 0.2517,
-      "median_instrument_net_return_pct": -0.1,
-      "median_win_rate_pct": 47.83,
-      "median_profit_factor": 0.96
+      "median_win_rate_pct": 47.73,
+      "median_profit_factor": 0.849
     },
     {
       "category": "LEVA_LONG",
@@ -1958,11 +1958,23 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 10,
       "instruments": 44,
-      "trades": 2619,
-      "mean_instrument_net_return_pct": -0.5064,
+      "trades": 2621,
+      "mean_instrument_net_return_pct": -0.4227,
       "median_instrument_net_return_pct": -0.1168,
-      "median_win_rate_pct": 48.37,
-      "median_profit_factor": 0.992
+      "median_win_rate_pct": 48.09,
+      "median_profit_factor": 0.989
+    },
+    {
+      "category": "LEVA_LONG",
+      "strategy": "RSI 2 pullback",
+      "horizon_days": 3,
+      "cost_bps_round_trip": 20,
+      "instruments": 45,
+      "trades": 1268,
+      "mean_instrument_net_return_pct": 0.1198,
+      "median_instrument_net_return_pct": -0.189,
+      "median_win_rate_pct": 46.43,
+      "median_profit_factor": 0.92
     },
     {
       "category": "LEVA_LONG",
@@ -1970,11 +1982,11 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 20,
       "instruments": 45,
-      "trades": 2846,
-      "mean_instrument_net_return_pct": -0.2901,
+      "trades": 2847,
+      "mean_instrument_net_return_pct": -0.289,
       "median_instrument_net_return_pct": -0.2,
       "median_win_rate_pct": 47.41,
-      "median_profit_factor": 0.95
+      "median_profit_factor": 0.948
     },
     {
       "category": "LEVA_LONG",
@@ -1982,11 +1994,11 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 20,
       "instruments": 45,
-      "trades": 2853,
-      "mean_instrument_net_return_pct": -0.2863,
+      "trades": 2854,
+      "mean_instrument_net_return_pct": -0.2852,
       "median_instrument_net_return_pct": -0.2,
       "median_win_rate_pct": 47.41,
-      "median_profit_factor": 0.952
+      "median_profit_factor": 0.95
     },
     {
       "category": "LEVA_LONG",
@@ -1994,8 +2006,8 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 20,
       "instruments": 45,
-      "trades": 1508,
-      "mean_instrument_net_return_pct": -0.4993,
+      "trades": 1509,
+      "mean_instrument_net_return_pct": -0.4983,
       "median_instrument_net_return_pct": -0.2,
       "median_win_rate_pct": 50.0,
       "median_profit_factor": 0.927
@@ -2006,23 +2018,11 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 20,
       "instruments": 45,
-      "trades": 3036,
-      "mean_instrument_net_return_pct": -0.5784,
+      "trades": 3034,
+      "mean_instrument_net_return_pct": -0.5549,
       "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 47.19,
-      "median_profit_factor": 0.795
-    },
-    {
-      "category": "LEVA_LONG",
-      "strategy": "RSI 2 pullback",
-      "horizon_days": 3,
-      "cost_bps_round_trip": 20,
-      "instruments": 45,
-      "trades": 1269,
-      "mean_instrument_net_return_pct": 0.1517,
-      "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 47.06,
-      "median_profit_factor": 0.921
+      "median_win_rate_pct": 47.5,
+      "median_profit_factor": 0.812
     },
     {
       "category": "LEVA_LONG",
@@ -2030,11 +2030,23 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 20,
       "instruments": 44,
-      "trades": 2619,
-      "mean_instrument_net_return_pct": -0.6064,
+      "trades": 2621,
+      "mean_instrument_net_return_pct": -0.5227,
       "median_instrument_net_return_pct": -0.2168,
       "median_win_rate_pct": 47.54,
-      "median_profit_factor": 0.938
+      "median_profit_factor": 0.929
+    },
+    {
+      "category": "LEVA_LONG",
+      "strategy": "RSI 2 pullback",
+      "horizon_days": 3,
+      "cost_bps_round_trip": 30,
+      "instruments": 45,
+      "trades": 1268,
+      "mean_instrument_net_return_pct": 0.0198,
+      "median_instrument_net_return_pct": -0.289,
+      "median_win_rate_pct": 46.43,
+      "median_profit_factor": 0.907
     },
     {
       "category": "LEVA_LONG",
@@ -2042,8 +2054,8 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 30,
       "instruments": 45,
-      "trades": 2846,
-      "mean_instrument_net_return_pct": -0.3901,
+      "trades": 2847,
+      "mean_instrument_net_return_pct": -0.389,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 45.9,
       "median_profit_factor": 0.892
@@ -2054,8 +2066,8 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 30,
       "instruments": 45,
-      "trades": 2853,
-      "mean_instrument_net_return_pct": -0.3863,
+      "trades": 2854,
+      "mean_instrument_net_return_pct": -0.3852,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 45.9,
       "median_profit_factor": 0.917
@@ -2066,11 +2078,11 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 30,
       "instruments": 45,
-      "trades": 1508,
-      "mean_instrument_net_return_pct": -0.5993,
+      "trades": 1509,
+      "mean_instrument_net_return_pct": -0.5983,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 47.06,
-      "median_profit_factor": 0.86
+      "median_profit_factor": 0.861
     },
     {
       "category": "LEVA_LONG",
@@ -2078,23 +2090,11 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 30,
       "instruments": 45,
-      "trades": 3036,
-      "mean_instrument_net_return_pct": -0.6784,
+      "trades": 3034,
+      "mean_instrument_net_return_pct": -0.6549,
       "median_instrument_net_return_pct": -0.3,
-      "median_win_rate_pct": 45.16,
-      "median_profit_factor": 0.762
-    },
-    {
-      "category": "LEVA_LONG",
-      "strategy": "RSI 2 pullback",
-      "horizon_days": 3,
-      "cost_bps_round_trip": 30,
-      "instruments": 45,
-      "trades": 1269,
-      "mean_instrument_net_return_pct": 0.0517,
-      "median_instrument_net_return_pct": -0.3,
-      "median_win_rate_pct": 46.43,
-      "median_profit_factor": 0.909
+      "median_win_rate_pct": 45.45,
+      "median_profit_factor": 0.765
     },
     {
       "category": "LEVA_LONG",
@@ -2102,8 +2102,8 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 30,
       "instruments": 44,
-      "trades": 2619,
-      "mean_instrument_net_return_pct": -0.7064,
+      "trades": 2621,
+      "mean_instrument_net_return_pct": -0.6227,
       "median_instrument_net_return_pct": -0.3168,
       "median_win_rate_pct": 47.34,
       "median_profit_factor": 0.903
@@ -2114,10 +2114,10 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 10,
       "instruments": 44,
-      "trades": 2006,
-      "mean_instrument_net_return_pct": 1.1982,
+      "trades": 2009,
+      "mean_instrument_net_return_pct": 1.2768,
       "median_instrument_net_return_pct": 0.3357,
-      "median_win_rate_pct": 51.75,
+      "median_win_rate_pct": 51.69,
       "median_profit_factor": 1.075
     },
     {
@@ -2126,8 +2126,8 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 10,
       "instruments": 45,
-      "trades": 1931,
-      "mean_instrument_net_return_pct": -0.5526,
+      "trades": 1932,
+      "mean_instrument_net_return_pct": -0.5486,
       "median_instrument_net_return_pct": -0.1086,
       "median_win_rate_pct": 47.56,
       "median_profit_factor": 0.969
@@ -2138,8 +2138,8 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 10,
       "instruments": 45,
-      "trades": 1935,
-      "mean_instrument_net_return_pct": -0.5463,
+      "trades": 1936,
+      "mean_instrument_net_return_pct": -0.5423,
       "median_instrument_net_return_pct": -0.1086,
       "median_win_rate_pct": 47.56,
       "median_profit_factor": 0.969
@@ -2150,8 +2150,8 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 10,
       "instruments": 45,
-      "trades": 1180,
-      "mean_instrument_net_return_pct": -0.5223,
+      "trades": 1181,
+      "mean_instrument_net_return_pct": -0.4876,
       "median_instrument_net_return_pct": -0.1348,
       "median_win_rate_pct": 46.43,
       "median_profit_factor": 0.975
@@ -2163,10 +2163,10 @@
       "cost_bps_round_trip": 10,
       "instruments": 45,
       "trades": 2223,
-      "mean_instrument_net_return_pct": 0.0932,
-      "median_instrument_net_return_pct": -0.3199,
+      "mean_instrument_net_return_pct": 0.0894,
+      "median_instrument_net_return_pct": -0.4177,
       "median_win_rate_pct": 47.71,
-      "median_profit_factor": 0.94
+      "median_profit_factor": 0.947
     },
     {
       "category": "LEVA_LONG",
@@ -2174,8 +2174,8 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 10,
       "instruments": 45,
-      "trades": 1024,
-      "mean_instrument_net_return_pct": -0.5416,
+      "trades": 1023,
+      "mean_instrument_net_return_pct": -0.5553,
       "median_instrument_net_return_pct": -0.5433,
       "median_win_rate_pct": 45.45,
       "median_profit_factor": 1.01
@@ -2186,11 +2186,11 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 20,
       "instruments": 44,
-      "trades": 2006,
-      "mean_instrument_net_return_pct": 1.0982,
-      "median_instrument_net_return_pct": 0.2358,
+      "trades": 2009,
+      "mean_instrument_net_return_pct": 1.1768,
+      "median_instrument_net_return_pct": 0.2356,
       "median_win_rate_pct": 51.37,
-      "median_profit_factor": 1.028
+      "median_profit_factor": 1.018
     },
     {
       "category": "LEVA_LONG",
@@ -2198,8 +2198,8 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 20,
       "instruments": 45,
-      "trades": 1931,
-      "mean_instrument_net_return_pct": -0.6526,
+      "trades": 1932,
+      "mean_instrument_net_return_pct": -0.6486,
       "median_instrument_net_return_pct": -0.2086,
       "median_win_rate_pct": 46.51,
       "median_profit_factor": 0.894
@@ -2210,8 +2210,8 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 20,
       "instruments": 45,
-      "trades": 1935,
-      "mean_instrument_net_return_pct": -0.6463,
+      "trades": 1936,
+      "mean_instrument_net_return_pct": -0.6423,
       "median_instrument_net_return_pct": -0.2086,
       "median_win_rate_pct": 46.51,
       "median_profit_factor": 0.898
@@ -2222,11 +2222,11 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 20,
       "instruments": 45,
-      "trades": 1180,
-      "mean_instrument_net_return_pct": -0.6223,
+      "trades": 1181,
+      "mean_instrument_net_return_pct": -0.5876,
       "median_instrument_net_return_pct": -0.2348,
       "median_win_rate_pct": 46.34,
-      "median_profit_factor": 0.937
+      "median_profit_factor": 0.956
     },
     {
       "category": "LEVA_LONG",
@@ -2235,10 +2235,10 @@
       "cost_bps_round_trip": 20,
       "instruments": 45,
       "trades": 2223,
-      "mean_instrument_net_return_pct": -0.0068,
-      "median_instrument_net_return_pct": -0.4199,
+      "mean_instrument_net_return_pct": -0.0106,
+      "median_instrument_net_return_pct": -0.5177,
       "median_win_rate_pct": 46.0,
-      "median_profit_factor": 0.923
+      "median_profit_factor": 0.928
     },
     {
       "category": "LEVA_LONG",
@@ -2246,11 +2246,11 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 20,
       "instruments": 45,
-      "trades": 1024,
-      "mean_instrument_net_return_pct": -0.6416,
+      "trades": 1023,
+      "mean_instrument_net_return_pct": -0.6553,
       "median_instrument_net_return_pct": -0.6433,
       "median_win_rate_pct": 44.12,
-      "median_profit_factor": 0.964
+      "median_profit_factor": 0.961
     },
     {
       "category": "LEVA_LONG",
@@ -2258,11 +2258,11 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 30,
       "instruments": 44,
-      "trades": 2006,
-      "mean_instrument_net_return_pct": 0.9982,
-      "median_instrument_net_return_pct": 0.1357,
+      "trades": 2009,
+      "mean_instrument_net_return_pct": 1.0768,
+      "median_instrument_net_return_pct": 0.1356,
       "median_win_rate_pct": 50.61,
-      "median_profit_factor": 0.997
+      "median_profit_factor": 0.994
     },
     {
       "category": "LEVA_LONG",
@@ -2270,8 +2270,8 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 30,
       "instruments": 45,
-      "trades": 1931,
-      "mean_instrument_net_return_pct": -0.7526,
+      "trades": 1932,
+      "mean_instrument_net_return_pct": -0.7486,
       "median_instrument_net_return_pct": -0.3086,
       "median_win_rate_pct": 46.51,
       "median_profit_factor": 0.825
@@ -2282,8 +2282,8 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 30,
       "instruments": 45,
-      "trades": 1935,
-      "mean_instrument_net_return_pct": -0.7463,
+      "trades": 1936,
+      "mean_instrument_net_return_pct": -0.7423,
       "median_instrument_net_return_pct": -0.3086,
       "median_win_rate_pct": 46.51,
       "median_profit_factor": 0.883
@@ -2294,11 +2294,11 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 30,
       "instruments": 45,
-      "trades": 1180,
-      "mean_instrument_net_return_pct": -0.7223,
+      "trades": 1181,
+      "mean_instrument_net_return_pct": -0.6876,
       "median_instrument_net_return_pct": -0.3348,
       "median_win_rate_pct": 46.15,
-      "median_profit_factor": 0.921
+      "median_profit_factor": 0.939
     },
     {
       "category": "LEVA_LONG",
@@ -2307,10 +2307,10 @@
       "cost_bps_round_trip": 30,
       "instruments": 45,
       "trades": 2223,
-      "mean_instrument_net_return_pct": -0.1068,
-      "median_instrument_net_return_pct": -0.5199,
+      "mean_instrument_net_return_pct": -0.1106,
+      "median_instrument_net_return_pct": -0.6177,
       "median_win_rate_pct": 45.83,
-      "median_profit_factor": 0.909
+      "median_profit_factor": 0.91
     },
     {
       "category": "LEVA_LONG",
@@ -2318,11 +2318,11 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 30,
       "instruments": 45,
-      "trades": 1024,
-      "mean_instrument_net_return_pct": -0.7416,
+      "trades": 1023,
+      "mean_instrument_net_return_pct": -0.7553,
       "median_instrument_net_return_pct": -0.7433,
       "median_win_rate_pct": 44.12,
-      "median_profit_factor": 0.865
+      "median_profit_factor": 0.881
     },
     {
       "category": "LEVA_SHORT",
@@ -2331,10 +2331,10 @@
       "cost_bps_round_trip": 10,
       "instruments": 38,
       "trades": 5971,
-      "mean_instrument_net_return_pct": 0.1373,
+      "mean_instrument_net_return_pct": 0.1338,
       "median_instrument_net_return_pct": -0.1,
       "median_win_rate_pct": 34.75,
-      "median_profit_factor": 0.694
+      "median_profit_factor": 0.693
     },
     {
       "category": "LEVA_SHORT",
@@ -2343,10 +2343,10 @@
       "cost_bps_round_trip": 10,
       "instruments": 38,
       "trades": 5982,
-      "mean_instrument_net_return_pct": 0.1373,
+      "mean_instrument_net_return_pct": 0.1338,
       "median_instrument_net_return_pct": -0.1,
       "median_win_rate_pct": 34.75,
-      "median_profit_factor": 0.694
+      "median_profit_factor": 0.693
     },
     {
       "category": "LEVA_SHORT",
@@ -2355,9 +2355,9 @@
       "cost_bps_round_trip": 10,
       "instruments": 38,
       "trades": 1516,
-      "mean_instrument_net_return_pct": 0.2714,
+      "mean_instrument_net_return_pct": 0.2699,
       "median_instrument_net_return_pct": -0.1,
-      "median_win_rate_pct": 37.99,
+      "median_win_rate_pct": 37.92,
       "median_profit_factor": 0.806
     },
     {
@@ -2366,10 +2366,10 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 10,
       "instruments": 38,
-      "trades": 3654,
-      "mean_instrument_net_return_pct": 0.1175,
+      "trades": 3656,
+      "mean_instrument_net_return_pct": 0.1134,
       "median_instrument_net_return_pct": -0.1,
-      "median_win_rate_pct": 37.29,
+      "median_win_rate_pct": 37.14,
       "median_profit_factor": 0.784
     },
     {
@@ -2379,9 +2379,9 @@
       "cost_bps_round_trip": 10,
       "instruments": 38,
       "trades": 3438,
-      "mean_instrument_net_return_pct": -0.1716,
+      "mean_instrument_net_return_pct": -0.1547,
       "median_instrument_net_return_pct": -0.1,
-      "median_win_rate_pct": 34.01,
+      "median_win_rate_pct": 34.52,
       "median_profit_factor": 0.686
     },
     {
@@ -2390,11 +2390,11 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 10,
       "instruments": 38,
-      "trades": 4716,
-      "mean_instrument_net_return_pct": -0.3372,
+      "trades": 4711,
+      "mean_instrument_net_return_pct": -0.3584,
       "median_instrument_net_return_pct": -0.1,
-      "median_win_rate_pct": 33.16,
-      "median_profit_factor": 0.639
+      "median_win_rate_pct": 32.23,
+      "median_profit_factor": 0.623
     },
     {
       "category": "LEVA_SHORT",
@@ -2403,10 +2403,10 @@
       "cost_bps_round_trip": 20,
       "instruments": 38,
       "trades": 5971,
-      "mean_instrument_net_return_pct": 0.0373,
+      "mean_instrument_net_return_pct": 0.0338,
       "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 33.89,
-      "median_profit_factor": 0.621
+      "median_win_rate_pct": 33.63,
+      "median_profit_factor": 0.614
     },
     {
       "category": "LEVA_SHORT",
@@ -2415,10 +2415,10 @@
       "cost_bps_round_trip": 20,
       "instruments": 38,
       "trades": 5982,
-      "mean_instrument_net_return_pct": 0.0373,
+      "mean_instrument_net_return_pct": 0.0338,
       "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 33.89,
-      "median_profit_factor": 0.621
+      "median_win_rate_pct": 33.63,
+      "median_profit_factor": 0.614
     },
     {
       "category": "LEVA_SHORT",
@@ -2427,7 +2427,7 @@
       "cost_bps_round_trip": 20,
       "instruments": 38,
       "trades": 1516,
-      "mean_instrument_net_return_pct": 0.1714,
+      "mean_instrument_net_return_pct": 0.1699,
       "median_instrument_net_return_pct": -0.2,
       "median_win_rate_pct": 34.52,
       "median_profit_factor": 0.671
@@ -2438,10 +2438,10 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 20,
       "instruments": 38,
-      "trades": 3654,
-      "mean_instrument_net_return_pct": 0.0175,
+      "trades": 3656,
+      "mean_instrument_net_return_pct": 0.0134,
       "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 34.85,
+      "median_win_rate_pct": 34.94,
       "median_profit_factor": 0.706
     },
     {
@@ -2451,10 +2451,10 @@
       "cost_bps_round_trip": 20,
       "instruments": 38,
       "trades": 3438,
-      "mean_instrument_net_return_pct": -0.2716,
+      "mean_instrument_net_return_pct": -0.2547,
       "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 32.33,
-      "median_profit_factor": 0.56
+      "median_win_rate_pct": 32.37,
+      "median_profit_factor": 0.571
     },
     {
       "category": "LEVA_SHORT",
@@ -2462,8 +2462,8 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 20,
       "instruments": 38,
-      "trades": 4716,
-      "mean_instrument_net_return_pct": -0.4372,
+      "trades": 4711,
+      "mean_instrument_net_return_pct": -0.4583,
       "median_instrument_net_return_pct": -0.2,
       "median_win_rate_pct": 30.8,
       "median_profit_factor": 0.53
@@ -2475,10 +2475,10 @@
       "cost_bps_round_trip": 30,
       "instruments": 38,
       "trades": 5971,
-      "mean_instrument_net_return_pct": -0.0627,
+      "mean_instrument_net_return_pct": -0.0662,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 31.32,
-      "median_profit_factor": 0.564
+      "median_profit_factor": 0.553
     },
     {
       "category": "LEVA_SHORT",
@@ -2487,10 +2487,10 @@
       "cost_bps_round_trip": 30,
       "instruments": 38,
       "trades": 5982,
-      "mean_instrument_net_return_pct": -0.0627,
+      "mean_instrument_net_return_pct": -0.0662,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 31.32,
-      "median_profit_factor": 0.564
+      "median_profit_factor": 0.553
     },
     {
       "category": "LEVA_SHORT",
@@ -2499,10 +2499,10 @@
       "cost_bps_round_trip": 30,
       "instruments": 38,
       "trades": 1516,
-      "mean_instrument_net_return_pct": 0.0714,
+      "mean_instrument_net_return_pct": 0.0699,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 33.33,
-      "median_profit_factor": 0.585
+      "median_profit_factor": 0.579
     },
     {
       "category": "LEVA_SHORT",
@@ -2510,10 +2510,10 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 30,
       "instruments": 38,
-      "trades": 3654,
-      "mean_instrument_net_return_pct": -0.0825,
+      "trades": 3656,
+      "mean_instrument_net_return_pct": -0.0866,
       "median_instrument_net_return_pct": -0.3,
-      "median_win_rate_pct": 32.32,
+      "median_win_rate_pct": 32.38,
       "median_profit_factor": 0.649
     },
     {
@@ -2523,10 +2523,10 @@
       "cost_bps_round_trip": 30,
       "instruments": 38,
       "trades": 3438,
-      "mean_instrument_net_return_pct": -0.3716,
+      "mean_instrument_net_return_pct": -0.3547,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 30.98,
-      "median_profit_factor": 0.5
+      "median_profit_factor": 0.518
     },
     {
       "category": "LEVA_SHORT",
@@ -2534,10 +2534,10 @@
       "horizon_days": 1,
       "cost_bps_round_trip": 30,
       "instruments": 38,
-      "trades": 4716,
-      "mean_instrument_net_return_pct": -0.5372,
+      "trades": 4711,
+      "mean_instrument_net_return_pct": -0.5584,
       "median_instrument_net_return_pct": -0.3,
-      "median_win_rate_pct": 29.2,
+      "median_win_rate_pct": 29.26,
       "median_profit_factor": 0.459
     },
     {
@@ -2546,11 +2546,11 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 10,
       "instruments": 38,
-      "trades": 3348,
-      "mean_instrument_net_return_pct": 0.3083,
+      "trades": 3349,
+      "mean_instrument_net_return_pct": 0.2618,
       "median_instrument_net_return_pct": -0.1,
       "median_win_rate_pct": 42.64,
-      "median_profit_factor": 0.819
+      "median_profit_factor": 0.814
     },
     {
       "category": "LEVA_SHORT",
@@ -2558,11 +2558,11 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 10,
       "instruments": 38,
-      "trades": 3353,
-      "mean_instrument_net_return_pct": 0.308,
+      "trades": 3354,
+      "mean_instrument_net_return_pct": 0.2615,
       "median_instrument_net_return_pct": -0.1,
       "median_win_rate_pct": 42.64,
-      "median_profit_factor": 0.819
+      "median_profit_factor": 0.814
     },
     {
       "category": "LEVA_SHORT",
@@ -2571,9 +2571,9 @@
       "cost_bps_round_trip": 10,
       "instruments": 38,
       "trades": 2029,
-      "mean_instrument_net_return_pct": -0.0277,
+      "mean_instrument_net_return_pct": 0.058,
       "median_instrument_net_return_pct": -0.1,
-      "median_win_rate_pct": 42.47,
+      "median_win_rate_pct": 43.11,
       "median_profit_factor": 0.943
     },
     {
@@ -2582,10 +2582,10 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 10,
       "instruments": 38,
-      "trades": 2790,
-      "mean_instrument_net_return_pct": -0.3165,
+      "trades": 2783,
+      "mean_instrument_net_return_pct": -0.3432,
       "median_instrument_net_return_pct": -0.1,
-      "median_win_rate_pct": 41.18,
+      "median_win_rate_pct": 41.12,
       "median_profit_factor": 0.77
     },
     {
@@ -2595,10 +2595,10 @@
       "cost_bps_round_trip": 10,
       "instruments": 38,
       "trades": 2658,
-      "mean_instrument_net_return_pct": 0.1369,
-      "median_instrument_net_return_pct": -0.1789,
+      "mean_instrument_net_return_pct": 0.1382,
+      "median_instrument_net_return_pct": -0.1822,
       "median_win_rate_pct": 41.89,
-      "median_profit_factor": 0.841
+      "median_profit_factor": 0.833
     },
     {
       "category": "LEVA_SHORT",
@@ -2607,10 +2607,10 @@
       "cost_bps_round_trip": 10,
       "instruments": 38,
       "trades": 1170,
-      "mean_instrument_net_return_pct": 0.1334,
+      "mean_instrument_net_return_pct": 0.1081,
       "median_instrument_net_return_pct": -0.1987,
-      "median_win_rate_pct": 42.96,
-      "median_profit_factor": 0.891
+      "median_win_rate_pct": 39.65,
+      "median_profit_factor": 0.885
     },
     {
       "category": "LEVA_SHORT",
@@ -2618,11 +2618,11 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 20,
       "instruments": 38,
-      "trades": 3348,
-      "mean_instrument_net_return_pct": 0.2083,
+      "trades": 3349,
+      "mean_instrument_net_return_pct": 0.1618,
       "median_instrument_net_return_pct": -0.2,
       "median_win_rate_pct": 40.86,
-      "median_profit_factor": 0.764
+      "median_profit_factor": 0.757
     },
     {
       "category": "LEVA_SHORT",
@@ -2630,11 +2630,11 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 20,
       "instruments": 38,
-      "trades": 3353,
-      "mean_instrument_net_return_pct": 0.208,
+      "trades": 3354,
+      "mean_instrument_net_return_pct": 0.1615,
       "median_instrument_net_return_pct": -0.2,
       "median_win_rate_pct": 40.86,
-      "median_profit_factor": 0.764
+      "median_profit_factor": 0.757
     },
     {
       "category": "LEVA_SHORT",
@@ -2643,10 +2643,10 @@
       "cost_bps_round_trip": 20,
       "instruments": 38,
       "trades": 2029,
-      "mean_instrument_net_return_pct": -0.1277,
+      "mean_instrument_net_return_pct": -0.042,
       "median_instrument_net_return_pct": -0.2,
       "median_win_rate_pct": 40.9,
-      "median_profit_factor": 0.804
+      "median_profit_factor": 0.807
     },
     {
       "category": "LEVA_SHORT",
@@ -2654,8 +2654,8 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 20,
       "instruments": 38,
-      "trades": 2790,
-      "mean_instrument_net_return_pct": -0.4165,
+      "trades": 2783,
+      "mean_instrument_net_return_pct": -0.4432,
       "median_instrument_net_return_pct": -0.2,
       "median_win_rate_pct": 39.14,
       "median_profit_factor": 0.708
@@ -2667,10 +2667,10 @@
       "cost_bps_round_trip": 20,
       "instruments": 38,
       "trades": 2658,
-      "mean_instrument_net_return_pct": 0.0369,
-      "median_instrument_net_return_pct": -0.2788,
-      "median_win_rate_pct": 40.34,
-      "median_profit_factor": 0.697
+      "mean_instrument_net_return_pct": 0.0382,
+      "median_instrument_net_return_pct": -0.2822,
+      "median_win_rate_pct": 40.26,
+      "median_profit_factor": 0.69
     },
     {
       "category": "LEVA_SHORT",
@@ -2679,9 +2679,9 @@
       "cost_bps_round_trip": 20,
       "instruments": 38,
       "trades": 1170,
-      "mean_instrument_net_return_pct": 0.0334,
+      "mean_instrument_net_return_pct": 0.0081,
       "median_instrument_net_return_pct": -0.2988,
-      "median_win_rate_pct": 40.75,
+      "median_win_rate_pct": 38.52,
       "median_profit_factor": 0.796
     },
     {
@@ -2690,8 +2690,8 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 30,
       "instruments": 38,
-      "trades": 3348,
-      "mean_instrument_net_return_pct": 0.1082,
+      "trades": 3349,
+      "mean_instrument_net_return_pct": 0.0618,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 39.31,
       "median_profit_factor": 0.698
@@ -2702,8 +2702,8 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 30,
       "instruments": 38,
-      "trades": 3353,
-      "mean_instrument_net_return_pct": 0.108,
+      "trades": 3354,
+      "mean_instrument_net_return_pct": 0.0615,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 39.31,
       "median_profit_factor": 0.698
@@ -2715,10 +2715,10 @@
       "cost_bps_round_trip": 30,
       "instruments": 38,
       "trades": 2029,
-      "mean_instrument_net_return_pct": -0.2277,
+      "mean_instrument_net_return_pct": -0.142,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 37.68,
-      "median_profit_factor": 0.728
+      "median_profit_factor": 0.746
     },
     {
       "category": "LEVA_SHORT",
@@ -2726,10 +2726,10 @@
       "horizon_days": 2,
       "cost_bps_round_trip": 30,
       "instruments": 38,
-      "trades": 2790,
-      "mean_instrument_net_return_pct": -0.5165,
+      "trades": 2783,
+      "mean_instrument_net_return_pct": -0.5432,
       "median_instrument_net_return_pct": -0.3,
-      "median_win_rate_pct": 38.78,
+      "median_win_rate_pct": 38.7,
       "median_profit_factor": 0.643
     },
     {
@@ -2739,9 +2739,9 @@
       "cost_bps_round_trip": 30,
       "instruments": 38,
       "trades": 2658,
-      "mean_instrument_net_return_pct": -0.0631,
-      "median_instrument_net_return_pct": -0.3789,
-      "median_win_rate_pct": 39.5,
+      "mean_instrument_net_return_pct": -0.0618,
+      "median_instrument_net_return_pct": -0.3822,
+      "median_win_rate_pct": 39.28,
       "median_profit_factor": 0.649
     },
     {
@@ -2751,10 +2751,10 @@
       "cost_bps_round_trip": 30,
       "instruments": 38,
       "trades": 1170,
-      "mean_instrument_net_return_pct": -0.0666,
+      "mean_instrument_net_return_pct": -0.0919,
       "median_instrument_net_return_pct": -0.3987,
-      "median_win_rate_pct": 36.91,
-      "median_profit_factor": 0.756
+      "median_win_rate_pct": 36.53,
+      "median_profit_factor": 0.749
     },
     {
       "category": "LEVA_SHORT",
@@ -2762,8 +2762,8 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 10,
       "instruments": 38,
-      "trades": 2427,
-      "mean_instrument_net_return_pct": 0.2931,
+      "trades": 2430,
+      "mean_instrument_net_return_pct": 0.3473,
       "median_instrument_net_return_pct": -0.1,
       "median_win_rate_pct": 42.6,
       "median_profit_factor": 0.845
@@ -2774,23 +2774,11 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 10,
       "instruments": 38,
-      "trades": 2430,
-      "mean_instrument_net_return_pct": 0.2941,
+      "trades": 2433,
+      "mean_instrument_net_return_pct": 0.3482,
       "median_instrument_net_return_pct": -0.1,
       "median_win_rate_pct": 42.6,
       "median_profit_factor": 0.845
-    },
-    {
-      "category": "LEVA_SHORT",
-      "strategy": "RSI 2 pullback",
-      "horizon_days": 3,
-      "cost_bps_round_trip": 10,
-      "instruments": 38,
-      "trades": 1565,
-      "mean_instrument_net_return_pct": -0.1423,
-      "median_instrument_net_return_pct": -0.1,
-      "median_win_rate_pct": 41.06,
-      "median_profit_factor": 0.812
     },
     {
       "category": "LEVA_SHORT",
@@ -2798,11 +2786,11 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 10,
       "instruments": 38,
-      "trades": 2150,
-      "mean_instrument_net_return_pct": -0.6309,
+      "trades": 2149,
+      "mean_instrument_net_return_pct": -0.6458,
       "median_instrument_net_return_pct": -0.1,
       "median_win_rate_pct": 40.86,
-      "median_profit_factor": 0.75
+      "median_profit_factor": 0.753
     },
     {
       "category": "LEVA_SHORT",
@@ -2811,10 +2799,10 @@
       "cost_bps_round_trip": 10,
       "instruments": 38,
       "trades": 2138,
-      "mean_instrument_net_return_pct": 0.1885,
-      "median_instrument_net_return_pct": -0.1386,
+      "mean_instrument_net_return_pct": 0.1817,
+      "median_instrument_net_return_pct": -0.117,
       "median_win_rate_pct": 42.48,
-      "median_profit_factor": 0.851
+      "median_profit_factor": 0.855
     },
     {
       "category": "LEVA_SHORT",
@@ -2822,20 +2810,32 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 10,
       "instruments": 38,
-      "trades": 1013,
-      "mean_instrument_net_return_pct": -0.1227,
+      "trades": 1014,
+      "mean_instrument_net_return_pct": -0.1407,
       "median_instrument_net_return_pct": -0.1502,
       "median_win_rate_pct": 43.92,
       "median_profit_factor": 0.838
     },
     {
       "category": "LEVA_SHORT",
+      "strategy": "RSI 2 pullback",
+      "horizon_days": 3,
+      "cost_bps_round_trip": 10,
+      "instruments": 38,
+      "trades": 1563,
+      "mean_instrument_net_return_pct": -0.1098,
+      "median_instrument_net_return_pct": -0.1553,
+      "median_win_rate_pct": 41.86,
+      "median_profit_factor": 0.812
+    },
+    {
+      "category": "LEVA_SHORT",
       "strategy": "EMA 3/8 trend",
       "horizon_days": 3,
       "cost_bps_round_trip": 20,
       "instruments": 38,
-      "trades": 2427,
-      "mean_instrument_net_return_pct": 0.1931,
+      "trades": 2430,
+      "mean_instrument_net_return_pct": 0.2472,
       "median_instrument_net_return_pct": -0.2,
       "median_win_rate_pct": 40.88,
       "median_profit_factor": 0.805
@@ -2846,23 +2846,11 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 20,
       "instruments": 38,
-      "trades": 2430,
-      "mean_instrument_net_return_pct": 0.1941,
+      "trades": 2433,
+      "mean_instrument_net_return_pct": 0.2482,
       "median_instrument_net_return_pct": -0.2,
       "median_win_rate_pct": 40.88,
       "median_profit_factor": 0.805
-    },
-    {
-      "category": "LEVA_SHORT",
-      "strategy": "RSI 2 pullback",
-      "horizon_days": 3,
-      "cost_bps_round_trip": 20,
-      "instruments": 38,
-      "trades": 1565,
-      "mean_instrument_net_return_pct": -0.2423,
-      "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 40.0,
-      "median_profit_factor": 0.706
     },
     {
       "category": "LEVA_SHORT",
@@ -2870,11 +2858,11 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 20,
       "instruments": 38,
-      "trades": 2150,
-      "mean_instrument_net_return_pct": -0.7309,
+      "trades": 2149,
+      "mean_instrument_net_return_pct": -0.7459,
       "median_instrument_net_return_pct": -0.2,
       "median_win_rate_pct": 40.24,
-      "median_profit_factor": 0.7
+      "median_profit_factor": 0.698
     },
     {
       "category": "LEVA_SHORT",
@@ -2883,10 +2871,10 @@
       "cost_bps_round_trip": 20,
       "instruments": 38,
       "trades": 2138,
-      "mean_instrument_net_return_pct": 0.0885,
-      "median_instrument_net_return_pct": -0.2386,
+      "mean_instrument_net_return_pct": 0.0817,
+      "median_instrument_net_return_pct": -0.217,
       "median_win_rate_pct": 42.02,
-      "median_profit_factor": 0.778
+      "median_profit_factor": 0.783
     },
     {
       "category": "LEVA_SHORT",
@@ -2894,11 +2882,23 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 20,
       "instruments": 38,
-      "trades": 1013,
-      "mean_instrument_net_return_pct": -0.2227,
+      "trades": 1014,
+      "mean_instrument_net_return_pct": -0.2407,
       "median_instrument_net_return_pct": -0.2502,
       "median_win_rate_pct": 42.78,
       "median_profit_factor": 0.759
+    },
+    {
+      "category": "LEVA_SHORT",
+      "strategy": "RSI 2 pullback",
+      "horizon_days": 3,
+      "cost_bps_round_trip": 20,
+      "instruments": 38,
+      "trades": 1563,
+      "mean_instrument_net_return_pct": -0.2098,
+      "median_instrument_net_return_pct": -0.2553,
+      "median_win_rate_pct": 40.0,
+      "median_profit_factor": 0.718
     },
     {
       "category": "LEVA_SHORT",
@@ -2906,8 +2906,8 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 30,
       "instruments": 38,
-      "trades": 2427,
-      "mean_instrument_net_return_pct": 0.0931,
+      "trades": 2430,
+      "mean_instrument_net_return_pct": 0.1472,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 38.46,
       "median_profit_factor": 0.726
@@ -2918,23 +2918,11 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 30,
       "instruments": 38,
-      "trades": 2430,
-      "mean_instrument_net_return_pct": 0.0941,
+      "trades": 2433,
+      "mean_instrument_net_return_pct": 0.1482,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 38.46,
       "median_profit_factor": 0.726
-    },
-    {
-      "category": "LEVA_SHORT",
-      "strategy": "RSI 2 pullback",
-      "horizon_days": 3,
-      "cost_bps_round_trip": 30,
-      "instruments": 38,
-      "trades": 1565,
-      "mean_instrument_net_return_pct": -0.3423,
-      "median_instrument_net_return_pct": -0.3,
-      "median_win_rate_pct": 40.0,
-      "median_profit_factor": 0.639
     },
     {
       "category": "LEVA_SHORT",
@@ -2942,8 +2930,8 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 30,
       "instruments": 38,
-      "trades": 2150,
-      "mean_instrument_net_return_pct": -0.8309,
+      "trades": 2149,
+      "mean_instrument_net_return_pct": -0.8459,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 38.95,
       "median_profit_factor": 0.641
@@ -2955,10 +2943,10 @@
       "cost_bps_round_trip": 30,
       "instruments": 38,
       "trades": 2138,
-      "mean_instrument_net_return_pct": -0.0115,
-      "median_instrument_net_return_pct": -0.3386,
+      "mean_instrument_net_return_pct": -0.0183,
+      "median_instrument_net_return_pct": -0.317,
       "median_win_rate_pct": 41.05,
-      "median_profit_factor": 0.72
+      "median_profit_factor": 0.714
     },
     {
       "category": "LEVA_SHORT",
@@ -2966,11 +2954,23 @@
       "horizon_days": 3,
       "cost_bps_round_trip": 30,
       "instruments": 38,
-      "trades": 1013,
-      "mean_instrument_net_return_pct": -0.3227,
+      "trades": 1014,
+      "mean_instrument_net_return_pct": -0.3407,
       "median_instrument_net_return_pct": -0.3503,
       "median_win_rate_pct": 39.81,
       "median_profit_factor": 0.692
+    },
+    {
+      "category": "LEVA_SHORT",
+      "strategy": "RSI 2 pullback",
+      "horizon_days": 3,
+      "cost_bps_round_trip": 30,
+      "instruments": 38,
+      "trades": 1563,
+      "mean_instrument_net_return_pct": -0.3098,
+      "median_instrument_net_return_pct": -0.3553,
+      "median_win_rate_pct": 40.0,
+      "median_profit_factor": 0.649
     },
     {
       "category": "LEVA_SHORT",
@@ -2978,11 +2978,11 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 10,
       "instruments": 38,
-      "trades": 1647,
-      "mean_instrument_net_return_pct": 0.5965,
+      "trades": 1648,
+      "mean_instrument_net_return_pct": 0.541,
       "median_instrument_net_return_pct": -0.1,
       "median_win_rate_pct": 41.29,
-      "median_profit_factor": 0.882
+      "median_profit_factor": 0.871
     },
     {
       "category": "LEVA_SHORT",
@@ -2990,23 +2990,11 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 10,
       "instruments": 38,
-      "trades": 1648,
-      "mean_instrument_net_return_pct": 0.5982,
+      "trades": 1649,
+      "mean_instrument_net_return_pct": 0.5426,
       "median_instrument_net_return_pct": -0.1,
       "median_win_rate_pct": 41.29,
-      "median_profit_factor": 0.882
-    },
-    {
-      "category": "LEVA_SHORT",
-      "strategy": "Fast Momentum + RVOL",
-      "horizon_days": 5,
-      "cost_bps_round_trip": 10,
-      "instruments": 38,
-      "trades": 804,
-      "mean_instrument_net_return_pct": -0.5836,
-      "median_instrument_net_return_pct": -0.1,
-      "median_win_rate_pct": 46.07,
-      "median_profit_factor": 0.935
+      "median_profit_factor": 0.871
     },
     {
       "category": "LEVA_SHORT",
@@ -3015,9 +3003,9 @@
       "cost_bps_round_trip": 10,
       "instruments": 38,
       "trades": 1162,
-      "mean_instrument_net_return_pct": 0.9345,
+      "mean_instrument_net_return_pct": 1.0562,
       "median_instrument_net_return_pct": -0.1,
-      "median_win_rate_pct": 44.44,
+      "median_win_rate_pct": 44.25,
       "median_profit_factor": 0.922
     },
     {
@@ -3026,11 +3014,23 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 10,
       "instruments": 38,
-      "trades": 1654,
-      "mean_instrument_net_return_pct": 0.6051,
+      "trades": 1652,
+      "mean_instrument_net_return_pct": 0.5801,
       "median_instrument_net_return_pct": -0.1,
-      "median_win_rate_pct": 43.38,
-      "median_profit_factor": 0.966
+      "median_win_rate_pct": 43.12,
+      "median_profit_factor": 0.968
+    },
+    {
+      "category": "LEVA_SHORT",
+      "strategy": "Fast Momentum + RVOL",
+      "horizon_days": 5,
+      "cost_bps_round_trip": 10,
+      "instruments": 38,
+      "trades": 805,
+      "mean_instrument_net_return_pct": -0.5929,
+      "median_instrument_net_return_pct": -0.104,
+      "median_win_rate_pct": 45.31,
+      "median_profit_factor": 0.936
     },
     {
       "category": "LEVA_SHORT",
@@ -3038,11 +3038,11 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 10,
       "instruments": 38,
-      "trades": 1635,
-      "mean_instrument_net_return_pct": 0.6513,
-      "median_instrument_net_return_pct": -0.372,
-      "median_win_rate_pct": 42.51,
-      "median_profit_factor": 0.957
+      "trades": 1636,
+      "mean_instrument_net_return_pct": 0.6541,
+      "median_instrument_net_return_pct": -0.2947,
+      "median_win_rate_pct": 43.09,
+      "median_profit_factor": 0.944
     },
     {
       "category": "LEVA_SHORT",
@@ -3050,11 +3050,11 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 20,
       "instruments": 38,
-      "trades": 1647,
-      "mean_instrument_net_return_pct": 0.4965,
+      "trades": 1648,
+      "mean_instrument_net_return_pct": 0.441,
       "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 40.38,
-      "median_profit_factor": 0.827
+      "median_win_rate_pct": 40.69,
+      "median_profit_factor": 0.821
     },
     {
       "category": "LEVA_SHORT",
@@ -3062,23 +3062,11 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 20,
       "instruments": 38,
-      "trades": 1648,
-      "mean_instrument_net_return_pct": 0.4982,
+      "trades": 1649,
+      "mean_instrument_net_return_pct": 0.4426,
       "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 40.38,
-      "median_profit_factor": 0.827
-    },
-    {
-      "category": "LEVA_SHORT",
-      "strategy": "Fast Momentum + RVOL",
-      "horizon_days": 5,
-      "cost_bps_round_trip": 20,
-      "instruments": 38,
-      "trades": 804,
-      "mean_instrument_net_return_pct": -0.6836,
-      "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 45.43,
-      "median_profit_factor": 0.882
+      "median_win_rate_pct": 40.69,
+      "median_profit_factor": 0.821
     },
     {
       "category": "LEVA_SHORT",
@@ -3087,9 +3075,9 @@
       "cost_bps_round_trip": 20,
       "instruments": 38,
       "trades": 1162,
-      "mean_instrument_net_return_pct": 0.8345,
+      "mean_instrument_net_return_pct": 0.9562,
       "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 44.25,
+      "median_win_rate_pct": 43.86,
       "median_profit_factor": 0.857
     },
     {
@@ -3098,11 +3086,23 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 20,
       "instruments": 38,
-      "trades": 1654,
-      "mean_instrument_net_return_pct": 0.5051,
+      "trades": 1652,
+      "mean_instrument_net_return_pct": 0.4801,
       "median_instrument_net_return_pct": -0.2,
-      "median_win_rate_pct": 43.38,
-      "median_profit_factor": 0.911
+      "median_win_rate_pct": 42.65,
+      "median_profit_factor": 0.912
+    },
+    {
+      "category": "LEVA_SHORT",
+      "strategy": "Fast Momentum + RVOL",
+      "horizon_days": 5,
+      "cost_bps_round_trip": 20,
+      "instruments": 38,
+      "trades": 805,
+      "mean_instrument_net_return_pct": -0.6929,
+      "median_instrument_net_return_pct": -0.204,
+      "median_win_rate_pct": 45.31,
+      "median_profit_factor": 0.883
     },
     {
       "category": "LEVA_SHORT",
@@ -3110,11 +3110,11 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 20,
       "instruments": 38,
-      "trades": 1635,
-      "mean_instrument_net_return_pct": 0.5513,
-      "median_instrument_net_return_pct": -0.472,
-      "median_win_rate_pct": 41.47,
-      "median_profit_factor": 0.869
+      "trades": 1636,
+      "mean_instrument_net_return_pct": 0.5541,
+      "median_instrument_net_return_pct": -0.3947,
+      "median_win_rate_pct": 42.09,
+      "median_profit_factor": 0.854
     },
     {
       "category": "LEVA_SHORT",
@@ -3122,11 +3122,11 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 30,
       "instruments": 38,
-      "trades": 1647,
-      "mean_instrument_net_return_pct": 0.3965,
+      "trades": 1648,
+      "mean_instrument_net_return_pct": 0.341,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 38.39,
-      "median_profit_factor": 0.754
+      "median_profit_factor": 0.744
     },
     {
       "category": "LEVA_SHORT",
@@ -3134,23 +3134,11 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 30,
       "instruments": 38,
-      "trades": 1648,
-      "mean_instrument_net_return_pct": 0.3982,
+      "trades": 1649,
+      "mean_instrument_net_return_pct": 0.3426,
       "median_instrument_net_return_pct": -0.3,
       "median_win_rate_pct": 38.39,
-      "median_profit_factor": 0.754
-    },
-    {
-      "category": "LEVA_SHORT",
-      "strategy": "Fast Momentum + RVOL",
-      "horizon_days": 5,
-      "cost_bps_round_trip": 30,
-      "instruments": 38,
-      "trades": 804,
-      "mean_instrument_net_return_pct": -0.7836,
-      "median_instrument_net_return_pct": -0.3,
-      "median_win_rate_pct": 43.33,
-      "median_profit_factor": 0.854
+      "median_profit_factor": 0.744
     },
     {
       "category": "LEVA_SHORT",
@@ -3159,9 +3147,9 @@
       "cost_bps_round_trip": 30,
       "instruments": 38,
       "trades": 1162,
-      "mean_instrument_net_return_pct": 0.7345,
+      "mean_instrument_net_return_pct": 0.8562,
       "median_instrument_net_return_pct": -0.3,
-      "median_win_rate_pct": 43.61,
+      "median_win_rate_pct": 43.0,
       "median_profit_factor": 0.813
     },
     {
@@ -3170,11 +3158,23 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 30,
       "instruments": 38,
-      "trades": 1654,
-      "mean_instrument_net_return_pct": 0.4051,
+      "trades": 1652,
+      "mean_instrument_net_return_pct": 0.3801,
       "median_instrument_net_return_pct": -0.3,
-      "median_win_rate_pct": 42.11,
-      "median_profit_factor": 0.863
+      "median_win_rate_pct": 41.58,
+      "median_profit_factor": 0.864
+    },
+    {
+      "category": "LEVA_SHORT",
+      "strategy": "Fast Momentum + RVOL",
+      "horizon_days": 5,
+      "cost_bps_round_trip": 30,
+      "instruments": 38,
+      "trades": 805,
+      "mean_instrument_net_return_pct": -0.7929,
+      "median_instrument_net_return_pct": -0.3039,
+      "median_win_rate_pct": 43.33,
+      "median_profit_factor": 0.854
     },
     {
       "category": "LEVA_SHORT",
@@ -3182,11 +3182,11 @@
       "horizon_days": 5,
       "cost_bps_round_trip": 30,
       "instruments": 38,
-      "trades": 1635,
-      "mean_instrument_net_return_pct": 0.4513,
-      "median_instrument_net_return_pct": -0.572,
-      "median_win_rate_pct": 41.14,
-      "median_profit_factor": 0.833
+      "trades": 1636,
+      "mean_instrument_net_return_pct": 0.4541,
+      "median_instrument_net_return_pct": -0.4947,
+      "median_win_rate_pct": 41.47,
+      "median_profit_factor": 0.827
     }
   ]
 }
