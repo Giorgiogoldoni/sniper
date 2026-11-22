@@ -30,7 +30,9 @@ jobs:
       - name: Install dependencies
         run: pip install 'yfinance[repair]' pandas numpy
       - name: Run portfolio simulation
-        run: python sniper_portfolio_simulation.py --from-date "\${{ github.event.inputs.from_date || '2023-01-01' }}"
+        env:
+          FROM_DATE: ${{ github.event.inputs.from_date || '2023-01-01' }}
+        run: python sniper_portfolio_simulation.py --from-date "$FROM_DATE"
       - name: Commit results
         run: |
           git config user.name "sniper-bot"
