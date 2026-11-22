@@ -167,8 +167,8 @@ def main():
 
     detail = pd.DataFrame(rows)
     summary = []
+    detail.to_csv(DETAIL, index=False)
     if not detail.empty:
-        detail.to_csv(DETAIL, index=False)
         for (cat, strategy, horizon, cost), g in detail.groupby(
                 ["category", "strategy", "horizon_days", "cost_bps_round_trip"]):
             valid = g[g["avg_net_return_pct"].notna()]
