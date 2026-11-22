@@ -33,11 +33,13 @@ jobs:
         run: python paper_trading.py --self-test
       - name: Update paper book
         run: python paper_trading.py
+      - name: Reconstruct historical paper from 1 November 2026 (isolated book)
+        run: python paper_trading.py --backfill-from 2026-11-01
       - name: Commit paper ledger
         run: |
           git config user.name "raptor-bot"
           git config user.email "raptor-bot@users.noreply.github.com"
-          git add data/paper_trading_state.json data/paper_trading_log.csv data/paper_trading_summary.json
+          git add data/paper_trading_state.json data/paper_trading_log.csv data/paper_trading_summary.json data/paper_backfill_20261101_state.json data/paper_backfill_20261101_log.csv data/paper_backfill_20261101_summary.json
           git diff --staged --quiet || git commit -m "sniper: update paper trading ledger"
           # Rebase on concurrent repository updates (e.g. Pages deployments) before pushing.
           for attempt in 1 2 3; do
