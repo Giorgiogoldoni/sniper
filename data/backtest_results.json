@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T02:23:09.468979+00:00",
+  "generated_at": "2026-11-22T03:31:48.228335+00:00",
   "period_requested": "10y",
   "minimum_history_bars": 260,
   "universe_total": 310,
@@ -1482,10 +1482,10 @@
       "strategy": "Donchian 20",
       "horizon_days": 3,
       "instruments": 105,
-      "trades": 3105,
+      "trades": 3104,
       "avg_instrument_return_pct": 0.28,
       "median_instrument_return_pct": 0.078,
-      "avg_win_rate_pct": 50.35,
+      "avg_win_rate_pct": 50.36,
       "median_win_rate_pct": 51.43,
       "avg_profit_factor": 2.393,
       "median_profit_factor": 0.953
@@ -1690,12 +1690,12 @@
       "strategy": "Donchian 20",
       "horizon_days": 5,
       "instruments": 105,
-      "trades": 2617,
+      "trades": 2616,
       "avg_instrument_return_pct": 0.363,
       "median_instrument_return_pct": 0.055,
-      "avg_win_rate_pct": 50.51,
+      "avg_win_rate_pct": 50.49,
       "median_win_rate_pct": 50.0,
-      "avg_profit_factor": 1.606,
+      "avg_profit_factor": 1.605,
       "median_profit_factor": 1.148
     },
     {
