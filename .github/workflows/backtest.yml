@@ -6,6 +6,7 @@ on:
     paths:
       - 'backtest_indicators.py'
       - 'backtest_stops.py'
+      - 'backtest_fast_leverage3.py'
       - 'corporate_action_filter.py'
       - 'data/indicator_history_cutoffs.json'
       - '.github/workflows/backtest.yml'
@@ -28,11 +29,13 @@ jobs:
         run: python backtest_indicators.py
       - name: Run next-open ATR and Chandelier backtest
         run: python backtest_stops.py
+      - name: Run fast signals backtest on exact 3x ETPs
+        run: python backtest_fast_leverage3.py
       - name: Commit results
         run: |
           git config user.name "raptor-bot"
           git config user.email "raptor-bot@users.noreply.github.com"
-          git add data/backtest_results.json data/backtest_detail.csv data/backtest_stops_results.json data/backtest_stops_detail.csv data/backtest_exclusion_audit.json
+          git add data/backtest_results.json data/backtest_detail.csv data/backtest_stops_results.json data/backtest_stops_detail.csv data/backtest_exclusion_audit.json data/fast_leverage3_results.json data/fast_leverage3_detail.csv
           git diff --staged --quiet || git commit -m "sniper: publish indicator and stop backtest results"
           git push
       - name: Upload results
@@ -45,3 +48,5 @@ jobs:
             data/backtest_stops_results.json
             data/backtest_stops_detail.csv
             data/backtest_exclusion_audit.json
+            data/fast_leverage3_results.json
+            data/fast_leverage3_detail.csv
