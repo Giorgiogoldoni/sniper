@@ -10,11 +10,8 @@ import yfinance as yf
 
 ROOT=Path(__file__).resolve().parent
 UNIVERSE=ROOT/"data"/"instrument_universe.json"
-OUT_JSON=ROOT/"data"/"walking_entry_test_20261001.json"
-OUT_CSV=ROOT/"data"/"walking_entry_test_20261001_trades.csv"
-START_DEFAULT="2026-10-01"
+START_DEFAULT="2023-01-01"
 BATCH=15
-COST_BPS=30
 warnings.filterwarnings("ignore")
 
 VARIANTS={
@@ -115,15 +112,13 @@ def run_variant(frames,variant,start_date):
 
 def metrics(rows):
     if not rows:
-        return {"trades":0,"wins":0,"win_rate_pct":None,"gross_mean_pct":None,"net30_mean_pct":None,
-                "gross_profit_factor":None,"net30_profit_factor":None,"gross_median_pct":None,"worst_trade_pct":None}
+        return {"trades":0,"wins":0,"win_rate_pct":None,"gross_mean_pct":None,
+                "gross_profit_factor":None,"gross_median_pct":None,"worst_trade_pct":None}
     gross=np.array([x["gross_return_pct"] for x in rows],dtype=float)
-    net=gross-COST_BPS/100
     gp=float(gross[gross>0].sum()); gl=float(-gross[gross<0].sum())
-    npf=float(net[net>0].sum()); npl=float(-net[net<0].sum())
-    return {"trades":len(rows),"wins":int((net>0).sum()),"win_rate_pct":round(float((net>0).mean()*100),2),
-        "gross_mean_pct":round(float(gross.mean()),3),"net30_mean_pct":round(float(net.mean()),3),
-        "gross_profit_factor":round(gp/gl,3) if gl else None,"net30_profit_factor":round(npf/npl,3) if npl else None,
+    return {"trades":len(rows),"wins":int((gross>0).sum()),"win_rate_pct":round(float((gross>0).mean()*100),2),
+        "gross_mean_pct":round(float(gross.mean()),3),
+        "gross_profit_factor":round(gp/gl,3) if gl else None,
         "gross_median_pct":round(float(np.median(gross)),3),"worst_trade_pct":round(float(gross.min()),3)}
 
 def main():
@@ -131,13 +126,15 @@ def main():
     ap.add_argument("--from-date",default=START_DEFAULT)
     args=ap.parse_args()
     start=str(pd.Timestamp(args.from_date).date())
+    OUT_JSON=ROOT/"data"/f"walking_entry_test_{start.replace('-','')}.json"
+    OUT_CSV=ROOT/"data"/f"walking_entry_test_{start.replace('-','')}_trades.csv"
     universe=json.loads(UNIVERSE.read_text(encoding="utf-8"))["instruments"]
     tickers=[x.get("yahoo") or x.get("ticker") for x in universe if x.get("classification")=="MATERIE_PRIME_LEVA" and (x.get("yahoo") or x.get("ticker"))]
     frames={}; failed=[]
     for j in range(0,len(tickers),BATCH):
         batch=tickers[j:j+BATCH]
         try:
-            raw=yf.download(batch,period="1y",interval="1d",auto_adjust=False,actions=True,repair=True,
+            raw=yf.download(batch,period="10y",interval="1d",auto_adjust=False,actions=True,repair=True,
                 group_by="ticker",threads=False,progress=False,timeout=35)
         except Exception as e:
             failed.extend({"ticker":t,"reason":str(e)[:180]} for t in batch); continue
@@ -155,24 +152,23 @@ def main():
         "C_DONCHIAN10_WALKING":"breakout close above previous 10-session high plus Walking true on same completed close; next open entry",
         "walking_definition":"Close >= 98.5% of upper Bollinger band, Close >= 20-session mean, upper band rising; condition true on at least 2 of last 3 completed sessions",
         "common_exits":"Initial stop = entry open - 2 x ATR(14) measured at signal close; daily low stop check with adverse gap fill at open; exit next open after 2 consecutive completed closes with Walking false; hard exit at close of holding session 10",
-        "costs":"30 bps hypothetical round-trip subtracted per closed trade; no observed bid/ask spread",
+        "costs":"Excluded: all reported returns and metrics are gross price returns.",
         "window_handling":"Indicators warmed on prior history; only signals from start date counted; trades still open or pending at end excluded",
         "limitations":"Short window and small number of instruments/trades; not proof of robust future performance."},"variants":{},"trades":[]}
     all_rows=[]
     for v in VARIANTS:
         rows,open_items=run_variant(frames,v,start)
         for row in rows:
-            row["net30_return_pct"]=round(row["gross_return_pct"]-COST_BPS/100,4)
         result["variants"][v]={**metrics(rows),"open_or_pending_tickers":open_items}
         all_rows.extend(rows)
         result["trades"].extend(rows)
     OUT_JSON.write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding="utf-8")
-    fields=["variant","ticker","signal_date","entry_date","entry_price","exit_date","exit_price","holding_sessions","exit_reason","gross_return_pct","net30_return_pct"]
+    fields=["variant","ticker","signal_date","entry_date","entry_price","exit_date","exit_price","holding_sessions","exit_reason","gross_return_pct"]
     with OUT_CSV.open("w",newline="",encoding="utf-8") as f:
         w=csv.DictWriter(f,fieldnames=fields); w.writeheader()
         for x in result["trades"]:
-            y=dict(x); y["net30_return_pct"]=round(y["gross_return_pct"]-COST_BPS/100,4); w.writerow(y)
-    print(json.dumps({k:{"trades":v["trades"],"wins":v["wins"],"win_rate_pct":v["win_rate_pct"],"gross_mean_pct":v["gross_mean_pct"],"net30_mean_pct":v["net30_mean_pct"],"gross_profit_factor":v["gross_profit_factor"],"net30_profit_factor":v["net30_profit_factor"]} for k,v in result["variants"].items()},ensure_ascii=False))
+            w.writerow(x)
+    print(json.dumps({k:{"trades":v["trades"],"wins":v["wins"],"win_rate_pct":v["win_rate_pct"],"gross_mean_pct":v["gross_mean_pct"],"gross_profit_factor":v["gross_profit_factor"]} for k,v in result["variants"].items()},ensure_ascii=False))
     print("TICKERS_WITH_DATA",len(frames),"OF",len(tickers),"FAILED",len(failed))
 
 if __name__=="__main__": main()
