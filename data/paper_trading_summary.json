@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T14:15:35.924488+00:00",
+  "generated_at": "2026-11-22T15:11:10.157888+00:00",
   "mode": "PAPER_ONLY_NO_ORDERS",
   "universe": {
     "total_selected": 99,
@@ -26,6 +26,7 @@
     50
   ],
   "spread_data": "Not available from Yahoo OHLC. No observed spread is claimed; net returns are sensitivities only.",
+  "price_basis": "Yahoo OHLC downloaded with auto_adjust=False and actions=True: split-adjusted historical OHLC without dividend adjustment. These are not guaranteed to be original as-traded historical nominal quotes; they are used consistently for indicators, ATR, stops and simulated fills. Dividend-adjusted OHLC is deliberately not used for execution.",
   "skipped_count": 13,
   "skipped_latest": [
     {
@@ -85,7 +86,7 @@
     "entry": "Donchian 20 breakout at completed close; enter next session open",
     "stop": "Initial stop at entry minus 2 x ATR(14) from signal close; daily low checked; adverse gap exits at open",
     "LEVA_LONG": "Exit at close of third holding session",
-    "MATERIE_PRIME_LEVA": "Exit next open after two consecutive completed closes with Walking upper Bollinger Band false; time cap 10 sessions at close",
+    "MATERIE_PRIME_LEVA": "Exit next open after two consecutive completed closes with Walking upper Bollinger Band false; hard cap at close of session 10 (never held into session 11)",
     "walking": "Not an entry filter",
     "position_limit": "One open position per ticker; no overlapping entries",
     "activation": "First run establishes a baseline on the latest available daily candle; it does not backfill or fabricate historical trades."

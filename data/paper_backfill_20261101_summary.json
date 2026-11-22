@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T14:16:41.670886+00:00",
+  "generated_at": "2026-11-22T15:12:27.587066+00:00",
   "mode": "PAPER_ONLY_NO_ORDERS",
   "universe": {
     "total_selected": 99,
@@ -28,7 +28,7 @@
   "pending_entries_detail": {
     "3TYL.MI": {
       "signal_date": "2026-11-20",
-      "atr": 0.6611827883761052
+      "atr": 0.6599067943033246
     }
   },
   "closed_trades_latest": [
@@ -58,14 +58,14 @@
       "entry_date": "2026-11-05",
       "entry_price": 28560.0,
       "exit_date": "2026-11-09",
-      "exit_price": 27503.15833388,
+      "exit_price": 27503.15072786,
       "holding_sessions": 3,
       "exit_reason": "ATR_2_STOP",
-      "gross_return_pct": -3.7004,
+      "gross_return_pct": -3.7005,
       "net_return_pct_by_cost_bps": {
-        "20": -3.9004,
-        "30": -4.0004,
-        "50": -4.2004
+        "20": -3.9005,
+        "30": -4.0005,
+        "50": -4.2005
       },
       "spread_observed": false,
       "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
@@ -400,14 +400,14 @@
       "entry_date": "2026-11-09",
       "entry_price": 62.0,
       "exit_date": "2026-11-10",
-      "exit_price": 60.84528946,
+      "exit_price": 60.85064404,
       "holding_sessions": 2,
       "exit_reason": "ATR_2_STOP",
-      "gross_return_pct": -1.8624,
+      "gross_return_pct": -1.8538,
       "net_return_pct_by_cost_bps": {
-        "20": -2.0624,
-        "30": -2.1624,
-        "50": -2.3624
+        "20": -2.0538,
+        "30": -2.1538,
+        "50": -2.3538
       },
       "spread_observed": false,
       "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
@@ -514,6 +514,7 @@
     50
   ],
   "spread_data": "Not available from Yahoo OHLC. No observed spread is claimed; net returns are sensitivities only.",
+  "price_basis": "Yahoo OHLC downloaded with auto_adjust=False and actions=True: split-adjusted historical OHLC without dividend adjustment. These are not guaranteed to be original as-traded historical nominal quotes; they are used consistently for indicators, ATR, stops and simulated fills. Dividend-adjusted OHLC is deliberately not used for execution.",
   "skipped_count": 13,
   "skipped_latest": [
     {
@@ -573,7 +574,7 @@
     "entry": "Donchian 20 breakout at completed close; enter next session open",
     "stop": "Initial stop at entry minus 2 x ATR(14) from signal close; daily low checked; adverse gap exits at open",
     "LEVA_LONG": "Exit at close of third holding session",
-    "MATERIE_PRIME_LEVA": "Exit next open after two consecutive completed closes with Walking upper Bollinger Band false; time cap 10 sessions at close",
+    "MATERIE_PRIME_LEVA": "Exit next open after two consecutive completed closes with Walking upper Bollinger Band false; hard cap at close of session 10 (never held into session 11)",
     "walking": "Not an entry filter",
     "position_limit": "One open position per ticker; no overlapping entries",
     "activation": "Isolated historical reconstruction from requested date; live paper state is not modified."
