@@ -73,11 +73,14 @@ def process_bar(state,ticker,category,date,row,atr_value,donchian,walking):
                 return
         elif category=="MATERIE_PRIME_LEVA":
             p["walking_false_streak"]=0 if walking else p["walking_false_streak"]+1
-            if p["walking_false_streak"]>=2:
-                state["pending_exits"][ticker]="WALKING_2_NEGATIVE_CLOSES"
-            elif p["holding_sessions"]>=10:
-                close_trade(state,ticker,p,date,float(row.Close),"TIME_MAX_10_SESSIONS")
+            if p["holding_sessions"]>=10:
+                # Hard cap: never carry a commodity position beyond session 10.
+                # If Walking confirms on session 10, exit at that session's close.
+                reason="WALKING_2_NEGATIVE_CLOSES" if p["walking_false_streak"]>=2 else "TIME_MAX_10_SESSIONS"
+                close_trade(state,ticker,p,date,float(row.Close),reason)
                 return
+            elif p["walking_false_streak"]>=2:
+                state["pending_exits"][ticker]="WALKING_2_NEGATIVE_CLOSES"
     # A breakout at today's close can only enter at the next session open.
     if ticker not in state["positions"] and ticker not in state["pending_entries"] and ticker not in state["pending_exits"]:
         if bool(donchian) and math.isfinite(atr_value) and atr_value>0:
@@ -104,7 +107,17 @@ def self_test():
     process_bar(s,"STOP","LEVA_LONG","2026-01-02",type("R",(),{"Open":100,"High":101,"Low":99,"Close":100})(),2,True,False)
     process_bar(s,"STOP","LEVA_LONG","2026-01-05",type("R",(),{"Open":101,"High":102,"Low":95,"Close":96})(),2,False,False)
     assert len(s["trades"])==1 and s["trades"][0]["exit_reason"]=="ATR_2_STOP"
-    print("SELF_TEST_OK: next-open entry, 3-session time exit, 2-close Walking exit, ATR stop")
+    # Commodity hard-cap test: second Walking failure on session 10 exits at that close.
+    s=blank_state()
+    process_bar(s,"CAP","MATERIE_PRIME_LEVA","2026-01-02",type("R",(),{"Open":50,"High":51,"Low":49,"Close":50})(),1,True,True)
+    process_bar(s,"CAP","MATERIE_PRIME_LEVA","2026-01-05",type("R",(),{"Open":50,"High":51,"Low":49,"Close":50})(),1,False,True)
+    for day in range(2,10):
+        process_bar(s,"CAP","MATERIE_PRIME_LEVA",f"2026-01-{day+5:02d}",type("R",(),{"Open":50,"High":51,"Low":49,"Close":50})(),1,False,True)
+    assert s["positions"]["CAP"]["holding_sessions"]==9
+    process_bar(s,"CAP","MATERIE_PRIME_LEVA","2026-01-15",type("R",(),{"Open":50,"High":51,"Low":49,"Close":48})(),1,False,False)
+    assert len(s["trades"])==1 and s["trades"][0]["holding_sessions"]==10
+    assert s["trades"][0]["exit_reason"]=="WALKING_2_NEGATIVE_CLOSES" and "CAP" not in s["positions"]
+    print("SELF_TEST_OK: next-open entry, 3-session time exit, Walking next-open exit, ATR stop, commodity hard cap session 10")
     
 def get_frame(raw,ticker):
     try:
@@ -148,7 +161,7 @@ def main():
     for start in range(0,len(tickers),BATCH):
         batch=tickers[start:start+BATCH]
         try:
-            raw=yf.download(batch,period="2y",interval="1d",auto_adjust=True,repair=True,
+            raw=yf.download(batch,period="2y",interval="1d",auto_adjust=False,actions=True,repair=True,
                 group_by="ticker",threads=False,progress=False,timeout=35)
         except Exception as e:
             skipped.extend([{"ticker":t,"reason":str(e)[:160]} for t in batch]); continue
@@ -201,11 +214,12 @@ def main():
         "pending_entries_detail":state["pending_entries"],"closed_trades_latest":state["trades"][-30:],
         "cost_sensitivity_bps_round_trip":list(COSTS_BPS),
         "spread_data":"Not available from Yahoo OHLC. No observed spread is claimed; net returns are sensitivities only.",
+        "price_basis":"Yahoo OHLC downloaded with auto_adjust=False and actions=True: split-adjusted historical OHLC without dividend adjustment. These are not guaranteed to be original as-traded historical nominal quotes; they are used consistently for indicators, ATR, stops and simulated fills. Dividend-adjusted OHLC is deliberately not used for execution.",
         "skipped_count":len(skipped),"skipped_latest":skipped[-30:],
         "rules":{"entry":"Donchian 20 breakout at completed close; enter next session open",
         "stop":"Initial stop at entry minus 2 x ATR(14) from signal close; daily low checked; adverse gap exits at open",
         "LEVA_LONG":"Exit at close of third holding session",
-        "MATERIE_PRIME_LEVA":"Exit next open after two consecutive completed closes with Walking upper Bollinger Band false; time cap 10 sessions at close",
+        "MATERIE_PRIME_LEVA":"Exit next open after two consecutive completed closes with Walking upper Bollinger Band false; hard cap at close of session 10 (never held into session 11)",
         "walking":"Not an entry filter","position_limit":"One open position per ticker; no overlapping entries",
         "activation":"First run establishes a baseline on the latest available daily candle; it does not backfill or fabricate historical trades."}}
     if args.backfill_from:
