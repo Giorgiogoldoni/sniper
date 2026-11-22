@@ -2,6 +2,11 @@ name: Sniper Paper Trading
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'paper_trading.py'
+      - '.github/workflows/paper-trading.yml'
+      - 'data/instrument_universe.json'
   schedule:
     # After US close; UTC. The script processes only completed Yahoo daily bars.
     - cron: '45 23 * * 1-5'
