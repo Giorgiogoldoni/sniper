@@ -91,6 +91,59 @@ def trade_returns(signal, df, horizon, test_start, cost_bps):
             "best_net_pct": round(float(x.max()), 4),
             "worst_net_pct": round(float(x.min()), 4)}
 
+
+def apply_price_continuity(df, ticker):
+    """Isolate confirmed >5x price-basis breaks without rewriting raw prices.
+
+    A jump reversing to within 20% of the pre-jump close next session is treated
+    as an isolated bad bar. A persistent jump starts a new history segment.
+    A final-bar jump is audited but not filtered because it cannot be confirmed.
+    """
+    if df is None or len(df) < 3:
+        n = 0 if df is None else int(len(df))
+        return df, {"ticker": ticker, "rows_before": n, "rows_after": n,
+                    "confirmed_break": False, "isolated_bad_bars": []}
+    work = df.copy().sort_index()
+    close = pd.to_numeric(work["Close"], errors="coerce")
+    ratio = close / close.shift(1)
+    candidates = np.flatnonzero(((ratio >= 5.0) | (ratio <= 0.20)).fillna(False).to_numpy())
+    confirmed_breaks, isolated, unconfirmed_tail = [], [], []
+    for pos in candidates:
+        if pos + 1 >= len(work):
+            unconfirmed_tail.append(str(work.index[pos].date()))
+            continue
+        prev_close = float(close.iloc[pos - 1]) if pos > 0 else np.nan
+        next_close = float(close.iloc[pos + 1])
+        if np.isfinite(prev_close) and prev_close > 0 and np.isfinite(next_close):
+            rebound_ratio = next_close / prev_close
+            if 0.80 <= rebound_ratio <= 1.20:
+                isolated.append(work.index[pos])
+            else:
+                confirmed_breaks.append(pos)
+        else:
+            confirmed_breaks.append(pos)
+
+    rows_before = int(len(work))
+    break_pos = max(confirmed_breaks) if confirmed_breaks else None
+    break_date, rows_before_break = None, 0
+    if break_pos is not None:
+        break_date = str(work.index[break_pos].date())
+        rows_before_break = int(break_pos)
+        work = work.iloc[break_pos:].copy()
+
+    isolated_dates = [str(stamp.date()) for stamp in isolated if stamp in work.index]
+    if isolated_dates:
+        work = work.drop(index=[stamp for stamp in isolated if stamp in work.index])
+    return work, {
+        "ticker": ticker, "rows_before": rows_before, "rows_after": int(len(work)),
+        "confirmed_break": break_pos is not None, "break_date": break_date,
+        "rows_before_break_omitted": rows_before_break,
+        "isolated_bad_bars": isolated_dates,
+        "unconfirmed_final_bar_jumps": unconfirmed_tail,
+        "factor_threshold": 5.0, "reversal_tolerance_pct": 20.0
+    }
+
+
 def main():
     universe = json.loads(UNIVERSE.read_text(encoding="utf-8"))["instruments"]
     # Exact 3x only: do not mix 2x/5x products or commodity leverage into this test.
@@ -107,7 +160,7 @@ def main():
                 pass
     tickers = list(items)
     print(f"Exact 3x leveraged universe: {len(tickers)} instruments")
-    frames, flagged, cutoff_audit = {}, {}, {}
+    frames, flagged, cutoff_audit, continuity_audit, insufficient_after_filter = {}, {}, {}, {}, {}
     cutoffs = load_cutoffs()
     for start in range(0, len(tickers), BATCH_SIZE):
         batch = tickers[start:start+BATCH_SIZE]
@@ -129,12 +182,16 @@ def main():
                     df, meta = apply_history_cutoff(df, ticker, cutoffs)
                     if meta.get("cutoff_applied"):
                         cutoff_audit[ticker] = meta
+                    df, continuity_meta = apply_price_continuity(df, ticker)
+                    continuity_audit[ticker] = continuity_meta
                     if len(df) >= MIN_BARS:
                         move = df["Close"].pct_change().abs().dropna()
                         mx = float(move.max()) if len(move) else 0
                         if mx > 0.60:
                             flagged[ticker] = round(mx*100, 2)
                         frames[ticker] = df
+                    else:
+                        insufficient_after_filter[ticker] = int(len(df))
                 except Exception as exc:
                     print(f"Ticker warning {ticker}: {exc}")
         except Exception as exc:
@@ -189,21 +246,31 @@ def main():
         "scope": "solo ETP con leva esattamente 3x; LEVA_LONG e LEVA_SHORT; leva 2x/5x e commodity escluse",
         "period_requested": PERIOD, "minimum_history_bars": MIN_BARS,
         "universe_3x_count": len(tickers), "usable_instruments": len(frames),
-        "coverage_by_category": coverage, "quality_flagged_count": len(flagged),
-        "quality_flagged_tickers": flagged, "corporate_action_cutoffs": cutoff_audit,
+        "coverage_by_category": coverage,
+        "high_volatility_flag_threshold_pct": 60,
+        "high_volatility_flagged_count": len(flagged),
+        "high_volatility_flagged_tickers": flagged,
+        "corporate_action_cutoffs": cutoff_audit,
+        "price_continuity_policy": "Price changes >=5x or <=0.2x are investigated. If the next close returns within 20% of the prior close, only the isolated bad bar is omitted. Otherwise the test starts a new segment at the persistent break. Final-bar jumps are audited but not filtered. Raw Yahoo observations are never rewritten.",
+        "price_continuity_audit": continuity_audit,
+        "insufficient_history_after_filters": insufficient_after_filter,
         "horizons_days": list(HORIZONS), "round_trip_cost_bps": list(COSTS_BPS),
         "method": "Segnale a close t; ingresso open t+1; uscita close t+h; OOS ultimo 30% cronologico per strumento; trade non sovrapposti per strategia/orizzonte; rendimenti netti con costo round-trip sottratto; aggregazione equal-weight per strumento.",
         "limitations": ["Dati daily Yahoo auto_adjust e repair=True; nessuna barra intraday.",
           "Non calcola VWAP intraday: servono barre 5m/15m affidabili.",
           "I segnali sono long sul prezzo dell'ETP, inclusi gli ETP inversi.",
-          "Flag di variazioni estreme solo per audit, nessuna esclusione automatica.",
+          "Le oscillazioni giornaliere >60% restano flag informative, non sono considerate automaticamente errori.",
+          "Le discontinuità persistenti di prezzo oltre 5x attivano un nuovo segmento storico; i dati originali non vengono riscritti.",
           "Il test non applica leva sintetica: usa i prezzi effettivi degli ETP 3x.",
           "Risultati esplorativi, non validazione di una strategia operativa."],
         "results": summary}
     OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps({"universe_3x": len(tickers), "usable": len(frames),
-                      "coverage": coverage, "detail_rows": len(rows),
-                      "summary_rows": len(summary)}, ensure_ascii=False))
+                      "coverage": coverage, "high_volatility_flagged": len(flagged),
+                      "continuity_resets": sum(1 for x in continuity_audit.values() if x.get("confirmed_break")),
+                      "isolated_bad_bars": sum(len(x.get("isolated_bad_bars", [])) for x in continuity_audit.values()),
+                      "insufficient_after_filters": len(insufficient_after_filter),
+                      "detail_rows": len(rows), "summary_rows": len(summary)}, ensure_ascii=False))
     if len(frames) < 5:
         raise SystemExit("Too few usable 3x instruments; refusing to publish an unreliable test.")
 
