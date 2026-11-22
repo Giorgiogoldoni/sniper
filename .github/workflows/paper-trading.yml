@@ -1,0 +1,45 @@
+name: Sniper Paper Trading
+
+on:
+  workflow_dispatch:
+  schedule:
+    # After US close; UTC. The script processes only completed Yahoo daily bars.
+    - cron: '45 23 * * 1-5'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sniper-paper-trading-main
+  cancel-in-progress: false
+
+jobs:
+  paper:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install 'yfinance[repair]' pandas numpy
+      - name: Run paper engine self-tests
+        run: python paper_trading.py --self-test
+      - name: Update paper book
+        run: python paper_trading.py
+      - name: Commit paper ledger
+        run: |
+          git config user.name "raptor-bot"
+          git config user.email "raptor-bot@users.noreply.github.com"
+          git add data/paper_trading_state.json data/paper_trading_log.csv data/paper_trading_summary.json
+          git diff --staged --quiet || git commit -m "sniper: update paper trading ledger"
+          git push
+      - name: Upload paper report
+        uses: actions/upload-artifact@v4
+        with:
+          name: sniper-paper-trading
+          path: |
+            data/paper_trading_state.json
+            data/paper_trading_log.csv
+            data/paper_trading_summary.json
