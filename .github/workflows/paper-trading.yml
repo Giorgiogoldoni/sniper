@@ -39,7 +39,17 @@ jobs:
           git config user.email "raptor-bot@users.noreply.github.com"
           git add data/paper_trading_state.json data/paper_trading_log.csv data/paper_trading_summary.json
           git diff --staged --quiet || git commit -m "sniper: update paper trading ledger"
-          git push
+          # Rebase on concurrent repository updates (e.g. Pages deployments) before pushing.
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push; then
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; retrying after rebase."
+            sleep 3
+          done
+          echo "Unable to publish paper ledger after 3 attempts."
+          exit 1
       - name: Upload paper report
         uses: actions/upload-artifact@v4
         with:
