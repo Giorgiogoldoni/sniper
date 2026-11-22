@@ -112,7 +112,8 @@ def self_test():
     process_bar(s,"CAP","MATERIE_PRIME_LEVA","2026-01-02",type("R",(),{"Open":50,"High":51,"Low":49,"Close":50})(),1,True,True)
     process_bar(s,"CAP","MATERIE_PRIME_LEVA","2026-01-05",type("R",(),{"Open":50,"High":51,"Low":49,"Close":50})(),1,False,True)
     for day in range(2,10):
-        process_bar(s,"CAP","MATERIE_PRIME_LEVA",f"2026-01-{day+5:02d}",type("R",(),{"Open":50,"High":51,"Low":49,"Close":50})(),1,False,True)
+        walking_ok = day < 9
+        process_bar(s,"CAP","MATERIE_PRIME_LEVA",f"2026-01-{day+5:02d}",type("R",(),{"Open":50,"High":51,"Low":49,"Close":50})(),1,False,walking_ok)
     assert s["positions"]["CAP"]["holding_sessions"]==9
     process_bar(s,"CAP","MATERIE_PRIME_LEVA","2026-01-15",type("R",(),{"Open":50,"High":51,"Low":49,"Close":48})(),1,False,False)
     assert len(s["trades"])==1 and s["trades"][0]["holding_sessions"]==10
