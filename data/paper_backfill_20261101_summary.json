@@ -1,0 +1,582 @@
+{
+  "generated_at": "2026-11-22T14:16:41.670886+00:00",
+  "mode": "PAPER_ONLY_NO_ORDERS",
+  "universe": {
+    "total_selected": 99,
+    "categories": {
+      "LEVA_LONG": 73,
+      "MATERIE_PRIME_LEVA": 26
+    }
+  },
+  "processed_bars": 1290,
+  "open_positions": 1,
+  "pending_entries": 1,
+  "closed_trades": 25,
+  "open_positions_detail": [
+    {
+      "ticker": "LNGA.MI",
+      "category": "MATERIE_PRIME_LEVA",
+      "signal_date": "2026-11-19",
+      "entry_date": "2026-11-20",
+      "entry_price": 0.008899999782443047,
+      "initial_atr": 0.0004467276992440445,
+      "stop_price": 0.008006544383954957,
+      "holding_sessions": 1,
+      "walking_false_streak": 0
+    }
+  ],
+  "pending_entries_detail": {
+    "3TYL.MI": {
+      "signal_date": "2026-11-20",
+      "atr": 0.6611827883761052
+    }
+  },
+  "closed_trades_latest": [
+    {
+      "ticker": "2CAR.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-02",
+      "entry_date": "2026-11-03",
+      "entry_price": 11.00399971,
+      "exit_date": "2026-11-05",
+      "exit_price": 11.61600018,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": 5.5616,
+      "net_return_pct_by_cost_bps": {
+        "20": 5.3616,
+        "30": 5.2616,
+        "50": 5.0616
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "2MCL.L",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-04",
+      "entry_date": "2026-11-05",
+      "entry_price": 28560.0,
+      "exit_date": "2026-11-09",
+      "exit_price": 27503.15833388,
+      "holding_sessions": 3,
+      "exit_reason": "ATR_2_STOP",
+      "gross_return_pct": -3.7004,
+      "net_return_pct_by_cost_bps": {
+        "20": -3.9004,
+        "30": -4.0004,
+        "50": -4.2004
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "2TRV.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-02",
+      "entry_date": "2026-11-03",
+      "entry_price": 32.99000168,
+      "exit_date": "2026-11-05",
+      "exit_price": 34.70000076,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": 5.1834,
+      "net_return_pct_by_cost_bps": {
+        "20": 4.9834,
+        "30": 4.8834,
+        "50": 4.6834
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "2TRV.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-16",
+      "entry_date": "2026-11-17",
+      "entry_price": 36.86999893,
+      "exit_date": "2026-11-19",
+      "exit_price": 33.875,
+      "holding_sessions": 3,
+      "exit_reason": "ATR_2_STOP",
+      "gross_return_pct": -8.1231,
+      "net_return_pct_by_cost_bps": {
+        "20": -8.3231,
+        "30": -8.4231,
+        "50": -8.6231
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3AAP.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-11",
+      "entry_date": "2026-11-12",
+      "entry_price": 156.55999756,
+      "exit_date": "2026-11-16",
+      "exit_price": 156.86000061,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": 0.1916,
+      "net_return_pct_by_cost_bps": {
+        "20": -0.0084,
+        "30": -0.1084,
+        "50": -0.3084
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3BTL.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-02",
+      "entry_date": "2026-11-03",
+      "entry_price": 111.02999878,
+      "exit_date": "2026-11-05",
+      "exit_price": 114.30999756,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": 2.9542,
+      "net_return_pct_by_cost_bps": {
+        "20": 2.7542,
+        "30": 2.6542,
+        "50": 2.4542
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3BUL.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-02",
+      "entry_date": "2026-11-03",
+      "entry_price": 71.88999939,
+      "exit_date": "2026-11-05",
+      "exit_price": 72.66000366,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": 1.0711,
+      "net_return_pct_by_cost_bps": {
+        "20": 0.8711,
+        "30": 0.7711,
+        "50": 0.5711
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3DEL.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-04",
+      "entry_date": "2026-11-05",
+      "entry_price": 29.05999947,
+      "exit_date": "2026-11-06",
+      "exit_price": 27.16871066,
+      "holding_sessions": 2,
+      "exit_reason": "ATR_2_STOP",
+      "gross_return_pct": -6.5082,
+      "net_return_pct_by_cost_bps": {
+        "20": -6.7082,
+        "30": -6.8082,
+        "50": -7.0082
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3DEL.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-12",
+      "entry_date": "2026-11-13",
+      "entry_price": 29.61000061,
+      "exit_date": "2026-11-17",
+      "exit_price": 27.60499954,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": -6.7714,
+      "net_return_pct_by_cost_bps": {
+        "20": -6.9714,
+        "30": -7.0714,
+        "50": -7.2714
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3EUL.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-04",
+      "entry_date": "2026-11-05",
+      "entry_price": 28.69499969,
+      "exit_date": "2026-11-06",
+      "exit_price": 26.75464035,
+      "holding_sessions": 2,
+      "exit_reason": "ATR_2_STOP",
+      "gross_return_pct": -6.762,
+      "net_return_pct_by_cost_bps": {
+        "20": -6.962,
+        "30": -7.062,
+        "50": -7.262
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3EUL.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-10",
+      "entry_date": "2026-11-11",
+      "entry_price": 30.05999947,
+      "exit_date": "2026-11-13",
+      "exit_price": 29.98999977,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": -0.2329,
+      "net_return_pct_by_cost_bps": {
+        "20": -0.4329,
+        "30": -0.5329,
+        "50": -0.7329
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3GIL.L",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-02",
+      "entry_date": "2026-11-03",
+      "entry_price": 5705.0,
+      "exit_date": "2026-11-05",
+      "exit_price": 5885.0,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": 3.1551,
+      "net_return_pct_by_cost_bps": {
+        "20": 2.9551,
+        "30": 2.8551,
+        "50": 2.6551
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3ITL.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-10",
+      "entry_date": "2026-11-11",
+      "entry_price": 549.23999023,
+      "exit_date": "2026-11-13",
+      "exit_price": 537.65002441,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": -2.1102,
+      "net_return_pct_by_cost_bps": {
+        "20": -2.3102,
+        "30": -2.4102,
+        "50": -2.6102
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3LAP.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-12",
+      "entry_date": "2026-11-13",
+      "entry_price": 64.30000305,
+      "exit_date": "2026-11-17",
+      "exit_price": 64.31999969,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": 0.0311,
+      "net_return_pct_by_cost_bps": {
+        "20": -0.1689,
+        "30": -0.2689,
+        "50": -0.4689
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3LCR.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-09",
+      "entry_date": "2026-11-10",
+      "entry_price": 140.02999878,
+      "exit_date": "2026-11-12",
+      "exit_price": 142.94000244,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": 2.0781,
+      "net_return_pct_by_cost_bps": {
+        "20": 1.8781,
+        "30": 1.7781,
+        "50": 1.5781
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3LPP.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-02",
+      "entry_date": "2026-11-03",
+      "entry_price": 1.07000005,
+      "exit_date": "2026-11-05",
+      "exit_price": 1.06739998,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": -0.243,
+      "net_return_pct_by_cost_bps": {
+        "20": -0.443,
+        "30": -0.543,
+        "50": -0.743
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3LSQ.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-04",
+      "entry_date": "2026-11-05",
+      "entry_price": 0.56480002,
+      "exit_date": "2026-11-09",
+      "exit_price": 0.58499998,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": 3.5765,
+      "net_return_pct_by_cost_bps": {
+        "20": 3.3765,
+        "30": 3.2765,
+        "50": 3.0765
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3RAC.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-03",
+      "entry_date": "2026-11-04",
+      "entry_price": 13.10000038,
+      "exit_date": "2026-11-06",
+      "exit_price": 13.63599968,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": 4.0916,
+      "net_return_pct_by_cost_bps": {
+        "20": 3.8916,
+        "30": 3.7916,
+        "50": 3.5916
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3TYL.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-02",
+      "entry_date": "2026-11-03",
+      "entry_price": 61.47999954,
+      "exit_date": "2026-11-05",
+      "exit_price": 62.09999847,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": 1.0085,
+      "net_return_pct_by_cost_bps": {
+        "20": 0.8085,
+        "30": 0.7085,
+        "50": 0.5085
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3TYL.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-06",
+      "entry_date": "2026-11-09",
+      "entry_price": 62.0,
+      "exit_date": "2026-11-10",
+      "exit_price": 60.84528946,
+      "holding_sessions": 2,
+      "exit_reason": "ATR_2_STOP",
+      "gross_return_pct": -1.8624,
+      "net_return_pct_by_cost_bps": {
+        "20": -2.0624,
+        "30": -2.1624,
+        "50": -2.3624
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "5EUL.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-10",
+      "entry_date": "2026-11-11",
+      "entry_price": 32.07500076,
+      "exit_date": "2026-11-13",
+      "exit_price": 31.89500046,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": -0.5612,
+      "net_return_pct_by_cost_bps": {
+        "20": -0.7612,
+        "30": -0.8612,
+        "50": -1.0612
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "5ITL.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-10",
+      "entry_date": "2026-11-11",
+      "entry_price": 88.08999634,
+      "exit_date": "2026-11-13",
+      "exit_price": 85.37999725,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": -3.0764,
+      "net_return_pct_by_cost_bps": {
+        "20": -3.2764,
+        "30": -3.3764,
+        "50": -3.5764
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "5MIB.MI",
+      "category": "LEVA_LONG",
+      "signal_date": "2026-11-10",
+      "entry_date": "2026-11-11",
+      "entry_price": 215.77000427,
+      "exit_date": "2026-11-13",
+      "exit_price": 216.41000366,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": 0.2966,
+      "net_return_pct_by_cost_bps": {
+        "20": 0.0966,
+        "30": -0.0034,
+        "50": -0.2034
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "LNIK.MI",
+      "category": "MATERIE_PRIME_LEVA",
+      "signal_date": "2026-11-05",
+      "entry_date": "2026-11-06",
+      "entry_price": 11.90999985,
+      "exit_date": "2026-11-12",
+      "exit_price": 12.09200001,
+      "holding_sessions": 4,
+      "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
+      "gross_return_pct": 1.5281,
+      "net_return_pct_by_cost_bps": {
+        "20": 1.3281,
+        "30": 1.2281,
+        "50": 1.0281
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "LNIK.MI",
+      "category": "MATERIE_PRIME_LEVA",
+      "signal_date": "2026-11-17",
+      "entry_date": "2026-11-18",
+      "entry_price": 11.75,
+      "exit_date": "2026-11-20",
+      "exit_price": 10.94999981,
+      "holding_sessions": 2,
+      "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
+      "gross_return_pct": -6.8085,
+      "net_return_pct_by_cost_bps": {
+        "20": -7.0085,
+        "30": -7.1085,
+        "50": -7.3085
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    }
+  ],
+  "cost_sensitivity_bps_round_trip": [
+    20,
+    30,
+    50
+  ],
+  "spread_data": "Not available from Yahoo OHLC. No observed spread is claimed; net returns are sensitivities only.",
+  "skipped_count": 13,
+  "skipped_latest": [
+    {
+      "ticker": "2BUL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "2QQL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3DAL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3LAD.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3LBA.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3LGO.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3LJP.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3LMS.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3LMT.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3LNF.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "DX3L.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "TECL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "2GOL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    }
+  ],
+  "rules": {
+    "entry": "Donchian 20 breakout at completed close; enter next session open",
+    "stop": "Initial stop at entry minus 2 x ATR(14) from signal close; daily low checked; adverse gap exits at open",
+    "LEVA_LONG": "Exit at close of third holding session",
+    "MATERIE_PRIME_LEVA": "Exit next open after two consecutive completed closes with Walking upper Bollinger Band false; time cap 10 sessions at close",
+    "walking": "Not an entry filter",
+    "position_limit": "One open position per ticker; no overlapping entries",
+    "activation": "Isolated historical reconstruction from requested date; live paper state is not modified."
+  },
+  "simulation_window_start": "2026-11-01"
+}
