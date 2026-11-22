@@ -103,7 +103,7 @@
   "pending_entries": {
     "3TYL.MI": {
       "signal_date": "2026-11-20",
-      "atr": 0.6599067943033246
+      "atr": 0.6611827883761052
     }
   },
   "pending_exits": {},
@@ -134,14 +134,14 @@
       "entry_date": "2026-11-05",
       "entry_price": 28560.0,
       "exit_date": "2026-11-09",
-      "exit_price": 27503.15072786,
+      "exit_price": 27503.15833388,
       "holding_sessions": 3,
       "exit_reason": "ATR_2_STOP",
-      "gross_return_pct": -3.7005,
+      "gross_return_pct": -3.7004,
       "net_return_pct_by_cost_bps": {
-        "20": -3.9005,
-        "30": -4.0005,
-        "50": -4.2005
+        "20": -3.9004,
+        "30": -4.0004,
+        "50": -4.2004
       },
       "spread_observed": false,
       "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
@@ -476,14 +476,14 @@
       "entry_date": "2026-11-09",
       "entry_price": 62.0,
       "exit_date": "2026-11-10",
-      "exit_price": 60.85064404,
+      "exit_price": 60.84528946,
       "holding_sessions": 2,
       "exit_reason": "ATR_2_STOP",
-      "gross_return_pct": -1.8538,
+      "gross_return_pct": -1.8624,
       "net_return_pct_by_cost_bps": {
-        "20": -2.0538,
-        "30": -2.1538,
-        "50": -2.3538
+        "20": -2.0624,
+        "30": -2.1624,
+        "50": -2.3624
       },
       "spread_observed": false,
       "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
@@ -584,6 +584,6 @@
       "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
     }
   ],
-  "updated_at": "2026-11-22T15:12:27.587066+00:00",
+  "updated_at": "2026-11-22T17:05:19.852226+00:00",
   "logged_trades": 25
 }
