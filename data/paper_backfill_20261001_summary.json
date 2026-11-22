@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T19:35:02.428711+00:00",
+  "generated_at": "2026-11-22T20:49:23.508925+00:00",
   "mode": "PAPER_ONLY_NO_ORDERS",
   "universe": {
     "total_selected": 99,
@@ -28,7 +28,7 @@
   "pending_entries_detail": {
     "3TYL.MI": {
       "signal_date": "2026-11-20",
-      "atr": 0.6599067943033246
+      "atr": 0.6611827883761052
     }
   },
   "closed_trades_latest": [
@@ -58,14 +58,14 @@
       "entry_date": "2026-11-02",
       "entry_price": 130.71000671,
       "exit_date": "2026-11-03",
-      "exit_price": 119.29338878,
+      "exit_price": 119.29812785,
       "holding_sessions": 2,
       "exit_reason": "ATR_2_STOP",
-      "gross_return_pct": -8.7343,
+      "gross_return_pct": -8.7307,
       "net_return_pct_by_cost_bps": {
-        "20": -8.9343,
-        "30": -9.0343,
-        "50": -9.2343
+        "20": -8.9307,
+        "30": -9.0307,
+        "50": -9.2307
       },
       "spread_observed": false,
       "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."

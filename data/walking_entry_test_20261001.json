@@ -15,9 +15,9 @@
     "C_DONCHIAN10_WALKING": "breakout close above previous 10-session high plus Walking true on same completed close; next open entry",
     "walking_definition": "Close >= 98.5% of upper Bollinger band, Close >= 20-session mean, upper band rising; condition true on at least 2 of last 3 completed sessions",
     "common_exits": "Initial stop = entry open - 2 x ATR(14) measured at signal close; daily low stop check with adverse gap fill at open; exit next open after 2 consecutive completed closes with Walking false; hard exit at close of holding session 10",
-    "costs": "30 bps hypothetical round-trip subtracted per closed trade; no observed bid/ask spread",
+    "costs": "Excluded: all reported returns and metrics are gross price returns.",
     "window_handling": "Indicators warmed on prior history; only signals from start date counted; trades still open or pending at end excluded",
-    "limitations": "Short window and small number of instruments/trades; not proof of robust future performance."
+    "limitations": "Requested start date is 2023-01-01; actual instrument histories may be shorter because products were listed later. Results remain exploratory and are not proof of future performance."
   },
   "variants": {
     "A_DONCHIAN20": {
@@ -25,9 +25,7 @@
       "wins": 15,
       "win_rate_pct": 71.43,
       "gross_mean_pct": 1.455,
-      "net30_mean_pct": 1.155,
       "gross_profit_factor": 1.427,
-      "net30_profit_factor": 1.33,
       "gross_median_pct": 1.528,
       "worst_trade_pct": -16.925,
       "open_or_pending_tickers": [
@@ -39,12 +37,10 @@
     },
     "B_DONCHIAN20_WALKING": {
       "trades": 12,
-      "wins": 8,
-      "win_rate_pct": 66.67,
+      "wins": 9,
+      "win_rate_pct": 75.0,
       "gross_mean_pct": 2.716,
-      "net30_mean_pct": 2.416,
       "gross_profit_factor": 3.101,
-      "net30_profit_factor": 2.76,
       "gross_median_pct": 2.467,
       "worst_trade_pct": -11.642,
       "open_or_pending_tickers": [
@@ -56,12 +52,10 @@
     },
     "C_DONCHIAN10_WALKING": {
       "trades": 12,
-      "wins": 8,
-      "win_rate_pct": 66.67,
+      "wins": 9,
+      "win_rate_pct": 75.0,
       "gross_mean_pct": 2.716,
-      "net30_mean_pct": 2.416,
       "gross_profit_factor": 3.101,
-      "net30_profit_factor": 2.76,
       "gross_median_pct": 2.467,
       "worst_trade_pct": -11.642,
       "open_or_pending_tickers": [
@@ -83,8 +77,7 @@
       "exit_price": 74.41999816894531,
       "holding_sessions": 2,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 11.909771682624527,
-      "net30_return_pct": 11.6098
+      "gross_return_pct": 11.909771682624527
     },
     {
       "variant": "A_DONCHIAN20",
@@ -96,8 +89,7 @@
       "exit_price": 82.55999755859375,
       "holding_sessions": 6,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 12.694506075865931,
-      "net30_return_pct": 12.3945
+      "gross_return_pct": 12.694506075865931
     },
     {
       "variant": "A_DONCHIAN20",
@@ -109,8 +101,7 @@
       "exit_price": 87.95999908447266,
       "holding_sessions": 2,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 0.9873715561626417,
-      "net30_return_pct": 0.6874
+      "gross_return_pct": 0.9873715561626417
     },
     {
       "variant": "A_DONCHIAN20",
@@ -122,8 +113,7 @@
       "exit_price": 93.80000305175781,
       "holding_sessions": 5,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 0.8819097281341115,
-      "net30_return_pct": 0.5819
+      "gross_return_pct": 0.8819097281341115
     },
     {
       "variant": "A_DONCHIAN20",
@@ -135,8 +125,7 @@
       "exit_price": 7.184000015258789,
       "holding_sessions": 2,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": -15.4823527616613,
-      "net30_return_pct": -15.7824
+      "gross_return_pct": -15.4823527616613
     },
     {
       "variant": "A_DONCHIAN20",
@@ -148,8 +137,7 @@
       "exit_price": 9.25,
       "holding_sessions": 2,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 1.9283767979388466,
-      "net30_return_pct": 1.6284
+      "gross_return_pct": 1.9283767979388466
     },
     {
       "variant": "A_DONCHIAN20",
@@ -161,8 +149,7 @@
       "exit_price": 72.97000122070312,
       "holding_sessions": 4,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 11.23476054574828,
-      "net30_return_pct": 10.9348
+      "gross_return_pct": 11.23476054574828
     },
     {
       "variant": "A_DONCHIAN20",
@@ -174,8 +161,7 @@
       "exit_price": 82.33000183105469,
       "holding_sessions": 4,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 7.846483862340681,
-      "net30_return_pct": 7.5465
+      "gross_return_pct": 7.846483862340681
     },
     {
       "variant": "A_DONCHIAN20",
@@ -184,11 +170,10 @@
       "entry_date": "2026-11-02",
       "entry_price": 74.93000030517578,
       "exit_date": "2026-11-03",
-      "exit_price": 62.24774875824219,
+      "exit_price": 62.24774874619704,
       "holding_sessions": 2,
       "exit_reason": "ATR_2_STOP",
-      "gross_return_pct": -16.925465761752534,
-      "net30_return_pct": -17.2255
+      "gross_return_pct": -16.925465777827732
     },
     {
       "variant": "A_DONCHIAN20",
@@ -200,8 +185,7 @@
       "exit_price": 6.070000171661377,
       "holding_sessions": 5,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 1.42021781538475,
-      "net30_return_pct": 1.1202
+      "gross_return_pct": 1.42021781538475
     },
     {
       "variant": "A_DONCHIAN20",
@@ -213,8 +197,7 @@
       "exit_price": 130.72999572753906,
       "holding_sessions": 2,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 8.10385793238424,
-      "net30_return_pct": 7.8039
+      "gross_return_pct": 8.10385793238424
     },
     {
       "variant": "A_DONCHIAN20",
@@ -226,8 +209,7 @@
       "exit_price": 145.0800018310547,
       "holding_sessions": 7,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 12.946675965678246,
-      "net30_return_pct": 12.6467
+      "gross_return_pct": 12.946675965678246
     },
     {
       "variant": "A_DONCHIAN20",
@@ -239,8 +221,7 @@
       "exit_price": 153.11000061035156,
       "holding_sessions": 5,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 0.7435221177649609,
-      "net30_return_pct": 0.4435
+      "gross_return_pct": 0.7435221177649609
     },
     {
       "variant": "A_DONCHIAN20",
@@ -252,8 +233,7 @@
       "exit_price": 2.549999952316284,
       "holding_sessions": 3,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": -11.642410783657764,
-      "net30_return_pct": -11.9424
+      "gross_return_pct": -11.642410783657764
     },
     {
       "variant": "A_DONCHIAN20",
@@ -265,8 +245,7 @@
       "exit_price": 2.7899999618530273,
       "holding_sessions": 4,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": -9.268295330446207,
-      "net30_return_pct": -9.5683
+      "gross_return_pct": -9.268295330446207
     },
     {
       "variant": "A_DONCHIAN20",
@@ -278,8 +257,7 @@
       "exit_price": 12.092000007629395,
       "holding_sessions": 4,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 1.5281289886567961,
-      "net30_return_pct": 1.2281
+      "gross_return_pct": 1.5281289886567961
     },
     {
       "variant": "A_DONCHIAN20",
@@ -291,8 +269,7 @@
       "exit_price": 10.949999809265137,
       "holding_sessions": 2,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": -6.808512261573307,
-      "net30_return_pct": -7.1085
+      "gross_return_pct": -6.808512261573307
     },
     {
       "variant": "A_DONCHIAN20",
@@ -304,8 +281,7 @@
       "exit_price": 29.600000381469727,
       "holding_sessions": 6,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 15.19751209583433,
-      "net30_return_pct": 14.8975
+      "gross_return_pct": 15.19751209583433
     },
     {
       "variant": "A_DONCHIAN20",
@@ -317,8 +293,7 @@
       "exit_price": 31.3700008392334,
       "holding_sessions": 4,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 5.092128771654081,
-      "net30_return_pct": 4.7921
+      "gross_return_pct": 5.092128771654081
     },
     {
       "variant": "A_DONCHIAN20",
@@ -327,11 +302,10 @@
       "entry_date": "2026-11-02",
       "entry_price": 29.510000228881836,
       "exit_date": "2026-11-03",
-      "exit_price": 26.1156590406837,
+      "exit_price": 26.115659037812478,
       "holding_sessions": 2,
       "exit_reason": "ATR_2_STOP",
-      "gross_return_pct": -11.502342127656274,
-      "net30_return_pct": -11.8023
+      "gross_return_pct": -11.502342137385924
     },
     {
       "variant": "A_DONCHIAN20",
@@ -343,8 +317,7 @@
       "exit_price": 3.0785000324249268,
       "holding_sessions": 6,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 9.67225216209644,
-      "net30_return_pct": 9.3723
+      "gross_return_pct": 9.67225216209644
     },
     {
       "variant": "B_DONCHIAN20_WALKING",
@@ -356,8 +329,7 @@
       "exit_price": 82.55999755859375,
       "holding_sessions": 4,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 7.123391573255988,
-      "net30_return_pct": 6.8234
+      "gross_return_pct": 7.123391573255988
     },
     {
       "variant": "B_DONCHIAN20_WALKING",
@@ -369,8 +341,7 @@
       "exit_price": 93.80000305175781,
       "holding_sessions": 4,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": -2.2814823010203544,
-      "net30_return_pct": -2.5815
+      "gross_return_pct": -2.2814823010203544
     },
     {
       "variant": "B_DONCHIAN20_WALKING",
@@ -382,8 +353,7 @@
       "exit_price": 72.97000122070312,
       "holding_sessions": 4,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 11.23476054574828,
-      "net30_return_pct": 10.9348
+      "gross_return_pct": 11.23476054574828
     },
     {
       "variant": "B_DONCHIAN20_WALKING",
@@ -395,8 +365,7 @@
       "exit_price": 82.33000183105469,
       "holding_sessions": 3,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 5.160302552411999,
-      "net30_return_pct": 4.8603
+      "gross_return_pct": 5.160302552411999
     },
     {
       "variant": "B_DONCHIAN20_WALKING",
@@ -408,8 +377,7 @@
       "exit_price": 6.070000171661377,
       "holding_sessions": 5,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 1.42021781538475,
-      "net30_return_pct": 1.1202
+      "gross_return_pct": 1.42021781538475
     },
     {
       "variant": "B_DONCHIAN20_WALKING",
@@ -421,8 +389,7 @@
       "exit_price": 145.0800018310547,
       "holding_sessions": 5,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 8.38189240216951,
-      "net30_return_pct": 8.0819
+      "gross_return_pct": 8.38189240216951
     },
     {
       "variant": "B_DONCHIAN20_WALKING",
@@ -434,8 +401,7 @@
       "exit_price": 153.11000061035156,
       "holding_sessions": 4,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": -1.5876084275826874,
-      "net30_return_pct": -1.8876
+      "gross_return_pct": -1.5876084275826874
     },
     {
       "variant": "B_DONCHIAN20_WALKING",
@@ -447,8 +413,7 @@
       "exit_price": 2.549999952316284,
       "holding_sessions": 3,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": -11.642410783657764,
-      "net30_return_pct": -11.9424
+      "gross_return_pct": -11.642410783657764
     },
     {
       "variant": "B_DONCHIAN20_WALKING",
@@ -460,8 +425,7 @@
       "exit_price": 12.092000007629395,
       "holding_sessions": 3,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 0.6157460537736581,
-      "net30_return_pct": 0.3157
+      "gross_return_pct": 0.6157460537736581
     },
     {
       "variant": "B_DONCHIAN20_WALKING",
@@ -473,8 +437,7 @@
       "exit_price": 29.600000381469727,
       "holding_sessions": 5,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 10.40656833683109,
-      "net30_return_pct": 10.1066
+      "gross_return_pct": 10.40656833683109
     },
     {
       "variant": "B_DONCHIAN20_WALKING",
@@ -486,8 +449,7 @@
       "exit_price": 31.3700008392334,
       "holding_sessions": 3,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 3.5142732992341497,
-      "net30_return_pct": 3.2143
+      "gross_return_pct": 3.5142732992341497
     },
     {
       "variant": "B_DONCHIAN20_WALKING",
@@ -499,8 +461,7 @@
       "exit_price": 3.0785000324249268,
       "holding_sessions": 5,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 0.24421794205722325,
-      "net30_return_pct": -0.0558
+      "gross_return_pct": 0.24421794205722325
     },
     {
       "variant": "C_DONCHIAN10_WALKING",
@@ -512,8 +473,7 @@
       "exit_price": 82.55999755859375,
       "holding_sessions": 4,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 7.123391573255988,
-      "net30_return_pct": 6.8234
+      "gross_return_pct": 7.123391573255988
     },
     {
       "variant": "C_DONCHIAN10_WALKING",
@@ -525,8 +485,7 @@
       "exit_price": 93.80000305175781,
       "holding_sessions": 4,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": -2.2814823010203544,
-      "net30_return_pct": -2.5815
+      "gross_return_pct": -2.2814823010203544
     },
     {
       "variant": "C_DONCHIAN10_WALKING",
@@ -538,8 +497,7 @@
       "exit_price": 72.97000122070312,
       "holding_sessions": 4,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 11.23476054574828,
-      "net30_return_pct": 10.9348
+      "gross_return_pct": 11.23476054574828
     },
     {
       "variant": "C_DONCHIAN10_WALKING",
@@ -551,8 +509,7 @@
       "exit_price": 82.33000183105469,
       "holding_sessions": 3,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 5.160302552411999,
-      "net30_return_pct": 4.8603
+      "gross_return_pct": 5.160302552411999
     },
     {
       "variant": "C_DONCHIAN10_WALKING",
@@ -564,8 +521,7 @@
       "exit_price": 6.070000171661377,
       "holding_sessions": 5,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 1.42021781538475,
-      "net30_return_pct": 1.1202
+      "gross_return_pct": 1.42021781538475
     },
     {
       "variant": "C_DONCHIAN10_WALKING",
@@ -577,8 +533,7 @@
       "exit_price": 145.0800018310547,
       "holding_sessions": 5,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 8.38189240216951,
-      "net30_return_pct": 8.0819
+      "gross_return_pct": 8.38189240216951
     },
     {
       "variant": "C_DONCHIAN10_WALKING",
@@ -590,8 +545,7 @@
       "exit_price": 153.11000061035156,
       "holding_sessions": 4,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": -1.5876084275826874,
-      "net30_return_pct": -1.8876
+      "gross_return_pct": -1.5876084275826874
     },
     {
       "variant": "C_DONCHIAN10_WALKING",
@@ -603,8 +557,7 @@
       "exit_price": 2.549999952316284,
       "holding_sessions": 3,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": -11.642410783657764,
-      "net30_return_pct": -11.9424
+      "gross_return_pct": -11.642410783657764
     },
     {
       "variant": "C_DONCHIAN10_WALKING",
@@ -616,8 +569,7 @@
       "exit_price": 12.092000007629395,
       "holding_sessions": 3,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 0.6157460537736581,
-      "net30_return_pct": 0.3157
+      "gross_return_pct": 0.6157460537736581
     },
     {
       "variant": "C_DONCHIAN10_WALKING",
@@ -629,8 +581,7 @@
       "exit_price": 29.600000381469727,
       "holding_sessions": 5,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 10.40656833683109,
-      "net30_return_pct": 10.1066
+      "gross_return_pct": 10.40656833683109
     },
     {
       "variant": "C_DONCHIAN10_WALKING",
@@ -642,8 +593,7 @@
       "exit_price": 31.3700008392334,
       "holding_sessions": 3,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 3.5142732992341497,
-      "net30_return_pct": 3.2143
+      "gross_return_pct": 3.5142732992341497
     },
     {
       "variant": "C_DONCHIAN10_WALKING",
@@ -655,8 +605,7 @@
       "exit_price": 3.0785000324249268,
       "holding_sessions": 5,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 0.24421794205722325,
-      "net30_return_pct": -0.0558
+      "gross_return_pct": 0.24421794205722325
     }
   ]
 }
