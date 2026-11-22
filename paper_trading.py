@@ -123,13 +123,25 @@ def get_frame(raw,ticker):
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--self-test",action="store_true")
+    ap.add_argument("--backfill-from", help="Run an isolated historical paper simulation from YYYY-MM-DD")
     args=ap.parse_args()
     if args.self_test: self_test(); return
+    # Historical reconstruction is isolated from the live paper book.
+    state_path=STATE
+    log_path=LOG
+    summary_path=SUMMARY
+    if args.backfill_from:
+        try: start_date=str(pd.Timestamp(args.backfill_from).date())
+        except Exception: raise SystemExit("--backfill-from must be YYYY-MM-DD")
+        suffix=start_date.replace("-","")
+        state_path=ROOT/"data"/f"paper_backfill_{suffix}_state.json"
+        log_path=ROOT/"data"/f"paper_backfill_{suffix}_log.csv"
+        summary_path=ROOT/"data"/f"paper_backfill_{suffix}_summary.json"
     universe=json.loads(UNIVERSE.read_text(encoding="utf-8"))["instruments"]
     selected={x.get("yahoo") or x.get("ticker"):x for x in universe
               if x.get("classification") in ("LEVA_LONG","MATERIE_PRIME_LEVA") and (x.get("yahoo") or x.get("ticker"))}
     tickers=list(selected)
-    state=json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else blank_state()
+    state=json.loads(state_path.read_text(encoding="utf-8")) if (not args.backfill_from and state_path.exists()) else blank_state()
     state.setdefault("last_processed",{}); state.setdefault("positions",{})
     state.setdefault("pending_entries",{}); state.setdefault("pending_exits",{}); state.setdefault("trades",[])
     fetched=0; skipped=[]
@@ -146,10 +158,13 @@ def main():
                 skipped.append({"ticker":ticker,"reason":"dati assenti o meno di 60 sedute"}); continue
             atr,prior_high,walking=indicators(df)
             last=state["last_processed"].get(ticker)
-            if last:
+            if args.backfill_from:
+                # Compute indicators on full history, but simulate only bars from requested date onward.
+                dates=[d for d in df.index if str(pd.Timestamp(d).date())>=start_date]
+            elif last:
                 dates=[d for d in df.index if str(pd.Timestamp(d).date())>last]
             else:
-                # First activation is a clean baseline: no historical trades are invented.
+                # First live activation is a clean baseline: no historical trades are invented.
                 dates=[df.index[-1]]
             if not dates:
                 continue
@@ -163,18 +178,18 @@ def main():
                 fetched+=1
         time.sleep(0.4)
     state["updated_at"]=datetime.now(timezone.utc).isoformat()
-    STATE.parent.mkdir(parents=True,exist_ok=True)
-    STATE.write_text(json.dumps(state,ensure_ascii=False,indent=2),encoding="utf-8")
+    state_path.parent.mkdir(parents=True,exist_ok=True)
+    state_path.write_text(json.dumps(state,ensure_ascii=False,indent=2),encoding="utf-8")
     fields=["ticker","category","signal_date","entry_date","entry_price","exit_date","exit_price","holding_sessions","exit_reason","gross_return_pct","net_return_pct_by_cost_bps","spread_observed","spread_note"]
-    existing=LOG.exists()
-    with LOG.open("a",newline="",encoding="utf-8") as f:
+    existing=log_path.exists()
+    with log_path.open("a",newline="",encoding="utf-8") as f:
         w=csv.DictWriter(f,fieldnames=fields)
         if not existing: w.writeheader()
         for row in state["trades"][int(state.get("logged_trades",0)):]:
             r=dict(row); r["net_return_pct_by_cost_bps"]=json.dumps(r["net_return_pct_by_cost_bps"])
             w.writerow(r)
     state["logged_trades"]=len(state["trades"])
-    STATE.write_text(json.dumps(state,ensure_ascii=False,indent=2),encoding="utf-8")
+    state_path.write_text(json.dumps(state,ensure_ascii=False,indent=2),encoding="utf-8")
     open_positions=[]
     for t,p in state["positions"].items():
         open_positions.append({"ticker":t,**p})
@@ -193,7 +208,10 @@ def main():
         "MATERIE_PRIME_LEVA":"Exit next open after two consecutive completed closes with Walking upper Bollinger Band false; time cap 10 sessions at close",
         "walking":"Not an entry filter","position_limit":"One open position per ticker; no overlapping entries",
         "activation":"First run establishes a baseline on the latest available daily candle; it does not backfill or fabricate historical trades."}}
-    SUMMARY.write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding="utf-8")
+    if args.backfill_from:
+        summary["simulation_window_start"]=start_date
+        summary["rules"]["activation"]="Isolated historical reconstruction from requested date; live paper state is not modified."
+    summary_path.write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding="utf-8")
     print(json.dumps({"mode":summary["mode"],"universe":summary["universe"],"processed_bars":fetched,
         "open_positions":len(open_positions),"pending_entries":len(state["pending_entries"]),
         "closed_trades":len(state["trades"]),"skipped":len(skipped)},ensure_ascii=False))
