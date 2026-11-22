@@ -1,0 +1,49 @@
+name: Sniper Walking Entry Historical Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      from_date:
+        description: "Prima data dei segnali (YYYY-MM-DD)"
+        required: false
+        default: "2023-01-01"
+  push:
+    paths:
+      - 'walking_entry_test.py'
+      - '.github/workflows/walking-entry-test.yml'
+      - 'data/instrument_universe.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sniper-walking-entry-test
+  cancel-in-progress: false
+
+jobs:
+  walking-entry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install 'yfinance[repair]' pandas numpy
+      - name: Run 10-year historical comparison
+        run: python walking_entry_test.py --from-date "${{ github.event.inputs.from_date || '2023-01-01' }}"
+      - name: Commit test results
+        run: |
+          git config user.name "sniper-bot"
+          git config user.email "sniper-bot@users.noreply.github.com"
+          git add data/walking_entry_test_*.json data/walking_entry_test_*_trades.csv
+          git diff --staged --quiet || git commit -m "Sniper: publish extended Walking entry test"
+          git push
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: sniper-walking-entry-historical-test
+          path: |
+            data/walking_entry_test_*.json
+            data/walking_entry_test_*_trades.csv
