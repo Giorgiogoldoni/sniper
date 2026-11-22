@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'paper_trading.py'
+      - 'walking_entry_test.py'
       - '.github/workflows/paper-trading.yml'
       - 'data/instrument_universe.json'
   schedule:
@@ -36,11 +37,13 @@ jobs:
         run: python paper_trading.py
       - name: Reconstruct historical paper from 1 October 2026 (isolated book)
         run: python paper_trading.py --backfill-from 2026-10-01
+      - name: Compare commodity Walking entry filters (isolated test)
+        run: python walking_entry_test.py --from-date 2026-10-01
       - name: Commit paper ledger
         run: |
           git config user.name "raptor-bot"
           git config user.email "raptor-bot@users.noreply.github.com"
-          git add data/paper_trading_state.json data/paper_trading_log.csv data/paper_trading_summary.json data/paper_backfill_20261001_state.json data/paper_backfill_20261001_log.csv data/paper_backfill_20261001_summary.json
+          git add data/paper_trading_state.json data/paper_trading_log.csv data/paper_trading_summary.json data/paper_backfill_20261001_state.json data/paper_backfill_20261001_log.csv data/paper_backfill_20261001_summary.json data/walking_entry_test_20261001.json data/walking_entry_test_20261001_trades.csv
           git diff --staged --quiet || git commit -m "sniper: update paper trading ledger"
           # Rebase on concurrent repository updates (e.g. Pages deployments) before pushing.
           for attempt in 1 2 3; do
@@ -61,3 +64,5 @@ jobs:
             data/paper_trading_state.json
             data/paper_trading_log.csv
             data/paper_trading_summary.json
+            data/walking_entry_test_20261001.json
+            data/walking_entry_test_20261001_trades.csv
