@@ -154,11 +154,10 @@ def main():
         "common_exits":"Initial stop = entry open - 2 x ATR(14) measured at signal close; daily low stop check with adverse gap fill at open; exit next open after 2 consecutive completed closes with Walking false; hard exit at close of holding session 10",
         "costs":"Excluded: all reported returns and metrics are gross price returns.",
         "window_handling":"Indicators warmed on prior history; only signals from start date counted; trades still open or pending at end excluded",
-        "limitations":"Short window and small number of instruments/trades; not proof of robust future performance."},"variants":{},"trades":[]}
+        "limitations":"Requested start date is 2023-01-01; actual instrument histories may be shorter because products were listed later. Results remain exploratory and are not proof of future performance."},"variants":{},"trades":[]}
     all_rows=[]
     for v in VARIANTS:
         rows,open_items=run_variant(frames,v,start)
-        for row in rows:
         result["variants"][v]={**metrics(rows),"open_or_pending_tickers":open_items}
         all_rows.extend(rows)
         result["trades"].extend(rows)
