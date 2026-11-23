@@ -33,6 +33,54 @@
   ],
   "instruments": [
     {
+      "id": "1GIS.L",
+      "ticker": "1GIS",
+      "yahoo": "1GIS.L",
+      "name": "WisdomTree Gilts 10Y 1x Daily Short",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "1MCS.L",
+      "ticker": "1MCS",
+      "yahoo": "1MCS.L",
+      "name": "WisdomTree FTSE 250 1x Daily Short",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "1PAS.MI",
+      "ticker": "1PAS",
+      "yahoo": "1PAS.MI",
+      "name": "WisdomTree Palladium 1x Daily Short",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": false,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "2BUL.MI",
       "ticker": "2BUL.MI",
       "yahoo": "2BUL.MI",
@@ -65,6 +113,22 @@
       ]
     },
     {
+      "id": "2GOL.MI",
+      "ticker": "2GOL.MI",
+      "yahoo": "2GOL.MI",
+      "name": "WisdomTree Gold 2x",
+      "leverage": 2,
+      "provider": null,
+      "currency": "EUR",
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "scannerv2_universe"
+      ]
+    },
+    {
       "id": "2MCL.L",
       "ticker": "2MCL",
       "yahoo": "2MCL.L",
@@ -81,6 +145,42 @@
       ]
     },
     {
+      "id": "2OIG.MI",
+      "ticker": "2OIG",
+      "yahoo": "2OIG.MI",
+      "name": "WisdomTree STOXX Europe Oil & Gas 2x Daily Short",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "2PAL.MI",
+      "ticker": "2PAL",
+      "yahoo": "2PAL.MI",
+      "name": "WisdomTree Palladium 2x Daily Leveraged",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "2PAL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
       "id": "2QQL.MI",
       "ticker": "2QQL.MI",
       "yahoo": "2QQL.MI",
@@ -94,6 +194,22 @@
       "classification": "LEVA_LONG",
       "sources": [
         "scannerv2_universe"
+      ]
+    },
+    {
+      "id": "2STR.MI",
+      "ticker": "2STR",
+      "yahoo": "2STR.MI",
+      "name": "WisdomTree STOXX Europe Travel & Leisure 2x Daily Short",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
       ]
     },
     {
@@ -124,6 +240,22 @@
       "leveraged": true,
       "short": false,
       "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "2UKS.L",
+      "ticker": "2UKS",
+      "yahoo": "2UKS.L",
+      "name": "WisdomTree FTSE 100 2x Daily Short",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
       "sources": [
         "raptor_leva"
       ]
@@ -161,6 +293,58 @@
       ]
     },
     {
+      "id": "3BAS.MI",
+      "ticker": "3BAS",
+      "yahoo": "3BAS.MI",
+      "name": "WisdomTree EURO STOXX Banks 3x Daily Short",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "3BRL.MI",
+      "ticker": "3BRL",
+      "yahoo": "3BRL.MI",
+      "name": "WisdomTree Brent Crude Oil 3x Daily Leveraged",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3BRL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
+      "id": "3BRS.MI",
+      "ticker": "3BRS",
+      "yahoo": "3BRS.MI",
+      "name": "WisdomTree Brent Crude Oil 3x Daily Short",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "3BTL.MI",
       "ticker": "3BTL",
       "yahoo": "3BTL.MI",
@@ -191,6 +375,42 @@
       "sources": [
         "raptor_leva"
       ]
+    },
+    {
+      "id": "3BUS.MI",
+      "ticker": "3BUS",
+      "yahoo": "3BUS.MI",
+      "name": "WisdomTree Bund 10Y 3x Daily Short",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "3CFL.MI",
+      "ticker": "3CFL",
+      "yahoo": "3CFL.MI",
+      "name": "WisdomTree Coffee 3x Daily Leveraged",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3CFL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "3CON.MI",
@@ -241,6 +461,22 @@
       ]
     },
     {
+      "id": "3DES.MI",
+      "ticker": "3DES",
+      "yahoo": "3DES.MI",
+      "name": "WisdomTree DAX 3x Daily Short",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "3EDF.MI",
       "ticker": "3EDF",
       "yahoo": "3EDF.MI",
@@ -252,6 +488,22 @@
       "leveraged": true,
       "short": false,
       "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "3EDS.MI",
+      "ticker": "3EDS",
+      "yahoo": "3EDS.MI",
+      "name": "WisdomTree STOXX Europe Aerospace & Defence 3x Daily Short",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
       "sources": [
         "raptor_leva"
       ]
@@ -273,6 +525,22 @@
       ]
     },
     {
+      "id": "3EMS.MI",
+      "ticker": "3EMS",
+      "yahoo": "3EMS.MI",
+      "name": "WisdomTree Emerging Markets 3x Daily Short",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "3EUL.MI",
       "ticker": "3EUL",
       "yahoo": "3EUL.MI",
@@ -284,6 +552,22 @@
       "leveraged": true,
       "short": false,
       "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "3EUS.MI",
+      "ticker": "3EUS",
+      "yahoo": "3EUS.MI",
+      "name": "WisdomTree EURO STOXX 50® 3x Daily Short",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
       "sources": [
         "raptor_leva"
       ]
@@ -321,6 +605,43 @@
       ]
     },
     {
+      "id": "3GIS.L",
+      "ticker": "3GIS",
+      "yahoo": "3GIS.L",
+      "name": "WisdomTree Gilts 10Y 3x Daily Short",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "3GOL.MI",
+      "ticker": "3GOL.MI",
+      "yahoo": "3GOL.MI",
+      "name": "WisdomTree Gold 3x",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": "EUR",
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "scannerv2_universe",
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3GOL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
       "id": "3GOO.MI",
       "ticker": "3GOO",
       "yahoo": "3GOO.MI",
@@ -337,6 +658,58 @@
       ]
     },
     {
+      "id": "3GOS.MI",
+      "ticker": "3GOS",
+      "yahoo": "3GOS.MI",
+      "name": "WisdomTree Gold 3x Daily Short",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "3HCL.MI",
+      "ticker": "3HCL",
+      "yahoo": "3HCL.MI",
+      "name": "WisdomTree Copper 3x Daily Leveraged",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3HCL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
+      "id": "3HCS.MI",
+      "ticker": "3HCS",
+      "yahoo": "3HCS.MI",
+      "name": "WisdomTree Copper 3x Daily Short",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "3ITL.MI",
       "ticker": "3ITL",
       "yahoo": "3ITL.MI",
@@ -348,6 +721,22 @@
       "leveraged": true,
       "short": false,
       "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "3ITS.MI",
+      "ticker": "3ITS",
+      "yahoo": "3ITS.MI",
+      "name": "WisdomTree FTSE MIB 3x Daily Short",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
       "sources": [
         "raptor_leva"
       ]
@@ -694,6 +1083,22 @@
       ]
     },
     {
+      "id": "3M7S.MI",
+      "ticker": "3M7S",
+      "yahoo": "3M7S.MI",
+      "name": "WisdomTree Magnificent 7 3x Daily Short",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "3MG7.MI",
       "ticker": "3MG7",
       "yahoo": "3MG7.MI",
@@ -758,6 +1163,26 @@
       ]
     },
     {
+      "id": "3NGL.MI",
+      "ticker": "3NGL",
+      "yahoo": "3NGL.MI",
+      "name": "WisdomTree Natural Gas 3x Daily Leveraged",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3NGL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
       "id": "3NIO.MI",
       "ticker": "3NIO",
       "yahoo": "3NIO.MI",
@@ -790,6 +1215,44 @@
       ]
     },
     {
+      "id": "3OIL.MI",
+      "ticker": "3OIL.MI",
+      "yahoo": "3OIL.MI",
+      "name": "WisdomTree Crude Oil 3x",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": "EUR",
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "scannerv2_universe",
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3OIL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
+      "id": "3OIS.MI",
+      "ticker": "3OIS",
+      "yahoo": "3OIS.MI",
+      "name": "WisdomTree WTI Crude Oil 3x Daily Short",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": "EUR",
+      "commodity": true,
+      "leveraged": true,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "isin": "XS2819844387",
+      "sources": [
+        "wisdomtree_verified"
+      ]
+    },
+    {
       "id": "3RAC.MI",
       "ticker": "3RAC",
       "yahoo": "3RAC.MI",
@@ -801,616 +1264,6 @@
       "leveraged": true,
       "short": false,
       "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3SEM.MI",
-      "ticker": "3SEM",
-      "yahoo": "3SEM.MI",
-      "name": "WisdomTree PHLX Semiconductor 3x Daily Leveraged",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3SQ.MI",
-      "ticker": "3SQ",
-      "yahoo": "3SQ.MI",
-      "name": "Leverage Shares 3x Square Etp Securities",
-      "leverage": 3,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3TSL.MI",
-      "ticker": "3TSL",
-      "yahoo": "3TSL.MI",
-      "name": "Leverage Shares 3x Tesla Etp",
-      "leverage": 3,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3TYL.MI",
-      "ticker": "3TYL",
-      "yahoo": "3TYL.MI",
-      "name": "WisdomTree US Treasuries 10Y 3x Daily Leveraged",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3UKL.L",
-      "ticker": "3UKL",
-      "yahoo": "3UKL.L",
-      "name": "WisdomTree FTSE 100 3x Daily Leveraged",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3USL.MI",
-      "ticker": "3USL.MI",
-      "yahoo": "3USL.MI",
-      "name": "WisdomTree S&P500 3x Daily",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": "EUR",
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "scannerv2_universe",
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "5EUL.MI",
-      "ticker": "5EUL",
-      "yahoo": "5EUL.MI",
-      "name": "WisdomTree EURO STOXX 50 5x Daily Leveraged",
-      "leverage": 5,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "5ITL.MI",
-      "ticker": "5ITL",
-      "yahoo": "5ITL.MI",
-      "name": "WisdomTree FTSE MIB 5x Daily Leveraged",
-      "leverage": 5,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "5MIB.MI",
-      "ticker": "5MIB",
-      "yahoo": "5MIB.MI",
-      "name": "GraniteShares 5x Long Mib Daily Etp",
-      "leverage": 5,
-      "provider": "GraniteShares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "5QQQ.MI",
-      "ticker": "5QQQ",
-      "yahoo": "5QQQ.MI",
-      "name": "Leverage Shares 5x Long Nasdaq 100 Etp",
-      "leverage": 5,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "5SPY.MI",
-      "ticker": "5SPY",
-      "yahoo": "5SPY.MI",
-      "name": "Leverage Shares 5x Long S&P 500 Etp",
-      "leverage": 5,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "5USL.MI",
-      "ticker": "5USL",
-      "yahoo": "5USL.MI",
-      "name": "WisdomTree S&P 500 5x Daily Leveraged",
-      "leverage": 5,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "ARM3.MI",
-      "ticker": "ARM3",
-      "yahoo": "ARM3.MI",
-      "name": "Leverage Shares 3x Arm Etp Securities",
-      "leverage": 3,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "DX3L.MI",
-      "ticker": "DX3L.MI",
-      "yahoo": "DX3L.MI",
-      "name": "WisdomTree DAX 3x Long",
-      "leverage": 3,
-      "provider": null,
-      "currency": "EUR",
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "scannerv2_universe"
-      ]
-    },
-    {
-      "id": "GPT3.MI",
-      "ticker": "GPT3",
-      "yahoo": "GPT3.MI",
-      "name": "Leverage Shares 3x Long Artificial Intelligence (AI) Etp",
-      "leverage": 3,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "HIM3.MI",
-      "ticker": "HIM3",
-      "yahoo": "HIM3.MI",
-      "name": "Leverage Shares 3x Long Hims & Hers Health Etp",
-      "leverage": 3,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "HOD3.MI",
-      "ticker": "HOD3",
-      "yahoo": "HOD3.MI",
-      "name": "Leverage Shares 3x Long Robinhood (Hood) Etp Securities",
-      "leverage": 3,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "LPET.MI",
-      "ticker": "LPET",
-      "yahoo": "LPET.MI",
-      "name": "WisdomTree Petroleum 2x Daily Leveraged",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "LQQ.MI",
-      "ticker": "LQQ.MI",
-      "yahoo": "LQQ.MI",
-      "name": "Leverage Shares 3x Nasdaq",
-      "leverage": 3,
-      "provider": null,
-      "currency": "EUR",
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "scannerv2_universe"
-      ]
-    },
-    {
-      "id": "QQQ3.MI",
-      "ticker": "QQQ3.MI",
-      "yahoo": "QQQ3.MI",
-      "name": "WisdomTree Nasdaq 3x Daily",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": "EUR",
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "scannerv2_universe",
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "QS5L.MI",
-      "ticker": "QS5L",
-      "yahoo": "QS5L.MI",
-      "name": "WisdomTree NASDAQ 100 5x Daily Leveraged",
-      "leverage": 5,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SMCI.MI",
-      "ticker": "SMCI",
-      "yahoo": "SMCI.MI",
-      "name": "Leverage Shares 2x Super Micro Computer Etp",
-      "leverage": 2,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SOXL.MI",
-      "ticker": "SOXL",
-      "yahoo": "SOXL.MI",
-      "name": "Leverage Shares 4x Long Semiconductors Etp",
-      "leverage": 4,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "TECL.MI",
-      "ticker": "TECL.MI",
-      "yahoo": "TECL.MI",
-      "name": "Leverage Shares 3x Technology",
-      "leverage": 3,
-      "provider": null,
-      "currency": "EUR",
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "scannerv2_universe"
-      ]
-    },
-    {
-      "id": "UNH3.MI",
-      "ticker": "UNH3",
-      "yahoo": "UNH3.MI",
-      "name": "Leverage Shares 3x Long Unitedhealth (Unh) Etp Securities",
-      "leverage": 3,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": false,
-      "classification": "LEVA_LONG",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "1GIS.L",
-      "ticker": "1GIS",
-      "yahoo": "1GIS.L",
-      "name": "WisdomTree Gilts 10Y 1x Daily Short",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "1MCS.L",
-      "ticker": "1MCS",
-      "yahoo": "1MCS.L",
-      "name": "WisdomTree FTSE 250 1x Daily Short",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "2STR.MI",
-      "ticker": "2STR",
-      "yahoo": "2STR.MI",
-      "name": "WisdomTree STOXX Europe Travel & Leisure 2x Daily Short",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "2UKS.L",
-      "ticker": "2UKS",
-      "yahoo": "2UKS.L",
-      "name": "WisdomTree FTSE 100 2x Daily Short",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3BAS.MI",
-      "ticker": "3BAS",
-      "yahoo": "3BAS.MI",
-      "name": "WisdomTree EURO STOXX Banks 3x Daily Short",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3BUS.MI",
-      "ticker": "3BUS",
-      "yahoo": "3BUS.MI",
-      "name": "WisdomTree Bund 10Y 3x Daily Short",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3DES.MI",
-      "ticker": "3DES",
-      "yahoo": "3DES.MI",
-      "name": "WisdomTree DAX 3x Daily Short",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3EDS.MI",
-      "ticker": "3EDS",
-      "yahoo": "3EDS.MI",
-      "name": "WisdomTree STOXX Europe Aerospace & Defence 3x Daily Short",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3EMS.MI",
-      "ticker": "3EMS",
-      "yahoo": "3EMS.MI",
-      "name": "WisdomTree Emerging Markets 3x Daily Short",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3EUS.MI",
-      "ticker": "3EUS",
-      "yahoo": "3EUS.MI",
-      "name": "WisdomTree EURO STOXX 50® 3x Daily Short",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3GIS.L",
-      "ticker": "3GIS",
-      "yahoo": "3GIS.L",
-      "name": "WisdomTree Gilts 10Y 3x Daily Short",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3ITS.MI",
-      "ticker": "3ITS",
-      "yahoo": "3ITS.MI",
-      "name": "WisdomTree FTSE MIB 3x Daily Short",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3M7S.MI",
-      "ticker": "3M7S",
-      "yahoo": "3M7S.MI",
-      "name": "WisdomTree Magnificent 7 3x Daily Short",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
       "sources": [
         "raptor_leva"
       ]
@@ -1481,6 +1334,22 @@
       ]
     },
     {
+      "id": "3SEM.MI",
+      "ticker": "3SEM",
+      "yahoo": "3SEM.MI",
+      "name": "WisdomTree PHLX Semiconductor 3x Daily Leveraged",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "3SGO.MI",
       "ticker": "3SGO.MI",
       "yahoo": "3SGO.MI",
@@ -1494,6 +1363,43 @@
       "classification": "LEVA_SHORT",
       "sources": [
         "scannerv2_universe"
+      ]
+    },
+    {
+      "id": "3SIL.MI",
+      "ticker": "3SIL.MI",
+      "yahoo": "3SIL.MI",
+      "name": "WisdomTree Silver 3x",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": "EUR",
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "scannerv2_universe",
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3SIL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
+      "id": "3SIS.MI",
+      "ticker": "3SIS",
+      "yahoo": "3SIS.MI",
+      "name": "WisdomTree Silver 3x Daily Short",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "raptor_leva"
       ]
     },
     {
@@ -1626,6 +1532,22 @@
       ]
     },
     {
+      "id": "3SQ.MI",
+      "ticker": "3SQ",
+      "yahoo": "3SQ.MI",
+      "name": "Leverage Shares 3x Square Etp Securities",
+      "leverage": 3,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "3SRA.MI",
       "ticker": "3SRA",
       "yahoo": "3SRA.MI",
@@ -1675,6 +1597,58 @@
       ]
     },
     {
+      "id": "3SUL.MI",
+      "ticker": "3SUL",
+      "yahoo": "3SUL.MI",
+      "name": "WisdomTree Sugar 3x Daily Leveraged",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3SUL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
+      "id": "3TSL.MI",
+      "ticker": "3TSL",
+      "yahoo": "3TSL.MI",
+      "name": "Leverage Shares 3x Tesla Etp",
+      "leverage": 3,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "3TYL.MI",
+      "ticker": "3TYL",
+      "yahoo": "3TYL.MI",
+      "name": "WisdomTree US Treasuries 10Y 3x Daily Leveraged",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "3UBS.MI",
       "ticker": "3UBS",
       "yahoo": "3UBS.MI",
@@ -1686,6 +1660,22 @@
       "leveraged": true,
       "short": true,
       "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "3UKL.L",
+      "ticker": "3UKL",
+      "yahoo": "3UKL.L",
+      "name": "WisdomTree FTSE 100 3x Daily Leveraged",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
       "sources": [
         "raptor_leva"
       ]
@@ -1707,6 +1697,23 @@
       ]
     },
     {
+      "id": "3USL.MI",
+      "ticker": "3USL.MI",
+      "yahoo": "3USL.MI",
+      "name": "WisdomTree S&P500 3x Daily",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": "EUR",
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "scannerv2_universe",
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "3USS.MI",
       "ticker": "3USS.MI",
       "yahoo": "3USS.MI",
@@ -1722,6 +1729,26 @@
         "scannerv2_universe",
         "raptor_leva"
       ]
+    },
+    {
+      "id": "3WHL.MI",
+      "ticker": "3WHL",
+      "yahoo": "3WHL.MI",
+      "name": "WisdomTree Wheat 3x Daily Leveraged",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "3WHL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
     },
     {
       "id": "5BTS.MI",
@@ -1756,6 +1783,22 @@
       ]
     },
     {
+      "id": "5EUL.MI",
+      "ticker": "5EUL",
+      "yahoo": "5EUL.MI",
+      "name": "WisdomTree EURO STOXX 50 5x Daily Leveraged",
+      "leverage": 5,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "5EUS.MI",
       "ticker": "5EUS",
       "yahoo": "5EUS.MI",
@@ -1767,6 +1810,22 @@
       "leveraged": true,
       "short": true,
       "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "5ITL.MI",
+      "ticker": "5ITL",
+      "yahoo": "5ITL.MI",
+      "name": "WisdomTree FTSE MIB 5x Daily Leveraged",
+      "leverage": 5,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
       "sources": [
         "raptor_leva"
       ]
@@ -1788,6 +1847,38 @@
       ]
     },
     {
+      "id": "5MIB.MI",
+      "ticker": "5MIB",
+      "yahoo": "5MIB.MI",
+      "name": "GraniteShares 5x Long Mib Daily Etp",
+      "leverage": 5,
+      "provider": "GraniteShares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "5QQQ.MI",
+      "ticker": "5QQQ",
+      "yahoo": "5QQQ.MI",
+      "name": "Leverage Shares 5x Long Nasdaq 100 Etp",
+      "leverage": 5,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "5SIT.MI",
       "ticker": "5SIT",
       "yahoo": "5SIT.MI",
@@ -1799,6 +1890,22 @@
       "leveraged": true,
       "short": true,
       "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "5SPY.MI",
+      "ticker": "5SPY",
+      "yahoo": "5SPY.MI",
+      "name": "Leverage Shares 5x Long S&P 500 Etp",
+      "leverage": 5,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
       "sources": [
         "raptor_leva"
       ]
@@ -1820,6 +1927,22 @@
       ]
     },
     {
+      "id": "5USL.MI",
+      "ticker": "5USL",
+      "yahoo": "5USL.MI",
+      "name": "WisdomTree S&P 500 5x Daily Leveraged",
+      "leverage": 5,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "5USS.MI",
       "ticker": "5USS",
       "yahoo": "5USS.MI",
@@ -1833,758 +1956,6 @@
       "classification": "LEVA_SHORT",
       "sources": [
         "raptor_leva"
-      ]
-    },
-    {
-      "id": "AUEU.MI",
-      "ticker": "AUEU",
-      "yahoo": "AUEU.MI",
-      "name": "WisdomTree Short AUD Long EUR",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "CHE3.MI",
-      "ticker": "CHE3",
-      "yahoo": "CHE3.MI",
-      "name": "WisdomTree Short CHF Long EUR 3x Daily",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "CHEU.MI",
-      "ticker": "CHEU",
-      "yahoo": "CHEU.MI",
-      "name": "WisdomTree Short CHF Long EUR",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "DX3S.MI",
-      "ticker": "DX3S.MI",
-      "yahoo": "DX3S.MI",
-      "name": "WisdomTree DAX 3x Short",
-      "leverage": 3,
-      "provider": null,
-      "currency": "EUR",
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "scannerv2_universe"
-      ]
-    },
-    {
-      "id": "ECH3.MI",
-      "ticker": "ECH3",
-      "yahoo": "ECH3.MI",
-      "name": "WisdomTree Long CHF Short EUR 3x Daily",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "EGB3.MI",
-      "ticker": "EGB3",
-      "yahoo": "EGB3.MI",
-      "name": "WisdomTree Long GBP Short EUR 3x Daily",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "EJP3.MI",
-      "ticker": "EJP3",
-      "yahoo": "EJP3.MI",
-      "name": "WisdomTree Long JPY Short EUR 3x Daily",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "ESXS.MI",
-      "ticker": "ESXS.MI",
-      "yahoo": "ESXS.MI",
-      "name": "WisdomTree Euro Stoxx 50 2x Short",
-      "leverage": 2,
-      "provider": null,
-      "currency": "EUR",
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "scannerv2_universe"
-      ]
-    },
-    {
-      "id": "EUAU.MI",
-      "ticker": "EUAU",
-      "yahoo": "EUAU.MI",
-      "name": "WisdomTree Long AUD Short EUR",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "EUCH.MI",
-      "ticker": "EUCH",
-      "yahoo": "EUCH.MI",
-      "name": "WisdomTree Long CHF Short EUR",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "EUGB.MI",
-      "ticker": "EUGB",
-      "yahoo": "EUGB.MI",
-      "name": "WisdomTree Long GBP Short EUR",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "EUJP.MI",
-      "ticker": "EUJP",
-      "yahoo": "EUJP.MI",
-      "name": "WisdomTree Long JPY Short EUR",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "EUNO.MI",
-      "ticker": "EUNO",
-      "yahoo": "EUNO.MI",
-      "name": "WisdomTree Long NOK Short EUR",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "EUS3.MI",
-      "ticker": "EUS3",
-      "yahoo": "EUS3.MI",
-      "name": "WisdomTree Long USD Short EUR 3x Daily",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "EUS5.MI",
-      "ticker": "EUS5",
-      "yahoo": "EUS5.MI",
-      "name": "WisdomTree Long USD Short EUR 5x Daily",
-      "leverage": 5,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "EUSE.MI",
-      "ticker": "EUSE",
-      "yahoo": "EUSE.MI",
-      "name": "WisdomTree Long SEK Short EUR",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "EUUS.MI",
-      "ticker": "EUUS",
-      "yahoo": "EUUS.MI",
-      "name": "WisdomTree Long USD Short EUR",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "GBE3.MI",
-      "ticker": "GBE3",
-      "yahoo": "GBE3.MI",
-      "name": "WisdomTree Short GBP Long EUR 3x Daily",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "GBEU.MI",
-      "ticker": "GBEU",
-      "yahoo": "GBEU.MI",
-      "name": "WisdomTree Short GBP Long EUR",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "GPTS.MI",
-      "ticker": "GPTS",
-      "yahoo": "GPTS.MI",
-      "name": "Leverage Shares -3x Short Artificial Intelligence (AI) Etp",
-      "leverage": 3,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "INTS.MI",
-      "ticker": "INTS",
-      "yahoo": "INTS.MI",
-      "name": "Leverage Shares -3x Short Intel (Intc) Etp Securities",
-      "leverage": 3,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "JPE3.MI",
-      "ticker": "JPE3",
-      "yahoo": "JPE3.MI",
-      "name": "WisdomTree Short JPY Long EUR 3x Daily",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "JPEU.MI",
-      "ticker": "JPEU",
-      "yahoo": "JPEU.MI",
-      "name": "WisdomTree Short JPY Long EUR",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "MAGS.MI",
-      "ticker": "MAGS",
-      "yahoo": "MAGS.MI",
-      "name": "Leverage Shares -3x Short Magnificent 7 Etp",
-      "leverage": 3,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "NOEU.MI",
-      "ticker": "NOEU",
-      "yahoo": "NOEU.MI",
-      "name": "WisdomTree Short NOK Long EUR",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "QQQ3S.MI",
-      "ticker": "QQQ3S.MI",
-      "yahoo": "QQQ3S.MI",
-      "name": "WisdomTree Nasdaq 3x Short",
-      "leverage": 3,
-      "provider": null,
-      "currency": "EUR",
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "scannerv2_universe"
-      ]
-    },
-    {
-      "id": "QQQS.MI",
-      "ticker": "QQQS",
-      "yahoo": "QQQS.MI",
-      "name": "WisdomTree NASDAQ 100 3x Daily Short",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "QS5S.MI",
-      "ticker": "QS5S",
-      "yahoo": "QS5S.MI",
-      "name": "WisdomTree NASDAQ 100 5x Daily Short",
-      "leverage": 5,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SBA3.MI",
-      "ticker": "SBA3",
-      "yahoo": "SBA3.MI",
-      "name": "Leverage Shares -3x Short Alibaba Etp Securities",
-      "leverage": 3,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SC3S.MI",
-      "ticker": "SC3S",
-      "yahoo": "SC3S.MI",
-      "name": "WisdomTree PHLX Semiconductor 3x Daily Short",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SDS.MI",
-      "ticker": "SDS.MI",
-      "yahoo": "SDS.MI",
-      "name": "WisdomTree S&P500 2x Short",
-      "leverage": 2,
-      "provider": null,
-      "currency": "EUR",
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "scannerv2_universe"
-      ]
-    },
-    {
-      "id": "SEEU.MI",
-      "ticker": "SEEU",
-      "yahoo": "SEEU.MI",
-      "name": "WisdomTree Short SEK Long EUR",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SMST.MI",
-      "ticker": "SMST",
-      "yahoo": "SMST.MI",
-      "name": "Leverage Shares -3x Short MicroStrategy Etp",
-      "leverage": 3,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SNV3.MI",
-      "ticker": "SNV3",
-      "yahoo": "SNV3.MI",
-      "name": "Leverage Shares -3x Short NVIDIA Etp Securities",
-      "leverage": 3,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SOXS.MI",
-      "ticker": "SOXS",
-      "yahoo": "SOXS.MI",
-      "name": "Leverage Shares -4x Short Semiconductors Etp",
-      "leverage": 4,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SQQQ.MI",
-      "ticker": "SQQQ",
-      "yahoo": "SQQQ.MI",
-      "name": "Leverage Shares -5x Short Nasdaq 100 Etp",
-      "leverage": 5,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SUK1.L",
-      "ticker": "SUK1",
-      "yahoo": "SUK1.L",
-      "name": "WisdomTree FTSE 100 1x Daily Short",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "TSLQ.MI",
-      "ticker": "TSLQ",
-      "yahoo": "TSLQ.MI",
-      "name": "Leverage Shares -3x Short Tesla Etp Securities",
-      "leverage": 3,
-      "provider": "Leverage Shares",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "UL3S.MI",
-      "ticker": "UL3S",
-      "yahoo": "UL3S.MI",
-      "name": "WisdomTree US Treasuries 30Y 3x Daily Short",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "USE3.MI",
-      "ticker": "USE3",
-      "yahoo": "USE3.MI",
-      "name": "WisdomTree Short USD Long EUR 3x Daily",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "USE5.MI",
-      "ticker": "USE5",
-      "yahoo": "USE5.MI",
-      "name": "WisdomTree Short USD Long EUR 5x Daily",
-      "leverage": 5,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "USEU.MI",
-      "ticker": "USEU",
-      "yahoo": "USEU.MI",
-      "name": "WisdomTree Short USD Long EUR",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "VIXL.MI",
-      "ticker": "VIXL",
-      "yahoo": "VIXL.MI",
-      "name": "WisdomTree S&P 500 VIX Short-Term Futures 2.25x Daily Leveraged",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": true,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "XBJF.DE",
-      "ticker": "XBJF",
-      "yahoo": "XBJF.DE",
-      "name": "WisdomTree Short CNY Long USD",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "XSDX.MI",
-      "ticker": "XSDX.MI",
-      "yahoo": "XSDX.MI",
-      "name": "Xtrackers DAX Short",
-      "leverage": 1,
-      "provider": null,
-      "currency": "EUR",
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "scannerv2_universe"
-      ]
-    },
-    {
-      "id": "XSND.MI",
-      "ticker": "XSND.MI",
-      "yahoo": "XSND.MI",
-      "name": "Xtrackers Nasdaq Short",
-      "leverage": 1,
-      "provider": null,
-      "currency": "EUR",
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "scannerv2_universe"
-      ]
-    },
-    {
-      "id": "XSPS.MI",
-      "ticker": "XSPS.MI",
-      "yahoo": "XSPS.MI",
-      "name": "Xtrackers S&P500 Short",
-      "leverage": 1,
-      "provider": null,
-      "currency": "EUR",
-      "commodity": false,
-      "leveraged": false,
-      "short": true,
-      "classification": "LEVA_SHORT",
-      "sources": [
-        "scannerv2_universe"
       ]
     },
     {
@@ -2766,6 +2137,38 @@
       "yahoo_mapping_status": "resolved_existing"
     },
     {
+      "id": "ARM3.MI",
+      "ticker": "ARM3",
+      "yahoo": "ARM3.MI",
+      "name": "Leverage Shares 3x Arm Etp Securities",
+      "leverage": 3,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "AUEU.MI",
+      "ticker": "AUEU",
+      "yahoo": "AUEU.MI",
+      "name": "WisdomTree Short AUD Long EUR",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "BCOM.DE",
       "ticker": "BCOM.DE",
       "yahoo": "BCOM.DE",
@@ -2919,6 +2322,38 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one"
+      ]
+    },
+    {
+      "id": "CHE3.MI",
+      "ticker": "CHE3",
+      "yahoo": "CHE3.MI",
+      "name": "WisdomTree Short CHF Long EUR 3x Daily",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "CHEU.MI",
+      "ticker": "CHEU",
+      "yahoo": "CHEU.MI",
+      "name": "WisdomTree Short CHF Long EUR",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
       ]
     },
     {
@@ -3285,6 +2720,38 @@
       ]
     },
     {
+      "id": "DX3L.MI",
+      "ticker": "DX3L.MI",
+      "yahoo": "DX3L.MI",
+      "name": "WisdomTree DAX 3x Long",
+      "leverage": 3,
+      "provider": null,
+      "currency": "EUR",
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "scannerv2_universe"
+      ]
+    },
+    {
+      "id": "DX3S.MI",
+      "ticker": "DX3S.MI",
+      "yahoo": "DX3S.MI",
+      "name": "WisdomTree DAX 3x Short",
+      "leverage": 3,
+      "provider": null,
+      "currency": "EUR",
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "scannerv2_universe"
+      ]
+    },
+    {
       "id": "EALU.MI",
       "ticker": "EALU",
       "yahoo": "EALU.MI",
@@ -3352,6 +2819,22 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one"
+      ]
+    },
+    {
+      "id": "ECH3.MI",
+      "ticker": "ECH3",
+      "yahoo": "ECH3.MI",
+      "name": "WisdomTree Long CHF Short EUR 3x Daily",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
       ]
     },
     {
@@ -3469,6 +2952,22 @@
       ]
     },
     {
+      "id": "EGB3.MI",
+      "ticker": "EGB3",
+      "yahoo": "EGB3.MI",
+      "name": "WisdomTree Long GBP Short EUR 3x Daily",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "EIMT.MI",
       "ticker": "EIMT",
       "yahoo": "EIMT.MI",
@@ -3482,6 +2981,22 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one",
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "EJP3.MI",
+      "ticker": "EJP3",
+      "yahoo": "EJP3.MI",
+      "name": "WisdomTree Long JPY Short EUR 3x Daily",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
         "raptor_leva"
       ]
     },
@@ -3609,6 +3124,166 @@
       ]
     },
     {
+      "id": "ESXS.MI",
+      "ticker": "ESXS.MI",
+      "yahoo": "ESXS.MI",
+      "name": "WisdomTree Euro Stoxx 50 2x Short",
+      "leverage": 2,
+      "provider": null,
+      "currency": "EUR",
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "scannerv2_universe"
+      ]
+    },
+    {
+      "id": "EUAU.MI",
+      "ticker": "EUAU",
+      "yahoo": "EUAU.MI",
+      "name": "WisdomTree Long AUD Short EUR",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "EUCH.MI",
+      "ticker": "EUCH",
+      "yahoo": "EUCH.MI",
+      "name": "WisdomTree Long CHF Short EUR",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "EUGB.MI",
+      "ticker": "EUGB",
+      "yahoo": "EUGB.MI",
+      "name": "WisdomTree Long GBP Short EUR",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "EUJP.MI",
+      "ticker": "EUJP",
+      "yahoo": "EUJP.MI",
+      "name": "WisdomTree Long JPY Short EUR",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "EUNO.MI",
+      "ticker": "EUNO",
+      "yahoo": "EUNO.MI",
+      "name": "WisdomTree Long NOK Short EUR",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "EUS3.MI",
+      "ticker": "EUS3",
+      "yahoo": "EUS3.MI",
+      "name": "WisdomTree Long USD Short EUR 3x Daily",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "EUS5.MI",
+      "ticker": "EUS5",
+      "yahoo": "EUS5.MI",
+      "name": "WisdomTree Long USD Short EUR 5x Daily",
+      "leverage": 5,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "EUSE.MI",
+      "ticker": "EUSE",
+      "yahoo": "EUSE.MI",
+      "name": "WisdomTree Long SEK Short EUR",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "EUUS.MI",
+      "ticker": "EUUS",
+      "yahoo": "EUUS.MI",
+      "name": "WisdomTree Long USD Short EUR",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "EWAT.MI",
       "ticker": "EWAT",
       "yahoo": "EWAT.MI",
@@ -3718,6 +3393,38 @@
       "yahoo_mapping_status": "resolved_existing"
     },
     {
+      "id": "GBE3.MI",
+      "ticker": "GBE3",
+      "yahoo": "GBE3.MI",
+      "name": "WisdomTree Short GBP Long EUR 3x Daily",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "GBEU.MI",
+      "ticker": "GBEU",
+      "yahoo": "GBEU.MI",
+      "name": "WisdomTree Short GBP Long EUR",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "GBS.MI",
       "ticker": "GBS",
       "yahoo": "GBS.MI",
@@ -3798,6 +3505,38 @@
       ]
     },
     {
+      "id": "GPT3.MI",
+      "ticker": "GPT3",
+      "yahoo": "GPT3.MI",
+      "name": "Leverage Shares 3x Long Artificial Intelligence (AI) Etp",
+      "leverage": 3,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "GPTS.MI",
+      "ticker": "GPTS",
+      "yahoo": "GPTS.MI",
+      "name": "Leverage Shares -3x Short Artificial Intelligence (AI) Etp",
+      "leverage": 3,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "GSCE.MI",
       "ticker": "GSCE",
       "yahoo": "GSCE.MI",
@@ -3811,6 +3550,86 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one"
+      ]
+    },
+    {
+      "id": "HIM3.MI",
+      "ticker": "HIM3",
+      "yahoo": "HIM3.MI",
+      "name": "Leverage Shares 3x Long Hims & Hers Health Etp",
+      "leverage": 3,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "HOD3.MI",
+      "ticker": "HOD3",
+      "yahoo": "HOD3.MI",
+      "name": "Leverage Shares 3x Long Robinhood (Hood) Etp Securities",
+      "leverage": 3,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "INTS.MI",
+      "ticker": "INTS",
+      "yahoo": "INTS.MI",
+      "name": "Leverage Shares -3x Short Intel (Intc) Etp Securities",
+      "leverage": 3,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "JPE3.MI",
+      "ticker": "JPE3",
+      "yahoo": "JPE3.MI",
+      "name": "WisdomTree Short JPY Long EUR 3x Daily",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "JPEU.MI",
+      "ticker": "JPEU",
+      "yahoo": "JPEU.MI",
+      "name": "WisdomTree Short JPY Long EUR",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
       ]
     },
     {
@@ -3830,6 +3649,154 @@
       ]
     },
     {
+      "id": "LAGR.MI",
+      "ticker": "LAGR",
+      "yahoo": "LAGR.MI",
+      "name": "WisdomTree Agriculture 2x Daily Leveraged",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "LALU.MI",
+      "ticker": "LALU",
+      "yahoo": "LALU.MI",
+      "name": "WisdomTree Aluminium 2x Daily Leveraged",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LALU",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
+      "id": "LBRT.MI",
+      "ticker": "LBRT",
+      "yahoo": "LBRT.MI",
+      "name": "WisdomTree Brent Crude Oil 2x Daily Leveraged",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "LBUL.MI",
+      "ticker": "LBUL",
+      "yahoo": "LBUL.MI",
+      "name": "WisdomTree Gold 2x Daily Leveraged",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "LCFE.MI",
+      "ticker": "LCFE",
+      "yahoo": "LCFE.MI",
+      "name": "WisdomTree Coffee 2x Daily Leveraged",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LCFE",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
+      "id": "LCOC.MI",
+      "ticker": "LCOC",
+      "yahoo": "LCOC.MI",
+      "name": "WisdomTree Cocoa 2x Daily Leveraged",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LCOC",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
+      "id": "LCOP.MI",
+      "ticker": "LCOP",
+      "yahoo": "LCOP.MI",
+      "name": "WisdomTree Copper 2x Daily Leveraged",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LCOP",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
+      "id": "LCOR.MI",
+      "ticker": "LCOR",
+      "yahoo": "LCOR.MI",
+      "name": "WisdomTree Corn 2x Daily Leveraged",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LCOR",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
       "id": "LEAD.MI",
       "ticker": "LEAD.MI",
       "yahoo": "LEAD.MI",
@@ -3847,6 +3814,146 @@
       ]
     },
     {
+      "id": "LNGA.MI",
+      "ticker": "LNGA",
+      "yahoo": "LNGA.MI",
+      "name": "WisdomTree Natural Gas 2x Daily Leveraged",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "LNIK.MI",
+      "ticker": "LNIK",
+      "yahoo": "LNIK.MI",
+      "name": "WisdomTree Nickel 2x Daily Leveraged",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "LOIL.MI",
+      "ticker": "LOIL",
+      "yahoo": "LOIL.MI",
+      "name": "WisdomTree WTI Crude Oil 2x Daily Leveraged",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LOIL",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
+      "id": "LPET.MI",
+      "ticker": "LPET",
+      "yahoo": "LPET.MI",
+      "name": "WisdomTree Petroleum 2x Daily Leveraged",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "LPLA.MI",
+      "ticker": "LPLA",
+      "yahoo": "LPLA.MI",
+      "name": "WisdomTree Platinum 2x Daily Leveraged",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LPLA",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
+      "id": "LQQ.MI",
+      "ticker": "LQQ.MI",
+      "yahoo": "LQQ.MI",
+      "name": "Leverage Shares 3x Nasdaq",
+      "leverage": 3,
+      "provider": null,
+      "currency": "EUR",
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "scannerv2_universe"
+      ]
+    },
+    {
+      "id": "LSIL.MI",
+      "ticker": "LSIL",
+      "yahoo": "LSIL.MI",
+      "name": "WisdomTree Silver 2x Daily Leveraged",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "LSUG.MI",
+      "ticker": "LSUG",
+      "yahoo": "LSUG.MI",
+      "name": "WisdomTree Sugar 2x Daily Leveraged",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LSUG",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
       "id": "LVO.MI",
       "ticker": "LVO",
       "yahoo": "LVO.MI",
@@ -3860,6 +3967,42 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one"
+      ]
+    },
+    {
+      "id": "LWEA.MI",
+      "ticker": "LWEA",
+      "yahoo": "LWEA.MI",
+      "name": "WisdomTree Wheat 2x Daily Leveraged",
+      "leverage": 2,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": true,
+      "short": false,
+      "classification": "MATERIE_PRIME_LEVA",
+      "sources": [
+        "raptor_leva",
+        "chart_index"
+      ],
+      "chart_ticker": "LWEA",
+      "chart_included": true,
+      "yahoo_mapping_status": "resolved_existing"
+    },
+    {
+      "id": "MAGS.MI",
+      "ticker": "MAGS",
+      "yahoo": "MAGS.MI",
+      "name": "Leverage Shares -3x Short Magnificent 7 Etp",
+      "leverage": 3,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
       ]
     },
     {
@@ -3932,6 +4075,22 @@
       "sources": [
         "scannerv2_universe",
         "raptor_one",
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "NOEU.MI",
+      "ticker": "NOEU",
+      "yahoo": "NOEU.MI",
+      "name": "WisdomTree Short NOK Long EUR",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
         "raptor_leva"
       ]
     },
@@ -4061,6 +4220,231 @@
       "yahoo_mapping_status": "resolved_existing"
     },
     {
+      "id": "QQQ3.MI",
+      "ticker": "QQQ3.MI",
+      "yahoo": "QQQ3.MI",
+      "name": "WisdomTree Nasdaq 3x Daily",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": "EUR",
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "scannerv2_universe",
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "QQQ3S.MI",
+      "ticker": "QQQ3S.MI",
+      "yahoo": "QQQ3S.MI",
+      "name": "WisdomTree Nasdaq 3x Short",
+      "leverage": 3,
+      "provider": null,
+      "currency": "EUR",
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "scannerv2_universe"
+      ]
+    },
+    {
+      "id": "QQQS.MI",
+      "ticker": "QQQS",
+      "yahoo": "QQQS.MI",
+      "name": "WisdomTree NASDAQ 100 3x Daily Short",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "QS5L.MI",
+      "ticker": "QS5L",
+      "yahoo": "QS5L.MI",
+      "name": "WisdomTree NASDAQ 100 5x Daily Leveraged",
+      "leverage": 5,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "QS5S.MI",
+      "ticker": "QS5S",
+      "yahoo": "QS5S.MI",
+      "name": "WisdomTree NASDAQ 100 5x Daily Short",
+      "leverage": 5,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "SALL.MI",
+      "ticker": "SALL",
+      "yahoo": "SALL.MI",
+      "name": "WisdomTree Broad Commodities 1x Daily Short",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": false,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "SBA3.MI",
+      "ticker": "SBA3",
+      "yahoo": "SBA3.MI",
+      "name": "Leverage Shares -3x Short Alibaba Etp Securities",
+      "leverage": 3,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "SBRT.MI",
+      "ticker": "SBRT",
+      "yahoo": "SBRT.MI",
+      "name": "WisdomTree Brent Crude Oil 1x Daily Short",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": false,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "SBUL.MI",
+      "ticker": "SBUL",
+      "yahoo": "SBUL.MI",
+      "name": "WisdomTree Gold 1x Daily Short",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": false,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "SC3S.MI",
+      "ticker": "SC3S",
+      "yahoo": "SC3S.MI",
+      "name": "WisdomTree PHLX Semiconductor 3x Daily Short",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "SCOP.MI",
+      "ticker": "SCOP",
+      "yahoo": "SCOP.MI",
+      "name": "WisdomTree Copper 1x Daily Short",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": false,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "SCRU.MI",
+      "ticker": "SCRU.MI",
+      "yahoo": "SCRU.MI",
+      "name": "WisdomTree Crude Oil Short",
+      "leverage": 1,
+      "provider": null,
+      "currency": "EUR",
+      "commodity": true,
+      "leveraged": false,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "scannerv2_universe"
+      ]
+    },
+    {
+      "id": "SDS.MI",
+      "ticker": "SDS.MI",
+      "yahoo": "SDS.MI",
+      "name": "WisdomTree S&P500 2x Short",
+      "leverage": 2,
+      "provider": null,
+      "currency": "EUR",
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "scannerv2_universe"
+      ]
+    },
+    {
+      "id": "SEEU.MI",
+      "ticker": "SEEU",
+      "yahoo": "SEEU.MI",
+      "name": "WisdomTree Short SEK Long EUR",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "SGBS.MI",
       "ticker": "SGBS",
       "yahoo": "SGBS.MI",
@@ -4094,6 +4478,22 @@
       ]
     },
     {
+      "id": "SGOL.MI",
+      "ticker": "SGOL.MI",
+      "yahoo": "SGOL.MI",
+      "name": "WisdomTree Gold Short",
+      "leverage": 1,
+      "provider": null,
+      "currency": "EUR",
+      "commodity": true,
+      "leveraged": false,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "scannerv2_universe"
+      ]
+    },
+    {
       "id": "SILV.MI",
       "ticker": "SILV.MI",
       "yahoo": "SILV.MI",
@@ -4107,6 +4507,22 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "scannerv2_universe"
+      ]
+    },
+    {
+      "id": "SIMT.MI",
+      "ticker": "SIMT",
+      "yahoo": "SIMT.MI",
+      "name": "WisdomTree Industrial Metals 1x Daily Short",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": false,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "raptor_leva"
       ]
     },
     {
@@ -4128,6 +4544,135 @@
       "chart_ticker": "SLVR",
       "chart_included": true,
       "yahoo_mapping_status": "resolved_existing"
+    },
+    {
+      "id": "SMCI.MI",
+      "ticker": "SMCI",
+      "yahoo": "SMCI.MI",
+      "name": "Leverage Shares 2x Super Micro Computer Etp",
+      "leverage": 2,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "SMST.MI",
+      "ticker": "SMST",
+      "yahoo": "SMST.MI",
+      "name": "Leverage Shares -3x Short MicroStrategy Etp",
+      "leverage": 3,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "SNGA.MI",
+      "ticker": "SNGA.MI",
+      "yahoo": "SNGA.MI",
+      "name": "SNGA",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": "EUR",
+      "commodity": true,
+      "leveraged": false,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "scannerv2_universe",
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "SNIK.MI",
+      "ticker": "SNIK",
+      "yahoo": "SNIK.MI",
+      "name": "WisdomTree Nickel 1x Daily Short",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": false,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "SNV3.MI",
+      "ticker": "SNV3",
+      "yahoo": "SNV3.MI",
+      "name": "Leverage Shares -3x Short NVIDIA Etp Securities",
+      "leverage": 3,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "SOIL.MI",
+      "ticker": "SOIL",
+      "yahoo": "SOIL.MI",
+      "name": "WisdomTree WTI Crude Oil 1x Daily Short",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": true,
+      "leveraged": false,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "SOXL.MI",
+      "ticker": "SOXL",
+      "yahoo": "SOXL.MI",
+      "name": "Leverage Shares 4x Long Semiconductors Etp",
+      "leverage": 4,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "SOXS.MI",
+      "ticker": "SOXS",
+      "yahoo": "SOXS.MI",
+      "name": "Leverage Shares -4x Short Semiconductors Etp",
+      "leverage": 4,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
     },
     {
       "id": "SOYB.MI",
@@ -4168,6 +4713,39 @@
       "yahoo_mapping_status": "resolved_existing"
     },
     {
+      "id": "SQQQ.MI",
+      "ticker": "SQQQ",
+      "yahoo": "SQQQ.MI",
+      "name": "Leverage Shares -5x Short Nasdaq 100 Etp",
+      "leverage": 5,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "SSIL.MI",
+      "ticker": "SSIL.MI",
+      "yahoo": "SSIL.MI",
+      "name": "WisdomTree Silver Short",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": "EUR",
+      "commodity": true,
+      "leveraged": false,
+      "short": true,
+      "classification": "MATERIE_PRIME_SHORT",
+      "sources": [
+        "scannerv2_universe",
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "SUGA.MI",
       "ticker": "SUGA",
       "yahoo": "SUGA.MI",
@@ -4189,6 +4767,38 @@
       "yahoo_mapping_status": "resolved_existing"
     },
     {
+      "id": "SUK1.L",
+      "ticker": "SUK1",
+      "yahoo": "SUK1.L",
+      "name": "WisdomTree FTSE 100 1x Daily Short",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "TECL.MI",
+      "ticker": "TECL.MI",
+      "yahoo": "TECL.MI",
+      "name": "Leverage Shares 3x Technology",
+      "leverage": 3,
+      "provider": null,
+      "currency": "EUR",
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "scannerv2_universe"
+      ]
+    },
+    {
       "id": "TINM.MI",
       "ticker": "TINM",
       "yahoo": "TINM.MI",
@@ -4200,6 +4810,22 @@
       "leveraged": false,
       "short": false,
       "classification": "MATERIE_PRIME_1X",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "TSLQ.MI",
+      "ticker": "TSLQ",
+      "yahoo": "TSLQ.MI",
+      "name": "Leverage Shares -3x Short Tesla Etp Securities",
+      "leverage": 3,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
       "sources": [
         "raptor_leva"
       ]
@@ -4235,6 +4861,102 @@
       "sources": [
         "scannerv2_universe",
         "raptor_one"
+      ]
+    },
+    {
+      "id": "UL3S.MI",
+      "ticker": "UL3S",
+      "yahoo": "UL3S.MI",
+      "name": "WisdomTree US Treasuries 30Y 3x Daily Short",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "UNH3.MI",
+      "ticker": "UNH3",
+      "yahoo": "UNH3.MI",
+      "name": "Leverage Shares 3x Long Unitedhealth (Unh) Etp Securities",
+      "leverage": 3,
+      "provider": "Leverage Shares",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": false,
+      "classification": "LEVA_LONG",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "USE3.MI",
+      "ticker": "USE3",
+      "yahoo": "USE3.MI",
+      "name": "WisdomTree Short USD Long EUR 3x Daily",
+      "leverage": 3,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "USE5.MI",
+      "ticker": "USE5",
+      "yahoo": "USE5.MI",
+      "name": "WisdomTree Short USD Long EUR 5x Daily",
+      "leverage": 5,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "USEU.MI",
+      "ticker": "USEU",
+      "yahoo": "USEU.MI",
+      "name": "WisdomTree Short USD Long EUR",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
+      "id": "VIXL.MI",
+      "ticker": "VIXL",
+      "yahoo": "VIXL.MI",
+      "name": "WisdomTree S&P 500 VIX Short-Term Futures 2.25x Daily Leveraged",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": true,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
       ]
     },
     {
@@ -4444,6 +5166,22 @@
       ]
     },
     {
+      "id": "XBJF.DE",
+      "ticker": "XBJF",
+      "yahoo": "XBJF.DE",
+      "name": "WisdomTree Short CNY Long USD",
+      "leverage": 1,
+      "provider": "WisdomTree",
+      "currency": null,
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "raptor_leva"
+      ]
+    },
+    {
       "id": "XDBC.MI",
       "ticker": "XDBC",
       "yahoo": "XDBC.MI",
@@ -4457,6 +5195,54 @@
       "classification": "MATERIE_PRIME_1X",
       "sources": [
         "raptor_one"
+      ]
+    },
+    {
+      "id": "XSDX.MI",
+      "ticker": "XSDX.MI",
+      "yahoo": "XSDX.MI",
+      "name": "Xtrackers DAX Short",
+      "leverage": 1,
+      "provider": null,
+      "currency": "EUR",
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "scannerv2_universe"
+      ]
+    },
+    {
+      "id": "XSND.MI",
+      "ticker": "XSND.MI",
+      "yahoo": "XSND.MI",
+      "name": "Xtrackers Nasdaq Short",
+      "leverage": 1,
+      "provider": null,
+      "currency": "EUR",
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "scannerv2_universe"
+      ]
+    },
+    {
+      "id": "XSPS.MI",
+      "ticker": "XSPS.MI",
+      "yahoo": "XSPS.MI",
+      "name": "Xtrackers S&P500 Short",
+      "leverage": 1,
+      "provider": null,
+      "currency": "EUR",
+      "commodity": false,
+      "leveraged": false,
+      "short": true,
+      "classification": "LEVA_SHORT",
+      "sources": [
+        "scannerv2_universe"
       ]
     },
     {
@@ -4480,775 +5266,6 @@
       "chart_ticker": "ZINC",
       "chart_included": true,
       "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "2GOL.MI",
-      "ticker": "2GOL.MI",
-      "yahoo": "2GOL.MI",
-      "name": "WisdomTree Gold 2x",
-      "leverage": 2,
-      "provider": null,
-      "currency": "EUR",
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "scannerv2_universe"
-      ]
-    },
-    {
-      "id": "2PAL.MI",
-      "ticker": "2PAL",
-      "yahoo": "2PAL.MI",
-      "name": "WisdomTree Palladium 2x Daily Leveraged",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "2PAL",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "3BRL.MI",
-      "ticker": "3BRL",
-      "yahoo": "3BRL.MI",
-      "name": "WisdomTree Brent Crude Oil 3x Daily Leveraged",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "3BRL",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "3CFL.MI",
-      "ticker": "3CFL",
-      "yahoo": "3CFL.MI",
-      "name": "WisdomTree Coffee 3x Daily Leveraged",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "3CFL",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "3GOL.MI",
-      "ticker": "3GOL.MI",
-      "yahoo": "3GOL.MI",
-      "name": "WisdomTree Gold 3x",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": "EUR",
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "scannerv2_universe",
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "3GOL",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "3HCL.MI",
-      "ticker": "3HCL",
-      "yahoo": "3HCL.MI",
-      "name": "WisdomTree Copper 3x Daily Leveraged",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "3HCL",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "3NGL.MI",
-      "ticker": "3NGL",
-      "yahoo": "3NGL.MI",
-      "name": "WisdomTree Natural Gas 3x Daily Leveraged",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "3NGL",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "3OIL.MI",
-      "ticker": "3OIL.MI",
-      "yahoo": "3OIL.MI",
-      "name": "WisdomTree Crude Oil 3x",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": "EUR",
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "scannerv2_universe",
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "3OIL",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "3SIL.MI",
-      "ticker": "3SIL.MI",
-      "yahoo": "3SIL.MI",
-      "name": "WisdomTree Silver 3x",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": "EUR",
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "scannerv2_universe",
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "3SIL",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "3SUL.MI",
-      "ticker": "3SUL",
-      "yahoo": "3SUL.MI",
-      "name": "WisdomTree Sugar 3x Daily Leveraged",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "3SUL",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "3WHL.MI",
-      "ticker": "3WHL",
-      "yahoo": "3WHL.MI",
-      "name": "WisdomTree Wheat 3x Daily Leveraged",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "3WHL",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "LAGR.MI",
-      "ticker": "LAGR",
-      "yahoo": "LAGR.MI",
-      "name": "WisdomTree Agriculture 2x Daily Leveraged",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "LALU.MI",
-      "ticker": "LALU",
-      "yahoo": "LALU.MI",
-      "name": "WisdomTree Aluminium 2x Daily Leveraged",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "LALU",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "LBRT.MI",
-      "ticker": "LBRT",
-      "yahoo": "LBRT.MI",
-      "name": "WisdomTree Brent Crude Oil 2x Daily Leveraged",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "LBUL.MI",
-      "ticker": "LBUL",
-      "yahoo": "LBUL.MI",
-      "name": "WisdomTree Gold 2x Daily Leveraged",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "LCFE.MI",
-      "ticker": "LCFE",
-      "yahoo": "LCFE.MI",
-      "name": "WisdomTree Coffee 2x Daily Leveraged",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "LCFE",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "LCOC.MI",
-      "ticker": "LCOC",
-      "yahoo": "LCOC.MI",
-      "name": "WisdomTree Cocoa 2x Daily Leveraged",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "LCOC",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "LCOP.MI",
-      "ticker": "LCOP",
-      "yahoo": "LCOP.MI",
-      "name": "WisdomTree Copper 2x Daily Leveraged",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "LCOP",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "LCOR.MI",
-      "ticker": "LCOR",
-      "yahoo": "LCOR.MI",
-      "name": "WisdomTree Corn 2x Daily Leveraged",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "LCOR",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "LNGA.MI",
-      "ticker": "LNGA",
-      "yahoo": "LNGA.MI",
-      "name": "WisdomTree Natural Gas 2x Daily Leveraged",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "LNIK.MI",
-      "ticker": "LNIK",
-      "yahoo": "LNIK.MI",
-      "name": "WisdomTree Nickel 2x Daily Leveraged",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "LOIL.MI",
-      "ticker": "LOIL",
-      "yahoo": "LOIL.MI",
-      "name": "WisdomTree WTI Crude Oil 2x Daily Leveraged",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "LOIL",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "LPLA.MI",
-      "ticker": "LPLA",
-      "yahoo": "LPLA.MI",
-      "name": "WisdomTree Platinum 2x Daily Leveraged",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "LPLA",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "LSIL.MI",
-      "ticker": "LSIL",
-      "yahoo": "LSIL.MI",
-      "name": "WisdomTree Silver 2x Daily Leveraged",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "LSUG.MI",
-      "ticker": "LSUG",
-      "yahoo": "LSUG.MI",
-      "name": "WisdomTree Sugar 2x Daily Leveraged",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "LSUG",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "LWEA.MI",
-      "ticker": "LWEA",
-      "yahoo": "LWEA.MI",
-      "name": "WisdomTree Wheat 2x Daily Leveraged",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": false,
-      "classification": "MATERIE_PRIME_LEVA",
-      "sources": [
-        "raptor_leva",
-        "chart_index"
-      ],
-      "chart_ticker": "LWEA",
-      "chart_included": true,
-      "yahoo_mapping_status": "resolved_existing"
-    },
-    {
-      "id": "1PAS.MI",
-      "ticker": "1PAS",
-      "yahoo": "1PAS.MI",
-      "name": "WisdomTree Palladium 1x Daily Short",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": false,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "2OIG.MI",
-      "ticker": "2OIG",
-      "yahoo": "2OIG.MI",
-      "name": "WisdomTree STOXX Europe Oil & Gas 2x Daily Short",
-      "leverage": 2,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3BRS.MI",
-      "ticker": "3BRS",
-      "yahoo": "3BRS.MI",
-      "name": "WisdomTree Brent Crude Oil 3x Daily Short",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3GOS.MI",
-      "ticker": "3GOS",
-      "yahoo": "3GOS.MI",
-      "name": "WisdomTree Gold 3x Daily Short",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3HCS.MI",
-      "ticker": "3HCS",
-      "yahoo": "3HCS.MI",
-      "name": "WisdomTree Copper 3x Daily Short",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "3SIS.MI",
-      "ticker": "3SIS",
-      "yahoo": "3SIS.MI",
-      "name": "WisdomTree Silver 3x Daily Short",
-      "leverage": 3,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": true,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SALL.MI",
-      "ticker": "SALL",
-      "yahoo": "SALL.MI",
-      "name": "WisdomTree Broad Commodities 1x Daily Short",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": false,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SBRT.MI",
-      "ticker": "SBRT",
-      "yahoo": "SBRT.MI",
-      "name": "WisdomTree Brent Crude Oil 1x Daily Short",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": false,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SBUL.MI",
-      "ticker": "SBUL",
-      "yahoo": "SBUL.MI",
-      "name": "WisdomTree Gold 1x Daily Short",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": false,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SCOP.MI",
-      "ticker": "SCOP",
-      "yahoo": "SCOP.MI",
-      "name": "WisdomTree Copper 1x Daily Short",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": false,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SCRU.MI",
-      "ticker": "SCRU.MI",
-      "yahoo": "SCRU.MI",
-      "name": "WisdomTree Crude Oil Short",
-      "leverage": 1,
-      "provider": null,
-      "currency": "EUR",
-      "commodity": true,
-      "leveraged": false,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "scannerv2_universe"
-      ]
-    },
-    {
-      "id": "SGOL.MI",
-      "ticker": "SGOL.MI",
-      "yahoo": "SGOL.MI",
-      "name": "WisdomTree Gold Short",
-      "leverage": 1,
-      "provider": null,
-      "currency": "EUR",
-      "commodity": true,
-      "leveraged": false,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "scannerv2_universe"
-      ]
-    },
-    {
-      "id": "SIMT.MI",
-      "ticker": "SIMT",
-      "yahoo": "SIMT.MI",
-      "name": "WisdomTree Industrial Metals 1x Daily Short",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": false,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SNGA.MI",
-      "ticker": "SNGA.MI",
-      "yahoo": "SNGA.MI",
-      "name": "SNGA",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": "EUR",
-      "commodity": true,
-      "leveraged": false,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "scannerv2_universe",
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SNIK.MI",
-      "ticker": "SNIK",
-      "yahoo": "SNIK.MI",
-      "name": "WisdomTree Nickel 1x Daily Short",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": false,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SOIL.MI",
-      "ticker": "SOIL",
-      "yahoo": "SOIL.MI",
-      "name": "WisdomTree WTI Crude Oil 1x Daily Short",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": null,
-      "commodity": true,
-      "leveraged": false,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "raptor_leva"
-      ]
-    },
-    {
-      "id": "SSIL.MI",
-      "ticker": "SSIL.MI",
-      "yahoo": "SSIL.MI",
-      "name": "WisdomTree Silver Short",
-      "leverage": 1,
-      "provider": "WisdomTree",
-      "currency": "EUR",
-      "commodity": true,
-      "leveraged": false,
-      "short": true,
-      "classification": "MATERIE_PRIME_SHORT",
-      "sources": [
-        "scannerv2_universe",
-        "raptor_leva"
-      ]
     }
   ]
 }
