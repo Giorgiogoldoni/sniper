@@ -82,8 +82,12 @@ def process_bar(state,ticker,category,date,row,atr_value,donchian,walking):
             elif p["walking_false_streak"]>=2:
                 state["pending_exits"][ticker]="WALKING_2_NEGATIVE_CLOSES"
     # A breakout at today's close can only enter at the next session open.
+    # Commodity Sniper requires the full Donchian20 + Walking confirmation.
+    # The separate LEVA_LONG branch retains its own exit horizon and is not
+    # silently merged into the commodity strategy.
     if ticker not in state["positions"] and ticker not in state["pending_entries"] and ticker not in state["pending_exits"]:
-        if bool(donchian) and math.isfinite(atr_value) and atr_value>0:
+        walking_entry_ok = category != "MATERIE_PRIME_LEVA" or bool(walking)
+        if bool(donchian) and walking_entry_ok and math.isfinite(atr_value) and atr_value>0:
             state["pending_entries"][ticker]={"signal_date":date,"atr":float(atr_value)}
 
 def self_test():
@@ -96,6 +100,12 @@ def self_test():
     assert s["positions"]["TEST"]["holding_sessions"]==2
     process_bar(s,"TEST","LEVA_LONG","2026-01-07",type("R",(),{"Open":103,"High":105,"Low":102,"Close":104})(),2,False,True)
     assert len(s["trades"])==1 and s["trades"][0]["exit_reason"]=="TIME_3_SESSIONS"
+    # Commodity entry must be rejected when Donchian breaks but Walking is false.
+    s=blank_state()
+    process_bar(s,"COM","MATERIE_PRIME_LEVA","2026-01-02",type("R",(),{"Open":50,"High":51,"Low":49,"Close":50})(),1,True,False)
+    assert "COM" not in s["pending_entries"]
+    process_bar(s,"COM","MATERIE_PRIME_LEVA","2026-01-05",type("R",(),{"Open":50,"High":51,"Low":49,"Close":50})(),1,True,True)
+    assert "COM" in s["pending_entries"]
     s=blank_state()
     process_bar(s,"COM","MATERIE_PRIME_LEVA","2026-01-02",type("R",(),{"Open":50,"High":51,"Low":49,"Close":50})(),1,True,True)
     process_bar(s,"COM","MATERIE_PRIME_LEVA","2026-01-05",type("R",(),{"Open":50,"High":51,"Low":49,"Close":50})(),1,False,False)
@@ -118,7 +128,7 @@ def self_test():
     process_bar(s,"CAP","MATERIE_PRIME_LEVA","2026-01-15",type("R",(),{"Open":50,"High":51,"Low":49,"Close":48})(),1,False,False)
     assert len(s["trades"])==1 and s["trades"][0]["holding_sessions"]==10
     assert s["trades"][0]["exit_reason"]=="WALKING_2_NEGATIVE_CLOSES" and "CAP" not in s["positions"]
-    print("SELF_TEST_OK: next-open entry, 3-session time exit, Walking next-open exit, ATR stop, commodity hard cap session 10")
+    print("SELF_TEST_OK: Donchian20 + Walking commodity entry, next-open entry, 3-session LEVA_LONG exit, Walking next-open exit, ATR14 x2 stop, commodity hard cap session 10")
     
 def get_frame(raw,ticker):
     try:
@@ -225,7 +235,7 @@ def main():
         "stop":"Initial stop at entry minus 2 x ATR(14) from signal close; daily low checked; adverse gap exits at open",
         "LEVA_LONG":"Exit at close of third holding session",
         "MATERIE_PRIME_LEVA":"Exit next open after two consecutive completed closes with Walking upper Bollinger Band false; hard cap at close of session 10 (never held into session 11)",
-        "walking":"Not an entry filter","position_limit":"One open position per ticker; no overlapping entries",
+        "walking":"Commodity entries require Walking true on the same completed close (at least 2 of last 3 qualifying Bollinger sessions); exits after 2 consecutive false closes at next open","position_limit":"One open position per ticker; no overlapping entries",
         "activation":"First run establishes a baseline on the latest available daily candle; it does not backfill or fabricate historical trades."}}
     if args.backfill_from:
         summary["simulation_window_start"]=start_date
