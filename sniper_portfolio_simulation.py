@@ -34,7 +34,7 @@ def simulate(frames,n,start):
     dates=sorted(set(d for df in frames.values() for d in df.index if str(pd.Timestamp(d).date())>=start))
     if not dates:raise RuntimeError("Nessuna data disponibile")
     slot=CAPITAL/n; cash=CAPITAL; pos={}; queued={}; pending_exit=set()
-    trades=[]; curve=[]; rejected=0; max_open=0
+    trades=[]; curve=[]; rejected=0; max_open=0; last_close={}
     date_set={str(pd.Timestamp(x).date()) for x in dates}
     for dt in dates:
         day=str(pd.Timestamp(dt).date())
@@ -42,7 +42,9 @@ def simulate(frames,n,start):
             if t in pos and dt in frames[t].index:
                 p=pos.pop(t); px=float(frames[t].loc[dt].Open); cash+=p["qty"]*px
                 trades.append({"ticker":t,"entry_date":p["entry_date"],"exit_date":day,"entry_price":p["entry"],"exit_price":px,"return_pct":(px/p["entry"]-1)*100,"reason":"WALKING_2_FALSE"})
-            pending_exit.discard(t)
+                pending_exit.discard(t)
+            elif t not in pos:
+                pending_exit.discard(t)
         candidates=queued.pop(day,[])
         candidates.sort(key=lambda x:(-x["strength"],x["ticker"]))
         for c in candidates:
@@ -65,7 +67,12 @@ def simulate(frames,n,start):
                 trades.append({"ticker":t,"entry_date":p["entry_date"],"exit_date":day,"entry_price":p["entry"],"exit_price":px,"return_pct":(px/p["entry"]-1)*100,"reason":"TIME_MAX_10"})
                 del pos[t];pending_exit.discard(t)
             elif p["false"]>=2:pending_exit.add(t)
-        mv=sum(p["qty"]*float(frames[t].loc[dt].Close) for t,p in pos.items() if dt in frames[t].index)
+        # Carry forward last observable close when an instrument has no bar
+        # on a union-calendar date; never mark an open position at zero value.
+        for t,df in frames.items():
+            if dt in df.index:
+                last_close[t]=float(df.loc[dt].Close)
+        mv=sum(p["qty"]*last_close.get(t,p["entry"]) for t,p in pos.items())
         curve.append({"date":day,"cash":cash,"market_value":mv,"equity":cash+mv,"open_positions":len(pos)})
         max_open=max(max_open,len(pos))
         for t,df in frames.items():
@@ -119,7 +126,8 @@ def main():
     out={"strategy":"Donchian20 + Walking; ATR14 x2; Walking exit after 2 false closes at next open; max 10 sessions",
       "assumptions":{"capital_eur":CAPITAL,"sizing":"fixed initial capital / slots, equal notional, no leverage, no compounding slot size",
       "entry_priority":"breakout distance above previous 20-session high descending; ticker alphabetical tie-break",
-      "mark_to_market":"daily close; stops checked on daily low with adverse gap fill at open","costs":"excluded",
+      "mark_to_market":"daily close; last close carried forward on missing instrument sessions; stops checked on daily low with adverse gap fill at open","costs":"excluded",
+      "calendar_handling":"union of instrument sessions; missing ticker bars carry forward last close for valuation and defer scheduled next-open exits until that ticker next trades",
       "open_positions":"valued at final close","fractional_units":True,"production_changes":False,
       "data_source":"Yahoo Finance daily OHLC","universe_count":len(tickers),"tickers_with_data":len(frames),"failed_data":failed},
       "results":results}
