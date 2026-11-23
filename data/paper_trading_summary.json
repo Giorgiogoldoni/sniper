@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T00:21:26.280291+00:00",
+  "generated_at": "2026-11-23T05:11:34.337114+00:00",
   "mode": "PAPER_ONLY_NO_ORDERS",
   "universe": {
     "total_selected": 99,
@@ -31,6 +31,10 @@
   "skipped_latest": [
     {
       "ticker": "2BUL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "2GOL.MI",
       "reason": "dati assenti o meno di 60 sedute"
     },
     {
@@ -75,10 +79,6 @@
     },
     {
       "ticker": "TECL.MI",
-      "reason": "dati assenti o meno di 60 sedute"
-    },
-    {
-      "ticker": "2GOL.MI",
       "reason": "dati assenti o meno di 60 sedute"
     }
   ],
