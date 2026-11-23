@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'paper_trading_short.py'
+      - 'data/instrument_universe.json'
       - '.github/workflows/update.yml'
   schedule:
     - cron: '0 8 * * 1-5'
