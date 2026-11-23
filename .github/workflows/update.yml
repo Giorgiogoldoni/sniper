@@ -27,7 +27,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install dependencies
-        run: pip install yfinance numpy --break-system-packages -q
+        run: pip install yfinance numpy scipy scikit-learn --break-system-packages -q
       - name: Run Sniper
         run: python sniper.py
       - name: Run independent SHORT PAPER engine
