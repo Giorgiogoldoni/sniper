@@ -19,15 +19,16 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Installa dipendenze
-        run: pip install requests
-
-      - name: Scarica script e dati
+      - name: Scarica script e dati aggiornati
         run: |
           curl -fsSL https://raw.githubusercontent.com/Giorgiogoldoni/sniper/main/sniper_email.py -o sniper_email.py
           curl -fsSL https://raw.githubusercontent.com/Giorgiogoldoni/sniper/main/signals.json -o signals.json
+          mkdir -p data
+          curl -fsSL https://raw.githubusercontent.com/Giorgiogoldoni/sniper/main/data/paper_trading_state.json -o data/paper_trading_state.json
+          curl -fsSL https://raw.githubusercontent.com/Giorgiogoldoni/sniper/main/data/paper_trading_summary.json -o data/paper_trading_summary.json
+          curl -fsSL https://raw.githubusercontent.com/Giorgiogoldoni/sniper/main/data/instrument_universe.json -o data/instrument_universe.json
 
-      - name: Esegui Rassegna Mattutina
+      - name: Invia bollettino operativo
         env:
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
