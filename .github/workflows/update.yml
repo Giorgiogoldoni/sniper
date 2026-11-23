@@ -1,6 +1,12 @@
 name: Sniper Update
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'paper_trading_short.py'
+      - '.github/workflows/update.yml'
   schedule:
     - cron: '0 8 * * 1-5'
     - cron: '0 10 * * 1-5'
