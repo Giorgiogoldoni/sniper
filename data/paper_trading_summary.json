@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T20:47:52.156135+00:00",
+  "generated_at": "2026-11-23T00:21:26.280291+00:00",
   "mode": "PAPER_ONLY_NO_ORDERS",
   "universe": {
     "total_selected": 99,
@@ -87,7 +87,7 @@
     "stop": "Initial stop at entry minus 2 x ATR(14) from signal close; daily low checked; adverse gap exits at open",
     "LEVA_LONG": "Exit at close of third holding session",
     "MATERIE_PRIME_LEVA": "Exit next open after two consecutive completed closes with Walking upper Bollinger Band false; hard cap at close of session 10 (never held into session 11)",
-    "walking": "Not an entry filter",
+    "walking": "Commodity entries require Walking true on the same completed close (at least 2 of last 3 qualifying Bollinger sessions); exits after 2 consecutive false closes at next open",
     "position_limit": "One open position per ticker; no overlapping entries",
     "activation": "First run establishes a baseline on the latest available daily candle; it does not backfill or fabricate historical trades."
   }
