@@ -12,7 +12,7 @@ jobs:
   sniper:
     name: Sniper Update
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     permissions:
       contents: write
     steps:
@@ -30,4 +30,12 @@ jobs:
           git config user.email "raptor-bot@users.noreply.github.com"
           git add signals.json signals_latest.json
           git diff --staged --quiet || git commit -m "sniper: update $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          git pull --rebase origin main
           git push
+      - name: Send end-of-day operational email
+        if: (github.event_name == 'schedule' && github.event.schedule == '30 16 * * 1-5') || github.event_name == 'workflow_dispatch'
+        env:
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          FRESH_HOURS: '48'
+        run: python sniper_email.py
