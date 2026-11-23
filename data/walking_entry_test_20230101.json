@@ -1,6 +1,6 @@
 {
   "window_start": "2023-01-01",
-  "window_end": "2026-11-22",
+  "window_end": "2026-11-23",
   "universe_count": 26,
   "tickers_with_data": 25,
   "failed_data": [
@@ -39,9 +39,9 @@
       "trades": 457,
       "wins": 204,
       "win_rate_pct": 44.64,
-      "gross_mean_pct": 1.058,
-      "gross_profit_factor": 1.288,
-      "gross_median_pct": -1.04,
+      "gross_mean_pct": 1.071,
+      "gross_profit_factor": 1.293,
+      "gross_median_pct": -1.002,
       "worst_trade_pct": -25.17,
       "open_or_pending_tickers": [
         {
@@ -54,9 +54,9 @@
       "trades": 468,
       "wins": 210,
       "win_rate_pct": 44.87,
-      "gross_mean_pct": 1.066,
-      "gross_profit_factor": 1.297,
-      "gross_median_pct": -0.955,
+      "gross_mean_pct": 1.078,
+      "gross_profit_factor": 1.302,
+      "gross_median_pct": -0.924,
       "worst_trade_pct": -25.17,
       "open_or_pending_tickers": [
         {
@@ -3350,10 +3350,10 @@
       "entry_date": "2026-09-03",
       "entry_price": 5.099999904632568,
       "exit_date": "2026-09-03",
-      "exit_price": 4.362102933565236,
+      "exit_price": 4.361941827924188,
       "holding_sessions": 1,
       "exit_reason": "ATR_2_STOP",
-      "gross_return_pct": -14.468568330698716
+      "gross_return_pct": -14.471727264895984
     },
     {
       "variant": "A_DONCHIAN20",
@@ -11821,11 +11821,11 @@
       "signal_date": "2026-07-07",
       "entry_date": "2026-07-08",
       "entry_price": 7.059999942779541,
-      "exit_date": "2026-07-21",
-      "exit_price": 7.495999813079834,
-      "holding_sessions": 9,
+      "exit_date": "2026-07-20",
+      "exit_price": 7.38100004196167,
+      "holding_sessions": 8,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 6.175635606714169
+      "gross_return_pct": 4.546743651328566
     },
     {
       "variant": "B_DONCHIAN20_WALKING",
@@ -13646,10 +13646,10 @@
       "entry_date": "2026-07-24",
       "entry_price": 0.9254999756813049,
       "exit_date": "2026-07-27",
-      "exit_price": 0.8680263335598641,
+      "exit_price": 0.8677736471861713,
       "holding_sessions": 2,
       "exit_reason": "ATR_2_STOP",
-      "gross_return_pct": -6.210010116870257
+      "gross_return_pct": -6.237312805182782
     },
     {
       "variant": "B_DONCHIAN20_WALKING",
@@ -15013,11 +15013,11 @@
       "signal_date": "2026-08-27",
       "entry_date": "2026-08-28",
       "entry_price": 4.048500061035156,
-      "exit_date": "2026-09-07",
-      "exit_price": 3.7025240868412093,
+      "exit_date": "2026-09-08",
+      "exit_price": 4.010499954223633,
       "holding_sessions": 7,
-      "exit_reason": "ATR_2_STOP",
-      "gross_return_pct": -8.545781622280247
+      "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
+      "gross_return_pct": -0.938621865842515
     },
     {
       "variant": "C_DONCHIAN10_WALKING",
@@ -17365,11 +17365,11 @@
       "signal_date": "2026-07-07",
       "entry_date": "2026-07-08",
       "entry_price": 7.059999942779541,
-      "exit_date": "2026-07-21",
-      "exit_price": 7.495999813079834,
-      "holding_sessions": 9,
+      "exit_date": "2026-07-20",
+      "exit_price": 7.38100004196167,
+      "holding_sessions": 8,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
-      "gross_return_pct": 6.175635606714169
+      "gross_return_pct": 4.546743651328566
     },
     {
       "variant": "C_DONCHIAN10_WALKING",
@@ -19262,10 +19262,10 @@
       "entry_date": "2026-07-24",
       "entry_price": 0.9254999756813049,
       "exit_date": "2026-07-27",
-      "exit_price": 0.8680263335598641,
+      "exit_price": 0.8677736471861713,
       "holding_sessions": 2,
       "exit_reason": "ATR_2_STOP",
-      "gross_return_pct": -6.210010116870257
+      "gross_return_pct": -6.237312805182782
     },
     {
       "variant": "C_DONCHIAN10_WALKING",
@@ -20629,11 +20629,11 @@
       "signal_date": "2026-08-27",
       "entry_date": "2026-08-28",
       "entry_price": 4.048500061035156,
-      "exit_date": "2026-09-07",
-      "exit_price": 3.7025240868412093,
+      "exit_date": "2026-09-08",
+      "exit_price": 4.010499954223633,
       "holding_sessions": 7,
-      "exit_reason": "ATR_2_STOP",
-      "gross_return_pct": -8.545781622280247
+      "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
+      "gross_return_pct": -0.938621865842515
     }
   ]
 }
