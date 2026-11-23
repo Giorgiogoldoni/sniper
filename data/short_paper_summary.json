@@ -1,7 +1,7 @@
 {
-  "mode": "NOT_RUN_YET",
+  "generated_at": "2026-11-23T01:20:19.515331+00:00",
+  "mode": "PAPER_ONLY_NO_ORDERS",
   "engine": "SNIPER_SHORT_INVERSE_ETP",
-  "generated_at": null,
   "universe": {
     "total_selected": 103,
     "categories": {
@@ -14,6 +14,145 @@
   "pending_entries": 0,
   "pending_exits": 0,
   "closed_trades": 0,
-  "skipped_count": 0,
-  "notes": "Initial placeholder; the first scheduled/manual Sniper Update run will populate this summary."
+  "open_positions_detail": [],
+  "pending_entries_detail": {},
+  "pending_exits_detail": {},
+  "closed_trades_latest": [],
+  "skipped_count": 103,
+  "skipped_latest": [
+    {
+      "ticker": "SOXS.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "SQQQ.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "SUK1.L",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "TSLQ.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "UL3S.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "USE3.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "USE5.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "USEU.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "VIXL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "XBJF.DE",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "XSDX.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "XSND.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "XSPS.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "1PAS.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "2OIG.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3BRS.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3GOS.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3HCS.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "3SIS.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "SALL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "SBRT.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "SBUL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "SCOP.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "SCRU.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "SGOL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "SIMT.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "SNGA.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "SNIK.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "SOIL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    },
+    {
+      "ticker": "SSIL.MI",
+      "reason": "dati assenti o meno di 60 sedute"
+    }
+  ],
+  "cost_sensitivity_bps_round_trip": [
+    20,
+    30,
+    50
+  ],
+  "spread_data": "Bid/ask non disponibile da Yahoo OHLC; costi sono sensitività, non spread osservati.",
+  "price_basis": "Yahoo OHLC auto_adjust=False, actions=True, repair=True; prezzi storici split-adjusted, non necessariamente prezzi nominali originali as-traded.",
+  "rules": {
+    "instrument": "Buy-and-hold PAPER on inverse/short ETPs; this is not broker short-selling.",
+    "entry": "Donchian20 breakout on the inverse ETP plus Walking true at completed close; enter next session open.",
+    "stop": "Initial stop at entry minus 2 x ATR14 measured at signal close; daily low checked; adverse gap exits at open.",
+    "exit": "After two consecutive completed closes with Walking false, exit next open; hard cap at close of session 10.",
+    "activation": "First live run establishes a baseline on latest daily candle; no historical trades fabricated."
+  }
 }
