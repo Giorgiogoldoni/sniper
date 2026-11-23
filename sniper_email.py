@@ -112,8 +112,8 @@ def build_email_html(buys, state, summary, universe, hours, now):
             th, rows.replace("<td>", '<td style="padding:7px;border-bottom:1px solid #e5e7eb">'))
 
     sections = [
-        ("🟢 ACQUISTA ORA — ingressi PAPER alla prossima apertura", table(["Ticker","Strumento","Segnale","ATR14",""], entries_html)),
-        ("🔴 VENDI ORA — uscite PAPER alla prossima apertura", table(["Ticker","Strumento","Motivo uscita","Entrata"], exits_html)),
+        ("🟢 ACQUISTA ORA — ingresso PAPER simulato alla prossima apertura", table(["Ticker","Strumento","Data segnale","ATR14"], entries_html)),
+        ("🔴 VENDI ORA — uscita PAPER simulata alla prossima apertura", table(["Ticker","Strumento","Motivo uscita","Data entrata"], exits_html)),
         ("📌 POSIZIONI PAPER APERTE — controllo stop", table(["Ticker","Strumento","Data entrata","Prezzo entrata","Stop ATR","Sedute"], positions_html)),
         ("🔎 BUY DELLA DASHBOARD — segnali da valutare, non ordini", table(["Ticker","Strumento","Score","Prezzo rilevato","Fonti"], buys_html)),
         ("📚 Ultime operazioni PAPER chiuse", table(["Ticker","Strumento","Uscita","Rendimento lordo","Motivo"], trades_html)),
