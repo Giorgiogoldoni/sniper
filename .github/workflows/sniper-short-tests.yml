@@ -25,6 +25,6 @@ jobs:
       - name: Install dependencies
         run: pip install yfinance numpy pandas --break-system-packages -q
       - name: Compile
-        run: python -m py_compile paper_trading_short.py
+        run: python -m py_compile paper_trading_short.py sniper_email.py
       - name: Run deterministic self-tests
         run: python paper_trading_short.py --self-test
