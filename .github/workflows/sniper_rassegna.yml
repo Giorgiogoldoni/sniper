@@ -26,6 +26,8 @@ jobs:
           mkdir -p data
           curl -fsSL https://raw.githubusercontent.com/Giorgiogoldoni/sniper/main/data/paper_trading_state.json -o data/paper_trading_state.json
           curl -fsSL https://raw.githubusercontent.com/Giorgiogoldoni/sniper/main/data/paper_trading_summary.json -o data/paper_trading_summary.json
+          curl -fsSL https://raw.githubusercontent.com/Giorgiogoldoni/sniper/main/data/short_paper_state.json -o data/short_paper_state.json
+          curl -fsSL https://raw.githubusercontent.com/Giorgiogoldoni/sniper/main/data/short_paper_summary.json -o data/short_paper_summary.json
           curl -fsSL https://raw.githubusercontent.com/Giorgiogoldoni/sniper/main/data/instrument_universe.json -o data/instrument_universe.json
 
       - name: Invia bollettino operativo

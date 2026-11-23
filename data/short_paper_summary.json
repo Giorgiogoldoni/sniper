@@ -1,0 +1,19 @@
+{
+  "mode": "NOT_RUN_YET",
+  "engine": "SNIPER_SHORT_INVERSE_ETP",
+  "generated_at": null,
+  "universe": {
+    "total_selected": 103,
+    "categories": {
+      "LEVA_SHORT": 86,
+      "MATERIE_PRIME_SHORT": 17
+    }
+  },
+  "processed_bars": 0,
+  "open_positions": 0,
+  "pending_entries": 0,
+  "pending_exits": 0,
+  "closed_trades": 0,
+  "skipped_count": 0,
+  "notes": "Initial placeholder; the first scheduled/manual Sniper Update run will populate this summary."
+}
