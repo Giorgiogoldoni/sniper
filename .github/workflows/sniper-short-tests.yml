@@ -1,0 +1,30 @@
+name: Sniper SHORT paper tests
+
+on:
+  push:
+    branches:
+      - feature/sniper-short-paper
+      - main
+    paths:
+      - 'paper_trading_short.py'
+      - '.github/workflows/sniper-short-tests.yml'
+  pull_request:
+    paths:
+      - 'paper_trading_short.py'
+      - '.github/workflows/sniper-short-tests.yml'
+  workflow_dispatch:
+
+jobs:
+  short-paper-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install yfinance numpy pandas --break-system-packages -q
+      - name: Compile
+        run: python -m py_compile paper_trading_short.py
+      - name: Run deterministic self-tests
+        run: python paper_trading_short.py --self-test
