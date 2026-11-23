@@ -1,1 +1,10 @@
 ticker,category,signal_date,entry_date,entry_price,exit_date,exit_price,holding_sessions,exit_reason,gross_return_pct,net_return_pct_by_cost_bps,spread_observed,spread_note
+3EMS.MI,LEVA_SHORT,2026-11-20,2026-11-23,1.08700001,2026-11-23,0.97501438,1,ATR_2_STOP,-10.3023,"{""20"": -10.5023, ""30"": -10.6023, ""50"": -10.8023}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
+3HCS.MI,MATERIE_PRIME_SHORT,2026-11-20,2026-11-23,20.55999947,2026-11-23,18.72556986,1,ATR_2_STOP,-8.9223,"{""20"": -9.1223, ""30"": -9.2223, ""50"": -9.4223}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
+3SMI.MI,LEVA_SHORT,2026-11-20,2026-11-23,5.1960001,2026-11-23,4.04035405,1,ATR_2_STOP,-22.2411,"{""20"": -22.4411, ""30"": -22.5411, ""50"": -22.7411}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
+3SNV.MI,LEVA_SHORT,2026-11-20,2026-11-23,0.72369999,2026-11-23,0.58576026,1,ATR_2_STOP,-19.0603,"{""20"": -19.2603, ""30"": -19.3603, ""50"": -19.5603}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
+3USS.MI,LEVA_SHORT,2026-11-20,2026-11-23,7.69799995,2026-11-23,7.0693458,1,ATR_2_STOP,-8.1665,"{""20"": -8.3665, ""30"": -8.4665, ""50"": -8.6665}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
+5USS.MI,LEVA_SHORT,2026-11-20,2026-11-23,1.83759999,2026-11-23,1.64293851,1,ATR_2_STOP,-10.5932,"{""20"": -10.7932, ""30"": -10.8932, ""50"": -11.0932}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
+SMST.MI,LEVA_SHORT,2026-11-20,2026-11-23,2.22199988,2026-11-23,1.72173095,1,ATR_2_STOP,-22.5144,"{""20"": -22.7144, ""30"": -22.8144, ""50"": -23.0144}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
+SNV3.MI,LEVA_SHORT,2026-11-20,2026-11-23,2.93950009,2026-11-23,2.36745096,1,ATR_2_STOP,-19.4608,"{""20"": -19.6608, ""30"": -19.7608, ""50"": -19.9608}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
+VIXL.MI,LEVA_SHORT,2026-11-20,2026-11-23,1.01499999,2026-11-23,0.79872901,1,ATR_2_STOP,-21.3075,"{""20"": -21.5075, ""30"": -21.6075, ""50"": -21.8075}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
