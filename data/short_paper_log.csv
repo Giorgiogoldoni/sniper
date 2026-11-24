@@ -8,3 +8,4 @@ ticker,category,signal_date,entry_date,entry_price,exit_date,exit_price,holding_
 SMST.MI,LEVA_SHORT,2026-11-20,2026-11-23,2.22199988,2026-11-23,1.72173095,1,ATR_2_STOP,-22.5144,"{""20"": -22.7144, ""30"": -22.8144, ""50"": -23.0144}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 SNV3.MI,LEVA_SHORT,2026-11-20,2026-11-23,2.93950009,2026-11-23,2.36745096,1,ATR_2_STOP,-19.4608,"{""20"": -19.6608, ""30"": -19.7608, ""50"": -19.9608}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 VIXL.MI,LEVA_SHORT,2026-11-20,2026-11-23,1.01499999,2026-11-23,0.79872901,1,ATR_2_STOP,-21.3075,"{""20"": -21.5075, ""30"": -21.6075, ""50"": -21.8075}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
+3M7S.MI,LEVA_SHORT,2026-11-20,2026-11-23,10.65400028,2026-11-24,9.32699966,2,ATR_2_STOP,-12.4554,"{""20"": -12.6554, ""30"": -12.7554, ""50"": -12.9554}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
