@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T05:11:34.337114+00:00",
+  "generated_at": "2026-11-24T07:09:03.859448+00:00",
   "mode": "PAPER_ONLY_NO_ORDERS",
   "universe": {
     "total_selected": 99,
@@ -8,17 +8,24 @@
       "MATERIE_PRIME_LEVA": 26
     }
   },
-  "processed_bars": 0,
-  "open_positions": 0,
-  "pending_entries": 1,
+  "processed_bars": 79,
+  "open_positions": 1,
+  "pending_entries": 0,
   "closed_trades": 0,
-  "open_positions_detail": [],
-  "pending_entries_detail": {
-    "3TYL.MI": {
+  "open_positions_detail": [
+    {
+      "ticker": "3TYL.MI",
+      "category": "LEVA_LONG",
       "signal_date": "2026-11-20",
-      "atr": 0.6599067943033246
+      "entry_date": "2026-11-23",
+      "entry_price": 62.310001373291016,
+      "initial_atr": 0.6599067943033246,
+      "stop_price": 60.990187784684366,
+      "holding_sessions": 1,
+      "walking_false_streak": 0
     }
-  },
+  ],
+  "pending_entries_detail": {},
   "closed_trades_latest": [],
   "cost_sensitivity_bps_round_trip": [
     20,
