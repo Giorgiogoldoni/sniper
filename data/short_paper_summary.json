@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T18:32:58.952956+00:00",
+  "generated_at": "2026-11-25T19:52:47.593074+00:00",
   "mode": "PAPER_ONLY_NO_ORDERS",
   "engine": "SNIPER_SHORT_INVERSE_ETP",
   "universe": {
@@ -9,7 +9,7 @@
       "MATERIE_PRIME_SHORT": 18
     }
   },
-  "processed_bars": 90,
+  "processed_bars": 0,
   "open_positions": 19,
   "pending_entries": 6,
   "pending_exits": 3,
