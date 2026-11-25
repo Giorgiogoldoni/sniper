@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T00:58:46.045610+00:00",
+  "generated_at": "2026-11-25T18:32:58.952956+00:00",
   "mode": "PAPER_ONLY_NO_ORDERS",
   "engine": "SNIPER_SHORT_INVERSE_ETP",
   "universe": {
@@ -9,11 +9,11 @@
       "MATERIE_PRIME_SHORT": 18
     }
   },
-  "processed_bars": 0,
-  "open_positions": 18,
-  "pending_entries": 3,
-  "pending_exits": 1,
-  "closed_trades": 10,
+  "processed_bars": 90,
+  "open_positions": 19,
+  "pending_entries": 6,
+  "pending_exits": 3,
+  "closed_trades": 11,
   "open_positions_detail": [
     {
       "ticker": "1MCS.L",
@@ -23,7 +23,7 @@
       "entry_price": 3207.0,
       "initial_atr": 28.444075317060545,
       "stop_price": 3150.1118493658787,
-      "holding_sessions": 2,
+      "holding_sessions": 3,
       "walking_false_streak": 0
     },
     {
@@ -34,7 +34,7 @@
       "entry_price": 11.378000259399414,
       "initial_atr": 0.28256784134903107,
       "stop_price": 10.812864576701353,
-      "holding_sessions": 2,
+      "holding_sessions": 3,
       "walking_false_streak": 0
     },
     {
@@ -45,8 +45,8 @@
       "entry_price": 991.5989990234376,
       "initial_atr": 17.602012365884512,
       "stop_price": 956.3949742916686,
-      "holding_sessions": 2,
-      "walking_false_streak": 1
+      "holding_sessions": 3,
+      "walking_false_streak": 2
     },
     {
       "ticker": "3GOS.MI",
@@ -56,7 +56,7 @@
       "entry_price": 2.1575000286102295,
       "initial_atr": 0.1049386060107168,
       "stop_price": 1.9476228165887959,
-      "holding_sessions": 2,
+      "holding_sessions": 3,
       "walking_false_streak": 0
     },
     {
@@ -67,7 +67,7 @@
       "entry_price": 52.04999923706055,
       "initial_atr": 3.7881753020043654,
       "stop_price": 44.473648633051816,
-      "holding_sessions": 2,
+      "holding_sessions": 3,
       "walking_false_streak": 0
     },
     {
@@ -78,8 +78,8 @@
       "entry_price": 3.2044999599456787,
       "initial_atr": 0.22736875123902614,
       "stop_price": 2.7497624574676265,
-      "holding_sessions": 2,
-      "walking_false_streak": 0
+      "holding_sessions": 3,
+      "walking_false_streak": 1
     },
     {
       "ticker": "3UKS.L",
@@ -89,8 +89,8 @@
       "entry_price": 113.00000000000001,
       "initial_atr": 3.460690387191302,
       "stop_price": 106.07861922561742,
-      "holding_sessions": 2,
-      "walking_false_streak": 1
+      "holding_sessions": 3,
+      "walking_false_streak": 2
     },
     {
       "ticker": "EUJP.MI",
@@ -100,19 +100,8 @@
       "entry_price": 27.774999618530273,
       "initial_atr": 0.10755238090908201,
       "stop_price": 27.55989485671211,
-      "holding_sessions": 2,
+      "holding_sessions": 3,
       "walking_false_streak": 0
-    },
-    {
-      "ticker": "MAGS.MI",
-      "category": "LEVA_SHORT",
-      "signal_date": "2026-11-20",
-      "entry_date": "2026-11-23",
-      "entry_price": 1.2882000207901,
-      "initial_atr": 0.06579461401015098,
-      "stop_price": 1.1566107927697982,
-      "holding_sessions": 2,
-      "walking_false_streak": 2
     },
     {
       "ticker": "SBUL.MI",
@@ -122,7 +111,7 @@
       "entry_price": 8.644000053405762,
       "initial_atr": 0.16776483626376018,
       "stop_price": 8.30847038087824,
-      "holding_sessions": 2,
+      "holding_sessions": 3,
       "walking_false_streak": 0
     },
     {
@@ -133,7 +122,7 @@
       "entry_price": 10.84000015258789,
       "initial_atr": 0.15973562155495988,
       "stop_price": 10.52052890947797,
-      "holding_sessions": 2,
+      "holding_sessions": 3,
       "walking_false_streak": 0
     },
     {
@@ -144,7 +133,7 @@
       "entry_price": 2.7320001125335693,
       "initial_atr": 0.08207287772545582,
       "stop_price": 2.5678543570826577,
-      "holding_sessions": 2,
+      "holding_sessions": 3,
       "walking_false_streak": 0
     },
     {
@@ -155,7 +144,7 @@
       "entry_price": 3880.0000000000005,
       "initial_atr": 34.24620102824782,
       "stop_price": 3811.5075979435046,
-      "holding_sessions": 2,
+      "holding_sessions": 3,
       "walking_false_streak": 0
     },
     {
@@ -166,7 +155,7 @@
       "entry_price": 5.5320000648498535,
       "initial_atr": 0.08397504725983324,
       "stop_price": 5.364049970330187,
-      "holding_sessions": 2,
+      "holding_sessions": 3,
       "walking_false_streak": 0
     },
     {
@@ -188,7 +177,7 @@
       "entry_price": 4.9704999923706055,
       "initial_atr": 0.0759059653881596,
       "stop_price": 4.818688061594286,
-      "holding_sessions": 1,
+      "holding_sessions": 2,
       "walking_false_streak": 0
     },
     {
@@ -199,8 +188,8 @@
       "entry_price": 104.0,
       "initial_atr": 1.0733703042549008,
       "stop_price": 101.8532593914902,
-      "holding_sessions": 1,
-      "walking_false_streak": 0
+      "holding_sessions": 2,
+      "walking_false_streak": 1
     },
     {
       "ticker": "EUS5.MI",
@@ -210,26 +199,62 @@
       "entry_price": 117.80000305175781,
       "initial_atr": 2.4416257763528946,
       "stop_price": 112.91675149905203,
+      "holding_sessions": 2,
+      "walking_false_streak": 2
+    },
+    {
+      "ticker": "3HCS.MI",
+      "category": "MATERIE_PRIME_SHORT",
+      "signal_date": "2026-11-24",
+      "entry_date": "2026-11-25",
+      "entry_price": 22.600000381469727,
+      "initial_atr": 1.2665116033701036,
+      "stop_price": 20.06697717472952,
       "holding_sessions": 1,
-      "walking_false_streak": 1
+      "walking_false_streak": 0
+    },
+    {
+      "ticker": "XBJF.DE",
+      "category": "LEVA_SHORT",
+      "signal_date": "2026-11-23",
+      "entry_date": "2026-11-24",
+      "entry_price": 35.652000427246094,
+      "initial_atr": 0.15473232674729118,
+      "stop_price": 35.342535773751514,
+      "holding_sessions": 1,
+      "walking_false_streak": 0
     }
   ],
   "pending_entries_detail": {
-    "3HCS.MI": {
-      "signal_date": "2026-11-24",
-      "atr": 1.2665116033701036
-    },
     "SALL.MI": {
       "signal_date": "2026-11-24",
       "atr": 0.289862969788383
     },
-    "XBJF.DE": {
-      "signal_date": "2026-11-23",
-      "atr": 0.15473232674729118
+    "3DES.MI": {
+      "signal_date": "2026-11-25",
+      "atr": 0.7119694156712644
+    },
+    "ECH3.MI": {
+      "signal_date": "2026-11-25",
+      "atr": 0.3539274561875899
+    },
+    "SIMT.MI": {
+      "signal_date": "2026-11-25",
+      "atr": 0.25293683071931994
+    },
+    "VIXL.MI": {
+      "signal_date": "2026-11-25",
+      "atr": 0.1355226852286314
+    },
+    "XSDX.MI": {
+      "signal_date": "2026-11-25",
+      "atr": 0.1251033001318502
     }
   },
   "pending_exits_detail": {
-    "MAGS.MI": "WALKING_2_NEGATIVE_CLOSES"
+    "2UKS.L": "WALKING_2_NEGATIVE_CLOSES",
+    "3UKS.L": "WALKING_2_NEGATIVE_CLOSES",
+    "EUS5.MI": "WALKING_2_NEGATIVE_CLOSES"
   },
   "closed_trades_latest": [
     {
@@ -418,6 +443,25 @@
         "20": -12.6554,
         "30": -12.7554,
         "50": -12.9554
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "MAGS.MI",
+      "category": "LEVA_SHORT",
+      "signal_date": "2026-11-20",
+      "entry_date": "2026-11-23",
+      "entry_price": 1.28820002,
+      "exit_date": "2026-11-25",
+      "exit_price": 1.3448,
+      "holding_sessions": 2,
+      "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
+      "gross_return_pct": 4.3937,
+      "net_return_pct_by_cost_bps": {
+        "20": 4.1937,
+        "30": 4.0937,
+        "50": 3.8937
       },
       "spread_observed": false,
       "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
