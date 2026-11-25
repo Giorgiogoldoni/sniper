@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T07:10:24.915628+00:00",
+  "generated_at": "2026-11-25T05:45:30.291291+00:00",
   "mode": "PAPER_ONLY_NO_ORDERS",
   "universe": {
     "total_selected": 99,
@@ -8,7 +8,7 @@
       "MATERIE_PRIME_LEVA": 26
     }
   },
-  "processed_bars": 3261,
+  "processed_bars": 3346,
   "open_positions": 2,
   "pending_entries": 0,
   "closed_trades": 79,
@@ -21,7 +21,7 @@
       "entry_price": 62.310001373291016,
       "initial_atr": 0.6599067943033246,
       "stop_price": 60.990187784684366,
-      "holding_sessions": 1,
+      "holding_sessions": 2,
       "walking_false_streak": 0
     },
     {
@@ -32,8 +32,8 @@
       "entry_price": 0.008899999782443047,
       "initial_atr": 0.0004467276992440444,
       "stop_price": 0.008006544383954957,
-      "holding_sessions": 2,
-      "walking_false_streak": 1
+      "holding_sessions": 3,
+      "walking_false_streak": 2
     }
   ],
   "pending_entries_detail": {},
