@@ -1,6 +1,6 @@
 {
   "window_start": "2026-10-01",
-  "window_end": "2026-11-25",
+  "window_end": "2026-11-26",
   "universe_count": 26,
   "tickers_with_data": 25,
   "failed_data": [
@@ -21,49 +21,34 @@
   },
   "variants": {
     "A_DONCHIAN20": {
-      "trades": 21,
+      "trades": 22,
       "wins": 15,
-      "win_rate_pct": 71.43,
-      "gross_mean_pct": 1.455,
-      "gross_profit_factor": 1.427,
-      "gross_median_pct": 1.528,
+      "win_rate_pct": 68.18,
+      "gross_mean_pct": 1.338,
+      "gross_profit_factor": 1.405,
+      "gross_median_pct": 1.474,
       "worst_trade_pct": -16.925,
-      "open_or_pending_tickers": [
-        {
-          "ticker": "LNGA.MI",
-          "reason": "posizione o ingresso ancora aperto a fine finestra"
-        }
-      ]
+      "open_or_pending_tickers": []
     },
     "B_DONCHIAN20_WALKING": {
-      "trades": 12,
+      "trades": 13,
       "wins": 9,
-      "win_rate_pct": 75.0,
-      "gross_mean_pct": 2.716,
-      "gross_profit_factor": 3.101,
-      "gross_median_pct": 2.467,
+      "win_rate_pct": 69.23,
+      "gross_mean_pct": 2.42,
+      "gross_profit_factor": 2.892,
+      "gross_median_pct": 1.42,
       "worst_trade_pct": -11.642,
-      "open_or_pending_tickers": [
-        {
-          "ticker": "LNGA.MI",
-          "reason": "posizione o ingresso ancora aperto a fine finestra"
-        }
-      ]
+      "open_or_pending_tickers": []
     },
     "C_DONCHIAN10_WALKING": {
-      "trades": 12,
+      "trades": 13,
       "wins": 9,
-      "win_rate_pct": 75.0,
-      "gross_mean_pct": 2.716,
-      "gross_profit_factor": 3.101,
-      "gross_median_pct": 2.467,
+      "win_rate_pct": 69.23,
+      "gross_mean_pct": 2.42,
+      "gross_profit_factor": 2.892,
+      "gross_median_pct": 1.42,
       "worst_trade_pct": -11.642,
-      "open_or_pending_tickers": [
-        {
-          "ticker": "LNGA.MI",
-          "reason": "posizione o ingresso ancora aperto a fine finestra"
-        }
-      ]
+      "open_or_pending_tickers": []
     }
   },
   "trades": [
@@ -249,6 +234,18 @@
     },
     {
       "variant": "A_DONCHIAN20",
+      "ticker": "LNGA.MI",
+      "signal_date": "2026-11-19",
+      "entry_date": "2026-11-20",
+      "entry_price": 0.008899999782443047,
+      "exit_date": "2026-11-25",
+      "exit_price": 0.008799999952316284,
+      "holding_sessions": 3,
+      "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
+      "gross_return_pct": -1.1235936243957134
+    },
+    {
+      "variant": "A_DONCHIAN20",
       "ticker": "LNIK.MI",
       "signal_date": "2026-11-05",
       "entry_date": "2026-11-06",
@@ -417,6 +414,18 @@
     },
     {
       "variant": "B_DONCHIAN20_WALKING",
+      "ticker": "LNGA.MI",
+      "signal_date": "2026-11-19",
+      "entry_date": "2026-11-20",
+      "entry_price": 0.008899999782443047,
+      "exit_date": "2026-11-25",
+      "exit_price": 0.008799999952316284,
+      "holding_sessions": 3,
+      "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
+      "gross_return_pct": -1.1235936243957134
+    },
+    {
+      "variant": "B_DONCHIAN20_WALKING",
       "ticker": "LNIK.MI",
       "signal_date": "2026-11-06",
       "entry_date": "2026-11-09",
@@ -558,6 +567,18 @@
       "holding_sessions": 3,
       "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
       "gross_return_pct": -11.642410783657764
+    },
+    {
+      "variant": "C_DONCHIAN10_WALKING",
+      "ticker": "LNGA.MI",
+      "signal_date": "2026-11-19",
+      "entry_date": "2026-11-20",
+      "entry_price": 0.008899999782443047,
+      "exit_date": "2026-11-25",
+      "exit_price": 0.008799999952316284,
+      "holding_sessions": 3,
+      "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
+      "gross_return_pct": -1.1235936243957134
     },
     {
       "variant": "C_DONCHIAN10_WALKING",

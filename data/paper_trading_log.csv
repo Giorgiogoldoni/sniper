@@ -1,1 +1,2 @@
 ticker,category,signal_date,entry_date,entry_price,exit_date,exit_price,holding_sessions,exit_reason,gross_return_pct,net_return_pct_by_cost_bps,spread_observed,spread_note
+3TYL.MI,LEVA_LONG,2026-11-20,2026-11-23,62.31000137,2026-11-25,64.0,3,TIME_3_SESSIONS,2.7122,"{""20"": 2.5122, ""30"": 2.4122, ""50"": 2.2122}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.

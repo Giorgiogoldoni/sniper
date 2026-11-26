@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T05:44:01.545053+00:00",
+  "generated_at": "2026-11-26T05:31:30.466417+00:00",
   "mode": "PAPER_ONLY_NO_ORDERS",
   "universe": {
     "total_selected": 99,
@@ -8,25 +8,33 @@
       "MATERIE_PRIME_LEVA": 26
     }
   },
-  "processed_bars": 85,
-  "open_positions": 1,
+  "processed_bars": 84,
+  "open_positions": 0,
   "pending_entries": 0,
-  "closed_trades": 0,
-  "open_positions_detail": [
+  "closed_trades": 1,
+  "open_positions_detail": [],
+  "pending_entries_detail": {},
+  "closed_trades_latest": [
     {
       "ticker": "3TYL.MI",
       "category": "LEVA_LONG",
       "signal_date": "2026-11-20",
       "entry_date": "2026-11-23",
-      "entry_price": 62.310001373291016,
-      "initial_atr": 0.6599067943033246,
-      "stop_price": 60.990187784684366,
-      "holding_sessions": 2,
-      "walking_false_streak": 0
+      "entry_price": 62.31000137,
+      "exit_date": "2026-11-25",
+      "exit_price": 64.0,
+      "holding_sessions": 3,
+      "exit_reason": "TIME_3_SESSIONS",
+      "gross_return_pct": 2.7122,
+      "net_return_pct_by_cost_bps": {
+        "20": 2.5122,
+        "30": 2.4122,
+        "50": 2.2122
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
     }
   ],
-  "pending_entries_detail": {},
-  "closed_trades_latest": [],
   "cost_sensitivity_bps_round_trip": [
     20,
     30,
