@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T05:32:59.462807+00:00",
+  "generated_at": "2026-11-27T05:27:35.261543+00:00",
   "mode": "PAPER_ONLY_NO_ORDERS",
   "universe": {
     "total_selected": 99,
@@ -8,7 +8,7 @@
       "MATERIE_PRIME_LEVA": 26
     }
   },
-  "processed_bars": 3430,
+  "processed_bars": 3516,
   "open_positions": 0,
   "pending_entries": 0,
   "closed_trades": 81,
@@ -22,14 +22,14 @@
       "entry_date": "2026-11-06",
       "entry_price": 62.36999893,
       "exit_date": "2026-11-10",
-      "exit_price": 61.17107944,
+      "exit_price": 61.17684591,
       "holding_sessions": 3,
       "exit_reason": "ATR_2_STOP",
-      "gross_return_pct": -1.9223,
+      "gross_return_pct": -1.913,
       "net_return_pct_by_cost_bps": {
-        "20": -2.1223,
-        "30": -2.2223,
-        "50": -2.4223
+        "20": -2.113,
+        "30": -2.213,
+        "50": -2.413
       },
       "spread_observed": false,
       "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
@@ -421,14 +421,14 @@
       "entry_date": "2026-11-02",
       "entry_price": 130.71000671,
       "exit_date": "2026-11-03",
-      "exit_price": 119.29812785,
+      "exit_price": 119.29338878,
       "holding_sessions": 2,
       "exit_reason": "ATR_2_STOP",
-      "gross_return_pct": -8.7307,
+      "gross_return_pct": -8.7343,
       "net_return_pct_by_cost_bps": {
-        "20": -8.9307,
-        "30": -9.0307,
-        "50": -9.2307
+        "20": -8.9343,
+        "30": -9.0343,
+        "50": -9.2343
       },
       "spread_observed": false,
       "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."

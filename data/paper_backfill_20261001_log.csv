@@ -1,7 +1,7 @@
 ticker,category,signal_date,entry_date,entry_price,exit_date,exit_price,holding_sessions,exit_reason,gross_return_pct,net_return_pct_by_cost_bps,spread_observed,spread_note
 2CAR.MI,LEVA_LONG,2026-11-02,2026-11-03,11.00399971,2026-11-05,11.61600018,3,TIME_3_SESSIONS,5.5616,"{""20"": 5.3616, ""30"": 5.2616, ""50"": 5.0616}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 2MCL.L,LEVA_LONG,2026-10-27,2026-10-28,28420.0,2026-10-30,27710.0,3,TIME_3_SESSIONS,-2.4982,"{""20"": -2.6982, ""30"": -2.7982, ""50"": -2.9982}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
-2MCL.L,LEVA_LONG,2026-11-04,2026-11-05,28560.0,2026-11-09,27503.15833388,3,ATR_2_STOP,-3.7004,"{""20"": -3.9004, ""30"": -4.0004, ""50"": -4.2004}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
+2MCL.L,LEVA_LONG,2026-11-04,2026-11-05,28560.0,2026-11-09,27503.15073017,3,ATR_2_STOP,-3.7005,"{""20"": -3.9005, ""30"": -4.0005, ""50"": -4.2005}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 2TRV.MI,LEVA_LONG,2026-10-28,2026-10-29,31.29000092,2026-11-02,32.99000168,3,TIME_3_SESSIONS,5.433,"{""20"": 5.233, ""30"": 5.133, ""50"": 4.933}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 2TRV.MI,LEVA_LONG,2026-11-04,2026-11-05,35.73500061,2026-11-05,34.78000015,1,ATR_2_STOP,-2.6725,"{""20"": -2.8725, ""30"": -2.9725, ""50"": -3.1725}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 2TRV.MI,LEVA_LONG,2026-11-16,2026-11-17,36.86999893,2026-11-19,33.875,3,ATR_2_STOP,-8.1231,"{""20"": -8.3231, ""30"": -8.4231, ""50"": -8.6231}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
@@ -22,7 +22,7 @@ ticker,category,signal_date,entry_date,entry_price,exit_date,exit_price,holding_
 3GIL.L,LEVA_LONG,2026-10-29,2026-10-30,5595.0,2026-11-03,5690.0,3,TIME_3_SESSIONS,1.6979,"{""20"": 1.4979, ""30"": 1.3979, ""50"": 1.1979}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 3GIL.L,LEVA_LONG,2026-11-04,2026-11-05,5965.0,2026-11-09,5895.0,3,TIME_3_SESSIONS,-1.1735,"{""20"": -1.3735, ""30"": -1.4735, ""50"": -1.6735}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 3ITL.MI,LEVA_LONG,2026-11-10,2026-11-11,549.23999023,2026-11-13,537.65002441,3,TIME_3_SESSIONS,-2.1102,"{""20"": -2.3102, ""30"": -2.4102, ""50"": -2.6102}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
-3LAM.MI,LEVA_LONG,2026-10-06,2026-10-07,797.23999023,2026-10-09,665.02293574,3,ATR_2_STOP,-16.5843,"{""20"": -16.7843, ""30"": -16.8843, ""50"": -17.0843}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
+3LAM.MI,LEVA_LONG,2026-10-06,2026-10-07,797.23999023,2026-10-09,664.98635448,3,ATR_2_STOP,-16.5889,"{""20"": -16.7889, ""30"": -16.8889, ""50"": -17.0889}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 3LAP.MI,LEVA_LONG,2026-10-13,2026-10-14,59.06999969,2026-10-16,59.70999908,3,TIME_3_SESSIONS,1.0835,"{""20"": 0.8835, ""30"": 0.7835, ""50"": 0.5835}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 3LAP.MI,LEVA_LONG,2026-10-23,2026-10-26,59.59999847,2026-10-28,59.06000137,3,TIME_3_SESSIONS,-0.906,"{""20"": -1.106, ""30"": -1.206, ""50"": -1.406}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 3LAP.MI,LEVA_LONG,2026-11-12,2026-11-13,64.30000305,2026-11-17,64.31999969,3,TIME_3_SESSIONS,0.0311,"{""20"": -0.1689, ""30"": -0.2689, ""50"": -0.4689}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
@@ -33,7 +33,7 @@ ticker,category,signal_date,entry_date,entry_price,exit_date,exit_price,holding_
 3LPP.MI,LEVA_LONG,2026-10-09,2026-10-12,0.91219997,2026-10-14,0.9436,3,TIME_3_SESSIONS,3.4422,"{""20"": 3.2422, ""30"": 3.1422, ""50"": 2.9422}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 3LPP.MI,LEVA_LONG,2026-10-16,2026-10-19,0.92479998,2026-10-21,1.01880002,3,TIME_3_SESSIONS,10.1644,"{""20"": 9.9644, ""30"": 9.8644, ""50"": 9.6644}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 3LPP.MI,LEVA_LONG,2026-11-02,2026-11-03,1.07000005,2026-11-05,1.06739998,3,TIME_3_SESSIONS,-0.243,"{""20"": -0.443, ""30"": -0.543, ""50"": -0.743}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
-3LSQ.MI,LEVA_LONG,2026-10-22,2026-10-23,0.50919998,2026-10-23,0.49159438,1,ATR_2_STOP,-3.4575,"{""20"": -3.6575, ""30"": -3.7575, ""50"": -3.9575}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
+3LSQ.MI,LEVA_LONG,2026-10-22,2026-10-23,0.50919998,2026-10-23,0.49158761,1,ATR_2_STOP,-3.4588,"{""20"": -3.6588, ""30"": -3.7588, ""50"": -3.9588}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 3LSQ.MI,LEVA_LONG,2026-11-04,2026-11-05,0.56480002,2026-11-09,0.58499998,3,TIME_3_SESSIONS,3.5765,"{""20"": 3.3765, ""30"": 3.2765, ""50"": 3.0765}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 3LTS.MI,LEVA_LONG,2026-10-26,2026-10-27,1.47440004,2026-10-29,1.60119998,3,TIME_3_SESSIONS,8.6001,"{""20"": 8.4001, ""30"": 8.3001, ""50"": 8.1001}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 3LZN.MI,LEVA_LONG,2026-10-08,2026-10-09,46.89500046,2026-10-13,49.43000031,3,TIME_3_SESSIONS,5.4057,"{""20"": 5.2057, ""30"": 5.1057, ""50"": 4.9057}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
@@ -50,7 +50,7 @@ ticker,category,signal_date,entry_date,entry_price,exit_date,exit_price,holding_
 3TYL.MI,LEVA_LONG,2026-10-15,2026-10-16,59.29000092,2026-10-20,58.97999954,3,TIME_3_SESSIONS,-0.5229,"{""20"": -0.7229, ""30"": -0.8229, ""50"": -1.0229}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 3TYL.MI,LEVA_LONG,2026-10-22,2026-10-23,60.63000107,2026-10-27,60.52000046,3,TIME_3_SESSIONS,-0.1814,"{""20"": -0.3814, ""30"": -0.4814, ""50"": -0.6814}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 3TYL.MI,LEVA_LONG,2026-10-30,2026-11-02,61.25999832,2026-11-04,61.24000168,3,TIME_3_SESSIONS,-0.0326,"{""20"": -0.2326, ""30"": -0.3326, ""50"": -0.5326}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
-3TYL.MI,LEVA_LONG,2026-11-05,2026-11-06,62.36999893,2026-11-10,61.17107944,3,ATR_2_STOP,-1.9223,"{""20"": -2.1223, ""30"": -2.2223, ""50"": -2.4223}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
+3TYL.MI,LEVA_LONG,2026-11-05,2026-11-06,62.36999893,2026-11-10,61.17684591,3,ATR_2_STOP,-1.913,"{""20"": -2.113, ""30"": -2.213, ""50"": -2.413}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 3TYL.MI,LEVA_LONG,2026-11-20,2026-11-23,62.31000137,2026-11-25,64.0,3,TIME_3_SESSIONS,2.7122,"{""20"": 2.5122, ""30"": 2.4122, ""50"": 2.2122}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 3UKL.L,LEVA_LONG,2026-10-16,2026-10-19,2410.0,2026-10-21,2354.5,3,TIME_3_SESSIONS,-2.3029,"{""20"": -2.5029, ""30"": -2.6029, ""50"": -2.8029}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 3USL.MI,LEVA_LONG,2026-10-05,2026-10-06,172.05999756,2026-10-08,171.61000061,3,TIME_3_SESSIONS,-0.2615,"{""20"": -0.4615, ""30"": -0.5615, ""50"": -0.7615}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
@@ -71,7 +71,7 @@ LOIL.MI,MATERIE_PRIME_LEVA,2026-10-26,2026-10-27,30.30500031,2026-10-30,31.37000
 LPET.MI,LEVA_LONG,2026-10-12,2026-10-13,119.94999695,2026-10-15,125.88999939,3,TIME_3_SESSIONS,4.9521,"{""20"": 4.7521, ""30"": 4.6521, ""50"": 4.4521}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 LPET.MI,LEVA_LONG,2026-10-19,2026-10-20,134.8999939,2026-10-22,130.11000061,3,TIME_3_SESSIONS,-3.5508,"{""20"": -3.7508, ""30"": -3.8508, ""50"": -4.0508}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 LPET.MI,LEVA_LONG,2026-10-23,2026-10-26,137.0,2026-10-28,140.5,3,TIME_3_SESSIONS,2.5547,"{""20"": 2.3547, ""30"": 2.2547, ""50"": 2.0547}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
-LPET.MI,LEVA_LONG,2026-10-30,2026-11-02,130.71000671,2026-11-03,119.29812785,2,ATR_2_STOP,-8.7307,"{""20"": -8.9307, ""30"": -9.0307, ""50"": -9.2307}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
+LPET.MI,LEVA_LONG,2026-10-30,2026-11-02,130.71000671,2026-11-03,119.29338878,2,ATR_2_STOP,-8.7343,"{""20"": -8.9343, ""30"": -9.0343, ""50"": -9.2343}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 LQQ.MI,LEVA_LONG,2026-10-02,2026-10-05,10.68200016,2026-10-07,10.85200024,3,TIME_3_SESSIONS,1.5915,"{""20"": 1.3915, ""30"": 1.2915, ""50"": 1.0915}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 LSUG.MI,MATERIE_PRIME_LEVA,2026-10-05,2026-10-06,3.0710001,2026-10-13,3.07850003,5,WALKING_2_NEGATIVE_CLOSES,0.2442,"{""20"": 0.0442, ""30"": -0.0558, ""50"": -0.2558}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 QQQ3.MI,LEVA_LONG,2026-10-02,2026-10-05,420.11999512,2026-10-07,430.86999512,3,TIME_3_SESSIONS,2.5588,"{""20"": 2.3588, ""30"": 2.2588, ""50"": 2.0588}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
