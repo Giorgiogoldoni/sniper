@@ -1,97 +1,97 @@
 {
   "schema_version": 1,
   "last_processed": {
-    "1GIS.L": "2026-11-25",
+    "1GIS.L": "2026-11-26",
     "1MCS.L": "2026-11-26",
-    "2STR.MI": "2026-11-25",
-    "2UKS.L": "2026-11-26",
-    "3BAS.MI": "2026-11-26",
+    "2STR.MI": "2026-11-26",
+    "2UKS.L": "2026-11-27",
+    "3BAS.MI": "2026-11-27",
     "3BUS.MI": "2026-11-26",
-    "3DES.MI": "2026-11-26",
-    "3EDS.MI": "2026-11-25",
-    "3EMS.MI": "2026-11-26",
-    "3EUS.MI": "2026-11-26",
-    "3GIS.L": "2026-11-26",
-    "3ITS.MI": "2026-11-26",
-    "3M7S.MI": "2026-11-25",
+    "3DES.MI": "2026-11-27",
+    "3EDS.MI": "2026-11-26",
+    "3EMS.MI": "2026-11-27",
+    "3EUS.MI": "2026-11-27",
+    "3GIS.L": "2026-11-27",
+    "3ITS.MI": "2026-11-27",
+    "3M7S.MI": "2026-11-27",
     "3SAA.MI": "2026-11-26",
-    "3SAP.MI": "2026-11-26",
-    "3SCR.MI": "2026-11-26",
-    "3SMI.MI": "2026-11-26",
-    "3SNF.MI": "2026-11-25",
-    "3SNI.MI": "2026-11-25",
-    "3SNV.MI": "2026-11-26",
-    "3SPA.MI": "2026-11-26",
-    "3SRA.MI": "2026-11-25",
-    "3SSQ.MI": "2026-11-26",
-    "3STS.MI": "2026-11-26",
-    "3UBS.MI": "2026-11-26",
-    "3UKS.L": "2026-11-26",
-    "3USS.MI": "2026-11-26",
+    "3SAP.MI": "2026-11-27",
+    "3SCR.MI": "2026-11-27",
+    "3SMI.MI": "2026-11-27",
+    "3SNF.MI": "2026-11-26",
+    "3SNI.MI": "2026-11-27",
+    "3SNV.MI": "2026-11-27",
+    "3SPA.MI": "2026-11-27",
+    "3SRA.MI": "2026-11-26",
+    "3SSQ.MI": "2026-11-27",
+    "3STS.MI": "2026-11-27",
+    "3UBS.MI": "2026-11-27",
+    "3UKS.L": "2026-11-27",
+    "3USS.MI": "2026-11-27",
     "5BTS.MI": "2026-11-26",
     "5BUS.MI": "2026-11-26",
-    "5EUS.MI": "2026-11-26",
-    "5ITS.MI": "2026-11-26",
-    "5SIT.MI": "2026-11-26",
-    "5TYS.MI": "2026-11-25",
-    "5USS.MI": "2026-11-25",
-    "AUEU.MI": "2026-11-25",
-    "CHE3.MI": "2026-11-25",
-    "CHEU.MI": "2026-11-25",
-    "ECH3.MI": "2026-11-25",
-    "EGB3.MI": "2026-11-25",
+    "5EUS.MI": "2026-11-27",
+    "5ITS.MI": "2026-11-27",
+    "5SIT.MI": "2026-11-27",
+    "5TYS.MI": "2026-11-26",
+    "5USS.MI": "2026-11-27",
+    "AUEU.MI": "2026-11-26",
+    "CHE3.MI": "2026-11-26",
+    "CHEU.MI": "2026-11-26",
+    "ECH3.MI": "2026-11-26",
+    "EGB3.MI": "2026-11-26",
     "EJP3.MI": "2026-11-26",
-    "EUAU.MI": "2026-11-25",
-    "EUCH.MI": "2026-11-25",
+    "EUAU.MI": "2026-11-26",
+    "EUCH.MI": "2026-11-27",
     "EUGB.MI": "2026-11-26",
-    "EUJP.MI": "2026-11-26",
-    "EUNO.MI": "2026-11-25",
-    "EUS3.MI": "2026-11-26",
-    "EUS5.MI": "2026-11-26",
-    "EUSE.MI": "2026-11-25",
+    "EUJP.MI": "2026-11-27",
+    "EUNO.MI": "2026-11-27",
+    "EUS3.MI": "2026-11-27",
+    "EUS5.MI": "2026-11-27",
+    "EUSE.MI": "2026-11-26",
     "EUUS.MI": "2026-11-26",
-    "GBE3.MI": "2026-11-25",
-    "GBEU.MI": "2026-11-25",
-    "GPTS.MI": "2026-11-26",
-    "INTS.MI": "2026-11-26",
+    "GBE3.MI": "2026-11-26",
+    "GBEU.MI": "2026-11-26",
+    "GPTS.MI": "2026-11-27",
+    "INTS.MI": "2026-11-27",
     "JPE3.MI": "2026-11-26",
-    "JPEU.MI": "2026-11-25",
-    "MAGS.MI": "2026-11-26",
-    "NOEU.MI": "2026-11-25",
-    "QQQS.MI": "2026-11-26",
-    "QS5S.MI": "2026-11-26",
-    "SBA3.MI": "2026-11-25",
-    "SC3S.MI": "2026-11-26",
-    "SEEU.MI": "2026-11-25",
-    "SMST.MI": "2026-11-26",
-    "SNV3.MI": "2026-11-26",
-    "SOXS.MI": "2026-11-26",
-    "SQQQ.MI": "2026-11-25",
+    "JPEU.MI": "2026-11-26",
+    "MAGS.MI": "2026-11-27",
+    "NOEU.MI": "2026-11-26",
+    "QQQS.MI": "2026-11-27",
+    "QS5S.MI": "2026-11-27",
+    "SBA3.MI": "2026-11-26",
+    "SC3S.MI": "2026-11-27",
+    "SEEU.MI": "2026-11-26",
+    "SMST.MI": "2026-11-27",
+    "SNV3.MI": "2026-11-27",
+    "SOXS.MI": "2026-11-27",
+    "SQQQ.MI": "2026-11-26",
     "SUK1.L": "2026-11-26",
-    "TSLQ.MI": "2026-11-26",
-    "UL3S.MI": "2026-11-25",
-    "USE3.MI": "2026-11-26",
-    "USE5.MI": "2026-11-26",
-    "USEU.MI": "2026-11-26",
-    "VIXL.MI": "2026-11-26",
-    "XBJF.DE": "2026-11-25",
-    "XSDX.MI": "2026-11-26",
-    "XSPS.MI": "2026-11-26",
-    "1PAS.MI": "2026-11-26",
-    "2OIG.MI": "2026-11-26",
-    "3BRS.MI": "2026-11-26",
-    "3GOS.MI": "2026-11-26",
-    "3HCS.MI": "2026-11-26",
-    "3SIS.MI": "2026-11-26",
+    "TSLQ.MI": "2026-11-27",
+    "UL3S.MI": "2026-11-26",
+    "USE3.MI": "2026-11-27",
+    "USE5.MI": "2026-11-27",
+    "USEU.MI": "2026-11-27",
+    "VIXL.MI": "2026-11-27",
+    "XBJF.DE": "2026-11-26",
+    "XSDX.MI": "2026-11-27",
+    "XSPS.MI": "2026-11-27",
+    "1PAS.MI": "2026-11-27",
+    "2OIG.MI": "2026-11-27",
+    "3BRS.MI": "2026-11-27",
+    "3GOS.MI": "2026-11-27",
+    "3HCS.MI": "2026-11-27",
+    "3SIS.MI": "2026-11-27",
     "SALL.MI": "2026-11-26",
-    "SBRT.MI": "2026-11-26",
-    "SBUL.MI": "2026-11-26",
-    "SCOP.MI": "2026-11-26",
+    "SBRT.MI": "2026-11-27",
+    "SBUL.MI": "2026-11-27",
+    "SCOP.MI": "2026-11-27",
     "SIMT.MI": "2026-11-26",
-    "SNGA.MI": "2026-11-26",
-    "SNIK.MI": "2026-11-25",
-    "SOIL.MI": "2026-11-26",
-    "SSIL.MI": "2026-11-26"
+    "SNGA.MI": "2026-11-27",
+    "SNIK.MI": "2026-11-27",
+    "SOIL.MI": "2026-11-27",
+    "SSIL.MI": "2026-11-27"
   },
   "positions": {
     "1MCS.L": {
@@ -111,8 +111,8 @@
       "entry_price": 11.378000259399414,
       "initial_atr": 0.28256784134903107,
       "stop_price": 10.812864576701353,
-      "holding_sessions": 4,
-      "walking_false_streak": 0
+      "holding_sessions": 5,
+      "walking_false_streak": 1
     },
     "3GOS.MI": {
       "category": "MATERIE_PRIME_SHORT",
@@ -121,27 +121,7 @@
       "entry_price": 2.1575000286102295,
       "initial_atr": 0.1049386060107168,
       "stop_price": 1.9476228165887959,
-      "holding_sessions": 4,
-      "walking_false_streak": 0
-    },
-    "3SIS.MI": {
-      "category": "MATERIE_PRIME_SHORT",
-      "signal_date": "2026-11-20",
-      "entry_date": "2026-11-23",
-      "entry_price": 52.04999923706055,
-      "initial_atr": 3.7881753020043654,
-      "stop_price": 44.473648633051816,
-      "holding_sessions": 4,
-      "walking_false_streak": 0
-    },
-    "3SNI.MI": {
-      "category": "LEVA_SHORT",
-      "signal_date": "2026-11-20",
-      "entry_date": "2026-11-23",
-      "entry_price": 3.2044999599456787,
-      "initial_atr": 0.22736875123902614,
-      "stop_price": 2.7497624574676265,
-      "holding_sessions": 3,
+      "holding_sessions": 5,
       "walking_false_streak": 1
     },
     "EUJP.MI": {
@@ -151,7 +131,7 @@
       "entry_price": 27.774999618530273,
       "initial_atr": 0.10755238090908201,
       "stop_price": 27.55989485671211,
-      "holding_sessions": 4,
+      "holding_sessions": 5,
       "walking_false_streak": 0
     },
     "SBUL.MI": {
@@ -161,8 +141,8 @@
       "entry_price": 8.644000053405762,
       "initial_atr": 0.16776483626376018,
       "stop_price": 8.30847038087824,
-      "holding_sessions": 4,
-      "walking_false_streak": 0
+      "holding_sessions": 5,
+      "walking_false_streak": 1
     },
     "SCOP.MI": {
       "category": "MATERIE_PRIME_SHORT",
@@ -171,8 +151,8 @@
       "entry_price": 10.84000015258789,
       "initial_atr": 0.15973562155495988,
       "stop_price": 10.52052890947797,
-      "holding_sessions": 4,
-      "walking_false_streak": 0
+      "holding_sessions": 5,
+      "walking_false_streak": 1
     },
     "SSIL.MI": {
       "category": "MATERIE_PRIME_SHORT",
@@ -181,8 +161,8 @@
       "entry_price": 2.7320001125335693,
       "initial_atr": 0.08207287772545582,
       "stop_price": 2.5678543570826577,
-      "holding_sessions": 4,
-      "walking_false_streak": 0
+      "holding_sessions": 5,
+      "walking_false_streak": 1
     },
     "SUK1.L": {
       "category": "LEVA_SHORT",
@@ -191,16 +171,6 @@
       "entry_price": 3880.0000000000005,
       "initial_atr": 34.24620102824782,
       "stop_price": 3811.5075979435046,
-      "holding_sessions": 4,
-      "walking_false_streak": 0
-    },
-    "XSPS.MI": {
-      "category": "LEVA_SHORT",
-      "signal_date": "2026-11-20",
-      "entry_date": "2026-11-23",
-      "entry_price": 5.5320000648498535,
-      "initial_atr": 0.08397504725983324,
-      "stop_price": 5.364049970330187,
       "holding_sessions": 4,
       "walking_false_streak": 0
     },
@@ -214,26 +184,6 @@
       "holding_sessions": 3,
       "walking_false_streak": 0
     },
-    "EUS3.MI": {
-      "category": "LEVA_SHORT",
-      "signal_date": "2026-11-23",
-      "entry_date": "2026-11-24",
-      "entry_price": 104.0,
-      "initial_atr": 1.0733703042549008,
-      "stop_price": 101.8532593914902,
-      "holding_sessions": 3,
-      "walking_false_streak": 2
-    },
-    "3HCS.MI": {
-      "category": "MATERIE_PRIME_SHORT",
-      "signal_date": "2026-11-24",
-      "entry_date": "2026-11-25",
-      "entry_price": 22.600000381469727,
-      "initial_atr": 1.2665116033701036,
-      "stop_price": 20.06697717472952,
-      "holding_sessions": 2,
-      "walking_false_streak": 0
-    },
     "XBJF.DE": {
       "category": "LEVA_SHORT",
       "signal_date": "2026-11-23",
@@ -241,7 +191,7 @@
       "entry_price": 35.652000427246094,
       "initial_atr": 0.15473232674729118,
       "stop_price": 35.342535773751514,
-      "holding_sessions": 2,
+      "holding_sessions": 3,
       "walking_false_streak": 0
     },
     "3DES.MI": {
@@ -251,8 +201,8 @@
       "entry_price": 16.899999618530273,
       "initial_atr": 0.7119694156712644,
       "stop_price": 15.476060787187745,
-      "holding_sessions": 1,
-      "walking_false_streak": 0
+      "holding_sessions": 2,
+      "walking_false_streak": 1
     },
     "SIMT.MI": {
       "category": "MATERIE_PRIME_SHORT",
@@ -264,16 +214,6 @@
       "holding_sessions": 1,
       "walking_false_streak": 0
     },
-    "VIXL.MI": {
-      "category": "LEVA_SHORT",
-      "signal_date": "2026-11-25",
-      "entry_date": "2026-11-26",
-      "entry_price": 1.1080000400543213,
-      "initial_atr": 0.1355226852286314,
-      "stop_price": 0.8369546695970584,
-      "holding_sessions": 1,
-      "walking_false_streak": 0
-    },
     "XSDX.MI": {
       "category": "LEVA_SHORT",
       "signal_date": "2026-11-25",
@@ -281,19 +221,22 @@
       "entry_price": 9.29699993133545,
       "initial_atr": 0.1251033001318502,
       "stop_price": 9.046793331071749,
+      "holding_sessions": 2,
+      "walking_false_streak": 1
+    },
+    "ECH3.MI": {
+      "category": "LEVA_SHORT",
+      "signal_date": "2026-11-25",
+      "entry_date": "2026-11-26",
+      "entry_price": 58.68000030517578,
+      "initial_atr": 0.3539274561875899,
+      "stop_price": 57.9721453928006,
       "holding_sessions": 1,
       "walking_false_streak": 0
     }
   },
-  "pending_entries": {
-    "ECH3.MI": {
-      "signal_date": "2026-11-25",
-      "atr": 0.3539274561875899
-    }
-  },
-  "pending_exits": {
-    "EUS3.MI": "WALKING_2_NEGATIVE_CLOSES"
-  },
+  "pending_entries": {},
+  "pending_exits": {},
   "trades": [
     {
       "ticker": "3EMS.MI",
@@ -598,8 +541,122 @@
       },
       "spread_observed": false,
       "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3HCS.MI",
+      "category": "MATERIE_PRIME_SHORT",
+      "signal_date": "2026-11-24",
+      "entry_date": "2026-11-25",
+      "entry_price": 22.60000038,
+      "exit_date": "2026-11-27",
+      "exit_price": 18.87599945,
+      "holding_sessions": 3,
+      "exit_reason": "ATR_2_STOP",
+      "gross_return_pct": -16.4779,
+      "net_return_pct_by_cost_bps": {
+        "20": -16.6779,
+        "30": -16.7779,
+        "50": -16.9779
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3SIS.MI",
+      "category": "MATERIE_PRIME_SHORT",
+      "signal_date": "2026-11-20",
+      "entry_date": "2026-11-23",
+      "entry_price": 52.04999924,
+      "exit_date": "2026-11-27",
+      "exit_price": 42.26499939,
+      "holding_sessions": 5,
+      "exit_reason": "ATR_2_STOP",
+      "gross_return_pct": -18.7992,
+      "net_return_pct_by_cost_bps": {
+        "20": -18.9992,
+        "30": -19.0992,
+        "50": -19.2992
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "3SNI.MI",
+      "category": "LEVA_SHORT",
+      "signal_date": "2026-11-20",
+      "entry_date": "2026-11-23",
+      "entry_price": 3.20449996,
+      "exit_date": "2026-11-27",
+      "exit_price": 2.43199992,
+      "holding_sessions": 4,
+      "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
+      "gross_return_pct": -24.1067,
+      "net_return_pct_by_cost_bps": {
+        "20": -24.3067,
+        "30": -24.4067,
+        "50": -24.6067
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "EUS3.MI",
+      "category": "LEVA_SHORT",
+      "signal_date": "2026-11-23",
+      "entry_date": "2026-11-24",
+      "entry_price": 104.0,
+      "exit_date": "2026-11-27",
+      "exit_price": 102.93000031,
+      "holding_sessions": 3,
+      "exit_reason": "WALKING_2_NEGATIVE_CLOSES",
+      "gross_return_pct": -1.0288,
+      "net_return_pct_by_cost_bps": {
+        "20": -1.2288,
+        "30": -1.3288,
+        "50": -1.5288
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "VIXL.MI",
+      "category": "LEVA_SHORT",
+      "signal_date": "2026-11-25",
+      "entry_date": "2026-11-26",
+      "entry_price": 1.10800004,
+      "exit_date": "2026-11-27",
+      "exit_price": 0.82880002,
+      "holding_sessions": 2,
+      "exit_reason": "ATR_2_STOP",
+      "gross_return_pct": -25.1986,
+      "net_return_pct_by_cost_bps": {
+        "20": -25.3986,
+        "30": -25.4986,
+        "50": -25.6986
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
+    },
+    {
+      "ticker": "XSPS.MI",
+      "category": "LEVA_SHORT",
+      "signal_date": "2026-11-20",
+      "entry_date": "2026-11-23",
+      "entry_price": 5.53200006,
+      "exit_date": "2026-11-27",
+      "exit_price": 5.36000013,
+      "holding_sessions": 5,
+      "exit_reason": "ATR_2_STOP",
+      "gross_return_pct": -3.1092,
+      "net_return_pct_by_cost_bps": {
+        "20": -3.3092,
+        "30": -3.4092,
+        "50": -3.6092
+      },
+      "spread_observed": false,
+      "spread_note": "Bid/ask non disponibile: costi solo ipotesi round-trip."
     }
   ],
-  "updated_at": "2026-11-27T00:44:22.586850+00:00",
-  "logged_trades": 16
+  "updated_at": "2026-11-27T17:58:40.001900+00:00",
+  "logged_trades": 22
 }
