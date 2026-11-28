@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T05:27:35.261543+00:00",
+  "generated_at": "2026-11-28T05:03:22.775355+00:00",
   "mode": "PAPER_ONLY_NO_ORDERS",
   "universe": {
     "total_selected": 99,
@@ -8,7 +8,7 @@
       "MATERIE_PRIME_LEVA": 26
     }
   },
-  "processed_bars": 3516,
+  "processed_bars": 3602,
   "open_positions": 0,
   "pending_entries": 0,
   "closed_trades": 81,

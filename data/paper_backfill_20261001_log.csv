@@ -1,7 +1,7 @@
 ticker,category,signal_date,entry_date,entry_price,exit_date,exit_price,holding_sessions,exit_reason,gross_return_pct,net_return_pct_by_cost_bps,spread_observed,spread_note
 2CAR.MI,LEVA_LONG,2026-11-02,2026-11-03,11.00399971,2026-11-05,11.61600018,3,TIME_3_SESSIONS,5.5616,"{""20"": 5.3616, ""30"": 5.2616, ""50"": 5.0616}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 2MCL.L,LEVA_LONG,2026-10-27,2026-10-28,28420.0,2026-10-30,27710.0,3,TIME_3_SESSIONS,-2.4982,"{""20"": -2.6982, ""30"": -2.7982, ""50"": -2.9982}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
-2MCL.L,LEVA_LONG,2026-11-04,2026-11-05,28560.0,2026-11-09,27503.15073017,3,ATR_2_STOP,-3.7005,"{""20"": -3.9005, ""30"": -4.0005, ""50"": -4.2005}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
+2MCL.L,LEVA_LONG,2026-11-04,2026-11-05,28560.0,2026-11-09,27503.15072786,3,ATR_2_STOP,-3.7005,"{""20"": -3.9005, ""30"": -4.0005, ""50"": -4.2005}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 2TRV.MI,LEVA_LONG,2026-10-28,2026-10-29,31.29000092,2026-11-02,32.99000168,3,TIME_3_SESSIONS,5.433,"{""20"": 5.233, ""30"": 5.133, ""50"": 4.933}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 2TRV.MI,LEVA_LONG,2026-11-04,2026-11-05,35.73500061,2026-11-05,34.78000015,1,ATR_2_STOP,-2.6725,"{""20"": -2.8725, ""30"": -2.9725, ""50"": -3.1725}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.
 2TRV.MI,LEVA_LONG,2026-11-16,2026-11-17,36.86999893,2026-11-19,33.875,3,ATR_2_STOP,-8.1231,"{""20"": -8.3231, ""30"": -8.4231, ""50"": -8.6231}",False,Bid/ask non disponibile: costi solo ipotesi round-trip.

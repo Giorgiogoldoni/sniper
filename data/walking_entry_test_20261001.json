@@ -1,6 +1,6 @@
 {
   "window_start": "2026-10-01",
-  "window_end": "2026-11-27",
+  "window_end": "2026-11-28",
   "universe_count": 26,
   "tickers_with_data": 25,
   "failed_data": [
@@ -28,7 +28,12 @@
       "gross_profit_factor": 1.405,
       "gross_median_pct": 1.474,
       "worst_trade_pct": -16.925,
-      "open_or_pending_tickers": []
+      "open_or_pending_tickers": [
+        {
+          "ticker": "LCOR.MI",
+          "reason": "posizione o ingresso ancora aperto a fine finestra"
+        }
+      ]
     },
     "B_DONCHIAN20_WALKING": {
       "trades": 13,
